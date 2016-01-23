@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AireOS", "AireOS\AireOS.vbproj", "{B51B9842-3946-4233-9A66-D091BAF70CCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B51B9842-3946-4233-9A66-D091BAF70CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B51B9842-3946-4233-9A66-D091BAF70CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B51B9842-3946-4233-9A66-D091BAF70CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B51B9842-3946-4233-9A66-D091BAF70CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
