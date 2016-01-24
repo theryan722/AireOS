@@ -135,6 +135,7 @@
     </Compile>
     <Compile Include="Events.vb" />
     <Compile Include="FormPosition.vb" />
+    <Compile Include="LogManager.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -150,7 +151,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="NotificationsAPI.vb" />
+    <Compile Include="Notifications.vb" />
     <Compile Include="Power.vb" />
     <Compile Include="Users.vb" />
   </ItemGroup>
