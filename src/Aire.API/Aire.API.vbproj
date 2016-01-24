@@ -121,6 +121,18 @@
     <Compile Include="Dialogs\dlgRun.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Dialogs\Volume\dlgVolume.Designer.vb">
+      <DependentUpon>dlgVolume.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Volume\dlgVolume.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Volume\dlgVolumeStatus.Designer.vb">
+      <DependentUpon>dlgVolumeStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Volume\dlgVolumeStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Events.vb" />
     <Compile Include="FormPosition.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
