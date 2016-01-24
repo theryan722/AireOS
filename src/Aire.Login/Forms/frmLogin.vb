@@ -3,7 +3,7 @@
 
 #Region "UI"
 
-    Private Sub btn_otherusers_Click(sender As Object, e As EventArgs) Handles btn_otherusers.Click
+    Private Sub btn_otherusers_Click(sender As Object, e As EventArgs) Handles btnOtherUsers.Click
         If lb_users.Visible Then
             lb_users.Hide()
         Else
@@ -40,7 +40,7 @@
 
     Private Sub InitializeUI()
         If lb_users.Items.Count > 0 Then
-            btn_otherusers.Visible = False
+            btnOtherUsers.Visible = True
         End If
     End Sub
 

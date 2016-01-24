@@ -25,7 +25,7 @@ Partial Class frmLogin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.btnPower = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btn_otherusers = New System.Windows.Forms.Button()
+        Me.btnOtherUsers = New System.Windows.Forms.Button()
         Me.txt_username = New System.Windows.Forms.TextBox()
         Me.txt_password = New System.Windows.Forms.TextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
@@ -52,7 +52,7 @@ Partial Class frmLogin
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.btn_otherusers)
+        Me.Panel1.Controls.Add(Me.btnOtherUsers)
         Me.Panel1.Controls.Add(Me.btnPower)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 209)
@@ -60,18 +60,19 @@ Partial Class frmLogin
         Me.Panel1.Size = New System.Drawing.Size(518, 32)
         Me.Panel1.TabIndex = 1
         '
-        'btn_otherusers
+        'btnOtherUsers
         '
-        Me.btn_otherusers.BackgroundImage = CType(resources.GetObject("btn_otherusers.BackgroundImage"), System.Drawing.Image)
-        Me.btn_otherusers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btn_otherusers.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btn_otherusers.FlatAppearance.BorderSize = 0
-        Me.btn_otherusers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_otherusers.Location = New System.Drawing.Point(0, 0)
-        Me.btn_otherusers.Name = "btn_otherusers"
-        Me.btn_otherusers.Size = New System.Drawing.Size(32, 32)
-        Me.btn_otherusers.TabIndex = 1
-        Me.btn_otherusers.UseVisualStyleBackColor = True
+        Me.btnOtherUsers.BackgroundImage = CType(resources.GetObject("btnOtherUsers.BackgroundImage"), System.Drawing.Image)
+        Me.btnOtherUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnOtherUsers.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnOtherUsers.FlatAppearance.BorderSize = 0
+        Me.btnOtherUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOtherUsers.Location = New System.Drawing.Point(0, 0)
+        Me.btnOtherUsers.Name = "btnOtherUsers"
+        Me.btnOtherUsers.Size = New System.Drawing.Size(32, 32)
+        Me.btnOtherUsers.TabIndex = 1
+        Me.btnOtherUsers.UseVisualStyleBackColor = True
+        Me.btnOtherUsers.Visible = False
         '
         'txt_username
         '
@@ -169,6 +170,6 @@ Partial Class frmLogin
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents lb_users As System.Windows.Forms.ListBox
     Friend WithEvents pb_user As System.Windows.Forms.PictureBox
-    Friend WithEvents btn_otherusers As System.Windows.Forms.Button
+    Friend WithEvents btnOtherUsers As System.Windows.Forms.Button
 
 End Class
