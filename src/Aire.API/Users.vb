@@ -84,6 +84,11 @@
 
         Public Class Actions
 
+            Public Shared Sub ShowLogoutDialog()
+                Dim newb As New dlgLogout
+                newb.ShowDialog()
+            End Sub
+
             Public Shared Sub ChangePermissionLevel(ByVal pass As String, ByVal newlevel As Integer)
 
             End Sub
