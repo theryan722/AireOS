@@ -37,11 +37,15 @@
                     Case LogSource.General
                         WriteToLog(User.Current.Info.GetLogLocation, message)
                     Case LogSource.MessageBox
-                        WriteToLog(User.Current.Info.GetLogLocation, message)
+                        If User.Current.Settings.LogNotificationText Then
+                            WriteToLog(User.Current.Info.GetLogLocation, message)
+                        End If
                     Case LogSource.System
                         WriteToLog(syslogloc, message)
                     Case LogSource.Toast
-                        WriteToLog(User.Current.Info.GetLogLocation, message)
+                        If User.Current.Settings.LogNotificationText Then
+                            WriteToLog(User.Current.Info.GetLogLocation, message)
+                        End If
                 End Select
             End Sub
 
