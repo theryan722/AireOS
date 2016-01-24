@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Timer")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyCompany("Ryan O'Day")> 
 <Assembly: AssemblyProduct("Timer")> 
-<Assembly: AssemblyCopyright("Copyright ©  2016")> 
+<Assembly: AssemblyCopyright("Copyright ©  2016 Ryan O'Day")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
