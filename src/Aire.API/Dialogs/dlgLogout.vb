@@ -19,7 +19,7 @@
 #Region "dlgLogout"
 
     Private Sub dlgLogout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Aire.API.FormPosition.CenterForm(Me)
     End Sub
 
 #End Region
