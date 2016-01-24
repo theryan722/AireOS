@@ -1,5 +1,7 @@
 ﻿Namespace User
 
+
+    'The currently logged in user
     Namespace Current
 
         Public Class Info
@@ -20,10 +22,15 @@
 
             End Function
 
+            Public Shared Function GetIfHidden() As Boolean
+
+            End Function
+
         End Class
 
     End Namespace
 
+    'Methods for all users
     Namespace Users
 
         Public Class Info
@@ -33,6 +40,10 @@
             End Function
 
             Public Shared Function GetPermissionLevelForUser(ByVal username As String) As Integer
+
+            End Function
+
+            Public Shared Function CheckIfUserIsHidden(ByVal username As String) As Boolean
 
             End Function
 
