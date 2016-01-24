@@ -1,4 +1,4 @@
-﻿Public Class frmPower
+﻿Public Class dlgPower
 
 #Region "UI"
 
@@ -26,7 +26,7 @@
 
 #Region "frmPower"
 
-    Private Sub frmPower_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub dlgPower_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Aire.API.FormPosition.CenterForm(Me)
     End Sub
 
