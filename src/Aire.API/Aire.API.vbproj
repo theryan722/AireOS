@@ -103,10 +103,10 @@
     <Compile Include="Dialogs\dlgLogout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgMessageBox.Designer.vb">
-      <DependentUpon>dlgMessageBox.vb</DependentUpon>
+    <Compile Include="Dialogs\MessageBox.Designer.vb">
+      <DependentUpon>MessageBox.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\dlgMessageBox.vb">
+    <Compile Include="Dialogs\MessageBox.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\dlgPower.Designer.vb">
@@ -155,6 +155,9 @@
     <Compile Include="Users.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialogs\MessageBox.resx">
+      <DependentUpon>MessageBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgPower.resx">
       <DependentUpon>dlgPower.vb</DependentUpon>
     </EmbeddedResource>
@@ -176,7 +179,24 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\notify_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notify_question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notify_security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notify_status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notify_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notify_warning.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

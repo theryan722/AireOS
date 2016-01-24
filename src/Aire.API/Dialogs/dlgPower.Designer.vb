@@ -99,6 +99,7 @@ Partial Class dlgPower
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "dlgPower"
         Me.Text = "Power"
+        Me.TopMost = True
         Me.ResumeLayout(False)
 
     End Sub
