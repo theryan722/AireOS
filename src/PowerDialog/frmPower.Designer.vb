@@ -22,11 +22,13 @@ Partial Class frmPower
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPower))
         Me.btnShutdown = New System.Windows.Forms.Button()
         Me.btnSleep = New System.Windows.Forms.Button()
         Me.btnRestart = New System.Windows.Forms.Button()
         Me.btnHibernate = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'btnShutdown
@@ -40,6 +42,7 @@ Partial Class frmPower
         Me.btnShutdown.Name = "btnShutdown"
         Me.btnShutdown.Size = New System.Drawing.Size(64, 64)
         Me.btnShutdown.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.btnShutdown, "Shutdown")
         Me.btnShutdown.UseVisualStyleBackColor = True
         '
         'btnSleep
@@ -53,6 +56,7 @@ Partial Class frmPower
         Me.btnSleep.Name = "btnSleep"
         Me.btnSleep.Size = New System.Drawing.Size(64, 64)
         Me.btnSleep.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.btnSleep, "Sleep")
         Me.btnSleep.UseVisualStyleBackColor = True
         '
         'btnRestart
@@ -66,6 +70,7 @@ Partial Class frmPower
         Me.btnRestart.Name = "btnRestart"
         Me.btnRestart.Size = New System.Drawing.Size(64, 64)
         Me.btnRestart.TabIndex = 2
+        Me.ToolTip1.SetToolTip(Me.btnRestart, "Restart")
         Me.btnRestart.UseVisualStyleBackColor = True
         '
         'btnHibernate
@@ -79,6 +84,7 @@ Partial Class frmPower
         Me.btnHibernate.Name = "btnHibernate"
         Me.btnHibernate.Size = New System.Drawing.Size(64, 64)
         Me.btnHibernate.TabIndex = 3
+        Me.ToolTip1.SetToolTip(Me.btnHibernate, "Hibernate")
         Me.btnHibernate.UseVisualStyleBackColor = True
         '
         'frmPower
@@ -100,5 +106,6 @@ Partial Class frmPower
     Friend WithEvents btnSleep As System.Windows.Forms.Button
     Friend WithEvents btnRestart As System.Windows.Forms.Button
     Friend WithEvents btnHibernate As System.Windows.Forms.Button
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 
 End Class
