@@ -1,6 +1,5 @@
 ﻿Namespace User
 
-
     'The currently logged in user
     Namespace Current
 

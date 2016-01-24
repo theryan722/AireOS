@@ -1,4 +1,6 @@
-﻿Namespace Notifications
+﻿Imports System.Drawing
+
+Namespace Notifications
 
     Public Class MessageBox
         Private mresponse As MessageBoxResponse
@@ -30,10 +32,9 @@
             YesNo
             YesNoCancel
             RetryCancel
-
         End Enum
 
-        Public Sub New(ByVal text As String, Optional ByVal title As String = "", Optional ByVal icon As MessageBoxIcon = MessageBoxIcon.None, Optional ByVal buttons As MessageBoxButtons = MessageBoxButtons.OkOnly)
+        Public Sub New(ByVal text As String, Optional ByVal title As String = "", Optional ByVal icon As MessageBoxIcon = MessageBoxIcon.None, Optional ByVal buttons As MessageBoxButtons = MessageBoxButtons.OkOnly, Optional ByVal backcolor As System.Drawing.Color = Nothing)
 
         End Sub
 

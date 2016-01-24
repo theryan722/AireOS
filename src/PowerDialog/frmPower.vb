@@ -3,22 +3,22 @@
 #Region "UI"
 
     Private Sub btnShutdown_Click(sender As Object, e As EventArgs) Handles btnShutdown.Click
-        Aire.API.System.Power.Shutdown()
+        Aire.API.Sys.Power.Shutdown()
         Me.Close()
     End Sub
 
     Private Sub btnSleep_Click(sender As Object, e As EventArgs) Handles btnSleep.Click
-        Aire.API.System.Power.Sleep()
+        Aire.API.Sys.Power.Sleep()
         Me.Close()
     End Sub
 
     Private Sub btnRestart_Click(sender As Object, e As EventArgs) Handles btnRestart.Click
-        Aire.API.System.Power.Restart()
+        Aire.API.Sys.Power.Restart()
         Me.Close()
     End Sub
 
     Private Sub btnHibernate_Click(sender As Object, e As EventArgs) Handles btnHibernate.Click
-        Aire.API.System.Power.Hibernate()
+        Aire.API.Sys.Power.Hibernate()
         Me.Close()
     End Sub
 

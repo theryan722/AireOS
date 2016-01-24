@@ -20,10 +20,10 @@
 
 #Region "Event Handlers"
 
-    Private Sub HandleShutdownEvents(ByVal powertype As Aire.API.System.Events.PowerState)
-        If powertype = API.System.Events.PowerState.Shutdown Then
+    Private Sub HandleShutdownEvents(ByVal powertype As Aire.API.Sys.Events.PowerState)
+        If powertype = API.Sys.Events.PowerState.Shutdown Then
             okaytoclose = True
-        ElseIf powertype = API.System.Events.PowerState.Restart Then
+        ElseIf powertype = API.Sys.Events.PowerState.Restart Then
             okaytoclose = True
         End If
     End Sub
@@ -58,7 +58,7 @@
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Aire.API.FormPosition.CenterForm(Me, frmLoginBackground)
-        AddHandler Aire.API.System.Events.SystemPowerStateChange, AddressOf HandleShutdownEvents
+        AddHandler Aire.API.Sys.Events.SystemPowerStateChange, AddressOf HandleShutdownEvents
         InitializeUI()
     End Sub
 

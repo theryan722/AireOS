@@ -1,4 +1,4 @@
-﻿Namespace System
+﻿Namespace Sys
 
     Public Class Events
 
