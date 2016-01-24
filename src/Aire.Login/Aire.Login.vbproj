@@ -130,6 +130,10 @@
       <Project>{8b285aed-9205-4cee-8955-c9c3c73408b9}</Project>
       <Name>Aire.API</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PowerDialog\PowerDialog.vbproj">
+      <Project>{f53c584c-1541-4ae1-b24a-08aaacf32050}</Project>
+      <Name>PowerDialog</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

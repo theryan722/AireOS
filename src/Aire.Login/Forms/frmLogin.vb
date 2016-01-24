@@ -11,6 +11,11 @@
         End If
     End Sub
 
+    Private Sub btnPower_Click(sender As Object, e As EventArgs) Handles btnPower.Click
+        Dim newb As New PowerDialog.frmPower
+        newb.ShowDialog()
+    End Sub
+
 #End Region
 
 #Region "Methods"
