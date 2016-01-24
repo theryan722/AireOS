@@ -18,6 +18,18 @@
 
 #End Region
 
+#Region "Event Handlers"
+
+    Private Sub HandleShutdownEvents(ByVal powertype As Aire.API.System.Events.PowerState)
+        If powertype = API.System.Events.PowerState.Shutdown Then
+            okaytoclose = True
+        ElseIf powertype = API.System.Events.PowerState.Restart Then
+            okaytoclose = True
+        End If
+    End Sub
+
+#End Region
+
 #Region "lb_users"
 
 
@@ -43,5 +55,5 @@
     End Sub
 
 #End Region
-    
+
 End Class

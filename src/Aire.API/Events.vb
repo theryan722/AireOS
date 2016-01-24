@@ -1,13 +1,17 @@
 ﻿Namespace System
 
-    Public Enum PowerState
-        Shutdown
-        Restart
-        Hibernate
-        Sleep
-    End Enum
-
     Public Class Events
+
+#Region "Enums"
+
+        Public Enum PowerState
+            Shutdown
+            Restart
+            Hibernate
+            Sleep
+        End Enum
+
+#End Region
 
 #Region "Events"
 
