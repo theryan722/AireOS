@@ -38,7 +38,11 @@
 
 #Region "Methods"
 
-
+    Private Sub InitializeUI()
+        If lb_users.Items.Count > 0 Then
+            btn_otherusers.Visible = False
+        End If
+    End Sub
 
 #End Region
 
@@ -53,6 +57,7 @@
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Aire.API.FormPosition.CenterForm(Me, frmLoginBackground)
         AddHandler Aire.API.System.Events.SystemPowerStateChange, AddressOf HandleShutdownEvents
+        InitializeUI()
     End Sub
 
 #End Region
