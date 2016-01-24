@@ -212,6 +212,12 @@
   <ItemGroup>
     <None Include="Resources\notify_warning.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aire.DataManager\Aire.DataManager.vbproj">
+      <Project>{e0cc3d59-2ef1-4459-9fce-02a3cceba7b1}</Project>
+      <Name>Aire.DataManager</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
