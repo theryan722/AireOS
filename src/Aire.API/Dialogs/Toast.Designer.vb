@@ -22,11 +22,13 @@ Partial Class Toast
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Toast))
         Me.pnl_top = New System.Windows.Forms.Panel()
+        Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.lblTitle = New System.Windows.Forms.Label()
+        Me.lifeTimer = New System.Windows.Forms.Timer(Me.components)
         Me.pnl_top.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -39,6 +41,15 @@ Partial Class Toast
         Me.pnl_top.Name = "pnl_top"
         Me.pnl_top.Size = New System.Drawing.Size(362, 16)
         Me.pnl_top.TabIndex = 0
+        '
+        'lblTitle
+        '
+        Me.lblTitle.AutoSize = True
+        Me.lblTitle.Dock = System.Windows.Forms.DockStyle.Left
+        Me.lblTitle.Location = New System.Drawing.Point(0, 0)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(0, 13)
+        Me.lblTitle.TabIndex = 1
         '
         'btnClose
         '
@@ -55,6 +66,7 @@ Partial Class Toast
         '
         'TextBox1
         '
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox1.Location = New System.Drawing.Point(0, 16)
         Me.TextBox1.Multiline = True
@@ -63,14 +75,9 @@ Partial Class Toast
         Me.TextBox1.Size = New System.Drawing.Size(362, 54)
         Me.TextBox1.TabIndex = 1
         '
-        'lblTitle
+        'lifeTimer
         '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Dock = System.Windows.Forms.DockStyle.Left
-        Me.lblTitle.Location = New System.Drawing.Point(0, 0)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(0, 13)
-        Me.lblTitle.TabIndex = 1
+        Me.lifeTimer.Interval = 2500
         '
         'Toast
         '
@@ -95,4 +102,5 @@ Partial Class Toast
     Friend WithEvents btnClose As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents lblTitle As System.Windows.Forms.Label
+    Private WithEvents lifeTimer As System.Windows.Forms.Timer
 End Class
