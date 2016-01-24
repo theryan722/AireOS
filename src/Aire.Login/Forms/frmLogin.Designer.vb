@@ -33,7 +33,7 @@ Partial Class frmLogin
         Me.ControlBox = False
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmLogin"
-        Me.Text = "Aire OS"
+        Me.Text = "Aire OS Login"
         Me.TopMost = True
         Me.ResumeLayout(False)
 

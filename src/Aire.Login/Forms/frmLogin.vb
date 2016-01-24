@@ -1,5 +1,6 @@
 ﻿Public Class frmLogin
     Private okaytoclose As Boolean = False
+
 #Region "UI"
 
 
