@@ -85,6 +85,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\dlgMessageBox.Designer.vb">
+      <DependentUpon>dlgMessageBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgMessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Events.vb" />
     <Compile Include="FormPosition.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -125,9 +131,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dialogs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
