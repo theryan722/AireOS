@@ -8,7 +8,8 @@
     End Sub
 
     Private Sub btnSwitchUser_Click(sender As Object, e As EventArgs) Handles btnSwitchUser.Click
-
+        Aire.API.User.Current.Actions.SwitchUser()
+        Me.Close()
     End Sub
 
     Private Sub btnLock_Click(sender As Object, e As EventArgs) Handles btnLock.Click
