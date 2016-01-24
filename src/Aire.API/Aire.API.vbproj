@@ -97,6 +97,12 @@
     <Compile Include="Dialogs\dlgFolder.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Dialogs\dlgLogout.Designer.vb">
+      <DependentUpon>dlgLogout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgLogout.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\dlgMessageBox.Designer.vb">
       <DependentUpon>dlgMessageBox.vb</DependentUpon>
     </Compile>
