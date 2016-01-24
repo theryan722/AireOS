@@ -17,6 +17,10 @@
 
             End Function
 
+            Public Shared Function GetLogLocation() As String
+
+            End Function
+
         End Class
 
         'The user settings for the currently logged in user
