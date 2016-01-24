@@ -33,6 +33,7 @@ Partial Class frmLogin
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lb_users = New System.Windows.Forms.ListBox()
         Me.pb_user = New System.Windows.Forms.PictureBox()
+        Me.btnHint = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.pb_user, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -136,6 +137,16 @@ Partial Class frmLogin
         Me.pb_user.TabIndex = 9
         Me.pb_user.TabStop = False
         '
+        'btnHint
+        '
+        Me.btnHint.Location = New System.Drawing.Point(385, 111)
+        Me.btnHint.Name = "btnHint"
+        Me.btnHint.Size = New System.Drawing.Size(35, 20)
+        Me.btnHint.TabIndex = 10
+        Me.btnHint.Text = "Hint"
+        Me.btnHint.UseVisualStyleBackColor = True
+        Me.btnHint.Visible = False
+        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -143,6 +154,7 @@ Partial Class frmLogin
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(518, 241)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnHint)
         Me.Controls.Add(Me.pb_user)
         Me.Controls.Add(Me.lb_users)
         Me.Controls.Add(Me.Label2)
@@ -171,5 +183,6 @@ Partial Class frmLogin
     Friend WithEvents lb_users As System.Windows.Forms.ListBox
     Friend WithEvents pb_user As System.Windows.Forms.PictureBox
     Friend WithEvents btnOtherUsers As System.Windows.Forms.Button
+    Friend WithEvents btnHint As System.Windows.Forms.Button
 
 End Class
