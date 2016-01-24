@@ -1,7 +1,6 @@
 ﻿Imports System.Drawing
 
 Public Class MessageBox
-    Private mresponse As MessageBoxResponse
 
 #Region "Enums"
 
@@ -34,10 +33,6 @@ Public Class MessageBox
 #End Region
 
 #Region "Methods"
-
-    Public Function Response() As MessageBoxResponse
-        Return mresponse
-    End Function
 
     Private Sub SetImage(ByVal icon As MessageBoxIcon)
         Select Case icon
@@ -86,6 +81,34 @@ Public Class MessageBox
 
 #End Region
 
+#Region "Buttons"
+
+    Private Sub btnYes_Click(sender As Object, e As EventArgs) Handles btnYes.Click
+        Me.DialogResult = Windows.Forms.DialogResult.Yes
+    End Sub
+
+    Private Sub btnRetry_Click(sender As Object, e As EventArgs) Handles btnRetry.Click
+        Me.DialogResult = Windows.Forms.DialogResult.Retry
+    End Sub
+
+    Private Sub btnAbort_Click(sender As Object, e As EventArgs) Handles btnAbort.Click
+        Me.DialogResult = Windows.Forms.DialogResult.Abort
+    End Sub
+
+    Private Sub btnNo_Click(sender As Object, e As EventArgs) Handles btnNo.Click
+        Me.DialogResult = Windows.Forms.DialogResult.No
+    End Sub
+
+    Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
+        Me.DialogResult = Windows.Forms.DialogResult.OK
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.DialogResult = Windows.Forms.DialogResult.Cancel
+    End Sub
+
+#End Region
+
 #Region "MessageBox"
 
     Public Sub New(ByVal text As String, Optional ByVal title As String = "", Optional ByVal icon As MessageBoxIcon = MessageBoxIcon.None, Optional ByVal buttons As MessageBoxButtons = MessageBoxButtons.OkOnly, Optional ByVal backcolor As System.Drawing.Color = Nothing, Optional ByVal showintaskbar As Boolean = False, Optional ByVal topmost As Boolean = False)
@@ -102,7 +125,5 @@ Public Class MessageBox
     End Sub
 
 #End Region
-
-    
 
 End Class
