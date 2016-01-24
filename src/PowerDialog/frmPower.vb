@@ -8,4 +8,8 @@
         Aire.API.System.Power.Sleep()
     End Sub
 
+    Private Sub btnRestart_Click(sender As Object, e As EventArgs) Handles btnRestart.Click
+        Aire.API.System.Power.Restart()
+    End Sub
+
 End Class
