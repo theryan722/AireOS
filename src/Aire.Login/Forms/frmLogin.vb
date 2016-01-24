@@ -44,8 +44,10 @@
 #Region "Methods"
 
     Private Function VerifyFields() As Boolean
-        Dim ret As Boolean = False
-
+        Dim ret As Boolean = True
+        If txt_username.Text = "" Or Not Aire.API.User.Users.Info.CheckIfUserExists(txt_username.Text) Then
+            ret = False
+        End If
         Return ret
     End Function
 
