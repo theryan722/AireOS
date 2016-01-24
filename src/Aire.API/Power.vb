@@ -2,7 +2,7 @@
     Public Class Power
 
         Public Shared Sub Shutdown()
-
+            System.Events.Raise_SystemPowerStateChange(PowerState.Shutdown)
         End Sub
 
         Public Shared Sub Restart()
