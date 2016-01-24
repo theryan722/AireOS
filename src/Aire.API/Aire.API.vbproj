@@ -82,7 +82,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Power.vb" />
-    <Compile Include="UserInfo.vb" />
+    <Compile Include="Users.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
