@@ -138,6 +138,10 @@
 
             End Function
 
+            Public Shared Function GetSaltForUser(ByVal username As String) As String
+
+            End Function
+
             Public Shared Function GetPermissionLevelForUser(ByVal username As String) As Integer
 
             End Function
