@@ -98,6 +98,8 @@ Partial Class dlgPower
         Me.Controls.Add(Me.btnShutdown)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "dlgPower"
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Power"
         Me.TopMost = True
         Me.ResumeLayout(False)

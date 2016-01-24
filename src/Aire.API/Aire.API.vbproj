@@ -162,6 +162,9 @@
     <Compile Include="Users.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialogs\dlgLogout.resx">
+      <DependentUpon>dlgLogout.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Toast.resx">
       <DependentUpon>Toast.vb</DependentUpon>
     </EmbeddedResource>
