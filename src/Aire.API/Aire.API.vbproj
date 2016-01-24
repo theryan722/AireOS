@@ -115,6 +115,12 @@
     <Compile Include="Dialogs\dlgPower.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Dialogs\dlgRun.Designer.vb">
+      <DependentUpon>dlgRun.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgRun.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Events.vb" />
     <Compile Include="FormPosition.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
