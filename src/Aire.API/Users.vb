@@ -134,6 +134,10 @@
 
             End Function
 
+            Public Shared Function MatchPasswordForUser(ByVal username As String, ByVal password As String) As Boolean
+
+            End Function
+
             Public Shared Function GetPermissionLevelForUser(ByVal username As String) As Integer
 
             End Function
