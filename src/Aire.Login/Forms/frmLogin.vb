@@ -15,6 +15,12 @@
         Aire.API.Sys.Power.ShowPowerDialog()
     End Sub
 
+    Private Sub btnHint_Click(sender As Object, e As EventArgs) Handles btnHint.Click
+        If Aire.API.User.Users.Info.CheckIfUserExists(txt_username.Text) Then
+            Dim bb As New Aire.API.MessageBox(Aire.API.User.Users.Info.GetPasswordHintForUser(txt_username.Text), "Password Hint", API.MessageBox.MessageBoxButtons.OkOnly, API.MessageBox.MessageBoxIcon.Information)
+        End If
+    End Sub
+
 #End Region
 
 #Region "Event Handlers"
@@ -37,11 +43,21 @@
 
 #Region "Methods"
 
+    Private Function VerifyFields() As Boolean
+        Dim ret As Boolean = False
 
+        Return ret
+    End Function
 
     Private Sub InitializeUI()
         If lb_users.Items.Count > 0 Then
             btnOtherUsers.Visible = True
+        End If
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If VerifyFields() Then
+
         End If
     End Sub
 
@@ -63,16 +79,8 @@
 
 #End Region
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If txt_username.Text <> "" AndAlso txt_password.Text <> "" Then
+    
 
-        End If
-    End Sub
-
-    Private Sub btnHint_Click(sender As Object, e As EventArgs) Handles btnHint.Click
-        If Aire.API.User.Users.Info.CheckIfUserExists(txt_username.Text) Then
-            Dim bb As New Aire.API.MessageBox(Aire.API.User.Users.Info.GetPasswordHintForUser(txt_username.Text), "Password Hint", API.MessageBox.MessageBoxButtons.OkOnly, API.MessageBox.MessageBoxIcon.Information)
-        End If
-    End Sub
+    
 
 End Class
