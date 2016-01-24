@@ -108,6 +108,10 @@
 
             End Sub
 
+            Public Shared Sub Lock()
+
+            End Sub
+
         End Class
 
     End Namespace

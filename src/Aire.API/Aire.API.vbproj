@@ -164,6 +164,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Dialogs\dlgLogout.resx">
       <DependentUpon>dlgLogout.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Toast.resx">
       <DependentUpon>Toast.vb</DependentUpon>
