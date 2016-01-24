@@ -3,7 +3,7 @@
     Namespace Logging
 
         Public Class Log
-            Private Shared syslogloc As String = ""
+            Private Shared syslogloc As String = AppDomain.CurrentDomain.BaseDirectory & "\SysData\syslog.txt"
 
 #Region "Enums"
 
