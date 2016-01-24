@@ -14,11 +14,10 @@
 
 #Region "frmLogin"
 
-
+    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Aire.API.FormPosition.CenterForm(Me, frmLoginBackground)
+    End Sub
 
 #End Region
 
-    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
