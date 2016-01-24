@@ -10,6 +10,7 @@
                 General
                 MessageBox
                 System
+                Toast
             End Enum
 
 #End Region
@@ -21,6 +22,7 @@
                     Case LogSource.General
                     Case LogSource.MessageBox
                     Case LogSource.System
+                    Case LogSource.Toast
                 End Select
             End Sub
 

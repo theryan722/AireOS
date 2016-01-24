@@ -23,6 +23,14 @@
 
         End Class
 
+        Public Class Settings
+
+            Public Shared Function GetDesktopBackgroundImageLocation() As String
+
+            End Function
+
+        End Class
+
         Public Class Actions
 
             Public Shared Sub ChangePermissionLevel(ByVal pass As String, ByVal newlevel As Integer)
