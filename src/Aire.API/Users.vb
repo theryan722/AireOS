@@ -21,6 +21,10 @@
 
             End Function
 
+            Public Shared Function GetSalt() As String
+
+            End Function
+
         End Class
 
         'The user settings for the currently logged in user
