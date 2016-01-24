@@ -85,6 +85,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\dlgFile.Designer.vb">
+      <DependentUpon>dlgFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgFolder.Designer.vb">
+      <DependentUpon>dlgFolder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgFolder.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\dlgMessageBox.Designer.vb">
       <DependentUpon>dlgMessageBox.vb</DependentUpon>
     </Compile>
