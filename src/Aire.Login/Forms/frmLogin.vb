@@ -3,7 +3,13 @@
 
 #Region "UI"
 
-
+    Private Sub btn_otherusers_Click(sender As Object, e As EventArgs) Handles btn_otherusers.Click
+        If lb_users.Visible Then
+            lb_users.Hide()
+        Else
+            lb_users.Show()
+        End If
+    End Sub
 
 #End Region
 
@@ -26,5 +32,5 @@
     End Sub
 
 #End Region
-
+    
 End Class
