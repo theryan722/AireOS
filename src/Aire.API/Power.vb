@@ -10,7 +10,7 @@
         End Sub
 
         Public Shared Sub Hibernate()
-
+            System.Events.Raise_SystemPowerStateChange(PowerState.Hibernate)
         End Sub
 
         Public Shared Sub Sleep()
