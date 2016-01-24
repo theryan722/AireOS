@@ -13,7 +13,8 @@
     End Sub
 
     Private Sub btnLock_Click(sender As Object, e As EventArgs) Handles btnLock.Click
-
+        Aire.API.User.Current.Actions.Lock()
+        Me.Close()
     End Sub
 
 #End Region
