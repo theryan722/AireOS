@@ -6,7 +6,7 @@
         End Sub
 
         Public Shared Sub Restart()
-
+            System.Events.Raise_SystemPowerStateChange(PowerState.Restart)
         End Sub
 
         Public Shared Sub Hibernate()
