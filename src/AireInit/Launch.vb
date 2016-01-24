@@ -5,8 +5,7 @@
     Sub Main()
         Console.Title = "Aire OS Initialization"
         'initialization code here
-        Dim newb As New Aire.Login.frmLogin
-        newb.Show()
+        Aire.Login.Manager.DisplayInitialLogin()
     End Sub
 
 End Module

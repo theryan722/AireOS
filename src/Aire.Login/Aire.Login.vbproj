@@ -70,17 +70,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLogin.vb">
+    <Compile Include="Classes\Manager.vb" />
+    <Compile Include="Forms\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.vb">
+    <Compile Include="Forms\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoginBackground.Designer.vb">
+    <Compile Include="Forms\frmLoginBackground.Designer.vb">
       <DependentUpon>frmLoginBackground.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmLoginBackground.vb">
+    <Compile Include="Forms\frmLoginBackground.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -100,10 +101,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoginBackground.resx">
+    <EmbeddedResource Include="Forms\frmLoginBackground.resx">
       <DependentUpon>frmLoginBackground.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -124,6 +125,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aire.API\Aire.API.vbproj">
+      <Project>{8b285aed-9205-4cee-8955-c9c3c73408b9}</Project>
+      <Name>Aire.API</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
