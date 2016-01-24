@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{70F275A9-BC68-4D39-AA44-5E02984C24E6}</ProjectGuid>
+    <ProjectGuid>{FFBC9F2F-30C8-4E0D-94FD-2687147E0867}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Add_Weather.My.MyApplication</StartupObject>
-    <RootNamespace>Add_Weather</RootNamespace>
-    <AssemblyName>Add Weather</AssemblyName>
+    <StartupObject>Music.My.MyApplication</StartupObject>
+    <RootNamespace>Music</RootNamespace>
+    <AssemblyName>Music</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -20,7 +20,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Add Weather.xml</DocumentationFile>
+    <DocumentationFile>Music.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -30,7 +30,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Add Weather.xml</DocumentationFile>
+    <DocumentationFile>Music.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
