@@ -1,5 +1,7 @@
 ﻿Public Class frmPower
 
+#Region "UI"
+
     Private Sub btnShutdown_Click(sender As Object, e As EventArgs) Handles btnShutdown.Click
         Aire.API.System.Power.Shutdown()
     End Sub
@@ -15,5 +17,13 @@
     Private Sub btnHibernate_Click(sender As Object, e As EventArgs) Handles btnHibernate.Click
         Aire.API.System.Power.Hibernate()
     End Sub
+
+#End Region
+
+#Region "frmPower"
+
+
+
+#End Region
 
 End Class
