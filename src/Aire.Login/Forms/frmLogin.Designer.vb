@@ -22,21 +22,153 @@ Partial Class frmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
+        Me.btnPower = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txt_username = New System.Windows.Forms.TextBox()
+        Me.txt_password = New System.Windows.Forms.TextBox()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lb_users = New System.Windows.Forms.ListBox()
+        Me.pb_user = New System.Windows.Forms.PictureBox()
+        Me.btn_otherusers = New System.Windows.Forms.Button()
+        Me.Panel1.SuspendLayout()
+        CType(Me.pb_user, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'btnPower
+        '
+        Me.btnPower.BackgroundImage = CType(resources.GetObject("btnPower.BackgroundImage"), System.Drawing.Image)
+        Me.btnPower.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnPower.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnPower.FlatAppearance.BorderSize = 0
+        Me.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPower.Location = New System.Drawing.Point(486, 0)
+        Me.btnPower.Name = "btnPower"
+        Me.btnPower.Size = New System.Drawing.Size(32, 32)
+        Me.btnPower.TabIndex = 0
+        Me.btnPower.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.btn_otherusers)
+        Me.Panel1.Controls.Add(Me.btnPower)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 209)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(518, 32)
+        Me.Panel1.TabIndex = 1
+        '
+        'txt_username
+        '
+        Me.txt_username.Location = New System.Drawing.Point(186, 111)
+        Me.txt_username.Name = "txt_username"
+        Me.txt_username.Size = New System.Drawing.Size(193, 20)
+        Me.txt_username.TabIndex = 2
+        '
+        'txt_password
+        '
+        Me.txt_password.Location = New System.Drawing.Point(186, 137)
+        Me.txt_password.Name = "txt_password"
+        Me.txt_password.Size = New System.Drawing.Size(193, 20)
+        Me.txt_password.TabIndex = 3
+        '
+        'btnLogin
+        '
+        Me.btnLogin.Location = New System.Drawing.Point(186, 163)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(193, 23)
+        Me.btnLogin.TabIndex = 4
+        Me.btnLogin.Text = "Login"
+        Me.btnLogin.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(124, 137)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(56, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Password:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(122, 111)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(58, 13)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Username:"
+        '
+        'lb_users
+        '
+        Me.lb_users.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lb_users.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_users.FormattingEnabled = True
+        Me.lb_users.ItemHeight = 20
+        Me.lb_users.Location = New System.Drawing.Point(0, 123)
+        Me.lb_users.Name = "lb_users"
+        Me.lb_users.ScrollAlwaysVisible = True
+        Me.lb_users.Size = New System.Drawing.Size(120, 84)
+        Me.lb_users.TabIndex = 8
+        Me.lb_users.Visible = False
+        '
+        'pb_user
+        '
+        Me.pb_user.Location = New System.Drawing.Point(235, 9)
+        Me.pb_user.Name = "pb_user"
+        Me.pb_user.Size = New System.Drawing.Size(96, 96)
+        Me.pb_user.TabIndex = 9
+        Me.pb_user.TabStop = False
+        '
+        'btn_otherusers
+        '
+        Me.btn_otherusers.BackgroundImage = CType(resources.GetObject("btn_otherusers.BackgroundImage"), System.Drawing.Image)
+        Me.btn_otherusers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_otherusers.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btn_otherusers.FlatAppearance.BorderSize = 0
+        Me.btn_otherusers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_otherusers.Location = New System.Drawing.Point(0, 0)
+        Me.btn_otherusers.Name = "btn_otherusers"
+        Me.btn_otherusers.Size = New System.Drawing.Size(32, 32)
+        Me.btn_otherusers.TabIndex = 1
+        Me.btn_otherusers.UseVisualStyleBackColor = True
         '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(656, 359)
+        Me.ClientSize = New System.Drawing.Size(518, 241)
         Me.ControlBox = False
+        Me.Controls.Add(Me.pb_user)
+        Me.Controls.Add(Me.lb_users)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnLogin)
+        Me.Controls.Add(Me.txt_password)
+        Me.Controls.Add(Me.txt_username)
+        Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmLogin"
         Me.Text = "Aire OS Login"
         Me.TopMost = True
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.pb_user, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
+    Friend WithEvents btnPower As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents txt_username As System.Windows.Forms.TextBox
+    Friend WithEvents txt_password As System.Windows.Forms.TextBox
+    Friend WithEvents btnLogin As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lb_users As System.Windows.Forms.ListBox
+    Friend WithEvents pb_user As System.Windows.Forms.PictureBox
+    Friend WithEvents btn_otherusers As System.Windows.Forms.Button
 
 End Class
