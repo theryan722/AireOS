@@ -34,6 +34,10 @@ Public Class MessageBox
 
 #Region "Methods"
 
+    Public Sub SetFont(ByVal font As System.Drawing.Font)
+        TextBox1.Font = font
+    End Sub
+
     Private Sub SetImage(ByVal icon As MessageBoxIcon)
         Select Case icon
             Case MessageBoxIcon.Information
