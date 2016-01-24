@@ -12,4 +12,8 @@
         Aire.API.System.Power.Restart()
     End Sub
 
+    Private Sub btnHibernate_Click(sender As Object, e As EventArgs) Handles btnHibernate.Click
+        Aire.API.System.Power.Hibernate()
+    End Sub
+
 End Class
