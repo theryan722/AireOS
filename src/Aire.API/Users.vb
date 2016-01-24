@@ -25,9 +25,23 @@
 
         Public Class Settings
 
-            Public Shared Function GetDesktopBackgroundImageLocation() As String
+            Public Shared Property DesktopBackgroundImageLocation() As String
+                Get
 
-            End Function
+                End Get
+                Set(value As String)
+
+                End Set
+            End Property
+
+            Public Shared Property LogNotificationText() As Boolean
+                Get
+
+                End Get
+                Set(value As Boolean)
+
+                End Set
+            End Property
 
         End Class
 
