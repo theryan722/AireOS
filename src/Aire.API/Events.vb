@@ -23,6 +23,16 @@
 
         Public Shared Sub Raise_SystemPowerStateChange(ByVal change As PowerState)
             RaiseEvent SystemPowerStateChange(change)
+            Select Case change
+                Case PowerState.Hibernate
+                    Aire.API.Sys.Logging.Log.Write("System is hibernating.")
+                Case PowerState.Restart
+                    Aire.API.Sys.Logging.Log.Write("System is restarting.")
+                Case PowerState.Shutdown
+                    Aire.API.Sys.Logging.Log.Write("System is shutting down.")
+                Case PowerState.Sleep
+                    Aire.API.Sys.Logging.Log.Write("System is sleeping.")
+            End Select
         End Sub
 
 #End Region
