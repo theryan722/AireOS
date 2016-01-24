@@ -38,6 +38,8 @@
 
 #Region "Methods"
 
+
+
     Private Sub InitializeUI()
         If lb_users.Items.Count > 0 Then
             btnOtherUsers.Visible = True
@@ -63,6 +65,8 @@
 #End Region
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If txt_username.Text <> "" AndAlso txt_password.Text <> "" Then
 
+        End If
     End Sub
 End Class
