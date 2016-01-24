@@ -24,7 +24,7 @@
 
 #End Region
 
-#Region "frmPower"
+#Region "dlgPower"
 
     Private Sub dlgPower_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Aire.API.FormPosition.CenterForm(Me)
