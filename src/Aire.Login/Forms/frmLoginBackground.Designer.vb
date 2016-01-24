@@ -32,7 +32,6 @@ Partial Class frmLoginBackground
         Me.ClientSize = New System.Drawing.Size(284, 261)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmLoginBackground"
-        Me.Text = "frmLoginBackground"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
