@@ -30,9 +30,11 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(656, 359)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.ControlBox = False
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmLogin"
         Me.Text = "Aire OS"
+        Me.TopMost = True
         Me.ResumeLayout(False)
 
     End Sub
