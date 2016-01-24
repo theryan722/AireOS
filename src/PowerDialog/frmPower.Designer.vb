@@ -99,6 +99,7 @@ Partial Class frmPower
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmPower"
         Me.Text = "Power"
+        Me.TopMost = True
         Me.ResumeLayout(False)
 
     End Sub
