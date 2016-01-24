@@ -12,8 +12,7 @@
     End Sub
 
     Private Sub btnPower_Click(sender As Object, e As EventArgs) Handles btnPower.Click
-        Dim newb As New PowerDialog.frmPower
-        newb.ShowDialog()
+        Aire.API.Sys.Power.ShowPowerDialog()
     End Sub
 
 #End Region

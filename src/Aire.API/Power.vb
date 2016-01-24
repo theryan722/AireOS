@@ -2,6 +2,11 @@
 
     Public Class Power
 
+        Public Shared Sub ShowPowerDialog()
+            Dim newb As New dlgPower
+            newb.ShowDialog()
+        End Sub
+
         Public Shared Sub Shutdown()
             Sys.Events.Raise_SystemPowerStateChange(Events.PowerState.Shutdown)
         End Sub
