@@ -14,7 +14,7 @@
         End Sub
 
         Public Shared Sub Sleep()
-
+            System.Events.Raise_SystemPowerStateChange(PowerState.Sleep)
         End Sub
 
     End Class
