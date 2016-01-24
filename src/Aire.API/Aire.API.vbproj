@@ -159,6 +159,7 @@
     </Compile>
     <Compile Include="Notifications.vb" />
     <Compile Include="Power.vb" />
+    <Compile Include="ProcessManager.vb" />
     <Compile Include="Users.vb" />
   </ItemGroup>
   <ItemGroup>
