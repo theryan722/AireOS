@@ -17,19 +17,16 @@
 
             End Function
 
-            Public Shared Function GetIfHidden() As Boolean
-
-            End Function
-
         End Class
 
+        'The user settings for the currently logged in user
         Public Class Settings
 
-            Public Shared Property DesktopBackgroundImageLocation() As String
+            Public Shared Property DesktopBackgroundImage() As System.Drawing.Image
                 Get
 
                 End Get
-                Set(value As String)
+                Set(value As System.Drawing.Image)
 
                 End Set
             End Property
@@ -39,6 +36,42 @@
 
                 End Get
                 Set(value As Boolean)
+
+                End Set
+            End Property
+
+            Public Shared Property IsHidden() As Boolean
+                Get
+
+                End Get
+                Set(value As Boolean)
+
+                End Set
+            End Property
+
+            Public Shared Property ProfilePicture() As System.Drawing.Image
+                Get
+
+                End Get
+                Set(value As System.Drawing.Image)
+
+                End Set
+            End Property
+
+            Public Shared Property ConfirmShutdown() As Boolean
+                Get
+
+                End Get
+                Set(value As Boolean)
+
+                End Set
+            End Property
+
+            Public Shared Property PasswordHint() As String
+                Get
+
+                End Get
+                Set(value As String)
 
                 End Set
             End Property
