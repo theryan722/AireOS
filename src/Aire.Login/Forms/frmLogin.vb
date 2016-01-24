@@ -72,7 +72,6 @@
     Private Sub btnHint_Click(sender As Object, e As EventArgs) Handles btnHint.Click
         If Aire.API.User.Users.Info.CheckIfUserExists(txt_username.Text) Then
             Dim bb As New Aire.API.MessageBox(Aire.API.User.Users.Info.GetPasswordHintForUser(txt_username.Text), "Password Hint", API.MessageBox.MessageBoxButtons.OkOnly, API.MessageBox.MessageBoxIcon.Information)
-            bb.ShowDialog()
         End If
     End Sub
 

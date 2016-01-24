@@ -127,6 +127,7 @@ Public Class MessageBox
         Me.ShowInTaskbar = showintaskbar
         Me.TopMost = topmost
         Sys.Logging.Log.Write("MessageBox - TITLE: " & title & " , TEXT: " & text, Sys.Logging.Log.LogSource.MessageBox)
+        Me.ShowDialog()
     End Sub
 
 #End Region
