@@ -1,3 +1,3 @@
-﻿Public Class dlgRun
+﻿Friend Class dlgRun
 
 End Class

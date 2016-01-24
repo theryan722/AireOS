@@ -1,3 +1,3 @@
-﻿Public Class dlgVolumeStatus
+﻿Friend Class dlgVolumeStatus
 
 End Class

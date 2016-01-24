@@ -1,3 +1,3 @@
-﻿Public Class dlgLogout
+﻿Friend Class dlgLogout
 
 End Class

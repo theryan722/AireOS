@@ -1,3 +1,3 @@
-﻿Public Class dlgFile
+﻿Friend Class dlgFile
 
 End Class

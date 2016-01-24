@@ -1,3 +1,3 @@
-﻿Public Class dlgMessageBox
+﻿Friend Class dlgMessageBox
 
 End Class

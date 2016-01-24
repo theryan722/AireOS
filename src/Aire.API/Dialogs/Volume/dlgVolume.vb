@@ -1,3 +1,3 @@
-﻿Public Class dlgVolume
+﻿Friend Class dlgVolume
 
 End Class

@@ -1,3 +1,3 @@
-﻿Public Class dlgFolder
+﻿Friend Class dlgFolder
 
 End Class

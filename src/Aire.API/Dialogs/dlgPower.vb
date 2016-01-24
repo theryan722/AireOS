@@ -1,4 +1,4 @@
-﻿Public Class dlgPower
+﻿Friend Class dlgPower
 
 #Region "UI"
 
