@@ -124,6 +124,7 @@ Partial Class MessageBox
         Me.TextBox1.Location = New System.Drawing.Point(48, 0)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox1.Size = New System.Drawing.Size(406, 87)
         Me.TextBox1.TabIndex = 2
         '
@@ -160,6 +161,7 @@ Partial Class MessageBox
         Me.Name = "MessageBox"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.TopMost = True
         Me.pnl_buttons.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

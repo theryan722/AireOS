@@ -38,22 +38,22 @@ Public Class MessageBox
         Select Case icon
             Case MessageBoxIcon.Information
                 pnl_picture.Visible = True
-                pnl_picture.BackgroundImage = My.Resources.notify_info
+                PictureBox1.BackgroundImage = My.Resources.notify_info
             Case MessageBoxIcon.Warning
                 pnl_picture.Visible = True
-                pnl_picture.BackgroundImage = My.Resources.notify_warning
+                PictureBox1.BackgroundImage = My.Resources.notify_warning
             Case MessageBoxIcon.Security
                 pnl_picture.Visible = True
-                pnl_picture.BackgroundImage = My.Resources.notify_security
+                PictureBox1.BackgroundImage = My.Resources.notify_security
             Case MessageBoxIcon.[Stop]
                 pnl_picture.Visible = True
-                pnl_picture.BackgroundImage = My.Resources.notify_stop
+                PictureBox1.BackgroundImage = My.Resources.notify_stop
             Case MessageBoxIcon.Critical
                 pnl_picture.Visible = True
-                pnl_picture.BackgroundImage = My.Resources.notify_critical
+                PictureBox1.BackgroundImage = My.Resources.notify_critical
             Case MessageBoxIcon.Question
                 pnl_picture.Visible = True
-                pnl_picture.BackgroundImage = My.Resources.notify_question
+                PictureBox1.BackgroundImage = My.Resources.notify_question
             Case MessageBoxIcon.None
                 pnl_picture.Visible = False
         End Select
@@ -111,7 +111,7 @@ Public Class MessageBox
 
 #Region "MessageBox"
 
-    Public Sub New(ByVal text As String, Optional ByVal title As String = "", Optional ByVal icon As MessageBoxIcon = MessageBoxIcon.None, Optional ByVal buttons As MessageBoxButtons = MessageBoxButtons.OkOnly, Optional ByVal backcolor As System.Drawing.Color = Nothing, Optional ByVal showintaskbar As Boolean = False, Optional ByVal topmost As Boolean = False)
+    Public Sub New(ByVal text As String, Optional ByVal title As String = "", Optional ByVal buttons As MessageBoxButtons = MessageBoxButtons.OkOnly, Optional ByVal icon As MessageBoxIcon = MessageBoxIcon.None, Optional ByVal backcolor As System.Drawing.Color = Nothing, Optional ByVal showintaskbar As Boolean = False, Optional ByVal topmost As Boolean = True)
         InitializeComponent()
         Dim bcolor As Color = If(backcolor = Nothing, SystemColors.Control, backcolor)
         TextBox1.BackColor = bcolor
