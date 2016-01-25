@@ -53,6 +53,34 @@ Namespace Databases
 
 #End Region
 
+#Region "Get"
+
+        Public Shared Function GetPassword(ByVal username As String) As String
+
+        End Function
+
+        Public Shared Function GetSalt(ByVal username As String) As String
+
+        End Function
+
+        Public Shared Function GetDataStorageLoc(ByVal username As String) As String
+
+        End Function
+
+        Public Shared Function GetHidden(ByVal username As String) As String
+
+        End Function
+
+        Public Shared Function GetPasswordHint(ByVal username As String) As String
+
+        End Function
+
+        Public Shared Function GetPermissionLevel(ByVal username As String) As String
+
+        End Function
+
+#End Region
+
     End Class
 
 End Namespace
