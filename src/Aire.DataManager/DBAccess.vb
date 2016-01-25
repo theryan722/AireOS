@@ -47,6 +47,10 @@ Namespace Databases
             DBConnection.Update(username, "PASSWORDHINT", passwordhint)
         End Sub
 
+        Public Shared Sub ModifyPermissionLevel(ByVal username As String, ByVal permissionlevel As String)
+            DBConnection.Update(username, "PERMISSIONLEVEL", permissionlevel)
+        End Sub
+
 #End Region
 
     End Class
