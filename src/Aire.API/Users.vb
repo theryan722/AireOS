@@ -133,7 +133,7 @@
         Public Class Info
 
             Public Shared Function CheckIfUserExists(ByVal username As String) As Boolean
-
+                Return Aire.DataManager.Databases.UserData.GetIfUserExists(username)
             End Function
 
             Public Shared Function GetPasswordHintForUser(ByVal username As String) As String
