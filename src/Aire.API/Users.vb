@@ -10,7 +10,7 @@
             End Function
 
             Public Shared Function GetPermissionLevel() As Integer
-                Return Aire.DataManager.Databases.UserData.GetPermissionLevel(GetUsername)
+                Return CInt(Aire.DataManager.Databases.UserData.GetPermissionLevel(GetUsername))
             End Function
 
             Public Shared Function GetDataStorageLocation() As String
