@@ -132,6 +132,16 @@
 
         Public Class Info
 
+            Public Shared Function GetAllUsers() As List(Of String)
+                Dim ret As New List(Of String)
+                For Each item As String In Aire.DataManager.Databases.UserData.GetAllUsers()
+                    If Not GetIfUserIsHidden(item) Then
+                        ret.Add(item)
+                    End If
+                Next
+                Return ret
+            End Function
+
             Public Shared Function GetIfUserExists(ByVal username As String) As Boolean
                 Return Aire.DataManager.Databases.UserData.GetIfUserExists(username)
             End Function
