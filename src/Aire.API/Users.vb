@@ -99,6 +99,10 @@
 
             End Sub
 
+            Public Shared Sub SetSalt(ByVal salt As String)
+
+            End Sub
+
             Public Shared Sub SetPasswordHint(ByVal hint As String)
 
             End Sub
