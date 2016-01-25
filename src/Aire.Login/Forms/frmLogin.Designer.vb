@@ -36,8 +36,10 @@ Partial Class frmLogin
         Me.pb_user = New System.Windows.Forms.PictureBox()
         Me.btnHint = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.pb_user, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnPower
@@ -123,11 +125,11 @@ Partial Class frmLogin
         '
         'lb_users
         '
-        Me.lb_users.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lb_users.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.lb_users.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb_users.FormattingEnabled = True
         Me.lb_users.ItemHeight = 20
-        Me.lb_users.Location = New System.Drawing.Point(0, 123)
+        Me.lb_users.Location = New System.Drawing.Point(0, 125)
         Me.lb_users.Name = "lb_users"
         Me.lb_users.ScrollAlwaysVisible = True
         Me.lb_users.Size = New System.Drawing.Size(120, 84)
@@ -152,6 +154,15 @@ Partial Class frmLogin
         Me.btnHint.UseVisualStyleBackColor = True
         Me.btnHint.Visible = False
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.lb_users)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(120, 209)
+        Me.Panel2.TabIndex = 11
+        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -159,9 +170,9 @@ Partial Class frmLogin
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(518, 241)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.btnHint)
         Me.Controls.Add(Me.pb_user)
-        Me.Controls.Add(Me.lb_users)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnLogin)
@@ -174,6 +185,7 @@ Partial Class frmLogin
         Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         CType(Me.pb_user, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -190,5 +202,6 @@ Partial Class frmLogin
     Friend WithEvents btnOtherUsers As System.Windows.Forms.Button
     Friend WithEvents btnHint As System.Windows.Forms.Button
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 
 End Class

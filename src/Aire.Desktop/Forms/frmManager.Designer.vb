@@ -30,6 +30,7 @@ Partial Class frmManager
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1022, 714)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.IsMdiContainer = True
         Me.Name = "frmManager"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
