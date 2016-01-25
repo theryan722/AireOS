@@ -83,15 +83,15 @@
                 newb.ShowDialog()
             End Sub
 
-            Public Shared Sub ChangePermissionLevel(ByVal pass As String, ByVal newlevel As Integer)
+            Public Shared Sub SetPermissionLevel(ByVal pass As String, ByVal newlevel As Integer)
 
             End Sub
 
-            Public Shared Sub ChangeUsername(ByVal newusername As String)
+            Public Shared Sub SetUsername(ByVal newusername As String)
 
             End Sub
 
-            Public Shared Sub ChangePassword(ByVal curpass As String, ByVal newpass As String)
+            Public Shared Sub SetPassword(ByVal curpass As String, ByVal newpass As String)
 
             End Sub
 
