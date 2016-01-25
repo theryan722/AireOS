@@ -18,4 +18,12 @@ Namespace Cryptography
 
     End Class
 
+    Public Class Text
+
+        Public Shared Function HashText(ByVal text As String) As String
+            Return HashString(text)
+        End Function
+
+    End Class
+
 End Namespace

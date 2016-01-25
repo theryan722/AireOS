@@ -162,7 +162,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Notifications.vb" />
-    <Compile Include="Passwords.vb" />
+    <Compile Include="CryptographyManager.vb" />
     <Compile Include="Power.vb" />
     <Compile Include="ProcessManager.vb" />
     <Compile Include="Users.vb" />
