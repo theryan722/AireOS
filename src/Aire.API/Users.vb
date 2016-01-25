@@ -100,7 +100,7 @@
             End Sub
 
             Public Shared Sub SetSalt(ByVal salt As String)
-
+                Aire.DataManager.Databases.UserData.ModifySalt(Current.Info.GetUsername, salt)
             End Sub
 
             Public Shared Sub SetPasswordHint(ByVal hint As String)
