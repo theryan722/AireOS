@@ -108,7 +108,7 @@
             End Sub
 
             Public Shared Function MatchPassword(ByVal pass As String) As Boolean
-
+                Return Cryptography.Passwords.CheckPassword(pass + Current.Info.GetSalt, Aire.DataManager.Databases.UserData.GetPassword(Current.Info.GetUsername))
             End Function
 
             Public Shared Sub Logout()
