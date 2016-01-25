@@ -3,6 +3,10 @@
 
 #Region "UI"
 
+    Private Sub lb_users_LostFocus(sender As Object, e As EventArgs) Handles lb_users.LostFocus
+        lb_users.Hide()
+    End Sub
+
     Private Sub lb_users_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lb_users.SelectedIndexChanged
         If lb_users.SelectedIndex <> -1 Then
             txt_username.Text = lb_users.SelectedItem
