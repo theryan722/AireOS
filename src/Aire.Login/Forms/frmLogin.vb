@@ -79,7 +79,6 @@
         If VerifyFields() AndAlso VerifyPassword(txt_username.Text, txt_password.Text) Then
             'login code to come once desktop is created
         Else
-            Dim cc As New Aire.API.Toast("hi i am test")
             Dim bb As New Aire.API.MessageBox("Invalid username or password, or the fields were not properly filled out.", "Error", API.MessageBox.MessageBoxButtons.OkOnly, API.MessageBox.MessageBoxIcon.Warning)
         End If
     End Sub
