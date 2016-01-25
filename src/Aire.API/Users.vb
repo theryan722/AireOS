@@ -104,7 +104,7 @@
             End Sub
 
             Public Shared Sub SetPasswordHint(ByVal hint As String)
-
+                Aire.DataManager.Databases.UserData.ModifyPasswordHint(Current.Info.GetUsername, hint)
             End Sub
 
             Public Shared Function MatchPassword(ByVal pass As String) As Boolean
