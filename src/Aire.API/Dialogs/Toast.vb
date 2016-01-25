@@ -3,6 +3,7 @@ Imports System.Windows.Forms
 
 Public Class Toast
     Private Shared openForms As New List(Of Toast)
+
 #Region "UI"
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
