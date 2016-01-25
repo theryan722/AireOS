@@ -5,12 +5,6 @@ Namespace Databases
 
     Public Class UserData
 
-#Region "Helper"
-
-
-
-#End Region
-
 #Region "Add/Remove"
 
         Public Shared Sub AddUser(ByVal username As String, ByVal password As String, ByVal salt As String, ByVal datastorageloc As String, ByVal hidden As String, ByVal passwordhint As String, ByVal permissionlevel As String)
@@ -66,7 +60,16 @@ Namespace Databases
 #Region "Get"
 
         Public Shared Function GetPassword(ByVal username As String) As String
-
+            Try
+                Dim result As String
+                Dim query As [String] = "SELECT PASSWORD FROM USERS WHERE USERNAME = '" & username & "';"
+                result = DBConnection.ExecuteScalar(query)
+                Return result
+            Catch fail As Exception
+                Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
+                [error] += fail.Message.ToString() + vbLf & vbLf
+                MessageBox.Show([error])
+            End Try
         End Function
 
         Public Shared Function GetSalt(ByVal username As String) As String
