@@ -157,6 +157,11 @@
         End Class
 
         Public Class Actions
+
+            Public Shared Sub LoginUser(ByVal username As String, ByVal password As String)
+
+            End Sub
+
             ' + Aire.DataManager.Databases.UserData.GetSalt(username)
             Public Shared Function MatchPasswordForUser(ByVal username As String, ByVal password As String) As Boolean
                 Return Cryptography.Passwords.CheckPassword(password, Aire.DataManager.Databases.UserData.GetPassword(username))
