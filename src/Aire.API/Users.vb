@@ -157,7 +157,7 @@
             End Function
 
             Public Shared Function IsALoggedInUser() As Boolean
-
+                Return If(Aire.DataManager.TempData.LoggedInUser <> "", True, False)
             End Function
 
         End Class
