@@ -88,8 +88,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBAccess.vb" />
-    <Compile Include="DBUserData.vb" />
+    <Compile Include="Databases\UserData\DBUserData_Access.vb" />
+    <Compile Include="Databases\UserData\DBUserData.vb" />
     <Compile Include="Helper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
