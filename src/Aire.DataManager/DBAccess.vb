@@ -31,6 +31,10 @@ Namespace Databases
             DBConnection.Update(username, """PASSWORD""", password)
         End Sub
 
+        Public Shared Sub ModifySalt(ByVal username As String, ByVal salt As String)
+            DBConnection.Update(username, "SALT", salt)
+        End Sub
+
 #End Region
 
     End Class
