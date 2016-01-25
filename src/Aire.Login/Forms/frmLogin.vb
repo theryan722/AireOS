@@ -57,6 +57,10 @@
         Return ret
     End Function
 
+    Private Function VerifyPassword(ByVal user As String, ByVal pass As String) As Boolean
+        Return Aire.API.User.Users.Actions.MatchPasswordForUser(user, pass)
+    End Function
+
     Private Sub InitializeUI()
         lb_users.Items.Clear()
         For Each item As String In Aire.API.User.Users.Info.GetAllUsers
