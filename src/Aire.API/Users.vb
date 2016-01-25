@@ -89,10 +89,6 @@
                 End If
             End Sub
 
-            Public Shared Sub SetUsername(ByVal newusername As String)
-
-            End Sub
-
             Public Shared Sub SetPassword(ByVal curpass As String, ByVal newpass As String)
 
             End Sub
