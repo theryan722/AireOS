@@ -25,10 +25,6 @@
                 Return Aire.DataManager.Databases.UserData.GetSalt(GetUsername)
             End Function
 
-            Public Shared Function GetID() As Integer
-
-            End Function
-
         End Class
 
         'The user settings for the currently logged in user
