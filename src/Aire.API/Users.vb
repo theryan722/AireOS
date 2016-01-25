@@ -153,7 +153,7 @@
             End Function
 
             Public Shared Function CheckIfUserIsHidden(ByVal username As String) As Boolean
-
+                Return If(Aire.DataManager.Databases.UserData.GetHidden(username) = "YES", True, False)
             End Function
 
             Public Shared Function IsALoggedInUser() As Boolean
