@@ -14,7 +14,7 @@
             End Function
 
             Public Shared Function GetDataStorageLocation() As String
-
+                Return Aire.DataManager.Databases.UserData.GetDataStorageLoc(GetUsername)
             End Function
 
             Public Shared Function GetLogLocation() As String
