@@ -7,11 +7,10 @@ Namespace Databases
 
 #Region "Add/Remove"
 
-        Public Shared Sub AddUser(ByVal username As String, ByVal password As String, ByVal salt As String, ByVal datastorageloc As String, ByVal hidden As String, ByVal passwordhint As String, ByVal permissionlevel As String)
+        Public Shared Sub AddUser(ByVal username As String, ByVal password As String, ByVal datastorageloc As String, ByVal hidden As String, ByVal passwordhint As String, ByVal permissionlevel As String)
             Dim data As New Dictionary(Of [String], [String])()
             data.Add("USERNAME", username)
             data.Add("PASSWORD", password)
-            data.Add("SALT", salt)
             data.Add("DATASTORAGELOC", datastorageloc)
             data.Add("HIDDEN", hidden)
             data.Add("PASSWORDHINT", passwordhint)
@@ -33,10 +32,6 @@ Namespace Databases
 
         Public Shared Sub ModifyPassword(ByVal username As String, ByVal password As String)
             DBUserData.Update(username, """PASSWORD""", password)
-        End Sub
-
-        Public Shared Sub ModifySalt(ByVal username As String, ByVal salt As String)
-            DBUserData.Update(username, "SALT", salt)
         End Sub
 
         Public Shared Sub ModifyDataStorageLoc(ByVal username As String, ByVal datastorageloc As String)
@@ -95,20 +90,6 @@ Namespace Databases
             Try
                 Dim result As String
                 Dim query As [String] = "SELECT PASSWORD FROM USERS WHERE USERNAME = '" & username & "';"
-                result = DBUserData.ExecuteScalar(query)
-                Return result
-            Catch ex As Exception
-                Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
-                [error] += ex.Message.ToString() + vbLf & vbLf
-                MessageBox.Show([error])
-                Return Nothing
-            End Try
-        End Function
-
-        Public Shared Function GetSalt(ByVal username As String) As String
-            Try
-                Dim result As String
-                Dim query As [String] = "SELECT SALT FROM USERS WHERE USERNAME = '" & username & "';"
                 result = DBUserData.ExecuteScalar(query)
                 Return result
             Catch ex As Exception

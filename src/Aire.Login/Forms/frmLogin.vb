@@ -73,7 +73,8 @@
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If VerifyFields() AndAlso VerifyPassword(txt_username.Text, txt_password.Text) Then
-
+        Else
+            Dim bb As New Aire.API.MessageBox("")
         End If
     End Sub
 

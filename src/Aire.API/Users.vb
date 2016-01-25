@@ -21,10 +21,6 @@
                 Return Aire.DataManager.Databases.UserData.GetDataStorageLoc(GetUsername) & "/Data/log.txt"
             End Function
 
-            Public Shared Function GetSalt() As String
-                Return Aire.DataManager.Databases.UserData.GetSalt(GetUsername)
-            End Function
-
             Public Shared Function GetIfHidden() As Boolean
                 Return If(Aire.DataManager.Databases.UserData.GetHidden(GetUsername) = "YES", True, False)
             End Function
@@ -99,16 +95,12 @@
                 Aire.DataManager.Databases.UserData.ModifyHidden(Current.Info.GetUsername, hidden)
             End Sub
 
-            Public Shared Sub SetSalt(ByVal salt As String)
-                Aire.DataManager.Databases.UserData.ModifySalt(Current.Info.GetUsername, salt)
-            End Sub
-
             Public Shared Sub SetPasswordHint(ByVal hint As String)
                 Aire.DataManager.Databases.UserData.ModifyPasswordHint(Current.Info.GetUsername, hint)
             End Sub
 
             Public Shared Function MatchPassword(ByVal pass As String) As Boolean
-                Return Cryptography.Passwords.CheckPassword(pass + Current.Info.GetSalt, Aire.DataManager.Databases.UserData.GetPassword(Current.Info.GetUsername))
+                Return Cryptography.Passwords.CheckPassword(pass, Aire.DataManager.Databases.UserData.GetPassword(Current.Info.GetUsername))
             End Function
 
             Public Shared Sub LogoutUser()
@@ -150,10 +142,6 @@
                 Return Aire.DataManager.Databases.UserData.GetPasswordHint(username)
             End Function
 
-            Public Shared Function GetSaltForUser(ByVal username As String) As String
-                Return Aire.DataManager.Databases.UserData.GetSalt(username)
-            End Function
-
             Public Shared Function GetPermissionLevelForUser(ByVal username As String) As Integer
                 Return CInt(Aire.DataManager.Databases.UserData.GetPermissionLevel(username))
             End Function
@@ -176,7 +164,7 @@
 
             Public Shared Sub CreateUser(ByVal username As String, ByVal password As String, ByVal salt As String, ByVal datastorageloc As String, ByVal hidden As Boolean, ByVal passwordhint As String, ByVal permissionlevel As Integer)
                 Dim hid As String = If(hidden, "YES", "NO")
-                Aire.DataManager.Databases.UserData.AddUser(username, Cryptography.Passwords.HashPassword(password, salt), salt, datastorageloc, hid, passwordhint, CInt(permissionlevel))
+                Aire.DataManager.Databases.UserData.AddUser(username, Cryptography.Passwords.HashPassword(password, salt), datastorageloc, hid, passwordhint, CInt(permissionlevel))
             End Sub
 
             Public Shared Sub RemoveUser(ByVal username As String)
