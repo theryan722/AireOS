@@ -141,7 +141,7 @@
             End Function
 
             Public Shared Function MatchPasswordForUser(ByVal username As String, ByVal password As String) As Boolean
-
+                Return Cryptography.Passwords.CheckPassword(password + Aire.DataManager.Databases.UserData.GetSalt(username), Aire.DataManager.Databases.UserData.GetPassword(username))
             End Function
 
             Public Shared Function GetSaltForUser(ByVal username As String) As String
