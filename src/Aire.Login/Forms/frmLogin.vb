@@ -10,6 +10,8 @@
     Private Sub lb_users_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lb_users.SelectedIndexChanged
         If lb_users.SelectedIndex <> -1 Then
             txt_username.Text = lb_users.SelectedItem
+            txt_password.Clear()
+            lb_users.Hide()
         End If
     End Sub
 
