@@ -52,6 +52,10 @@
     End Function
 
     Private Sub InitializeUI()
+        lb_users.Items.Clear()
+        For Each item As String In Aire.API.User.Users.Info.GetAllUsers
+            lb_users.Items.Add(item)
+        Next
         If lb_users.Items.Count > 0 Then
             btnOtherUsers.Visible = True
         End If
