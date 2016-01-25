@@ -25,6 +25,10 @@
                 Return Aire.DataManager.Databases.UserData.GetSalt(GetUsername)
             End Function
 
+            Public Shared Function GetIfHidden() As Boolean
+                Return If(Aire.DataManager.Databases.UserData.GetHidden(GetUsername) = "YES", True, False)
+            End Function
+
         End Class
 
         'The user settings for the currently logged in user
