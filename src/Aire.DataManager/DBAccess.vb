@@ -39,6 +39,10 @@ Namespace Databases
             DBConnection.Update(username, "DATASTORAGELOC", datastorageloc)
         End Sub
 
+        Public Shared Sub ModifyHidden(ByVal username As String, ByVal hidden As String)
+            DBConnection.Update(username, "HIDDEN", hidden)
+        End Sub
+
 #End Region
 
     End Class
