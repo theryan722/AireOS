@@ -34,6 +34,7 @@ Partial Class Toast
         '
         'pnl_top
         '
+        Me.pnl_top.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.pnl_top.Controls.Add(Me.lblTitle)
         Me.pnl_top.Controls.Add(Me.btnClose)
         Me.pnl_top.Dock = System.Windows.Forms.DockStyle.Top
@@ -66,7 +67,7 @@ Partial Class Toast
         '
         'TextBox1
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox1.Location = New System.Drawing.Point(0, 16)
         Me.TextBox1.Multiline = True
@@ -85,6 +86,7 @@ Partial Class Toast
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(362, 70)
+        Me.ControlBox = False
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.pnl_top)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

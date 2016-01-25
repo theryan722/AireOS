@@ -16,7 +16,7 @@ Public Class Toast
 
     Public Sub New(ByVal text As String, Optional ByVal duration As Integer = 2500, Optional ByVal title As String = "", Optional ByVal backcolor As System.Drawing.Color = Nothing)
         InitializeComponent()
-        Dim bcolor As Color = If(backcolor = Nothing, SystemColors.ActiveCaption, backcolor)
+        Dim bcolor As Color = If(backcolor = Nothing, SystemColors.ActiveBorder, backcolor)
         Me.TextBox1.BackColor = bcolor
         Me.pnl_top.BackColor = bcolor
         Me.TextBox1.Text = text
