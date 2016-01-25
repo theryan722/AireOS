@@ -5,7 +5,6 @@ Namespace Databases
 
     Public Class UserData
 
-
         Public Shared Sub AddUser(ByVal username As String, ByVal password As String, ByVal salt As String, ByVal datastorageloc As String, ByVal hidden As String, ByVal passwordhint As String, ByVal permissionlevel As String)
             Dim data As New Dictionary(Of [String], [String])()
             data.Add("USERNAME", username)
@@ -23,8 +22,16 @@ Namespace Databases
         End Sub
 
         Public Shared Sub RemoveUser(ByVal username As String)
-
+            DBConnection.Delete(username)
         End Sub
+
+#Region "Modify"
+
+        Public Shared Sub ModifyPassword(ByVal username As String, ByVal password As String)
+            DBConnection.Update(username, """PASSWORD""", password)
+        End Sub
+
+#End Region
 
     End Class
 

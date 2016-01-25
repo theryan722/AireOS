@@ -85,7 +85,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBTest.vb" />
     <Compile Include="Dialogs\dlgFile.Designer.vb">
       <DependentUpon>dlgFile.vb</DependentUpon>
     </Compile>

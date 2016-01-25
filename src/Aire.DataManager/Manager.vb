@@ -65,42 +65,65 @@ Friend Class DBConnection
         Return ""
     End Function
 
-    ''' <summary>
-    '''     Allows the programmer to easily update rows in the DB.
-    ''' </summary>
-    ''' <param name="tableName">The table to update.</param>
-    ''' <param name="data">A dictionary containing Column names and their new values.</param>
-    ''' <param name="where">The where clause for the update statement.</param>
-    ''' <returns>A boolean true or false to signify success or failure.</returns>
-    Public Shared Function Update(tableName As [String], data As Dictionary(Of [String], [String]), where As [String]) As Boolean
-        Dim vals As [String] = ""
+    Public Shared Function Update(ByVal username As String, ByVal item As String, ByVal replacewith As String) As Boolean
+        Dim exec As String = "UPDATE USERS SET item = '" & replacewith & "' WHERE USERNAME = '" & username & "'"
+
         Dim returnCode As [Boolean] = True
-        If data.Count >= 1 Then
-            For Each val As KeyValuePair(Of [String], [String]) In data
-                vals += [String].Format(" {0} = '{1}',", val.Key.ToString(), val.Value.ToString())
-            Next
-            vals = vals.Substring(0, vals.Length - 1)
-        End If
         Try
-            ExecuteNonQuery([String].Format("update {0} set {1} where {2};", tableName, vals, where))
+            ExecuteNonQuery(exec)
         Catch
             returnCode = False
         End Try
         Return returnCode
     End Function
 
-    ''' <summary>
-    '''     Allows the programmer to easily delete rows from the DB.
-    ''' </summary>
-    ''' <param name="tableName">The table from which to delete.</param>
-    ''' <param name="where">The where clause for the delete.</param>
-    ''' <returns>A boolean true or false to signify success or failure.</returns>
-    Public Shared Function Delete(tableName As [String], where As [String]) As Boolean
+    ' ''' <summary>
+    ' '''     Allows the programmer to easily update rows in the DB.
+    ' ''' </summary>
+    ' ''' <param name="tableName">The table to update.</param>
+    ' ''' <param name="data">A dictionary containing Column names and their new values.</param>
+    ' ''' <param name="where">The where clause for the update statement.</param>
+    ' ''' <returns>A boolean true or false to signify success or failure.</returns>
+    'Public Shared Function Update(tableName As [String], data As Dictionary(Of [String], [String]), where As [String]) As Boolean
+    '    Dim vals As [String] = ""
+    '    Dim returnCode As [Boolean] = True
+    '    If data.Count >= 1 Then
+    '        For Each val As KeyValuePair(Of [String], [String]) In data
+    '            vals += [String].Format(" {0} = '{1}',", val.Key.ToString(), val.Value.ToString())
+    '        Next
+    '        vals = vals.Substring(0, vals.Length - 1)
+    '    End If
+    '    Try
+    '        ExecuteNonQuery([String].Format("update {0} set {1} where {2};", tableName, vals, where))
+    '    Catch
+    '        returnCode = False
+    '    End Try
+    '    Return returnCode
+    'End Function
+
+    ' ''' <summary>
+    ' '''     Allows the programmer to easily delete rows from the DB.
+    ' ''' </summary>
+    ' ''' <param name="tableName">The table from which to delete.</param>
+    ' ''' <param name="where">The where clause for the delete.</param>
+    ' ''' <returns>A boolean true or false to signify success or failure.</returns>
+    'Public Shared Function Delete(tableName As [String], where As [String]) As Boolean
+    '    Dim returnCode As [Boolean] = True
+    '    Try
+    '        ExecuteNonQuery([String].Format("delete from {0} where {1};", tableName, where))
+    '    Catch fail As Exception
+    '        MessageBox.Show(fail.Message, "Error")
+    '        returnCode = False
+    '    End Try
+    '    Return returnCode
+    'End Function
+
+    Public Shared Function Delete(ByVal username As String)
+        Dim exec As String = "DELETE FROM USERS WHERE USERNAME = '" & username & "'"
         Dim returnCode As [Boolean] = True
         Try
-            ExecuteNonQuery([String].Format("delete from {0} where {1};", tableName, where))
-        Catch fail As Exception
-            MessageBox.Show(fail.Message, "Error")
+            ExecuteNonQuery(exec)
+        Catch
             returnCode = False
         End Try
         Return returnCode

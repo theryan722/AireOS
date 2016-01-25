@@ -81,7 +81,4 @@
 
 #End Region
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Aire.API.DBTest.CreateUser()
-    End Sub
 End Class
