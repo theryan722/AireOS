@@ -84,7 +84,9 @@
             End Sub
 
             Public Shared Sub SetPermissionLevel(ByVal pass As String, ByVal newlevel As Integer)
-
+                If MatchPassword(pass) Then
+                    Aire.DataManager.Databases.UserData.ModifyPermissionLevel(Current.Info.GetUsername, newlevel)
+                End If
             End Sub
 
             Public Shared Sub SetUsername(ByVal newusername As String)
