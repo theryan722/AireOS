@@ -3,7 +3,7 @@
 #Region "UI"
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Aire.API.User.Current.Actions.Logout()
+        Aire.API.User.Current.Actions.LogoutUser()
         Me.Close()
     End Sub
 
@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub btnLock_Click(sender As Object, e As EventArgs) Handles btnLock.Click
-        Aire.API.User.Current.Actions.Lock()
+        Aire.API.User.Current.Actions.LockUser()
         Me.Close()
     End Sub
 

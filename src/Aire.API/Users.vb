@@ -111,7 +111,7 @@
                 Return Cryptography.Passwords.CheckPassword(pass + Current.Info.GetSalt, Aire.DataManager.Databases.UserData.GetPassword(Current.Info.GetUsername))
             End Function
 
-            Public Shared Sub Logout()
+            Public Shared Sub LogoutUser()
 
             End Sub
 
@@ -119,7 +119,7 @@
 
             End Sub
 
-            Public Shared Sub Lock()
+            Public Shared Sub LockUser()
 
             End Sub
 
