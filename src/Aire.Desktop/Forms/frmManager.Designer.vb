@@ -34,7 +34,6 @@ Partial Class frmManager
         Me.Name = "frmManager"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 

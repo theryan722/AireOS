@@ -93,6 +93,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Manager.vb" />
+    <Compile Include="Classes\UserDesktops.vb" />
     <Compile Include="Forms\frmDesktop.Designer.vb">
       <DependentUpon>frmDesktop.vb</DependentUpon>
     </Compile>
@@ -148,9 +150,7 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
