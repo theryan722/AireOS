@@ -17,14 +17,14 @@ Namespace Databases
             data.Add("PASSWORDHINT", passwordhint)
             data.Add("PERMISSIONLEVEL", permissionlevel)
             Try
-                DBConnection.Insert("Users", data)
+                DBUserData.Insert("Users", data)
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "Error")
             End Try
         End Sub
 
         Public Shared Sub RemoveUser(ByVal username As String)
-            DBConnection.Delete(username)
+            DBUserData.Delete(username)
         End Sub
 
 #End Region
@@ -32,27 +32,27 @@ Namespace Databases
 #Region "Modify"
 
         Public Shared Sub ModifyPassword(ByVal username As String, ByVal password As String)
-            DBConnection.Update(username, """PASSWORD""", password)
+            DBUserData.Update(username, """PASSWORD""", password)
         End Sub
 
         Public Shared Sub ModifySalt(ByVal username As String, ByVal salt As String)
-            DBConnection.Update(username, "SALT", salt)
+            DBUserData.Update(username, "SALT", salt)
         End Sub
 
         Public Shared Sub ModifyDataStorageLoc(ByVal username As String, ByVal datastorageloc As String)
-            DBConnection.Update(username, "DATASTORAGELOC", datastorageloc)
+            DBUserData.Update(username, "DATASTORAGELOC", datastorageloc)
         End Sub
 
         Public Shared Sub ModifyHidden(ByVal username As String, ByVal hidden As String)
-            DBConnection.Update(username, "HIDDEN", hidden)
+            DBUserData.Update(username, "HIDDEN", hidden)
         End Sub
 
         Public Shared Sub ModifyPasswordHint(ByVal username As String, ByVal passwordhint As String)
-            DBConnection.Update(username, "PASSWORDHINT", passwordhint)
+            DBUserData.Update(username, "PASSWORDHINT", passwordhint)
         End Sub
 
         Public Shared Sub ModifyPermissionLevel(ByVal username As String, ByVal permissionlevel As String)
-            DBConnection.Update(username, "PERMISSIONLEVEL", permissionlevel)
+            DBUserData.Update(username, "PERMISSIONLEVEL", permissionlevel)
         End Sub
 
 #End Region
@@ -63,7 +63,7 @@ Namespace Databases
             Try
                 Dim recipe As DataTable
                 Dim query As [String] = "select USERNAME ""Username"" FROM USERS"
-                recipe = DBConnection.GetDataTable(query)
+                recipe = DBUserData.GetDataTable(query)
                 Dim ret As New List(Of String)
                 For Each r As DataRow In recipe.Rows
                     ret.Add(r("Username").ToString())
@@ -81,7 +81,7 @@ Namespace Databases
             Try
                 Dim result As Integer
                 Dim query As [String] = "SELECT EXISTS(SELECT 1 FROM USERS WHERE USERNAME='" & username & "');"
-                result = CInt(DBConnection.ExecuteScalar(query))
+                result = CInt(DBUserData.ExecuteScalar(query))
                 Return If(result = 1, True, False)
             Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
@@ -95,7 +95,7 @@ Namespace Databases
             Try
                 Dim result As String
                 Dim query As [String] = "SELECT PASSWORD FROM USERS WHERE USERNAME = '" & username & "';"
-                result = DBConnection.ExecuteScalar(query)
+                result = DBUserData.ExecuteScalar(query)
                 Return result
             Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
@@ -109,7 +109,7 @@ Namespace Databases
             Try
                 Dim result As String
                 Dim query As [String] = "SELECT SALT FROM USERS WHERE USERNAME = '" & username & "';"
-                result = DBConnection.ExecuteScalar(query)
+                result = DBUserData.ExecuteScalar(query)
                 Return result
             Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
@@ -123,7 +123,7 @@ Namespace Databases
             Try
                 Dim result As String
                 Dim query As [String] = "SELECT DATASTORAGELOC FROM USERS WHERE USERNAME = '" & username & "';"
-                result = DBConnection.ExecuteScalar(query)
+                result = DBUserData.ExecuteScalar(query)
                 Return result
             Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
@@ -137,7 +137,7 @@ Namespace Databases
             Try
                 Dim result As String
                 Dim query As [String] = "SELECT HIDDEN FROM USERS WHERE USERNAME = '" & username & "';"
-                result = DBConnection.ExecuteScalar(query)
+                result = DBUserData.ExecuteScalar(query)
                 Return result
             Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
@@ -151,7 +151,7 @@ Namespace Databases
             Try
                 Dim result As String
                 Dim query As [String] = "SELECT PASSWORDHINT FROM USERS WHERE USERNAME = '" & username & "';"
-                result = DBConnection.ExecuteScalar(query)
+                result = DBUserData.ExecuteScalar(query)
                 Return result
             Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
@@ -165,7 +165,7 @@ Namespace Databases
             Try
                 Dim result As String
                 Dim query As [String] = "SELECT PERMISSIONLEVEL FROM USERS WHERE USERNAME = '" & username & "';"
-                result = DBConnection.ExecuteScalar(query)
+                result = DBUserData.ExecuteScalar(query)
                 Return result
             Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf

@@ -89,7 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBAccess.vb" />
-    <Compile Include="DBConnection.vb" />
+    <Compile Include="DBUserData.vb" />
     <Compile Include="Helper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
