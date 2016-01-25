@@ -149,7 +149,7 @@
             End Function
 
             Public Shared Function GetPermissionLevelForUser(ByVal username As String) As Integer
-
+                Return CInt(Aire.DataManager.Databases.UserData.GetPermissionLevel(username))
             End Function
 
             Public Shared Function CheckIfUserIsHidden(ByVal username As String) As Boolean
