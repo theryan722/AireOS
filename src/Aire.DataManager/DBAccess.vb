@@ -35,6 +35,10 @@ Namespace Databases
             DBConnection.Update(username, "SALT", salt)
         End Sub
 
+        Public Shared Sub ModifyDataStorageLoc(ByVal username As String, ByVal datastorageloc As String)
+            DBConnection.Update(username, "DATASTORAGELOC", datastorageloc)
+        End Sub
+
 #End Region
 
     End Class
