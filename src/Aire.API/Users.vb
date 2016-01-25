@@ -95,6 +95,14 @@
 
             End Sub
 
+            Public Shared Sub SetIfHidden(ByVal hidden As Boolean)
+
+            End Sub
+
+            Public Shared Sub SetPasswordHint(ByVal hint As String)
+
+            End Sub
+
             Public Shared Function MatchPassword(ByVal pass As String) As Boolean
 
             End Function
