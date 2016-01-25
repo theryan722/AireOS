@@ -72,7 +72,7 @@
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If VerifyFields() Then
+        If VerifyFields() AndAlso VerifyPassword(txt_username.Text, txt_password.Text) Then
 
         End If
     End Sub
@@ -94,9 +94,5 @@
     End Sub
 
 #End Region
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Aire.API.User.Users.Actions.CreateUser(TextBox1.Text, "fdsfds", Aire.API.Cryptography.Passwords.GenerateSalt(), "", False, "fddsfdsfdsfdsf", 0)
-    End Sub
 
 End Class
