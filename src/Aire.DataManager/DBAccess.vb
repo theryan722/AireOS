@@ -60,7 +60,21 @@ Namespace Databases
 #Region "Get"
 
         Public Shared Function GetAllUsers() As List(Of String)
-
+            Try
+                Dim recipe As DataTable
+                Dim query As [String] = "select USERNAME ""Username"" FROM USERS"
+                recipe = DBConnection.GetDataTable(query)
+                Dim ret As New List(Of String)
+                For Each r As DataRow In recipe.Rows
+                    ret.Add(r("Username").ToString())
+                Next
+                Return ret
+            Catch ex As Exception
+                Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
+                [error] += ex.Message.ToString() + vbLf & vbLf
+                MessageBox.Show([error])
+                Return Nothing
+            End Try
         End Function
 
         Public Shared Function GetIfUserExists(ByVal username As String) As Boolean
