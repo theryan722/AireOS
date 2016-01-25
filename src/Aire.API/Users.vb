@@ -6,7 +6,7 @@
         Public Class Info
 
             Public Shared Function GetUsername() As String
-
+                Return Aire.DataManager.TempData.LoggedInUser
             End Function
 
             Public Shared Function GetPermissionLevel() As Integer
