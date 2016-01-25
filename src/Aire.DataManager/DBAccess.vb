@@ -1,13 +1,29 @@
 ﻿Imports System.Data.SqlClient
-Imports System.Data.SQLite
+Imports System.Windows.Forms
 
 Namespace Databases
 
     Public Class UserData
-        Private Shared userdatadb As String = AppDomain.CurrentDomain.BaseDirectory & "\SysData\userdata.s3db"
 
-        Public Shared Sub test()
-            Dim cnn As New SQLiteConnection("Data Source=" & userdatadb)
+
+        Public Shared Sub AddUser(ByVal username As String, ByVal password As String, ByVal salt As String, ByVal datastorageloc As String, ByVal hidden As String, ByVal passwordhint As String, ByVal permissionlevel As String)
+            Dim data As New Dictionary(Of [String], [String])()
+            data.Add("USERNAME", username)
+            data.Add("PASSWORD", password)
+            data.Add("SALT", salt)
+            data.Add("DATASTORAGELOC", datastorageloc)
+            data.Add("HIDDEN", hidden)
+            data.Add("PASSWORDHINT", passwordhint)
+            data.Add("PERMISSIONLEVEL", permissionlevel)
+            Try
+                DBConnection.Insert("Users", data)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "Error")
+            End Try
+        End Sub
+
+        Public Shared Sub RemoveUser(ByVal username As String)
+
         End Sub
 
     End Class
