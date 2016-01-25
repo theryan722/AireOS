@@ -59,15 +59,29 @@ Namespace Databases
 
 #Region "Get"
 
+        Public Shared Function GetIfUserExists(ByVal username As String) As Boolean
+            Try
+                Dim result As Integer
+                Dim query As [String] = "SELECT EXISTS(SELECT 1 FROM USERS WHERE USERNAME='" & username & "');"
+                result = CInt(DBConnection.ExecuteScalar(query))
+                Return If(result = 1, True, False)
+            Catch ex As Exception
+                Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
+                [error] += ex.Message.ToString() + vbLf & vbLf
+                MessageBox.Show([error])
+                Return Nothing
+            End Try
+        End Function
+
         Public Shared Function GetPassword(ByVal username As String) As String
             Try
                 Dim result As String
                 Dim query As [String] = "SELECT PASSWORD FROM USERS WHERE USERNAME = '" & username & "';"
                 result = DBConnection.ExecuteScalar(query)
                 Return result
-            Catch fail As Exception
+            Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
-                [error] += fail.Message.ToString() + vbLf & vbLf
+                [error] += ex.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
                 Return Nothing
             End Try
@@ -79,9 +93,9 @@ Namespace Databases
                 Dim query As [String] = "SELECT SALT FROM USERS WHERE USERNAME = '" & username & "';"
                 result = DBConnection.ExecuteScalar(query)
                 Return result
-            Catch fail As Exception
+            Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
-                [error] += fail.Message.ToString() + vbLf & vbLf
+                [error] += ex.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
                 Return Nothing
             End Try
@@ -93,9 +107,9 @@ Namespace Databases
                 Dim query As [String] = "SELECT DATASTORAGELOC FROM USERS WHERE USERNAME = '" & username & "';"
                 result = DBConnection.ExecuteScalar(query)
                 Return result
-            Catch fail As Exception
+            Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
-                [error] += fail.Message.ToString() + vbLf & vbLf
+                [error] += ex.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
                 Return Nothing
             End Try
@@ -107,9 +121,9 @@ Namespace Databases
                 Dim query As [String] = "SELECT HIDDEN FROM USERS WHERE USERNAME = '" & username & "';"
                 result = DBConnection.ExecuteScalar(query)
                 Return result
-            Catch fail As Exception
+            Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
-                [error] += fail.Message.ToString() + vbLf & vbLf
+                [error] += ex.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
                 Return Nothing
             End Try
@@ -121,9 +135,9 @@ Namespace Databases
                 Dim query As [String] = "SELECT PASSWORDHINT FROM USERS WHERE USERNAME = '" & username & "';"
                 result = DBConnection.ExecuteScalar(query)
                 Return result
-            Catch fail As Exception
+            Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
-                [error] += fail.Message.ToString() + vbLf & vbLf
+                [error] += ex.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
                 Return Nothing
             End Try
@@ -135,9 +149,9 @@ Namespace Databases
                 Dim query As [String] = "SELECT PERMISSIONLEVEL FROM USERS WHERE USERNAME = '" & username & "';"
                 result = DBConnection.ExecuteScalar(query)
                 Return result
-            Catch fail As Exception
+            Catch ex As Exception
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
-                [error] += fail.Message.ToString() + vbLf & vbLf
+                [error] += ex.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
                 Return Nothing
             End Try
