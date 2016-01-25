@@ -96,7 +96,7 @@
             End Sub
 
             Public Shared Sub SetIfHidden(ByVal hidden As Boolean)
-
+                Aire.DataManager.Databases.UserData.ModifyHidden(Current.Info.GetUsername, hidden)
             End Sub
 
             Public Shared Sub SetSalt(ByVal salt As String)
