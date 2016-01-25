@@ -69,6 +69,7 @@ Namespace Databases
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
                 [error] += fail.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
+                Return Nothing
             End Try
         End Function
 
@@ -82,6 +83,7 @@ Namespace Databases
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
                 [error] += fail.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
+                Return Nothing
             End Try
         End Function
 
@@ -95,6 +97,7 @@ Namespace Databases
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
                 [error] += fail.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
+                Return Nothing
             End Try
         End Function
 
@@ -108,6 +111,7 @@ Namespace Databases
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
                 [error] += fail.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
+                Return Nothing
             End Try
         End Function
 
@@ -121,6 +125,7 @@ Namespace Databases
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
                 [error] += fail.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
+                Return Nothing
             End Try
         End Function
 
@@ -134,6 +139,7 @@ Namespace Databases
                 Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
                 [error] += fail.Message.ToString() + vbLf & vbLf
                 MessageBox.Show([error])
+                Return Nothing
             End Try
         End Function
 
