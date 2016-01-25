@@ -164,6 +164,11 @@
                 Return Cryptography.Passwords.CheckPassword(password + Aire.DataManager.Databases.UserData.GetSalt(username), Aire.DataManager.Databases.UserData.GetPassword(username))
             End Function
 
+            Public Shared Sub CreateUser(ByVal username As String, ByVal password As String, ByVal salt As String, ByVal datastorageloc As String, ByVal hidden As Boolean, ByVal passwordhint As String, ByVal permissionlevel As Integer)
+                Dim hid As String = If(hidden, "YES", "NO")
+                Aire.DataManager.Databases.UserData.AddUser(username, Cryptography.Passwords.HashPassword(password, salt), salt, datastorageloc, hid, passwordhint, CInt(permissionlevel))
+            End Sub
+
         End Class
 
     End Namespace
