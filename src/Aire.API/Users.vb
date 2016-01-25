@@ -90,7 +90,9 @@
             End Sub
 
             Public Shared Sub SetPassword(ByVal curpass As String, ByVal newpass As String)
-
+                If MatchPassword(curpass) Then
+                    Aire.DataManager.Databases.UserData.ModifyPassword(Current.Info.GetUsername, newpass)
+                End If
             End Sub
 
             Public Shared Sub SetIfHidden(ByVal hidden As Boolean)
