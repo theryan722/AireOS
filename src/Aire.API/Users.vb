@@ -179,6 +179,10 @@
                 Aire.DataManager.Databases.UserData.AddUser(username, Cryptography.Passwords.HashPassword(password, salt), salt, datastorageloc, hid, passwordhint, CInt(permissionlevel))
             End Sub
 
+            Public Shared Sub RemoveUser(ByVal username As String)
+                Aire.DataManager.Databases.UserData.RemoveUser(username)
+            End Sub
+
         End Class
 
     End Namespace
