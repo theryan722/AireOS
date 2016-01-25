@@ -137,7 +137,7 @@
             End Function
 
             Public Shared Function GetPasswordHintForUser(ByVal username As String) As String
-
+                Return Aire.DataManager.Databases.UserData.GetPasswordHint(username)
             End Function
 
             Public Shared Function MatchPasswordForUser(ByVal username As String, ByVal password As String) As Boolean
