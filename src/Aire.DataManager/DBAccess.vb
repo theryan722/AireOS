@@ -5,6 +5,14 @@ Namespace Databases
 
     Public Class UserData
 
+#Region "Helper"
+
+
+
+#End Region
+
+#Region "Add/Remove"
+
         Public Shared Sub AddUser(ByVal username As String, ByVal password As String, ByVal salt As String, ByVal datastorageloc As String, ByVal hidden As String, ByVal passwordhint As String, ByVal permissionlevel As String)
             Dim data As New Dictionary(Of [String], [String])()
             data.Add("USERNAME", username)
@@ -24,6 +32,8 @@ Namespace Databases
         Public Shared Sub RemoveUser(ByVal username As String)
             DBConnection.Delete(username)
         End Sub
+
+#End Region
 
 #Region "Modify"
 
