@@ -3,6 +3,12 @@
 
 #Region "UI"
 
+    Private Sub lb_users_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lb_users.SelectedIndexChanged
+        If lb_users.SelectedIndex <> -1 Then
+            txt_username.Text = lb_users.SelectedItem
+        End If
+    End Sub
+
     Private Sub btn_otherusers_Click(sender As Object, e As EventArgs) Handles btnOtherUsers.Click
         If lb_users.Visible Then
             lb_users.Hide()
@@ -88,4 +94,5 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Aire.API.User.Users.Actions.CreateUser(TextBox1.Text, "fdsfds", Aire.API.Cryptography.Passwords.GenerateSalt(), "", False, "fddsfdsfdsfdsf", 0)
     End Sub
+
 End Class
