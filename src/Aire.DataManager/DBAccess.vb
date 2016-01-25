@@ -59,6 +59,10 @@ Namespace Databases
 
 #Region "Get"
 
+        Public Shared Function GetAllUsers() As List(Of String)
+
+        End Function
+
         Public Shared Function GetIfUserExists(ByVal username As String) As Boolean
             Try
                 Dim result As Integer

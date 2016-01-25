@@ -132,16 +132,12 @@
 
         Public Class Info
 
-            Public Shared Function CheckIfUserExists(ByVal username As String) As Boolean
+            Public Shared Function GetIfUserExists(ByVal username As String) As Boolean
                 Return Aire.DataManager.Databases.UserData.GetIfUserExists(username)
             End Function
 
             Public Shared Function GetPasswordHintForUser(ByVal username As String) As String
                 Return Aire.DataManager.Databases.UserData.GetPasswordHint(username)
-            End Function
-
-            Public Shared Function MatchPasswordForUser(ByVal username As String, ByVal password As String) As Boolean
-                Return Cryptography.Passwords.CheckPassword(password + Aire.DataManager.Databases.UserData.GetSalt(username), Aire.DataManager.Databases.UserData.GetPassword(username))
             End Function
 
             Public Shared Function GetSaltForUser(ByVal username As String) As String
@@ -152,12 +148,20 @@
                 Return CInt(Aire.DataManager.Databases.UserData.GetPermissionLevel(username))
             End Function
 
-            Public Shared Function CheckIfUserIsHidden(ByVal username As String) As Boolean
+            Public Shared Function GetIfUserIsHidden(ByVal username As String) As Boolean
                 Return If(Aire.DataManager.Databases.UserData.GetHidden(username) = "YES", True, False)
             End Function
 
             Public Shared Function IsALoggedInUser() As Boolean
                 Return If(Aire.DataManager.TempData.LoggedInUser <> "", True, False)
+            End Function
+
+        End Class
+
+        Public Class Actions
+
+            Public Shared Function MatchPasswordForUser(ByVal username As String, ByVal password As String) As Boolean
+                Return Cryptography.Passwords.CheckPassword(password + Aire.DataManager.Databases.UserData.GetSalt(username), Aire.DataManager.Databases.UserData.GetPassword(username))
             End Function
 
         End Class
