@@ -73,8 +73,9 @@
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If VerifyFields() AndAlso VerifyPassword(txt_username.Text, txt_password.Text) Then
+            Dim bb As New Aire.API.Toast("Password verified!")
         Else
-            Dim bb As New Aire.API.MessageBox("")
+            Dim bb As New Aire.API.MessageBox("Invalid username or password, or the fields were not properly filled out.", "Error", API.MessageBox.MessageBoxButtons.OkOnly, API.MessageBox.MessageBoxIcon.Warning)
         End If
     End Sub
 

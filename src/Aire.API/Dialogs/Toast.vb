@@ -22,6 +22,7 @@ Public Class Toast
         Me.lblTitle.Text = title
         Me.lifeTimer.Interval = duration
         Sys.Logging.Log.Write("Toast - TITLE: " & title & " , TEXT: " & text, Sys.Logging.Log.LogSource.Toast)
+        Me.Show()
     End Sub
 
     Private Sub Toast_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
