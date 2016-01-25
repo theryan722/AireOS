@@ -4,7 +4,7 @@ Imports System.Data.SQLite
 Imports System.Windows.Forms
 
 Friend Class DBConnection
-    Private Shared dbConnection As String = AppDomain.CurrentDomain.BaseDirectory & "\SysData\userdata.s3db"
+    Private Shared dbConnection As String = "Data Source=" & AppDomain.CurrentDomain.BaseDirectory & "SysData\userdata.s3db"
 
     Public Shared Sub SetDatabase(inputFile As String)
         dbConnection = [String].Format("Data Source={0}", inputFile)
@@ -82,7 +82,7 @@ Friend Class DBConnection
             vals = vals.Substring(0, vals.Length - 1)
         End If
         Try
-            Me.ExecuteNonQuery([String].Format("update {0} set {1} where {2};", tableName, vals, where))
+            ExecuteNonQuery([String].Format("update {0} set {1} where {2};", tableName, vals, where))
         Catch
             returnCode = False
         End Try
@@ -98,7 +98,7 @@ Friend Class DBConnection
     Public Shared Function Delete(tableName As [String], where As [String]) As Boolean
         Dim returnCode As [Boolean] = True
         Try
-            Me.ExecuteNonQuery([String].Format("delete from {0} where {1};", tableName, where))
+            ExecuteNonQuery([String].Format("delete from {0} where {1};", tableName, where))
         Catch fail As Exception
             MessageBox.Show(fail.Message, "Error")
             returnCode = False
@@ -123,7 +123,7 @@ Friend Class DBConnection
         columns = columns.Substring(0, columns.Length - 1)
         values = values.Substring(0, values.Length - 1)
         Try
-            Me.ExecuteNonQuery([String].Format("insert into {0}({1}) values({2});", tableName, columns, values))
+            ExecuteNonQuery([String].Format("insert into {0}({1}) values({2});", tableName, columns, values))
         Catch fail As Exception
 
             MessageBox.Show(fail.Message, "Error")
@@ -139,7 +139,7 @@ Friend Class DBConnection
     Public Shared Function ClearDB() As Boolean
         Dim tables As DataTable
         Try
-            tables = Me.GetDataTable("select NAME from SQLITE_MASTER where type='table' order by NAME;")
+            tables = GetDataTable("select NAME from SQLITE_MASTER where type='table' order by NAME;")
             For Each table As DataRow In tables.Rows
                 ClearTable(table("NAME").ToString())
             Next
