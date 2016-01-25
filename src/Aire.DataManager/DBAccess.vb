@@ -125,7 +125,16 @@ Namespace Databases
         End Function
 
         Public Shared Function GetPermissionLevel(ByVal username As String) As String
-
+            Try
+                Dim result As String
+                Dim query As [String] = "SELECT PERMISSIONLEVEL FROM USERS WHERE USERNAME = '" & username & "';"
+                result = DBConnection.ExecuteScalar(query)
+                Return result
+            Catch fail As Exception
+                Dim [error] As [String] = "The following error has occurred:" & vbLf & vbLf
+                [error] += fail.Message.ToString() + vbLf & vbLf
+                MessageBox.Show([error])
+            End Try
         End Function
 
 #End Region
