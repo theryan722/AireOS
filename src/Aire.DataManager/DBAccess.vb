@@ -43,6 +43,10 @@ Namespace Databases
             DBConnection.Update(username, "HIDDEN", hidden)
         End Sub
 
+        Public Shared Sub ModifyPasswordHint(ByVal username As String, ByVal passwordhint As String)
+            DBConnection.Update(username, "PASSWORDHINT", passwordhint)
+        End Sub
+
 #End Region
 
     End Class
