@@ -13,7 +13,7 @@ Namespace Cryptography
         End Function
 
         Public Shared Function CheckPassword(ByVal pass As String, ByVal hashedpass As String) As Boolean
-            Return BCrypt.Net.BCrypt.Verify(pass, hashedpass)
+            Return Verify(pass, hashedpass)
         End Function
 
     End Class
