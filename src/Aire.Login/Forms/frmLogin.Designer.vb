@@ -22,6 +22,7 @@ Partial Class frmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.btnPower = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -34,6 +35,7 @@ Partial Class frmLogin
         Me.lb_users = New System.Windows.Forms.ListBox()
         Me.pb_user = New System.Windows.Forms.PictureBox()
         Me.btnHint = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.pb_user, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,6 +51,7 @@ Partial Class frmLogin
         Me.btnPower.Name = "btnPower"
         Me.btnPower.Size = New System.Drawing.Size(32, 32)
         Me.btnPower.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.btnPower, "Power")
         Me.btnPower.UseVisualStyleBackColor = True
         '
         'Panel1
@@ -72,6 +75,7 @@ Partial Class frmLogin
         Me.btnOtherUsers.Name = "btnOtherUsers"
         Me.btnOtherUsers.Size = New System.Drawing.Size(32, 32)
         Me.btnOtherUsers.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.btnOtherUsers, "Users")
         Me.btnOtherUsers.UseVisualStyleBackColor = True
         Me.btnOtherUsers.Visible = False
         '
@@ -185,5 +189,6 @@ Partial Class frmLogin
     Friend WithEvents pb_user As System.Windows.Forms.PictureBox
     Friend WithEvents btnOtherUsers As System.Windows.Forms.Button
     Friend WithEvents btnHint As System.Windows.Forms.Button
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 
 End Class
