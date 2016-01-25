@@ -4,7 +4,7 @@ Imports System.Data.SQLite
 Imports System.Windows.Forms
 
 Friend Class DBConnection
-    Private Shared dbConnection As String = "Data Source=" & AppDomain.CurrentDomain.BaseDirectory & "SysData\userdata.s3db"
+    Private Shared dbConnection As String = "Data Source=" & Helper.FixPath(AppDomain.CurrentDomain.BaseDirectory & "SysData/userdata.s3db")
 
     Public Shared Sub SetDatabase(inputFile As String)
         dbConnection = [String].Format("Data Source={0}", inputFile)

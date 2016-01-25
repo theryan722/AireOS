@@ -1,5 +1,5 @@
 ﻿Module Launch
-    Private loginloc As String = AppDomain.CurrentDomain.BaseDirectory & "\Aire.Login.exe"
+    Private loginloc As String = Aire.API.Compatibility.FixPath(AppDomain.CurrentDomain.BaseDirectory & "/Aire.Login.exe")
 
     'Initializes Aire OS
     Sub Main()

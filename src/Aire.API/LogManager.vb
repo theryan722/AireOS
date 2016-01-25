@@ -3,7 +3,7 @@
     Namespace Logging
 
         Public Class Log
-            Private Shared syslogloc As String = AppDomain.CurrentDomain.BaseDirectory & "\SysData\syslog.txt"
+            Private Shared syslogloc As String = Aire.API.Compatibility.FixPath(AppDomain.CurrentDomain.BaseDirectory & "/SysData/syslog.txt")
 
 #Region "Enums"
 
