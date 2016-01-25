@@ -145,7 +145,7 @@
             End Function
 
             Public Shared Function GetSaltForUser(ByVal username As String) As String
-
+                Return Aire.DataManager.Databases.UserData.GetSalt(username)
             End Function
 
             Public Shared Function GetPermissionLevelForUser(ByVal username As String) As Integer
