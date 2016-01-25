@@ -22,7 +22,7 @@
             End Function
 
             Public Shared Function GetSalt() As String
-
+                Return Aire.DataManager.Databases.UserData.GetSalt(GetUsername)
             End Function
 
             Public Shared Function GetID() As Integer
