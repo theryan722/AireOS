@@ -56,15 +56,6 @@
                 End Set
             End Property
 
-            Public Shared Property IsHidden() As Boolean
-                Get
-
-                End Get
-                Set(value As Boolean)
-
-                End Set
-            End Property
-
             Public Shared Property ProfilePicture() As System.Drawing.Image
                 Get
 
@@ -79,15 +70,6 @@
 
                 End Get
                 Set(value As Boolean)
-
-                End Set
-            End Property
-
-            Public Shared Property PasswordHint() As String
-                Get
-
-                End Get
-                Set(value As String)
 
                 End Set
             End Property
