@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmDesktop
+Partial Class frmManager
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,18 +24,19 @@ Partial Class frmDesktop
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'frmDesktop
+        'frmManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(856, 612)
+        Me.ClientSize = New System.Drawing.Size(1022, 714)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmDesktop"
+        Me.Name = "frmManager"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.Text = "frmDesktop"
+        Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub
+
 End Class
