@@ -145,6 +145,7 @@ Partial Class dlgFile
         Me.Name = "dlgFile"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "File"
         Me.TopMost = True
         Me.pnl_bottom.ResumeLayout(False)

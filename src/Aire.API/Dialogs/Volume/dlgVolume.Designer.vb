@@ -29,7 +29,10 @@ Partial Class dlgVolume
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "dlgVolume"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.Text = "dlgVolume"
         Me.TopMost = True
         Me.ResumeLayout(False)
