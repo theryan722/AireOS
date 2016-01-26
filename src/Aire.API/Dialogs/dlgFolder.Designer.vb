@@ -76,9 +76,12 @@ Partial Class dlgFolder
         'TreeView1
         '
         Me.TreeView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TreeView1.ImageIndex = 0
+        Me.TreeView1.ImageList = Me.imageList1
         Me.TreeView1.Indent = 25
         Me.TreeView1.Location = New System.Drawing.Point(0, 0)
         Me.TreeView1.Name = "TreeView1"
+        Me.TreeView1.SelectedImageIndex = 0
         Me.TreeView1.Size = New System.Drawing.Size(284, 216)
         Me.TreeView1.TabIndex = 2
         '
