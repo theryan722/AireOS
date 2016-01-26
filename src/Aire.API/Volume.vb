@@ -7,7 +7,7 @@
         End Sub
 
         Public Shared Sub Decrease(ByVal amount As Integer)
-
+            Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 -" & Math.Min(amount, 100) & "%")
         End Sub
 
         Public Shared Sub Mute()
