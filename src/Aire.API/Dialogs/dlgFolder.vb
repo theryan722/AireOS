@@ -83,6 +83,13 @@ Public Class dlgFolder
         End If
     End Sub
 
+    Private Sub TreeView1_KeyDown(sender As Object, e As KeyEventArgs) Handles TreeView1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            SetSelectedFolderFromSelectedNode()
+            btnOK.PerformClick()
+        End If
+    End Sub
+
     Private Sub TreeView1_NodeMouseDoubleClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseDoubleClick
         SetSelectedFolderFromSelectedNode()
         btnOK.PerformClick()
