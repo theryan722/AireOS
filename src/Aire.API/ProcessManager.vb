@@ -24,15 +24,29 @@
         proc.Start()
         ret = proc.StandardOutput.ReadToEnd()
         proc.WaitForExit()
-        Return ret
+
     End Function
 
     Public Shared Sub ExecuteScript(ByVal script As String)
-
+        Dim proc As New System.Diagnostics.Process()
+        proc.StartInfo.FileName = "/bin/bash"
+        proc.StartInfo.Arguments = script
+        proc.StartInfo.UseShellExecute = False
+        proc.StartInfo.RedirectStandardOutput = True
+        proc.Start()
     End Sub
 
     Public Shared Function ExecuteScriptWithOutput(ByVal script As String)
-
+        Dim ret As String = ""
+        Dim proc As New System.Diagnostics.Process()
+        proc.StartInfo.FileName = "/bin/bash"
+        proc.StartInfo.Arguments = script
+        proc.StartInfo.UseShellExecute = False
+        proc.StartInfo.RedirectStandardOutput = True
+        proc.Start()
+        ret = proc.StandardOutput.ReadToEnd()
+        proc.WaitForExit()
+        Return ret
     End Function
 
 End Class
