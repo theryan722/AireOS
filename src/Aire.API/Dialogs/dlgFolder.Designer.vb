@@ -22,8 +22,94 @@ Partial Class dlgFolder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgFolder))
+        Me.pnl_bottom = New System.Windows.Forms.Panel()
+        Me.btnOK = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.imageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.pnl_bottom.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'pnl_bottom
+        '
+        Me.pnl_bottom.Controls.Add(Me.Panel2)
+        Me.pnl_bottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnl_bottom.Location = New System.Drawing.Point(0, 216)
+        Me.pnl_bottom.Name = "pnl_bottom"
+        Me.pnl_bottom.Size = New System.Drawing.Size(284, 45)
+        Me.pnl_bottom.TabIndex = 0
+        '
+        'btnOK
+        '
+        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnOK.Location = New System.Drawing.Point(0, 0)
+        Me.btnOK.Name = "btnOK"
+        Me.btnOK.Size = New System.Drawing.Size(74, 23)
+        Me.btnOK.TabIndex = 0
+        Me.btnOK.Text = "OK"
+        Me.btnOK.UseVisualStyleBackColor = True
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.btnCancel.Location = New System.Drawing.Point(0, 22)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(74, 23)
+        Me.btnCancel.TabIndex = 1
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.btnCancel)
+        Me.Panel2.Controls.Add(Me.btnOK)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel2.Location = New System.Drawing.Point(210, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(74, 45)
+        Me.Panel2.TabIndex = 0
+        '
+        'TreeView1
+        '
+        Me.TreeView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TreeView1.Indent = 25
+        Me.TreeView1.Location = New System.Drawing.Point(0, 0)
+        Me.TreeView1.Name = "TreeView1"
+        Me.TreeView1.Size = New System.Drawing.Size(284, 216)
+        Me.TreeView1.TabIndex = 2
+        '
+        'imageList1
+        '
+        Me.imageList1.ImageStream = CType(resources.GetObject("imageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.imageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.imageList1.Images.SetKeyName(0, "003-folder_1.gif")
+        '
+        'dlgFolder
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Text = "dlgFolder"
+        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.TreeView1)
+        Me.Controls.Add(Me.pnl_bottom)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "dlgFolder"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
+        Me.Text = "Browse For Folder"
+        Me.pnl_bottom.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.ResumeLayout(False)
+
     End Sub
+    Friend WithEvents pnl_bottom As System.Windows.Forms.Panel
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents btnCancel As System.Windows.Forms.Button
+    Friend WithEvents btnOK As System.Windows.Forms.Button
+    Private WithEvents TreeView1 As System.Windows.Forms.TreeView
+    Private WithEvents imageList1 As System.Windows.Forms.ImageList
 End Class

@@ -171,6 +171,9 @@
     <EmbeddedResource Include="Dialogs\dlgFile.resx">
       <DependentUpon>dlgFile.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgFolder.resx">
+      <DependentUpon>dlgFolder.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgLogout.resx">
       <DependentUpon>dlgLogout.vb</DependentUpon>
       <SubType>Designer</SubType>
