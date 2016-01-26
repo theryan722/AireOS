@@ -1,7 +1,7 @@
 ﻿Public Class DataPaths
 
     Public Shared Function GetOSLocation() As String
-
+        Return AppDomain.CurrentDomain.BaseDirectory
     End Function
 
     Public Shared Function GetSysDataLocation() As String
