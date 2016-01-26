@@ -7,9 +7,12 @@ Public Class dlgFolder
 
 #Region "Methods"
 
-    Private Sub SetSelectedFolderFromSelectedNode()
+    Private Sub SetSelectedFolderFromSelectedNode(Optional ByVal close As Boolean = False)
         If TreeView1.SelectedNode IsNot Nothing AndAlso TreeView1.SelectedNode.Text <> "My Computer" Then
             SelectedFolder = TreeView1.SelectedNode.Text
+            If close Then
+                btnOK.PerformClick()
+            End If
         End If
     End Sub
 
@@ -85,14 +88,12 @@ Public Class dlgFolder
 
     Private Sub TreeView1_KeyDown(sender As Object, e As KeyEventArgs) Handles TreeView1.KeyDown
         If e.KeyCode = Keys.Enter Then
-            SetSelectedFolderFromSelectedNode()
-            btnOK.PerformClick()
+            SetSelectedFolderFromSelectedNode(True)
         End If
     End Sub
 
     Private Sub TreeView1_NodeMouseDoubleClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseDoubleClick
-        SetSelectedFolderFromSelectedNode()
-        btnOK.PerformClick()
+        SetSelectedFolderFromSelectedNode(True)
     End Sub
 
 #End Region
