@@ -44,5 +44,21 @@ Public Class dlgFolder
 
 #End Region
 
+#Region "TreeView1"
 
+    Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
+
+    End Sub
+
+    Private Sub TreeView1_BeforeExpand(sender As Object, e As TreeViewCancelEventArgs) Handles TreeView1.BeforeExpand
+
+    End Sub
+
+    Private Sub TreeView1_NodeMouseDoubleClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseDoubleClick
+
+    End Sub
+
+#End Region
+
+    
 End Class
