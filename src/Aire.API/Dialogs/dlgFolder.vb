@@ -1,8 +1,26 @@
-﻿Public Class dlgFolder
+﻿Imports System.Windows.Forms
+Imports System.IO
+
+Public Class dlgFolder
+
+    Public Property SelectedFolder As String
 
 #Region "Methods"
 
-
+    Private Sub LoadFolders_MyComputer()
+        Dim drives As String() = Environment.GetLogicalDrives()
+        Dim myPC As TreeNode = TreeView1.Nodes.Add("MYPC", "My Computer")
+        For Each drive As String In drives
+            Dim tmp As TreeNode = myPC.Nodes.Add(drive, drive)
+            Try
+                If Directory.GetDirectories(drive).Length <> 0 Then
+                    tmp.Nodes.Add("[EMPTY]", "")
+                End If
+            Catch
+                Exit Try
+            End Try
+        Next
+    End Sub
 
 #End Region
 
@@ -26,5 +44,5 @@
 
 #End Region
 
-    
+
 End Class
