@@ -57,7 +57,30 @@ Public Class dlgFolder
     End Sub
 
     Private Sub TreeView1_BeforeExpand(sender As Object, e As TreeViewCancelEventArgs) Handles TreeView1.BeforeExpand
-
+        Dim tmp As TreeNode()
+        Dim newNode As TreeNode
+        tmp = e.Node.Nodes.Find("[EMPTY]", False)
+        If tmp.Length > 0 Then
+            e.Node.Nodes.Clear()
+        End If
+        If Directory.Exists(e.Node.Text) Then
+            For Each dir As String In Directory.GetDirectories(e.Node.Text)
+                tmp = e.Node.Nodes.Find(dir, False)
+                If tmp.Length = 0 Then
+                    newNode = e.Node.Nodes.Add(dir, dir)
+                    newNode.Tag = dir
+                    newNode.ImageIndex = 0
+                    Try
+                        If Directory.GetDirectories(dir).Length <> 0 Then
+                            newNode.Nodes.Add("[EMPTY]", "")
+                        End If
+                    Catch
+                        Exit Try
+                    End Try
+                    newNode = Nothing
+                End If
+            Next
+        End If
     End Sub
 
     Private Sub TreeView1_NodeMouseDoubleClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseDoubleClick
