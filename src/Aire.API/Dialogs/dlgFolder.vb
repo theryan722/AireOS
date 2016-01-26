@@ -33,7 +33,7 @@ Public Class dlgFolder
 #Region "dlgFolder"
 
     Private Sub dlgFolder_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        LoadFolders_MyComputer()
     End Sub
 
 #End Region
