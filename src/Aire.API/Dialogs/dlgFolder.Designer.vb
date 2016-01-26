@@ -119,6 +119,7 @@ Partial Class dlgFolder
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Browse For Folder"
+        Me.TopMost = True
         Me.pnl_bottom.ResumeLayout(False)
         Me.pnl_bottom.PerformLayout()
         Me.Panel2.ResumeLayout(False)

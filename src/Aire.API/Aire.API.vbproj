@@ -178,6 +178,9 @@
       <DependentUpon>dlgLogout.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgRun.resx">
+      <DependentUpon>dlgRun.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Toast.resx">
       <DependentUpon>Toast.vb</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +189,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgPower.resx">
       <DependentUpon>dlgPower.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Volume\dlgVolume.resx">
+      <DependentUpon>dlgVolume.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Volume\dlgVolumeStatus.resx">
+      <DependentUpon>dlgVolumeStatus.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -146,6 +146,7 @@ Partial Class dlgFile
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.Text = "File"
+        Me.TopMost = True
         Me.pnl_bottom.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
