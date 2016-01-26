@@ -23,7 +23,11 @@
         End Sub
 
         Public Shared Function GetVolume() As Integer
-            Sys.Process.ExecuteScriptWithOutput()
+            Dim temp As String = Sys.Process.ExecuteScriptWithOutput(Aire.DataManager.DataPaths.GetSysDataLocation & "/Scripts/getvolume.sh")
+            If temp.Contains("%") Then
+                temp.Replace("%", "")
+            End If
+            Return temp
         End Function
 
     End Class
