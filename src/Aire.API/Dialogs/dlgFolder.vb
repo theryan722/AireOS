@@ -55,6 +55,15 @@ Public Class dlgFolder
 
 #Region "TreeView1"
 
+    Public Sub New(Optional ByVal title As String = "Browse For File", Optional ByVal text As String = "")
+        InitializeComponent()
+        Me.Text = title
+        If text <> "" Then
+            TextBox1.Text = text
+            TextBox1.Show()
+        End If
+    End Sub
+
     Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
         SetSelectedFolderFromSelectedNode()
     End Sub

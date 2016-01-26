@@ -30,12 +30,14 @@ Partial Class dlgFolder
         Me.btnOK = New System.Windows.Forms.Button()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.imageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.pnl_bottom.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnl_bottom
         '
+        Me.pnl_bottom.Controls.Add(Me.TextBox1)
         Me.pnl_bottom.Controls.Add(Me.Panel2)
         Me.pnl_bottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.pnl_bottom.Location = New System.Drawing.Point(0, 216)
@@ -91,6 +93,18 @@ Partial Class dlgFolder
         Me.imageList1.TransparentColor = System.Drawing.Color.Transparent
         Me.imageList1.Images.SetKeyName(0, "003-folder_1.gif")
         '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox1.Location = New System.Drawing.Point(0, 0)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox1.Size = New System.Drawing.Size(210, 45)
+        Me.TextBox1.TabIndex = 1
+        Me.TextBox1.Visible = False
+        '
         'dlgFolder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -105,6 +119,7 @@ Partial Class dlgFolder
         Me.ShowInTaskbar = False
         Me.Text = "Browse For Folder"
         Me.pnl_bottom.ResumeLayout(False)
+        Me.pnl_bottom.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -115,4 +130,5 @@ Partial Class dlgFolder
     Friend WithEvents btnOK As System.Windows.Forms.Button
     Private WithEvents TreeView1 As System.Windows.Forms.TreeView
     Private WithEvents imageList1 As System.Windows.Forms.ImageList
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class
