@@ -62,6 +62,7 @@ Public Class dlgFolder
             TextBox1.Text = text
             TextBox1.Show()
         End If
+        Me.ShowDialog()
     End Sub
 
     Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
