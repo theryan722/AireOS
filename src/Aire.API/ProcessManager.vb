@@ -27,4 +27,12 @@
         Return ret
     End Function
 
+    Public Shared Sub ExecuteScript(ByVal script As String)
+
+    End Sub
+
+    Public Shared Function ExecuteScriptWithOutput(ByVal script As String)
+
+    End Function
+
 End Class
