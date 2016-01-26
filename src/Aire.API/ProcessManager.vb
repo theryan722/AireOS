@@ -5,6 +5,7 @@
     End Sub
 
     Public Shared Sub ExecuteCommand(ByVal file As String, ByVal arguments As String)
+        Try
             Dim proc As System.Diagnostics.Process = New System.Diagnostics.Process()
             proc.StartInfo.FileName = file
             proc.StartInfo.Arguments = arguments
@@ -12,6 +13,9 @@
             proc.StartInfo.RedirectStandardOutput = True
             proc.StartInfo.CreateNoWindow = True
             proc.Start()
+        Catch ex As Exception
+            Sys.Logging.Log.Write("")
+        End Try
     End Sub
 
     Public Shared Function ExecuteCommandWithOutput(ByVal file As String, ByVal arguments As String) As String
@@ -24,7 +28,7 @@
         proc.Start()
         ret = proc.StandardOutput.ReadToEnd()
         proc.WaitForExit()
-
+        Return ret
     End Function
 
     Public Shared Sub ExecuteScript(ByVal script As String)
