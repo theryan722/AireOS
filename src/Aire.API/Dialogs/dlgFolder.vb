@@ -7,6 +7,12 @@ Public Class dlgFolder
 
 #Region "Methods"
 
+    Private Sub SetSelectedFolderFromSelectedNode()
+        If TreeView1.SelectedNode IsNot Nothing AndAlso TreeView1.SelectedNode.Text <> "My Computer" Then
+            SelectedFolder = TreeView1.SelectedNode.Text
+        End If
+    End Sub
+
     Private Sub LoadFolders_MyComputer()
         Dim drives As String() = Environment.GetLogicalDrives()
         Dim myPC As TreeNode = TreeView1.Nodes.Add("MYPC", "My Computer")
