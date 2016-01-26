@@ -53,7 +53,7 @@ Public Class dlgFolder
 #Region "TreeView1"
 
     Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
-
+        SetSelectedFolderFromSelectedNode()
     End Sub
 
     Private Sub TreeView1_BeforeExpand(sender As Object, e As TreeViewCancelEventArgs) Handles TreeView1.BeforeExpand
