@@ -216,6 +216,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\getvolume.sh" />
     <None Include="Resources\notify_info.png" />
   </ItemGroup>
   <ItemGroup>
