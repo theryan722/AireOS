@@ -25,9 +25,9 @@ Partial Class dlgFolder
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgFolder))
         Me.pnl_bottom = New System.Windows.Forms.Panel()
-        Me.btnOK = New System.Windows.Forms.Button()
-        Me.btnCancel = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnOK = New System.Windows.Forms.Button()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.imageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.pnl_bottom.SuspendLayout()
@@ -43,26 +43,6 @@ Partial Class dlgFolder
         Me.pnl_bottom.Size = New System.Drawing.Size(284, 45)
         Me.pnl_bottom.TabIndex = 0
         '
-        'btnOK
-        '
-        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnOK.Location = New System.Drawing.Point(0, 0)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(74, 23)
-        Me.btnOK.TabIndex = 0
-        Me.btnOK.Text = "OK"
-        Me.btnOK.UseVisualStyleBackColor = True
-        '
-        'btnCancel
-        '
-        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnCancel.Location = New System.Drawing.Point(0, 22)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(74, 23)
-        Me.btnCancel.TabIndex = 1
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
-        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.btnCancel)
@@ -72,6 +52,26 @@ Partial Class dlgFolder
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(74, 45)
         Me.Panel2.TabIndex = 0
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.btnCancel.Location = New System.Drawing.Point(0, 22)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(74, 23)
+        Me.btnCancel.TabIndex = 2
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
+        'btnOK
+        '
+        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnOK.Location = New System.Drawing.Point(0, 0)
+        Me.btnOK.Name = "btnOK"
+        Me.btnOK.Size = New System.Drawing.Size(74, 23)
+        Me.btnOK.TabIndex = 1
+        Me.btnOK.Text = "OK"
+        Me.btnOK.UseVisualStyleBackColor = True
         '
         'TreeView1
         '
@@ -83,7 +83,7 @@ Partial Class dlgFolder
         Me.TreeView1.Name = "TreeView1"
         Me.TreeView1.SelectedImageIndex = 0
         Me.TreeView1.Size = New System.Drawing.Size(284, 216)
-        Me.TreeView1.TabIndex = 2
+        Me.TreeView1.TabIndex = 0
         '
         'imageList1
         '
