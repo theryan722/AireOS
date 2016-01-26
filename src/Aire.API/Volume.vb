@@ -15,7 +15,7 @@
         End Sub
 
         Public Shared Sub Unmute()
-
+            Sys.Process.ExecuteCommand("pactl", "-- set-sink-mute 0 0")
         End Sub
 
         Public Shared Sub ToggleMute()
