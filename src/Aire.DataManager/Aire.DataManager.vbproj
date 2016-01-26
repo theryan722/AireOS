@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="Databases\UserData\DBUserData_Access.vb" />
     <Compile Include="Databases\UserData\DBUserData.vb" />
+    <Compile Include="DataPaths.vb" />
     <Compile Include="Helper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
