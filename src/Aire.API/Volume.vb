@@ -23,7 +23,7 @@
         End Sub
 
         Public Shared Function GetVolume() As Integer
-
+            Sys.Process.ExecuteScriptWithOutput()
         End Function
 
     End Class
