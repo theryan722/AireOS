@@ -4,4 +4,8 @@
 
     End Function
 
+    Public Shared Function GetSysDataLocation() As String
+        Return AppDomain.CurrentDomain.BaseDirectory & "/SysData"
+    End Function
+
 End Class
