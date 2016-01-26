@@ -8,7 +8,7 @@
 
 #Region "ExecuteCommand"
 
-        Public Shared Sub ExecuteCommand(ByVal file As String, ByVal arguments As String)
+        Public Shared Sub ExecuteCommand(ByVal file As String, Optional ByVal arguments As String = "")
             Try
                 Dim proc As System.Diagnostics.Process = New System.Diagnostics.Process()
                 proc.StartInfo.FileName = file
@@ -22,7 +22,7 @@
             End Try
         End Sub
 
-        Public Shared Function ExecuteCommandWithOutput(ByVal file As String, ByVal arguments As String) As String
+        Public Shared Function ExecuteCommandWithOutput(ByVal file As String, Optional ByVal arguments As String = "") As String
             Try
                 Dim ret As String = ""
                 Dim proc As New System.Diagnostics.Process()
