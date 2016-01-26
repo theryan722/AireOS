@@ -61,7 +61,8 @@ Public Class dlgFolder
     End Sub
 
     Private Sub TreeView1_NodeMouseDoubleClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseDoubleClick
-
+        SetSelectedFolderFromSelectedNode()
+        btnOK.PerformClick()
     End Sub
 
 #End Region
