@@ -1,6 +1,6 @@
 ﻿Namespace Sys
 
-    Namespace Logging
+    Namespace Logs
 
         Public Class Log
             Private Shared syslogloc As String = Aire.API.Compatibility.FixPath(AppDomain.CurrentDomain.BaseDirectory & "/SysData/syslog.txt")

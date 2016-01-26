@@ -22,7 +22,7 @@ Public Class Toast
         Me.TextBox1.Text = text
         Me.lblTitle.Text = title
         Me.lifeTimer.Interval = duration
-        Sys.Logging.Log.Write("Toast - TITLE: " & title & " , TEXT: " & text, Sys.Logging.Log.LogSource.Toast)
+        Sys.Logs.Log.Write("Toast - TITLE: " & title & " , TEXT: " & text, Sys.Logs.Log.LogSource.Toast)
         Me.Show()
     End Sub
 

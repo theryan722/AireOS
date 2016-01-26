@@ -126,7 +126,7 @@ Public Class MessageBox
         SetButtons(buttons)
         Me.ShowInTaskbar = showintaskbar
         Me.TopMost = topmost
-        Sys.Logging.Log.Write("MessageBox - TITLE: " & title & " , TEXT: " & text, Sys.Logging.Log.LogSource.MessageBox)
+        Sys.Logs.Log.Write("MessageBox - TITLE: " & title & " , TEXT: " & text, Sys.Logs.Log.LogSource.MessageBox)
         Me.ShowDialog()
     End Sub
 
