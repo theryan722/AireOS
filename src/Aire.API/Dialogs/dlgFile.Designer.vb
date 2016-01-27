@@ -32,6 +32,7 @@ Partial Class dlgFile
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.combo_fileextensions = New System.Windows.Forms.ComboBox()
         Me.pnl_top = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.pnl_bottom.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -51,6 +52,7 @@ Partial Class dlgFile
         'Panel3
         '
         Me.Panel3.Controls.Add(Me.txt_file)
+        Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
@@ -63,7 +65,7 @@ Partial Class dlgFile
         Me.txt_file.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_file.Location = New System.Drawing.Point(57, 0)
         Me.txt_file.Name = "txt_file"
-        Me.txt_file.Size = New System.Drawing.Size(281, 20)
+        Me.txt_file.Size = New System.Drawing.Size(271, 20)
         Me.txt_file.TabIndex = 3
         '
         'Label1
@@ -133,6 +135,14 @@ Partial Class dlgFile
         Me.pnl_top.Size = New System.Drawing.Size(489, 40)
         Me.pnl_top.TabIndex = 1
         '
+        'Panel4
+        '
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel4.Location = New System.Drawing.Point(328, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(10, 20)
+        Me.Panel4.TabIndex = 7
+        '
         'dlgFile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -166,4 +176,5 @@ Partial Class dlgFile
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
 End Class
