@@ -186,6 +186,60 @@
       <Name>Aire.API</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery_50_charging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery_75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery_75_charging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery_100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery_100_charging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery_danger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery_danger_charging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume_high.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume_low.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume_mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery_25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery_25_charging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network_wireless.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\networking_disconnected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network_wired.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16_notification.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

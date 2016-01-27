@@ -11,6 +11,7 @@
 Option Strict On
 Option Explicit On
 
+Imports System
 
 Namespace My.Resources
     
@@ -21,20 +22,20 @@ Namespace My.Resources
     '''<summary>
     '''  A strongly-typed resource class, for looking up localized strings, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0"), _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-     Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(), _
-     Global.Microsoft.VisualBasic.HideModuleNameAttribute()> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0"),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
+     Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
     Friend Module Resources
-
+        
         Private resourceMan As Global.System.Resources.ResourceManager
-
+        
         Private resourceCulture As Global.System.Globalization.CultureInfo
-
+        
         '''<summary>
         '''  Returns the cached ResourceManager instance used by this class.
         '''</summary>
-        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
         Friend ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
@@ -44,19 +45,199 @@ Namespace My.Resources
                 Return resourceMan
             End Get
         End Property
-
+        
         '''<summary>
         '''  Overrides the current thread's CurrentUICulture property for all
         '''  resource lookups using this strongly typed resource class.
         '''</summary>
-        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
+        <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
         Friend Property Culture() As Global.System.Globalization.CultureInfo
             Get
                 Return resourceCulture
             End Get
-            Set(ByVal value As Global.System.Globalization.CultureInfo)
+            Set
                 resourceCulture = value
             End Set
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _16_notification() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_16_notification", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property battery_100() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("battery_100", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property battery_100_charging() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("battery_100_charging", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property battery_25() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("battery_25", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property battery_25_charging() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("battery_25_charging", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property battery_50() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("battery_50", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property battery_50_charging() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("battery_50_charging", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property battery_75() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("battery_75", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property battery_75_charging() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("battery_75_charging", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property battery_danger() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("battery_danger", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property battery_danger_charging() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("battery_danger_charging", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property network_wired() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("network_wired", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property network_wireless() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("network_wireless", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property networking_disconnected() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("networking_disconnected", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property volume_high() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("volume_high", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property volume_low() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("volume_low", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property volume_medium() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("volume_medium", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property volume_mute() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("volume_mute", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
         End Property
     End Module
 End Namespace
