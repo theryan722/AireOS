@@ -22,13 +22,43 @@ Partial Class frmDesktop
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.pnl_launchbar_loc = New System.Windows.Forms.Panel()
+        Me.pnl_appbar_top_loc = New System.Windows.Forms.Panel()
+        Me.pnl_appbar_bottom_loc = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
+        '
+        'pnl_launchbar_loc
+        '
+        Me.pnl_launchbar_loc.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnl_launchbar_loc.Location = New System.Drawing.Point(0, 0)
+        Me.pnl_launchbar_loc.Name = "pnl_launchbar_loc"
+        Me.pnl_launchbar_loc.Size = New System.Drawing.Size(80, 685)
+        Me.pnl_launchbar_loc.TabIndex = 0
+        '
+        'pnl_appbar_top_loc
+        '
+        Me.pnl_appbar_top_loc.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnl_appbar_top_loc.Location = New System.Drawing.Point(80, 0)
+        Me.pnl_appbar_top_loc.Name = "pnl_appbar_top_loc"
+        Me.pnl_appbar_top_loc.Size = New System.Drawing.Size(901, 48)
+        Me.pnl_appbar_top_loc.TabIndex = 1
+        '
+        'pnl_appbar_bottom_loc
+        '
+        Me.pnl_appbar_bottom_loc.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnl_appbar_bottom_loc.Location = New System.Drawing.Point(80, 637)
+        Me.pnl_appbar_bottom_loc.Name = "pnl_appbar_bottom_loc"
+        Me.pnl_appbar_bottom_loc.Size = New System.Drawing.Size(901, 48)
+        Me.pnl_appbar_bottom_loc.TabIndex = 2
         '
         'frmDesktop
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(856, 612)
+        Me.ClientSize = New System.Drawing.Size(981, 685)
+        Me.Controls.Add(Me.pnl_appbar_bottom_loc)
+        Me.Controls.Add(Me.pnl_appbar_top_loc)
+        Me.Controls.Add(Me.pnl_launchbar_loc)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmDesktop"
         Me.ShowIcon = False
@@ -37,4 +67,7 @@ Partial Class frmDesktop
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents pnl_launchbar_loc As System.Windows.Forms.Panel
+    Friend WithEvents pnl_appbar_top_loc As System.Windows.Forms.Panel
+    Friend WithEvents pnl_appbar_bottom_loc As System.Windows.Forms.Panel
 End Class
