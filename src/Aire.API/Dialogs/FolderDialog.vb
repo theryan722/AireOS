@@ -1,7 +1,7 @@
 ﻿Imports System.Windows.Forms
 Imports System.IO
 
-Public Class dlgFolder
+Public Class FolderDialog
 
     Public Property SelectedFolder As String
 

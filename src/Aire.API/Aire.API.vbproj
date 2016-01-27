@@ -95,10 +95,10 @@
     <Compile Include="Dialogs\dlgFile.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgFolder.Designer.vb">
-      <DependentUpon>dlgFolder.vb</DependentUpon>
+    <Compile Include="Dialogs\FolderDialog.Designer.vb">
+      <DependentUpon>FolderDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\dlgFolder.vb">
+    <Compile Include="Dialogs\FolderDialog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\dlgLogout.Designer.vb">
@@ -172,8 +172,8 @@
     <EmbeddedResource Include="Dialogs\dlgFile.resx">
       <DependentUpon>dlgFile.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgFolder.resx">
-      <DependentUpon>dlgFolder.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\FolderDialog.resx">
+      <DependentUpon>FolderDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgLogout.resx">
       <DependentUpon>dlgLogout.vb</DependentUpon>
