@@ -120,13 +120,6 @@
     <Compile Include="Forms\frmDesktop.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmManager.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmManager.Designer.vb">
-      <DependentUpon>frmManager.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -146,9 +139,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\frmDesktop.resx">
       <DependentUpon>frmDesktop.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmManager.resx">
-      <DependentUpon>frmManager.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
