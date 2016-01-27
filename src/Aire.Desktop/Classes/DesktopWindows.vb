@@ -1,6 +1,7 @@
 ﻿Public Class DesktopWindows
 
     Public Property Windows As List(Of Process) 'Unsure of how will be storing window info, use process for now as placeholder
+    Private desktop As frmDesktop
 
 #Region "Methods"
 
@@ -27,7 +28,7 @@
 #End Region
 
     Public Sub New(ByVal frm As frmDesktop)
-
+        desktop = frm
     End Sub
 
 End Class
