@@ -1,4 +1,4 @@
-﻿Public Class dlgFile
+﻿Public Class FileDialog
 
     Public Enum Mode
         Open

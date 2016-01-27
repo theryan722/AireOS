@@ -89,10 +89,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compatibility.vb" />
-    <Compile Include="Dialogs\dlgFile.Designer.vb">
-      <DependentUpon>dlgFile.vb</DependentUpon>
+    <Compile Include="Dialogs\FileDialog.Designer.vb">
+      <DependentUpon>FileDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\dlgFile.vb">
+    <Compile Include="Dialogs\FileDialog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\FolderDialog.Designer.vb">
@@ -169,8 +169,8 @@
     <Compile Include="Volume.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dialogs\dlgFile.resx">
-      <DependentUpon>dlgFile.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\FileDialog.resx">
+      <DependentUpon>FileDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\FolderDialog.resx">
       <DependentUpon>FolderDialog.vb</DependentUpon>
