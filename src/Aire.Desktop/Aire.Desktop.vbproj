@@ -108,6 +108,12 @@
     <Compile Include="Forms\Bars\bar_launchbar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\dlgTray.Designer.vb">
+      <DependentUpon>dlgTray.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgTray.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\dlgViewDesktops.Designer.vb">
       <DependentUpon>dlgViewDesktops.vb</DependentUpon>
     </Compile>

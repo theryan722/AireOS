@@ -25,9 +25,11 @@ Partial Class bar_launchbar
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bar_launchbar))
         Me.btnLauncher = New System.Windows.Forms.Button()
         Me.pnl_tray = New System.Windows.Forms.Panel()
-        Me.pnl_applications = New System.Windows.Forms.Panel()
         Me.lbl_timedate = New System.Windows.Forms.Label()
+        Me.pnl_applications = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.pnl_tray.SuspendLayout()
+        Me.pnl_applications.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLauncher
@@ -52,14 +54,6 @@ Partial Class bar_launchbar
         Me.pnl_tray.Size = New System.Drawing.Size(80, 100)
         Me.pnl_tray.TabIndex = 1
         '
-        'pnl_applications
-        '
-        Me.pnl_applications.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_applications.Location = New System.Drawing.Point(0, 25)
-        Me.pnl_applications.Name = "pnl_applications"
-        Me.pnl_applications.Size = New System.Drawing.Size(80, 460)
-        Me.pnl_applications.TabIndex = 2
-        '
         'lbl_timedate
         '
         Me.lbl_timedate.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -70,6 +64,26 @@ Partial Class bar_launchbar
         Me.lbl_timedate.TabIndex = 0
         Me.lbl_timedate.Text = "TIME" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DAY" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DATE"
         Me.lbl_timedate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'pnl_applications
+        '
+        Me.pnl_applications.Controls.Add(Me.Button1)
+        Me.pnl_applications.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnl_applications.Location = New System.Drawing.Point(0, 25)
+        Me.pnl_applications.Name = "pnl_applications"
+        Me.pnl_applications.Size = New System.Drawing.Size(80, 460)
+        Me.pnl_applications.TabIndex = 2
+        '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(28, 378)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(22, 19)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'bar_launchbar
         '
@@ -86,6 +100,7 @@ Partial Class bar_launchbar
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.TopMost = True
         Me.pnl_tray.ResumeLayout(False)
+        Me.pnl_applications.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -93,4 +108,5 @@ Partial Class bar_launchbar
     Friend WithEvents pnl_tray As System.Windows.Forms.Panel
     Friend WithEvents pnl_applications As System.Windows.Forms.Panel
     Friend WithEvents lbl_timedate As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
