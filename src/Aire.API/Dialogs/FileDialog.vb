@@ -5,6 +5,7 @@
         Save
     End Enum
 
+    Public Property SelectedFile As String
     Private extlist As New List(Of String)
 
 #Region "Methods"
