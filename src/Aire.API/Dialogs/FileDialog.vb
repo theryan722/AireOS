@@ -31,6 +31,14 @@
 
 #End Region
 
+#Region "UI"
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.DialogResult = Windows.Forms.DialogResult.Cancel
+    End Sub
+
+#End Region
+
 #Region "dlgFile"
 
     Public Sub New(Optional ByVal filemode As Mode = Mode.Open, Optional ByVal extensions As List(Of String) = Nothing, Optional ByVal title As String = "")
@@ -55,4 +63,5 @@
 
 #End Region
 
+    
 End Class

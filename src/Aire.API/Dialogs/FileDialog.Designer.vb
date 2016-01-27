@@ -25,6 +25,7 @@ Partial Class FileDialog
         Me.pnl_bottom = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.txt_file = New System.Windows.Forms.TextBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -32,7 +33,6 @@ Partial Class FileDialog
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.combo_fileextensions = New System.Windows.Forms.ComboBox()
         Me.pnl_top = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.pnl_bottom.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -67,6 +67,14 @@ Partial Class FileDialog
         Me.txt_file.Name = "txt_file"
         Me.txt_file.Size = New System.Drawing.Size(271, 20)
         Me.txt_file.TabIndex = 3
+        '
+        'Panel4
+        '
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel4.Location = New System.Drawing.Point(328, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(10, 20)
+        Me.Panel4.TabIndex = 7
         '
         'Label1
         '
@@ -135,15 +143,7 @@ Partial Class FileDialog
         Me.pnl_top.Size = New System.Drawing.Size(489, 40)
         Me.pnl_top.TabIndex = 1
         '
-        'Panel4
-        '
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel4.Location = New System.Drawing.Point(328, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(10, 20)
-        Me.Panel4.TabIndex = 7
-        '
-        'dlgFile
+        'FileDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -152,7 +152,7 @@ Partial Class FileDialog
         Me.Controls.Add(Me.pnl_bottom)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "dlgFile"
+        Me.Name = "FileDialog"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
