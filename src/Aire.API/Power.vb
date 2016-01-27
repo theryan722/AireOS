@@ -8,19 +8,19 @@
         End Sub
 
         Public Shared Sub Shutdown()
-            Sys.Events.Raise_SystemPowerStateChange(Events.PowerState.Shutdown)
+            Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Shutdown)
         End Sub
 
         Public Shared Sub Restart()
-            Sys.Events.Raise_SystemPowerStateChange(Events.PowerState.Restart)
+            Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Restart)
         End Sub
 
         Public Shared Sub Hibernate()
-            Sys.Events.Raise_SystemPowerStateChange(Events.PowerState.Hibernate)
+            Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Hibernate)
         End Sub
 
         Public Shared Sub Sleep()
-            Sys.Events.Raise_SystemPowerStateChange(Events.PowerState.Sleep)
+            Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Sleep)
         End Sub
 
     End Class
