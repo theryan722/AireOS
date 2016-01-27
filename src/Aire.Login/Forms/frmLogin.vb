@@ -110,4 +110,8 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Aire.API.Audio.Volume.Decrease(5)
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Aire.API.Audio.Volume.ToggleMute()
+    End Sub
 End Class

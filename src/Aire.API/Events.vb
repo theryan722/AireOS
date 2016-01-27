@@ -38,6 +38,7 @@
 
         Public Shared Sub Raise_VolumeChanged(ByVal volume As Integer)
             RaiseEvent VolumeChanged(volume)
+            Audio.Volume.DisplayVolumeStatus()
         End Sub
 
 #End Region
