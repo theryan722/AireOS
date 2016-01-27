@@ -5,6 +5,7 @@ Friend Class dlgVolumeStatus
     Private Volume As Integer = 0
     Private ovolume As Integer = 0
     Private trun As Integer = 0
+    Public Shadows Event StatClosed()
 
 #Region "Event Handlers"
 
@@ -41,6 +42,10 @@ Friend Class dlgVolumeStatus
 
 #Region "dlgVolumeStatus"
 
+    Private Sub dlgVolumeStatus_FormClosing(sender As Object, e As Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        RaiseEvent StatClosed()
+    End Sub
+
     Private Sub dlgVolumeStatus_Paint(sender As Object, e As Windows.Forms.PaintEventArgs) Handles Me.Paint
         DrawProgress(e.Graphics, New Rectangle(5, 5, 60, 60), Volume)
     End Sub
@@ -71,5 +76,5 @@ Friend Class dlgVolumeStatus
     End Sub
 
 #End Region
-    
+
 End Class
