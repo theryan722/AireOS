@@ -45,7 +45,7 @@
         End Function
 
         Public Shared Sub SetVolume(ByVal vol As Integer)
-            Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 " & Math.Min(vol, 100))
+            Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 " & Math.Min(vol, 100) & "%")
         End Sub
 
         Public Shared Function GetIfMuted() As Boolean
@@ -53,9 +53,7 @@
         End Function
 
         Public Shared Sub DisplayVolumeControl()
-            If dlgVolumeControl.Showing Then
-                volcont.UpdateUI()
-            Else
+            If Not dlgVolumeControl.Showing Then
                 volcont = New dlgVolumeControl
                 volcont.Show()
             End If

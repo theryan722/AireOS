@@ -21,6 +21,10 @@
 
 #Region "UI"
 
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
+    End Sub
+
     Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles TrackBar1.Scroll
         Audio.Volume.SetVolume(TrackBar1.Value)
         UpdateUI(True)
@@ -34,9 +38,16 @@
         Showing = False
     End Sub
 
+    Private Sub dlgVolumeControl_KeyDown(sender As Object, e As Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Windows.Forms.Keys.Escape Then
+            Me.Close()
+        End If
+    End Sub
+
     Private Sub dlgVolume_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Showing = True
         UpdateUI()
+        TrackBar1.Focus()
     End Sub
 
     Private Sub dlgVolume_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
