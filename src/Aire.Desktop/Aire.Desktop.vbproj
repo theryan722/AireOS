@@ -93,6 +93,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DesktopWindows.vb" />
     <Compile Include="Classes\Manager.vb" />
     <Compile Include="Classes\UserDesktops.vb" />
     <Compile Include="Forms\frmDesktop.Designer.vb">
