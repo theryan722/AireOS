@@ -29,11 +29,11 @@ Partial Class dlgVolume
         '
         'TrackBar1
         '
-        Me.TrackBar1.Location = New System.Drawing.Point(32, 12)
+        Me.TrackBar1.Location = New System.Drawing.Point(32, 3)
         Me.TrackBar1.Maximum = 100
         Me.TrackBar1.Name = "TrackBar1"
         Me.TrackBar1.Orientation = System.Windows.Forms.Orientation.Vertical
-        Me.TrackBar1.Size = New System.Drawing.Size(45, 136)
+        Me.TrackBar1.Size = New System.Drawing.Size(45, 145)
         Me.TrackBar1.TabIndex = 0
         Me.TrackBar1.TickStyle = System.Windows.Forms.TickStyle.None
         '
