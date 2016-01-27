@@ -5,27 +5,26 @@
 
 #Region "Methods"
 
-    Private Sub UpdateUI()
+    Public Sub UpdateUI(Optional notrackbar As Boolean = False)
         Dim vol As Integer = Audio.Volume.GetVolume()
         If Audio.Volume.GetIfMuted Then
             lbl_vol.Text = "Muted"
         Else
             lbl_vol.Text = vol & "%"
-            TrackBar1.Value = vol
+            If notrackbar Then
+                TrackBar1.Value = vol
+            End If
         End If
-
-    End Sub
-
-    Private Sub UpdateVolume()
-
-
     End Sub
 
 #End Region
 
 #Region "UI"
 
-
+    Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles TrackBar1.Scroll
+        Audio.Volume.SetVolume(TrackBar1.Value)
+        UpdateUI(True)
+    End Sub
 
 #End Region
 
@@ -45,5 +44,5 @@
     End Sub
 
 #End Region
-
+    
 End Class
