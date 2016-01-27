@@ -15,6 +15,12 @@
         BatteryDangerCharge
     End Enum
 
+    Public Enum NetworkStatus
+        Wired
+        Wireless
+        Disconnected
+    End Enum
+
     Private desktop As frmDesktop
 
 #End Region
