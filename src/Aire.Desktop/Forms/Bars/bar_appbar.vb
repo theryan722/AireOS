@@ -14,7 +14,17 @@
 
 #Region "Methods"
 
+#Region "Public"
 
+    Public Sub SetBackColor(ByVal ncolor As Color)
+        Me.BackColor = ncolor
+    End Sub
+
+    Public Function GetBackColor() As Color
+        Return Me.BackColor
+    End Function
+
+#End Region
 
 #End Region
 
