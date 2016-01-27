@@ -40,7 +40,7 @@
         Public Shared Function GetVolume() As Integer
             Dim temp As String = Sys.Process.ExecuteScriptWithOutput(Aire.DataManager.DataPaths.GetSysDataLocation & "/Scripts/getvolume.sh")
             Dim ret As String = temp.Replace("%", "")
-            Return CInt(ret)
+            Return Math.Min(CInt(ret), 100)
         End Function
 
         Public Shared Function GetIfMuted() As Boolean
