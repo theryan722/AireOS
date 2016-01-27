@@ -1,6 +1,19 @@
 ﻿Public Class bar_launchbar
 
-#Region "Variables/Properties"
+#Region "Variables/Properties/Enums"
+
+    Public Enum BatteryStatus
+        Battery100
+        Battery75
+        Battery50
+        Battery25
+        BatteryDanger
+        Battery100Charge
+        Battery75Charge
+        Battery50Charge
+        Battery25Charge
+        BatteryDangerCharge
+    End Enum
 
     Private desktop As frmDesktop
 
