@@ -13,7 +13,7 @@
             End Function
 
             Public Shared Function Release() As String
-
+                Return Aire.Info.Info.OSRelease
             End Function
 
         End Class
