@@ -45,7 +45,7 @@
         Public Class Memory
 
             Public Shared Function TotalPhysicalMemory() As Integer
-
+                Return My.Computer.Info.TotalPhysicalMemory
             End Function
 
             Public Shared Function TotalVirtualMemory() As Integer
