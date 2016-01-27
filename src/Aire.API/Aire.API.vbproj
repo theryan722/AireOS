@@ -239,6 +239,10 @@
       <Project>{e0cc3d59-2ef1-4459-9fce-02a3cceba7b1}</Project>
       <Name>Aire.DataManager</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Aire.Info\Aire.Info.vbproj">
+      <Project>{622f3845-368a-460b-af8e-942e76b32ed9}</Project>
+      <Name>Aire.Info</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Aire.Security\Aire.Security.vbproj">
       <Project>{d1931c58-f5b4-467f-8b45-83dd530fd61a}</Project>
       <Name>Aire.Security</Name>

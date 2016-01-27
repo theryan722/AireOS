@@ -5,7 +5,7 @@
         Public Class OS
 
             Public Shared Function Name() As String
-
+                Return Aire.Info.Info.OSName
             End Function
 
             Public Shared Function Version() As String
