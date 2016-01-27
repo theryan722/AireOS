@@ -165,6 +165,7 @@
     <Compile Include="CryptographyManager.vb" />
     <Compile Include="Power.vb" />
     <Compile Include="ProcessManager.vb" />
+    <Compile Include="SystemInfo.vb" />
     <Compile Include="Users.vb" />
     <Compile Include="Volume.vb" />
   </ItemGroup>
