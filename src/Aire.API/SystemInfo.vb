@@ -25,7 +25,7 @@
             End Function
 
             Public Shared Function MachineName() As String
-
+                Return Environment.MachineName
             End Function
 
             Public Shared Function TimeAlive() As Integer
