@@ -78,6 +78,17 @@
         End Select
     End Sub
 
+    Public Sub SetNetworkIcon(ByVal icon As NetworkStatus)
+        Select Case icon
+            Case NetworkStatus.Wired
+                btnNetwork.BackgroundImage = My.Resources.network_wired
+            Case NetworkStatus.Wireless
+                btnNetwork.BackgroundImage = My.Resources.network_wireless
+            Case NetworkStatus.Disconnected
+                btnNetwork.BackgroundImage = My.Resources.networking_disconnected
+        End Select
+    End Sub
+
 #End Region
 
 #End Region
