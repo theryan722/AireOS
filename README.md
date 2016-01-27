@@ -1,9 +1,18 @@
 # AireOS
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/status-Active-brightgreen.svg)
-![Build](https://img.shields.io/badge/Build-Unstable-red.svg)
+![Build](https://img.shields.io/badge/build-Unstable-red.svg)
 
 An open source operating system developed in .Net.
+
+###Project Status
+This project is in active development, and contributions are welcome. This project is also extremely early in development, and not everything is properly documented or explained yet, but bug reports are welcome.
+
+###What is this?
+AireOS is an operating system I have been repeatedly attempting to create over the past several years. This project here is my current attempt, using everything I have learned from my previous attempts this project has made it further than any of the previous attempts. Simply put, AireOS is an operating system being developed in .Net on the Mono Framework. Please see the contributions section if you are interested in helping out!
+
+###Contributions
+All contributions are welcome! Currently, I am in need of someone skilled in Python or Java, and someone skilled in graphic design (AireOS doesn't even have a logo yet). You can contact me or submit a new Issue if interested in contributing to this project.
 
 ###License
 The MIT License (MIT)
