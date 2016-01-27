@@ -21,7 +21,7 @@
         Public Class Computer
 
             Public Shared Function Name() As String
-
+                Return My.Computer.Name
             End Function
 
             Public Shared Function MachineName() As String
