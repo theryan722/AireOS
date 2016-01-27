@@ -28,7 +28,8 @@ Partial Class dlgVolumeStatus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.ClientSize = New System.Drawing.Size(60, 100)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "dlgVolumeStatus"
         Me.ShowIcon = False
