@@ -37,7 +37,7 @@
         Public Class Network
 
             Public Shared Function IsAvailable() As Boolean
-
+                Return My.Computer.Network.IsAvailable
             End Function
 
         End Class
