@@ -34,7 +34,6 @@ Partial Class dlgVolumeStatus
         Me.Name = "dlgVolumeStatus"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.Text = "dlgVolumeStatus"
         Me.TopMost = True
         Me.ResumeLayout(False)
 

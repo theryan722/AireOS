@@ -35,6 +35,11 @@ Friend Class dlgVolumeStatus
         DrawProgress(e.Graphics, New Rectangle(5, 5, 60, 60), Volume)
     End Sub
 
+    Public Sub New(Optional ByVal vol As Integer = 0)
+        InitializeComponent()
+        UpdateVolume(vol)
+    End Sub
+
 #End Region
     
 End Class
