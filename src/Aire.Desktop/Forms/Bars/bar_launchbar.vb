@@ -14,7 +14,20 @@
 
 #Region "Methods"
 
+#Region "Public"
 
+    Public Sub SetBackColor(ByVal ncolor As Color)
+        btnLauncher.BackColor = ncolor
+        pnl_applications.BackColor = ncolor
+        pnl_tray.BackColor = ncolor
+        Me.BackColor = ncolor
+    End Sub
+
+    Public Function GetBackColor() As Color
+        Return Me.BackColor
+    End Function
+
+#End Region
 
 #End Region
 
