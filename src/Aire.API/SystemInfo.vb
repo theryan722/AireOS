@@ -57,7 +57,7 @@
             End Function
 
             Public Shared Function AvailableVirtualMemory() As Integer
-
+                Return My.Computer.Info.AvailableVirtualMemory
             End Function
 
         End Class
