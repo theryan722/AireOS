@@ -9,7 +9,7 @@
             End Function
 
             Public Shared Function Version() As String
-
+                Return Aire.Info.Info.OSVersion
             End Function
 
             Public Shared Function Release() As String
