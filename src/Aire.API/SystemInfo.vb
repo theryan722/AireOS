@@ -28,8 +28,8 @@
                 Return Environment.MachineName
             End Function
 
-            Public Shared Function TimeAlive() As Integer
-
+            Public Shared Function TimeAwake() As Integer
+                Return Environment.TickCount
             End Function
 
         End Class
