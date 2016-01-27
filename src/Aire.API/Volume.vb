@@ -43,6 +43,10 @@
             Return Math.Min(CInt(ret), 100)
         End Function
 
+        Public Shared Sub SetVolume(ByVal vol As Integer)
+            Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 " & Math.Min(vol, 100))
+        End Sub
+
         Public Shared Function GetIfMuted() As Boolean
             Return muted
         End Function
