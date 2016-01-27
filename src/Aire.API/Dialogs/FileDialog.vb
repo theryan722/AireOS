@@ -37,6 +37,10 @@
         Me.DialogResult = Windows.Forms.DialogResult.Cancel
     End Sub
 
+    Private Sub btnOpenSave_Click(sender As Object, e As EventArgs) Handles btnOpenSave.Click
+        Me.DialogResult = Windows.Forms.DialogResult.OK
+    End Sub
+
 #End Region
 
 #Region "dlgFile"
@@ -63,5 +67,6 @@
 
 #End Region
 
+    
     
 End Class
