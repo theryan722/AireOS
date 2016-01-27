@@ -1,7 +1,15 @@
 ﻿Namespace Sys
 
-    Public Class Info
+    Namespace Info
 
-    End Class
+        Public Class OS
+
+        End Class
+
+        Public Class Hardware
+
+        End Class
+
+    End Namespace
 
 End Namespace
