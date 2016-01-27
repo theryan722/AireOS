@@ -3,6 +3,8 @@
 Friend Class dlgVolumeStatus
 
     Private Volume As Integer = 0
+    Private ovolume As Integer = 0
+    Private trun As Integer = 0
 
 #Region "Event Handlers"
 
@@ -46,7 +48,26 @@ Friend Class dlgVolumeStatus
     Public Sub New(Optional ByVal vol As Integer = 0)
         InitializeComponent()
         UpdateVolume(vol)
+        LifeTimer.Start()
         AddHandler Aire.API.Sys.Events.VolumeChanged, AddressOf HandleVolumeChanged
+    End Sub
+
+#End Region
+
+#Region "Timer"
+
+    Private Sub LifeTimer_Tick(sender As Object, e As EventArgs) Handles LifeTimer.Tick
+        If trun = 0 Then
+            ovolume = Volume
+            trun += 1
+        Else
+            If ovolume = Volume Then
+                Me.Close()
+            Else
+                ovolume = Volume
+                trun += 1
+            End If
+        End If
     End Sub
 
 #End Region

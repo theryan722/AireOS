@@ -22,7 +22,13 @@ Partial Class dlgVolumeStatus
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Me.LifeTimer = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
+        '
+        'LifeTimer
+        '
+        Me.LifeTimer.Interval = 1000
         '
         'dlgVolumeStatus
         '
@@ -38,4 +44,5 @@ Partial Class dlgVolumeStatus
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents LifeTimer As System.Windows.Forms.Timer
 End Class
