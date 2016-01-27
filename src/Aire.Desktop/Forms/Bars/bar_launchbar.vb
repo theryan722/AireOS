@@ -21,6 +21,13 @@
         Disconnected
     End Enum
 
+    Public Enum VolumeStatus
+        VolumeHigh
+        VolumeMedium
+        VolumeLow
+        VolumeMute
+    End Enum
+
     Private desktop As frmDesktop
 
 #End Region
