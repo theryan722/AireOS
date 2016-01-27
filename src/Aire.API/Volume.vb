@@ -4,24 +4,14 @@
 
 #Region "Volume Status"
 
-#Region "Private"
-
-        Private Shared volstatdisp As Boolean = False
         Private Shared volstat As dlgVolumeStatus
 
-        Private Shared Sub VolStatusClosed()
-            volstatdisp = False
-            RemoveHandler volstat.StatClosed, AddressOf VolStatusClosed
-        End Sub
-
-#End Region
-
         Public Shared Sub DisplayVolumeStatus()
-            If Not volstatdisp Then
-                volstat = New dlgVolumeStatus(GetVolume())
-                volstatdisp = True
+            If dlgVolumeStatus.Showing Then
+                volstat.UpdateVolume(GetVolume())
+            Else
+                volstat = New dlgVolumeStatus
                 volstat.Show()
-                AddHandler volstat.StatClosed, AddressOf VolStatusClosed
             End If
         End Sub
 
@@ -29,11 +19,13 @@
 
         Public Shared Sub Increase(ByVal amount As Integer)
             Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 +" & Math.Min(amount, 100) & "%")
+            DisplayVolumeStatus()
             Sys.Events.Raise_VolumeChanged(GetVolume())
         End Sub
 
         Public Shared Sub Decrease(ByVal amount As Integer)
             Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 -" & Math.Min(amount, 100) & "%")
+            DisplayVolumeStatus()
             Sys.Events.Raise_VolumeChanged(GetVolume())
         End Sub
 

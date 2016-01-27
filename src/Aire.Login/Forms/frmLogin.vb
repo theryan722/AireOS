@@ -103,4 +103,11 @@
 
 #End Region
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Aire.API.Audio.Volume.Increase(5)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Aire.API.Audio.Volume.Decrease(5)
+    End Sub
 End Class

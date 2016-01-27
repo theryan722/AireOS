@@ -1,28 +1,19 @@
 ﻿Imports System.Drawing
+Imports System.Windows.Forms
 
 Friend Class dlgVolumeStatus
 
-    Private Volume As Integer = 0
-    Private ovolume As Integer = 0
-    Private trun As Integer = 0
-    Public Shadows Event StatClosed()
-
-#Region "Event Handlers"
-
-    Private Sub HandleVolumeChanged(ByVal vol As Integer)
-        UpdateVolume(vol)
-    End Sub
-
-#End Region
+    Private Shared Volume As Integer = 0
+    Public Shared Showing As Boolean = False
 
 #Region "Methods"
 
     Public Sub UpdateVolume(ByVal vol As Integer)
-        Volume = vol
+        Volume = Math.Min(vol, 100)
         Me.Invalidate()
     End Sub
 
-    Public Sub DrawProgress(g As Graphics, rect As Rectangle, percentage As Single)
+    Private Sub DrawProgress(g As Graphics, rect As Rectangle, percentage As Single)
         Dim progressAngle = CSng(360 / 100 * percentage)
         Dim remainderAngle = 360 - progressAngle
         Using progressPen As New Pen(Color.LightSeaGreen, 2), remainderPen As New Pen(Color.LightGray, 2)
@@ -43,18 +34,18 @@ Friend Class dlgVolumeStatus
 #Region "dlgVolumeStatus"
 
     Private Sub dlgVolumeStatus_FormClosing(sender As Object, e As Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        RaiseEvent StatClosed()
+        Showing = False
+    End Sub
+
+    Private Sub dlgVolumeStatus_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.Location = New Point(Screen.PrimaryScreen.WorkingArea.Width - Me.Width - 5, Screen.PrimaryScreen.WorkingArea.Height - Me.Height - 5)
+        Showing = True
+        UpdateVolume(Aire.API.Audio.Volume.GetVolume())
+        LifeTimer.Start()
     End Sub
 
     Private Sub dlgVolumeStatus_Paint(sender As Object, e As Windows.Forms.PaintEventArgs) Handles Me.Paint
         DrawProgress(e.Graphics, New Rectangle(5, 5, 60, 60), Volume)
-    End Sub
-
-    Public Sub New(Optional ByVal vol As Integer = 0)
-        InitializeComponent()
-        UpdateVolume(vol)
-        LifeTimer.Start()
-        AddHandler Aire.API.Sys.Events.VolumeChanged, AddressOf HandleVolumeChanged
     End Sub
 
 #End Region
@@ -62,17 +53,7 @@ Friend Class dlgVolumeStatus
 #Region "Timer"
 
     Private Sub LifeTimer_Tick(sender As Object, e As EventArgs) Handles LifeTimer.Tick
-        If trun = 0 Then
-            ovolume = Volume
-            trun += 1
-        Else
-            If ovolume = Volume Then
-                Me.Close()
-            Else
-                ovolume = Volume
-                trun += 1
-            End If
-        End If
+        Me.Close()
     End Sub
 
 #End Region
