@@ -22,7 +22,7 @@
 
 #Region "Raise Event Methods"
 
-        Public Shared Sub Raise_SystemPowerStateChange(ByVal change As PowerState)
+        Public Shared Sub Raise_SystemPowerStateChanged(ByVal change As PowerState)
             RaiseEvent SystemPowerStateChanged(change)
             Select Case change
                 Case PowerState.Hibernate
