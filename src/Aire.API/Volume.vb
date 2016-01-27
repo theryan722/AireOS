@@ -51,6 +51,10 @@
             Return CInt(ret)
         End Function
 
+        Public Shared Function GetIfMuted() As Boolean
+            Return muted
+        End Function
+
     End Class
 
 End Namespace
