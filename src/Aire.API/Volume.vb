@@ -1,19 +1,11 @@
 ﻿Namespace Audio
 
     Public Class Volume
+
+#Region "Variables"
+
         Private Shared muted As Boolean = False
-#Region "Volume Status"
-
         Private Shared volstat As dlgVolumeStatus
-
-        Public Shared Sub DisplayVolumeStatus()
-            If dlgVolumeStatus.Showing Then
-                volstat.UpdateVolume(GetVolume())
-            Else
-                volstat = New dlgVolumeStatus
-                volstat.Show()
-            End If
-        End Sub
 
 #End Region
 
@@ -54,6 +46,15 @@
         Public Shared Function GetIfMuted() As Boolean
             Return muted
         End Function
+
+        Public Shared Sub DisplayVolumeStatus()
+            If dlgVolumeStatus.Showing Then
+                volstat.UpdateVolume(GetVolume())
+            Else
+                volstat = New dlgVolumeStatus
+                volstat.Show()
+            End If
+        End Sub
 
     End Class
 
