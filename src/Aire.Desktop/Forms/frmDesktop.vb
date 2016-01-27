@@ -2,7 +2,8 @@
 
 #Region "Properties"
 
-
+    Public Property Windows As List(Of DesktopWindows)
+    Public Property User As String
 
 #End Region
 
