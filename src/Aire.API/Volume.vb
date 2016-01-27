@@ -6,6 +6,7 @@
 
         Private Shared muted As Boolean = False
         Private Shared volstat As dlgVolumeStatus
+        Private Shared volcont As dlgVolume
 
 #End Region
 
@@ -50,6 +51,15 @@
         Public Shared Function GetIfMuted() As Boolean
             Return muted
         End Function
+
+        Public Shared Sub DisplayVolumeControl()
+            If dlgVolume.Showing Then
+                volcont.UpdateUI()
+            Else
+                volcont = New dlgVolume
+                volcont.Show()
+            End If
+        End Sub
 
         Public Shared Sub DisplayVolumeStatus()
             If dlgVolumeStatus.Showing Then
