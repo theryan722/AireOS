@@ -53,6 +53,31 @@
         Return Me.BackColor
     End Function
 
+    Public Sub SetBatteryIcon(ByVal icon As BatteryStatus)
+        Select Case icon
+            Case BatteryStatus.Battery100
+                btnBattery.BackgroundImage = My.Resources.battery_100
+            Case BatteryStatus.Battery75
+                btnBattery.BackgroundImage = My.Resources.battery_75
+            Case BatteryStatus.Battery50
+                btnBattery.BackgroundImage = My.Resources.battery_50
+            Case BatteryStatus.Battery25
+                btnBattery.BackgroundImage = My.Resources.battery_25
+            Case BatteryStatus.BatteryDanger
+                btnBattery.BackgroundImage = My.Resources.battery_danger
+            Case BatteryStatus.Battery100Charge
+                btnBattery.BackgroundImage = My.Resources.battery_100_charging
+            Case BatteryStatus.Battery75Charge
+                btnBattery.BackgroundImage = My.Resources.battery_75_charging
+            Case BatteryStatus.Battery50Charge
+                btnBattery.BackgroundImage = My.Resources.battery_50_charging
+            Case BatteryStatus.Battery25Charge
+                btnBattery.BackgroundImage = My.Resources.battery_25_charging
+            Case BatteryStatus.BatteryDangerCharge
+                btnBattery.BackgroundImage = My.Resources.battery_danger_charging
+        End Select
+    End Sub
+
 #End Region
 
 #End Region
