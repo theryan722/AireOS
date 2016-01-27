@@ -65,7 +65,7 @@
         Public Class Hardware
 
             Public Shared Function ProcessorCount() As Integer
-
+                Return Environment.ProcessorCount
             End Function
 
         End Class
