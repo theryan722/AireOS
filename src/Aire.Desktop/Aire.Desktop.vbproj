@@ -137,6 +137,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Bars\bar_appbar.resx">
+      <DependentUpon>bar_appbar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bars\bar_launchbar.resx">
+      <DependentUpon>bar_launchbar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDesktop.resx">
       <DependentUpon>frmDesktop.vb</DependentUpon>
     </EmbeddedResource>

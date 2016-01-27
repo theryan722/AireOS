@@ -22,8 +22,18 @@ Partial Class bar_appbar
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.SuspendLayout()
+        '
+        'bar_appbar
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Text = "bar_appbar"
+        Me.ClientSize = New System.Drawing.Size(609, 48)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "bar_appbar"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.TopMost = True
+        Me.ResumeLayout(False)
+
     End Sub
 End Class
