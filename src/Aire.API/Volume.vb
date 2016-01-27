@@ -11,45 +11,74 @@
 #End Region
 
         Public Shared Sub Increase(ByVal amount As Integer)
-            Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 +" & Math.Min(amount, 100) & "%")
-            Sys.Events.Raise_VolumeChanged(GetVolume())
+            Try
+                Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 +" & Math.Min(amount, 100) & "%")
+                Sys.Events.Raise_VolumeChanged(GetVolume())
+            Catch ex As Exception
+                Sys.Logging.Log.Write("ERROR: " & ex.ToString)
+            End Try
         End Sub
 
         Public Shared Sub Decrease(ByVal amount As Integer)
-            Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 -" & Math.Min(amount, 100) & "%")
-            Sys.Events.Raise_VolumeChanged(GetVolume())
+            Try
+                Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 -" & Math.Min(amount, 100) & "%")
+                Sys.Events.Raise_VolumeChanged(GetVolume())
+            Catch ex As Exception
+                Sys.Logging.Log.Write("ERROR: " & ex.ToString)
+            End Try
         End Sub
 
         Public Shared Sub Mute()
-            Sys.Process.ExecuteCommand("pactl", "-- set-sink-mute 0 1")
-            Sys.Events.Raise_VolumeChanged(GetVolume())
-            muted = True
+            Try
+                Sys.Process.ExecuteCommand("pactl", "-- set-sink-mute 0 1")
+                Sys.Events.Raise_VolumeChanged(GetVolume())
+                muted = True
+            Catch ex As Exception
+                Sys.Logging.Log.Write("ERROR: " & ex.ToString)
+            End Try
         End Sub
 
         Public Shared Sub Unmute()
-            Sys.Process.ExecuteCommand("pactl", "-- set-sink-mute 0 0")
-            Sys.Events.Raise_VolumeChanged(GetVolume())
-            muted = False
+            Try
+                Sys.Process.ExecuteCommand("pactl", "-- set-sink-mute 0 0")
+                Sys.Events.Raise_VolumeChanged(GetVolume())
+                muted = False
+            Catch ex As Exception
+                Sys.Logging.Log.Write("ERROR: " & ex.ToString)
+            End Try
         End Sub
 
         Public Shared Sub ToggleMute()
-            Sys.Process.ExecuteCommand("pactl", "-- set-sink-mute 0 toggle")
-            Sys.Events.Raise_VolumeChanged(GetVolume())
-            muted = If(muted, False, True)
+            Try
+                Sys.Process.ExecuteCommand("pactl", "-- set-sink-mute 0 toggle")
+                Sys.Events.Raise_VolumeChanged(GetVolume())
+                muted = If(muted, False, True)
+            Catch ex As Exception
+                Sys.Logging.Log.Write("ERROR: " & ex.ToString)
+            End Try
         End Sub
 
         Public Shared Function GetVolume() As Integer
-            Dim temp As String = Sys.Process.ExecuteScriptWithOutput(Aire.DataManager.DataPaths.GetSysDataLocation & "/Scripts/getvolume.sh")
-            Dim ret As String = temp.Replace("%", "")
-            Return Math.Min(CInt(ret), 100)
+            Try
+                Dim temp As String = Sys.Process.ExecuteScriptWithOutput(Aire.DataManager.DataPaths.GetSysDataLocation & "/Scripts/getvolume.sh")
+                Dim ret As String = temp.Replace("%", "")
+                Return Math.Min(CInt(ret), 100)
+            Catch ex As Exception
+                Sys.Logging.Log.Write("ERROR: " & ex.ToString)
+                Return 0
+            End Try
         End Function
 
         Public Shared Sub SetVolume(ByVal vol As Integer)
-            Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 " & Math.Min(vol, 100) & "%")
+            Try
+                Sys.Process.ExecuteCommand("pactl", "-- set-sink-volume 0 " & Math.Min(vol, 100) & "%")
+            Catch ex As Exception
+                Sys.Logging.Log.Write("ERROR: " & ex.ToString)
+            End Try
         End Sub
 
         Public Shared Function GetIfMuted() As Boolean
-            Return muted
+                Return muted
         End Function
 
         Public Shared Sub DisplayVolumeControl()
