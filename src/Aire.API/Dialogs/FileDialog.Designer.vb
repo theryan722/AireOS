@@ -33,10 +33,13 @@ Partial Class FileDialog
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.combo_fileextensions = New System.Windows.Forms.ComboBox()
         Me.pnl_top = New System.Windows.Forms.Panel()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.pnl_bottom.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnl_bottom
@@ -143,11 +146,21 @@ Partial Class FileDialog
         Me.pnl_top.Size = New System.Drawing.Size(489, 40)
         Me.pnl_top.TabIndex = 1
         '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 40)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Size = New System.Drawing.Size(489, 244)
+        Me.SplitContainer1.SplitterDistance = 155
+        Me.SplitContainer1.TabIndex = 2
+        '
         'FileDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(489, 329)
+        Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.pnl_top)
         Me.Controls.Add(Me.pnl_bottom)
         Me.MaximizeBox = False
@@ -163,6 +176,8 @@ Partial Class FileDialog
         Me.Panel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -177,4 +192,5 @@ Partial Class FileDialog
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
 End Class
