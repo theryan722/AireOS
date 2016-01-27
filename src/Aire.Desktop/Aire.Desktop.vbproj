@@ -96,6 +96,12 @@
     <Compile Include="Classes\DesktopWindows.vb" />
     <Compile Include="Classes\Manager.vb" />
     <Compile Include="Classes\UserDesktops.vb" />
+    <Compile Include="Forms\dlgViewDesktops.Designer.vb">
+      <DependentUpon>dlgViewDesktops.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgViewDesktops.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmDesktop.Designer.vb">
       <DependentUpon>frmDesktop.vb</DependentUpon>
     </Compile>
