@@ -4,6 +4,14 @@ Friend Class dlgVolumeStatus
 
     Private Volume As Integer = 0
 
+#Region "Event Handlers"
+
+    Private Sub HandleVolumeChanged(ByVal vol As Integer)
+        UpdateVolume(vol)
+    End Sub
+
+#End Region
+
 #Region "Methods"
 
     Public Sub UpdateVolume(ByVal vol As Integer)
@@ -38,6 +46,7 @@ Friend Class dlgVolumeStatus
     Public Sub New(Optional ByVal vol As Integer = 0)
         InitializeComponent()
         UpdateVolume(vol)
+        AddHandler Aire.API.Sys.Events.VolumeChanged, AddressOf HandleVolumeChanged
     End Sub
 
 #End Region
