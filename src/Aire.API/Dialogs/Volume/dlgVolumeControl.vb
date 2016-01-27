@@ -1,4 +1,4 @@
-﻿Friend Class dlgVolume
+﻿Friend Class dlgVolumeControl
 
     Private Shared Volume As Integer = 0
     Public Shared Showing As Boolean = False
@@ -44,5 +44,5 @@
     End Sub
 
 #End Region
-    
+
 End Class

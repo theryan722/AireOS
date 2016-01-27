@@ -131,10 +131,10 @@
     <Compile Include="Dialogs\dlgRun.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\Volume\dlgVolume.Designer.vb">
-      <DependentUpon>dlgVolume.vb</DependentUpon>
+    <Compile Include="Dialogs\Volume\dlgVolumeControl.Designer.vb">
+      <DependentUpon>dlgVolumeControl.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\Volume\dlgVolume.vb">
+    <Compile Include="Dialogs\Volume\dlgVolumeControl.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\Volume\dlgVolumeStatus.Designer.vb">
@@ -191,8 +191,8 @@
     <EmbeddedResource Include="Dialogs\dlgPower.resx">
       <DependentUpon>dlgPower.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\Volume\dlgVolume.resx">
-      <DependentUpon>dlgVolume.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\Volume\dlgVolumeControl.resx">
+      <DependentUpon>dlgVolumeControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Volume\dlgVolumeStatus.resx">
       <DependentUpon>dlgVolumeStatus.vb</DependentUpon>
