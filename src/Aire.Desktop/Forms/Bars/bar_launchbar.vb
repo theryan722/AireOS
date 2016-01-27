@@ -89,6 +89,19 @@
         End Select
     End Sub
 
+    Public Sub SetVolumeIcon(ByVal icon As VolumeStatus)
+        Select Case icon
+            Case VolumeStatus.VolumeHigh
+                btnVolume.BackgroundImage = My.Resources.volume_high
+            Case VolumeStatus.VolumeMedium
+                btnVolume.BackgroundImage = My.Resources.volume_medium
+            Case VolumeStatus.VolumeLow
+                btnVolume.BackgroundImage = My.Resources.volume_low
+            Case VolumeStatus.VolumeMute
+                btnVolume.BackgroundImage = My.Resources.volume_mute
+        End Select
+    End Sub
+
 #End Region
 
 #End Region
