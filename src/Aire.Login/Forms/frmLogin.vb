@@ -97,7 +97,7 @@
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Aire.API.FormPosition.CenterForm(Me, frmLoginBackground)
-        AddHandler Aire.API.Sys.Events.SystemPowerStateChange, AddressOf HandleShutdownEvents
+        AddHandler Aire.API.Sys.Events.SystemPowerStateChanged, AddressOf HandleShutdownEvents
         InitializeUI()
     End Sub
 

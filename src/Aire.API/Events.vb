@@ -15,7 +15,7 @@
 
 #Region "Events"
 
-        Public Shared Event SystemPowerStateChange(ByVal change As PowerState)
+        Public Shared Event SystemPowerStateChanged(ByVal change As PowerState)
         Public Shared Event VolumeChanged(ByVal volume As Integer)
 
 #End Region
@@ -23,7 +23,7 @@
 #Region "Raise Event Methods"
 
         Public Shared Sub Raise_SystemPowerStateChange(ByVal change As PowerState)
-            RaiseEvent SystemPowerStateChange(change)
+            RaiseEvent SystemPowerStateChanged(change)
             Select Case change
                 Case PowerState.Hibernate
                     Aire.API.Sys.Logging.Log.Write("System is hibernating.")
