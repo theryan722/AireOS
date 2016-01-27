@@ -1,12 +1,17 @@
 ﻿Public Class FileDialog
 
+    Public Property SelectedFile As String
+
+#Region "Variables/Enums"
+
+    Private extlist As New List(Of String)
+
     Public Enum Mode
         Open
         Save
     End Enum
 
-    Public Property SelectedFile As String
-    Private extlist As New List(Of String)
+#End Region
 
 #Region "Methods"
 
@@ -72,7 +77,4 @@
 
 #End Region
 
-    
-    
-    
 End Class
