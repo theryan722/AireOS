@@ -49,7 +49,7 @@
             End Function
 
             Public Shared Function TotalVirtualMemory() As Integer
-
+                Return My.Computer.Info.TotalVirtualMemory
             End Function
 
             Public Shared Function AvailablePhysicalMemory() As Integer
