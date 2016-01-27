@@ -16,6 +16,7 @@
 #Region "Events"
 
         Public Shared Event SystemPowerStateChange(ByVal change As PowerState)
+        Public Shared Event VolumeChanged(ByVal volume As Integer)
 
 #End Region
 
@@ -33,6 +34,10 @@
                 Case PowerState.Sleep
                     Aire.API.Sys.Logging.Log.Write("System is sleeping.")
             End Select
+        End Sub
+
+        Public Shared Sub Raise_VolumeChanged(ByVal volume As Integer)
+            RaiseEvent VolumeChanged(volume)
         End Sub
 
 #End Region
