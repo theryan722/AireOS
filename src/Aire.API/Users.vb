@@ -124,6 +124,12 @@
 
         Public Class Info
 
+            Private Shared Property ActiveUsers() As List(Of String)
+
+            Public Shared Function GetActiveUsers() As List(Of String)
+                Return ActiveUsers
+            End Function
+
             Public Shared Function GetAllUsers() As List(Of String)
                 Dim ret As New List(Of String)
                 For Each item As String In Aire.DataManager.Databases.UserData.GetAllUsers()
@@ -157,6 +163,10 @@
         End Class
 
         Public Class Actions
+
+            Public Shared Sub LogoutUser(ByVal username As String)
+
+            End Sub
 
             Public Shared Sub LoginUser(ByVal username As String, ByVal password As String)
 

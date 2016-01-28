@@ -78,6 +78,7 @@ Partial Class frmDesktop
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.Text = "frmDesktop"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub
