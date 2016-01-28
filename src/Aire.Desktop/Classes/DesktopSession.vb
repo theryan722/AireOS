@@ -31,7 +31,8 @@
 
     Public Sub LoadSettings()
         Desktop.SetDesktopBackground(Aire.API.User.Current.Settings.DesktopBackgroundImage, Aire.API.User.Current.Settings.DesktopBackgroundImageLayout)
-
+        Desktop.SetAppBarColor(Aire.API.User.Current.Settings.AppBarColor)
+        LaunchBar.SetBackColor(Aire.API.User.Current.Settings.LaunchBarColor)
     End Sub
 
 #End Region

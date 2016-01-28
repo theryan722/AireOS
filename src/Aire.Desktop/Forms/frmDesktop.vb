@@ -15,6 +15,11 @@
         pnl_desktop.BackgroundImageLayout = layout
     End Sub
 
+    Public Sub SetAppBarColor(ByVal clr As Color)
+        pnl_appbar_top.BackColor = clr
+        pnl_appbar_bottom.BackColor = clr
+    End Sub
+
 #End Region
 
 #Region "UI"
