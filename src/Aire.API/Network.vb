@@ -9,6 +9,10 @@
                 Return res = "WIRELESS"
             End Function
 
+            Public Shared Function GetIfNetworkConnection() As Boolean
+                Return Sys.Info.Network.IsAvailable()
+            End Function
+
         End Class
 
     End Namespace
