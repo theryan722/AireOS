@@ -124,32 +124,42 @@
             If batpercent > 75 Then
                 If batcharging Then
                     btnBattery.BackgroundImage = My.Resources.battery_100_charging
+                    ToolTip1.SetToolTip(btnBattery, "Charging|" & batpercent & "%")
                 Else
                     btnBattery.BackgroundImage = My.Resources.battery_100
+                    ToolTip1.SetToolTip(btnBattery, "Discharging|" & batpercent & "%")
                 End If
             ElseIf batpercent > 50 Then
                 If batcharging Then
                     btnBattery.BackgroundImage = My.Resources.battery_75_charging
+                    ToolTip1.SetToolTip(btnBattery, "Charging|" & batpercent & "%")
                 Else
                     btnBattery.BackgroundImage = My.Resources.battery_75
+                    ToolTip1.SetToolTip(btnBattery, "Discharging|" & batpercent & "%")
                 End If
             ElseIf batpercent > 25 Then
                 If batcharging Then
                     btnBattery.BackgroundImage = My.Resources.battery_50_charging
+                    ToolTip1.SetToolTip(btnBattery, "Charging|" & batpercent & "%")
                 Else
                     btnBattery.BackgroundImage = My.Resources.battery_50
+                    ToolTip1.SetToolTip(btnBattery, "Discharging|" & batpercent & "%")
                 End If
             ElseIf batpercent > 15 Then
                 If batcharging Then
                     btnBattery.BackgroundImage = My.Resources.battery_25_charging
+                    ToolTip1.SetToolTip(btnBattery, "Charging|" & batpercent & "%")
                 Else
                     btnBattery.BackgroundImage = My.Resources.battery_25
+                    ToolTip1.SetToolTip(btnBattery, "Discharging|" & batpercent & "%")
                 End If
             Else
                 If batcharging Then
                     btnBattery.BackgroundImage = My.Resources.battery_danger_charging
+                    ToolTip1.SetToolTip(btnBattery, "Charging|" & batpercent & "%")
                 Else
                     btnBattery.BackgroundImage = My.Resources.battery_danger
+                    ToolTip1.SetToolTip(btnBattery, "Discharging|" & batpercent & "%")
                 End If
             End If
         Else
