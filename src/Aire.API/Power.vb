@@ -35,7 +35,8 @@
             End Function
 
             Public Shared Function GetBatteryPercentage() As Integer
-
+                Dim res As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0| grep -E ""percentage""")
+                Return CDbl(res.Split(":")(1).Replace(" ", "").Replace("%", ""))
             End Function
 
             Public Shared Function GetIfBatteryCharging() As Boolean
