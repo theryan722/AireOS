@@ -24,7 +24,10 @@
     End Sub
 
     Private Sub HideOtherUsers(Optional ByVal button As Boolean = False)
-
+        If button Then
+            btnUsers.Hide()
+        End If
+        lb_users.Hide()
     End Sub
 
     Private Function VerifyFields() As Boolean
