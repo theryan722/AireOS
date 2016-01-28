@@ -95,7 +95,7 @@
   <ItemGroup>
     <Compile Include="Classes\DesktopWindows.vb" />
     <Compile Include="Classes\Manager.vb" />
-    <Compile Include="Classes\UserDesktops.vb" />
+    <Compile Include="Classes\DesktopSession.vb" />
     <Compile Include="Forms\Bars\bar_appbar.Designer.vb">
       <DependentUpon>bar_appbar.vb</DependentUpon>
     </Compile>
