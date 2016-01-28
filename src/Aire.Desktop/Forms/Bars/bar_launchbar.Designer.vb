@@ -24,14 +24,14 @@ Partial Class bar_launchbar
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bar_launchbar))
         Me.pnl_tray = New System.Windows.Forms.Panel()
-        Me.lbl_timedate = New System.Windows.Forms.Label()
-        Me.pnl_applications = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnNotification = New System.Windows.Forms.Button()
         Me.btnVolume = New System.Windows.Forms.Button()
         Me.btnNetwork = New System.Windows.Forms.Button()
         Me.btnMore = New System.Windows.Forms.Button()
         Me.btnBattery = New System.Windows.Forms.Button()
+        Me.lbl_timedate = New System.Windows.Forms.Label()
+        Me.pnl_applications = New System.Windows.Forms.Panel()
         Me.btnLauncher = New System.Windows.Forms.Button()
         Me.pnl_tray.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -46,25 +46,6 @@ Partial Class bar_launchbar
         Me.pnl_tray.Name = "pnl_tray"
         Me.pnl_tray.Size = New System.Drawing.Size(80, 66)
         Me.pnl_tray.TabIndex = 1
-        '
-        'lbl_timedate
-        '
-        Me.lbl_timedate.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.lbl_timedate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_timedate.Location = New System.Drawing.Point(0, 16)
-        Me.lbl_timedate.Name = "lbl_timedate"
-        Me.lbl_timedate.Size = New System.Drawing.Size(80, 50)
-        Me.lbl_timedate.TabIndex = 0
-        Me.lbl_timedate.Text = "TIME" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DAY" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DATE"
-        Me.lbl_timedate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'pnl_applications
-        '
-        Me.pnl_applications.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_applications.Location = New System.Drawing.Point(0, 25)
-        Me.pnl_applications.Name = "pnl_applications"
-        Me.pnl_applications.Size = New System.Drawing.Size(80, 494)
-        Me.pnl_applications.TabIndex = 2
         '
         'Panel1
         '
@@ -143,6 +124,25 @@ Partial Class bar_launchbar
         Me.btnBattery.Size = New System.Drawing.Size(16, 16)
         Me.btnBattery.TabIndex = 0
         Me.btnBattery.UseVisualStyleBackColor = True
+        '
+        'lbl_timedate
+        '
+        Me.lbl_timedate.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.lbl_timedate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_timedate.Location = New System.Drawing.Point(0, 16)
+        Me.lbl_timedate.Name = "lbl_timedate"
+        Me.lbl_timedate.Size = New System.Drawing.Size(80, 50)
+        Me.lbl_timedate.TabIndex = 0
+        Me.lbl_timedate.Text = "TIME" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DAY" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DATE"
+        Me.lbl_timedate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'pnl_applications
+        '
+        Me.pnl_applications.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnl_applications.Location = New System.Drawing.Point(0, 25)
+        Me.pnl_applications.Name = "pnl_applications"
+        Me.pnl_applications.Size = New System.Drawing.Size(80, 494)
+        Me.pnl_applications.TabIndex = 2
         '
         'btnLauncher
         '

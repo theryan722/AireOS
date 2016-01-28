@@ -29,12 +29,21 @@
     End Enum
 
     Private desktop As frmDesktop
+    Private launcher As frmLauncher
 
 #End Region
 
 #Region "UI"
 
-
+    Private Sub btnLauncher_Click(sender As Object, e As EventArgs) Handles btnLauncher.Click
+        If frmLauncher.Showing Then
+            launcher.Focus()
+        Else
+            launcher = New frmLauncher(Me, desktop)
+            launcher.Show()
+            launcher.Location = PointToScreen(btnNetwork.Location)
+        End If
+    End Sub
 
 #End Region
 
@@ -114,4 +123,5 @@
 
 #End Region
 
+    
 End Class
