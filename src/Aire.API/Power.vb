@@ -1,28 +1,48 @@
 ﻿Namespace Sys
 
-    Public Class Power
+    Namespace Power
 
-        Public Shared Sub ShowPowerDialog()
-            Dim newb As New dlgPower
-            newb.ShowDialog()
-        End Sub
+        Public Class Actions
 
-        Public Shared Sub Shutdown()
-            Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Shutdown)
-        End Sub
+            Public Shared Sub ShowPowerDialog()
+                Dim newb As New dlgPower
+                newb.ShowDialog()
+            End Sub
 
-        Public Shared Sub Restart()
-            Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Restart)
-        End Sub
+            Public Shared Sub Shutdown()
+                Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Shutdown)
+            End Sub
 
-        Public Shared Sub Hibernate()
-            Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Hibernate)
-        End Sub
+            Public Shared Sub Restart()
+                Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Restart)
+            End Sub
 
-        Public Shared Sub Sleep()
-            Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Sleep)
-        End Sub
+            Public Shared Sub Hibernate()
+                Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Hibernate)
+            End Sub
 
-    End Class
+            Public Shared Sub Sleep()
+                Sys.Events.Raise_SystemPowerStateChanged(Events.PowerState.Sleep)
+            End Sub
+
+        End Class
+
+        Public Class Info
+
+            Public Shared Function GetIfUsingBattery() As Boolean
+
+            End Function
+
+            Public Shared Function GetBatteryPercentage() As Integer
+
+            End Function
+
+            Public Shared Function GetIfBatteryCharging() As Boolean
+
+            End Function
+
+        End Class
+
+    End Namespace
 
 End Namespace
