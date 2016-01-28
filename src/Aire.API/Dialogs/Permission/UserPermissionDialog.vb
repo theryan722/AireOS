@@ -17,7 +17,10 @@
 #Region "Methods"
 
     Private Sub ShowOtherUsers(Optional ByVal button As Boolean = False)
-
+        If button Then
+            btnUsers.Show()
+        End If
+        lb_users.Show()
     End Sub
 
     Private Sub HideOtherUsers(Optional ByVal button As Boolean = False)
