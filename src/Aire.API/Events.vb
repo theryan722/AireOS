@@ -17,6 +17,7 @@
 
         Public Shared Event SystemPowerStateChanged(ByVal change As PowerState)
         Public Shared Event VolumeChanged(ByVal volume As Integer)
+        Public Shared Event BatteryPercentChanged(ByVal percent As Integer)
 
 #End Region
 
@@ -39,6 +40,10 @@
         Public Shared Sub Raise_VolumeChanged(ByVal volume As Integer)
             RaiseEvent VolumeChanged(volume)
             Audio.Volume.DisplayVolumeStatus()
+        End Sub
+
+        Public Shared Sub Raise_BatteryPercentChanged(ByVal percent As Integer)
+            RaiseEvent BatteryPercentChanged(percent)
         End Sub
 
 #End Region

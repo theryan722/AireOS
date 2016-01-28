@@ -143,7 +143,7 @@
 
     Private Sub UpdateBattery()
         If Aire.API.Sys.Power.Info.GetIfUsingBattery Then
-            Dim batpercent As Integer = Aire.API.Sys.Power.Info.GetBatteryPercentage
+            Dim batpercent As Double = Aire.API.Sys.Power.Info.GetBatteryPercentage
             Dim batcharging As Boolean = Aire.API.Sys.Power.Info.GetIfBatteryCharging
             If batpercent > 75 Then
                 If batcharging Then

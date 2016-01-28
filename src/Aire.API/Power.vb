@@ -29,6 +29,8 @@
 
         Public Class Info
 
+            Dim batpercent As Double = 0
+
             Public Shared Function GetIfUsingBattery() As Boolean
                 Try
                     Dim bb As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0")
