@@ -117,6 +117,14 @@
         lbl_timedate.Text = DateTime.Now.ToString("hh:mm") & vbNewLine & Date.Today.ToString("dddd") & vbNewLine & DateTime.Today
     End Sub
 
+    Private Sub UpdateBattery()
+
+    End Sub
+
+    Private Sub UpdateNetwork()
+
+    End Sub
+
 #End Region
 
 #Region "bar_launchbar"

@@ -162,7 +162,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Network.vb" />
-    <Compile Include="Notifications.vb" />
     <Compile Include="CryptographyManager.vb" />
     <Compile Include="Power.vb" />
     <Compile Include="ProcessManager.vb" />
