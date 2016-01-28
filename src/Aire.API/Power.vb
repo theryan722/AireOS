@@ -30,7 +30,8 @@
         Public Class Info
 
             Public Shared Function GetIfUsingBattery() As Boolean
-
+                Dim bb As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0")
+                Return If(bb.StartsWith("failed"), False, True)
             End Function
 
             Public Shared Function GetBatteryPercentage() As Integer
