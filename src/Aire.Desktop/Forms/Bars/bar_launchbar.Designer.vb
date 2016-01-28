@@ -35,6 +35,7 @@ Partial Class bar_launchbar
         Me.pnl_applications = New System.Windows.Forms.Panel()
         Me.btnLauncher = New System.Windows.Forms.Button()
         Me.UpdateTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.pnl_tray.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -73,6 +74,7 @@ Partial Class bar_launchbar
         Me.btnNotification.Name = "btnNotification"
         Me.btnNotification.Size = New System.Drawing.Size(16, 16)
         Me.btnNotification.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.btnNotification, "Notifications")
         Me.btnNotification.UseVisualStyleBackColor = True
         '
         'btnVolume
@@ -86,6 +88,7 @@ Partial Class bar_launchbar
         Me.btnVolume.Name = "btnVolume"
         Me.btnVolume.Size = New System.Drawing.Size(16, 16)
         Me.btnVolume.TabIndex = 3
+        Me.ToolTip1.SetToolTip(Me.btnVolume, "Volume")
         Me.btnVolume.UseVisualStyleBackColor = True
         '
         'btnNetwork
@@ -99,6 +102,7 @@ Partial Class bar_launchbar
         Me.btnNetwork.Name = "btnNetwork"
         Me.btnNetwork.Size = New System.Drawing.Size(16, 16)
         Me.btnNetwork.TabIndex = 2
+        Me.ToolTip1.SetToolTip(Me.btnNetwork, "Network")
         Me.btnNetwork.UseVisualStyleBackColor = True
         '
         'btnMore
@@ -112,6 +116,7 @@ Partial Class bar_launchbar
         Me.btnMore.Name = "btnMore"
         Me.btnMore.Size = New System.Drawing.Size(16, 16)
         Me.btnMore.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.btnMore, "More")
         Me.btnMore.UseVisualStyleBackColor = True
         '
         'btnBattery
@@ -125,6 +130,7 @@ Partial Class bar_launchbar
         Me.btnBattery.Name = "btnBattery"
         Me.btnBattery.Size = New System.Drawing.Size(16, 16)
         Me.btnBattery.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.btnBattery, "Battery")
         Me.btnBattery.UseVisualStyleBackColor = True
         '
         'lbl_timedate
@@ -157,6 +163,7 @@ Partial Class bar_launchbar
         Me.btnLauncher.Name = "btnLauncher"
         Me.btnLauncher.Size = New System.Drawing.Size(80, 25)
         Me.btnLauncher.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.btnLauncher, "Launcher")
         Me.btnLauncher.UseVisualStyleBackColor = True
         '
         'UpdateTimer
@@ -193,4 +200,5 @@ Partial Class bar_launchbar
     Friend WithEvents btnVolume As System.Windows.Forms.Button
     Friend WithEvents btnNotification As System.Windows.Forms.Button
     Friend WithEvents UpdateTimer As System.Windows.Forms.Timer
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class
