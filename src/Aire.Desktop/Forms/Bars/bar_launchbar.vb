@@ -45,6 +45,14 @@
         End If
     End Sub
 
+#Region "Tray"
+
+    Private Sub btnVolume_Click(sender As Object, e As EventArgs) Handles btnVolume.Click
+        Aire.API.Audio.Volume.DisplayVolumeControl()
+    End Sub
+
+#End Region
+
 #End Region
 
 #Region "Methods"
@@ -235,5 +243,5 @@
     End Sub
 
 #End Region
-
+    
 End Class
