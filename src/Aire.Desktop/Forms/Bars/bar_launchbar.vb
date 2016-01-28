@@ -113,12 +113,24 @@
 
 #End Region
 
+    Private Sub UpdateTimeDate()
+        lbl_timedate.Text = DateTime.Now.ToString("hh:mm") & vbNewLine & Date.Today.ToString("dddd") & vbNewLine & DateTime.Today
+    End Sub
+
 #End Region
 
 #Region "bar_launchbar"
 
     Public Sub New(ByVal frm As frmDesktop)
         desktop = frm
+    End Sub
+
+#End Region
+
+#Region "Timers"
+
+    Private Sub UpdateTimer_Tick(sender As Object, e As EventArgs) Handles UpdateTimer.Tick
+        UpdateTimeDate()
     End Sub
 
 #End Region

@@ -22,6 +22,7 @@ Partial Class bar_launchbar
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bar_launchbar))
         Me.pnl_tray = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -33,6 +34,7 @@ Partial Class bar_launchbar
         Me.lbl_timedate = New System.Windows.Forms.Label()
         Me.pnl_applications = New System.Windows.Forms.Panel()
         Me.btnLauncher = New System.Windows.Forms.Button()
+        Me.UpdateTimer = New System.Windows.Forms.Timer(Me.components)
         Me.pnl_tray.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -157,6 +159,10 @@ Partial Class bar_launchbar
         Me.btnLauncher.TabIndex = 0
         Me.btnLauncher.UseVisualStyleBackColor = True
         '
+        'UpdateTimer
+        '
+        Me.UpdateTimer.Interval = 1000
+        '
         'bar_launchbar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -186,4 +192,5 @@ Partial Class bar_launchbar
     Friend WithEvents btnNetwork As System.Windows.Forms.Button
     Friend WithEvents btnVolume As System.Windows.Forms.Button
     Friend WithEvents btnNotification As System.Windows.Forms.Button
+    Friend WithEvents UpdateTimer As System.Windows.Forms.Timer
 End Class
