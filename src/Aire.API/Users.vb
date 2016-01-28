@@ -1,4 +1,6 @@
-﻿Namespace User
+﻿Imports System.Windows.Forms
+
+Namespace User
 
     'The currently logged in user
     Namespace Current
@@ -34,11 +36,20 @@
         'The user settings for the currently logged in user
         Public Class Settings
 
-            Public Shared Property DesktopBackgroundImage() As System.Drawing.Image
+            Public Shared Property DesktopBackgroundImage() As String
                 Get
 
                 End Get
-                Set(value As System.Drawing.Image)
+                Set(value As String)
+
+                End Set
+            End Property
+
+            Public Shared Property DesktopBackgroundImageLayout() As ImageLayout
+                Get
+
+                End Get
+                Set(value As ImageLayout)
 
                 End Set
             End Property

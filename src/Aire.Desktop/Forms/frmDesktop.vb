@@ -10,7 +10,10 @@
 
 #Region "Methods"
 
-
+    Public Sub SetDesktopBackground(ByVal img As String, Optional ByVal layout As ImageLayout = ImageLayout.Stretch)
+        pnl_desktop.BackgroundImage = Image.FromFile(img)
+        pnl_desktop.BackgroundImageLayout = layout
+    End Sub
 
 #End Region
 

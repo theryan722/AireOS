@@ -29,6 +29,10 @@
         Desktop.Close()
     End Sub
 
+    Public Sub LoadSettings()
+        Desktop.SetDesktopBackground(Aire.API.User.Current.Settings.DesktopBackgroundImage, Aire.API.User.Current.Settings.DesktopBackgroundImageLayout)
+    End Sub
+
 #End Region
 
 #Region "Private"
