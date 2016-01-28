@@ -42,6 +42,14 @@
 
             End Function
 
+            Public Shared Function GetTimeToBatteryFull() As String
+
+            End Function
+
+            Public Shared Function GetTimeToBatteryEmpty() As String
+
+            End Function
+
         End Class
 
     End Namespace
