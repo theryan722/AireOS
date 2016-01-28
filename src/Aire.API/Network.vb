@@ -15,7 +15,21 @@
 
             Public Shared Function GetWirelessStrengthDBM() As Integer
                 Dim res As String = Sys.Process.ExecuteCommandWithOutput("iwconfig", "eth1")
-                Return res.Substring(res.IndexOf("level=") + 6, 4).Trim(" ")
+                Return CInt(res.Substring(res.IndexOf("level=") + 6, 4).Trim(" "))
+            End Function
+
+            Public Shared Function GetWirelessStrengthInBars() As Integer
+                Dim res As String = Sys.Process.ExecuteCommandWithOutput("iwconfig", "eth1")
+                Dim dbm As Integer = CInt(res.Substring(res.IndexOf("level=") + 6, 4).Trim(" "))
+                If dbm > -50 Then
+                    Return 4
+                ElseIf dbm > -60 Then
+                    Return 3
+                ElseIf dbm > -70 Then
+                    Return 2
+                Else
+                    Return 1
+                End If
             End Function
 
         End Class
