@@ -16,7 +16,9 @@
 
 #Region "Methods"
 
-
+    Public Sub SetProfilePicture(ByVal img As String)
+        pb_profilepicture.BackgroundImage = Image.FromFile(img)
+    End Sub
 
 #End Region
 
