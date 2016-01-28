@@ -22,6 +22,12 @@
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 
+    Private Sub txt_password_KeyDown(sender As Object, e As Windows.Forms.KeyEventArgs) Handles txt_password.KeyDown
+        If e.KeyCode = Windows.Forms.Keys.Enter Then
+            btnOk.PerformClick()
+        End If
+    End Sub
+
 #End Region
 
 #Region "Methods"
@@ -76,5 +82,4 @@
 
 #End Region
 
-    
 End Class
