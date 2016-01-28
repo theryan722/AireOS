@@ -60,6 +60,18 @@
         lb_users.Hide()
     End Sub
 
+    Private Function VerifyUser(ByVal user As String, ByVal pass As String) As Boolean
+        If VerifyPassword(user, pass) Then
+            If Aire.API.User.Users.Info.GetPermissionLevelForUser(user) >= permlevel Then
+                Return True
+            Else
+                Return False
+            End If
+        Else
+            Return False
+        End If
+    End Function
+
     Private Function VerifyFields() As Boolean
         Dim ret As Boolean = True
         If allowothers Then
