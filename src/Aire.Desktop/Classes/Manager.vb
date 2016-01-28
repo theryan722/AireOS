@@ -24,7 +24,7 @@
             Else
                 Dim newses As New DesktopSession
                 newses.User = user
-                newses.Desktop = New frmDesktop
+                newses.Desktop = New frmDesktop(user)
                 newses.AppBarTop = New bar_appbar(newses.Desktop, True)
                 newses.AppBarBottom = New bar_appbar(newses.Desktop, False)
                 newses.LaunchBar = New bar_launchbar(newses.Desktop)
@@ -32,10 +32,6 @@
                 ActiveSession = newses
                 ActiveSession.LoadSession()
             End If
-            Dim newb As New frmDesktop
-            newb.User = user
-            newb.Windows.Add(New DesktopWindows(newb))
-            newb.Show()
         End If
     End Sub
 

@@ -21,7 +21,10 @@
 
 #Region "frmDesktop"
 
-
+    Public Sub New(ByVal ouser As String)
+        InitializeComponent()
+        User = ouser
+    End Sub
 
 #End Region
 

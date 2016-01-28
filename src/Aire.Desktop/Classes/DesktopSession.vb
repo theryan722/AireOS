@@ -31,6 +31,7 @@
 
     Public Sub CloseSession()
         Manager.DesktopSessions.Remove(Me)
+        Desktop.Close()
     End Sub
 
 #End Region
