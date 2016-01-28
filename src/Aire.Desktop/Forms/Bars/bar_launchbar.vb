@@ -192,6 +192,10 @@
         End If
     End Sub
 
+    Private Sub UpdateVolume()
+
+    End Sub
+
 #End Region
 
 #Region "bar_launchbar"
@@ -212,6 +216,7 @@
         UpdateTimeDate()
         UpdateBattery()
         UpdateNetwork()
+        UpdateVolume()
     End Sub
 
 #End Region
