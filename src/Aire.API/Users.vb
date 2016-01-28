@@ -1,4 +1,5 @@
 ﻿Imports System.Windows.Forms
+Imports System.Drawing
 
 Namespace User
 
@@ -41,6 +42,24 @@ Namespace User
 
                 End Get
                 Set(value As String)
+
+                End Set
+            End Property
+
+            Public Shared Property LaunchBarColor() As Color
+                Get
+
+                End Get
+                Set(value As Color)
+
+                End Set
+            End Property
+
+            Public Shared Property AppBarColor() As Color
+                Get
+
+                End Get
+                Set(value As Color)
 
                 End Set
             End Property
