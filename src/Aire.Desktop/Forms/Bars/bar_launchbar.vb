@@ -30,7 +30,7 @@
 
     Private desktop As frmDesktop
     Private launcher As frmLauncher
-
+    Private batcount As Integer = 30
 #End Region
 
 #Region "UI"
@@ -252,8 +252,13 @@
 #Region "Timers"
 
     Private Sub UpdateTimer_Tick(sender As Object, e As EventArgs) Handles UpdateTimer.Tick
+        If batcount = 30 Then
+            UpdateBattery()
+            batcount = 0
+        Else
+            batcount += 1
+        End If
         UpdateTimeDate()
-        UpdateBattery()
         UpdateNetwork()
         UpdateVolume()
     End Sub
