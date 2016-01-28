@@ -30,28 +30,50 @@
         Public Class Info
 
             Public Shared Function GetIfUsingBattery() As Boolean
-                Dim bb As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0")
-                Return If(bb.StartsWith("failed"), False, True)
+                Try
+                    Dim bb As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0")
+                    Return If(bb.StartsWith("failed"), False, True)
+                Catch ex As Exception
+                    Sys.Logging.Log.Write("ERROR: ", ex.ToString)
+                End Try
             End Function
 
             Public Shared Function GetBatteryPercentage() As Integer
-                Dim res As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0| grep -E ""percentage""")
-                Return CDbl(res.Split(":")(1).Replace(" ", "").Replace("%", ""))
+                Try
+                    Dim res As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0| grep -E ""percentage""")
+                    Return CDbl(res.Split(":")(1).Replace(" ", "").Replace("%", ""))
+                Catch ex As Exception
+                    Sys.Logging.Log.Write("ERROR: ", ex.ToString)
+                End Try
             End Function
 
             Public Shared Function GetIfBatteryCharging() As Boolean
-                Dim res As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0| grep -E ""state""")
-                Return (res.Split(":")(1).Replace(" ", "")) = "charging"
+                Try
+                    Dim res As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0| grep -E ""state""")
+                    Return (res.Split(":")(1).Replace(" ", "")) = "charging"
+                Catch ex As Exception
+                    Sys.Logging.Log.Write("ERROR: ", ex.ToString)
+                End Try
             End Function
 
             Public Shared Function GetTimeToBatteryFull() As String
-                Dim res As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0| grep -E ""to\ full""")
-                Return res.Split(":")(1).Replace(" ", "").Replace("minutes", "")
+                Try
+                    Dim res As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0| grep -E ""to\ full""")
+                    Return res.Split(":")(1).Replace(" ", "").Replace("minutes", "")
+                Catch ex As Exception
+                    Sys.Logging.Log.Write("ERROR: ", ex.ToString)
+                    Return "ERROR"
+                End Try
             End Function
 
             Public Shared Function GetTimeToBatteryEmpty() As String
-                Dim res As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0| grep -E ""to\ full""")
-                Return res.Split(":")(1).Replace(" ", "").Replace("minutes", "")
+                Try
+                    Dim res As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0| grep -E ""to\ full""")
+                    Return res.Split(":")(1).Replace(" ", "").Replace("minutes", "")
+                Catch ex As Exception
+                    Sys.Logging.Log.Write("ERROR: ", ex.ToString)
+                    Return "ERROR"
+                End Try
             End Function
 
         End Class
