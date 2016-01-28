@@ -30,8 +30,4 @@
 
 #End Region
 
-    Private Sub frmDesktop_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Session.DisplayBars()
-    End Sub
-
 End Class

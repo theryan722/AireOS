@@ -12,9 +12,6 @@
 
     Public Sub LoadSession()
         DisplayDesktop()
-    End Sub
-
-    Public Sub DisplayBars()
         DisplayLaunchBar()
     End Sub
 
