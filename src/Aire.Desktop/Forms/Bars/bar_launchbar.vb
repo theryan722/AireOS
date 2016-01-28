@@ -118,7 +118,43 @@
     End Sub
 
     Private Sub UpdateBattery()
-
+        If Aire.API.Sys.Power.Info.GetIfUsingBattery Then
+            Dim batpercent As Integer = Aire.API.Sys.Power.Info.GetBatteryPercentage
+            Dim batcharging As Boolean = Aire.API.Sys.Power.Info.GetIfBatteryCharging
+            If batpercent > 75 Then
+                If batcharging Then
+                    btnBattery.BackgroundImage = My.Resources.battery_100_charging
+                Else
+                    btnBattery.BackgroundImage = My.Resources.battery_100
+                End If
+            ElseIf batpercent > 50 Then
+                If batcharging Then
+                    btnBattery.BackgroundImage = My.Resources.battery_75_charging
+                Else
+                    btnBattery.BackgroundImage = My.Resources.battery_75
+                End If
+            ElseIf batpercent > 25 Then
+                If batcharging Then
+                    btnBattery.BackgroundImage = My.Resources.battery_50_charging
+                Else
+                    btnBattery.BackgroundImage = My.Resources.battery_50
+                End If
+            ElseIf batpercent > 15 Then
+                If batcharging Then
+                    btnBattery.BackgroundImage = My.Resources.battery_25_charging
+                Else
+                    btnBattery.BackgroundImage = My.Resources.battery_25
+                End If
+            Else
+                If batcharging Then
+                    btnBattery.BackgroundImage = My.Resources.battery_danger_charging
+                Else
+                    btnBattery.BackgroundImage = My.Resources.battery_danger
+                End If
+            End If
+        Else
+            btnBattery.Visible = False
+        End If
     End Sub
 
     Private Sub UpdateNetwork()
@@ -143,6 +179,8 @@
 
     Private Sub UpdateTimer_Tick(sender As Object, e As EventArgs) Handles UpdateTimer.Tick
         UpdateTimeDate()
+        UpdateBattery()
+        UpdateNetwork()
     End Sub
 
 #End Region
