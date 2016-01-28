@@ -30,7 +30,7 @@ Partial Class frmDesktop
         '
         'pnl_launchbar_loc
         '
-        Me.pnl_launchbar_loc.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.pnl_launchbar_loc.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.pnl_launchbar_loc.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnl_launchbar_loc.Location = New System.Drawing.Point(0, 0)
         Me.pnl_launchbar_loc.Name = "pnl_launchbar_loc"
