@@ -9,7 +9,7 @@
 
 #Region "Methods"
 
-    Public Shared Sub LoadMainDesktop(ByVal user As String, ByVal pass As String)
+    Public Shared Sub LoadDesktopSession(ByVal user As String, ByVal pass As String)
         If Aire.API.User.Users.Actions.MatchPasswordForUser(user, pass) Then
             If Aire.API.User.Users.Info.GetActiveUsers().Contains(user) Then
                 For Each item As DesktopSession In DesktopSessions
