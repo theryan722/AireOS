@@ -38,6 +38,10 @@
         Return ret
     End Function
 
+    Private Function VerifyPassword(ByVal user As String, ByVal pass As String) As Boolean
+        Return Aire.API.User.Users.Actions.MatchPasswordForUser(user, pass)
+    End Function
+
 #End Region
 
 #Region "UserPermissionDialog"
