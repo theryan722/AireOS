@@ -136,6 +136,14 @@
         End Select
     End Sub
 
+    Public Sub StopUpdating()
+        UpdateTimer.Stop()
+    End Sub
+
+    Public Sub StartUpdating()
+        UpdateTimer.Start()
+    End Sub
+
 #End Region
 
 #Region "Update"
