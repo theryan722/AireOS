@@ -13,6 +13,11 @@
                 Return Sys.Info.Network.IsAvailable()
             End Function
 
+            Public Shared Function GetWirelessStrengthDBM() As Integer
+                Dim res As String = Sys.Process.ExecuteCommandWithOutput("iwconfig", "eth1")
+                Return res.Substring(res.IndexOf("level=") + 6, 4).Trim(" ")
+            End Function
+
         End Class
 
     End Namespace
