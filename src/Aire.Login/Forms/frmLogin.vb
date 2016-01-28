@@ -24,7 +24,7 @@
     End Sub
 
     Private Sub btnPower_Click(sender As Object, e As EventArgs) Handles btnPower.Click
-        Aire.API.Sys.Power.ShowPowerDialog()
+        Aire.API.Sys.Power.Actions.ShowPowerDialog()
     End Sub
 
     Private Sub btnHint_Click(sender As Object, e As EventArgs) Handles btnHint.Click
