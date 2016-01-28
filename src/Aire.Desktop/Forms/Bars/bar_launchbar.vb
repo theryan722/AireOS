@@ -121,6 +121,10 @@
 
 #Region "bar_launchbar"
 
+    Private Sub bar_launchbar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        UpdateTimer.Start()
+    End Sub
+
     Public Sub New(ByVal frm As frmDesktop)
         desktop = frm
     End Sub
