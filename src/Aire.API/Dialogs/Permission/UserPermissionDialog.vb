@@ -24,11 +24,25 @@
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        If Aire.API.User.Users.Info.GetIfUserExists(txt_username.Text) Then
+            CreateCertificate(False, txt_username.Text, Aire.API.User.Users.Info.GetPermissionLevelForUser(txt_username.text)
+        Else
+            CreateCertificate(False)
+        End If
         Me.DialogResult = Windows.Forms.DialogResult.Cancel
     End Sub
 
     Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        If VerifyFields() Then
+            If VerifyUser(txt_username.Text, txt_password.Text) Then
+                CreateCertificate(txt_username.Text, Aire.API.User.Users.Info.GetPermissionLevelForUser(txt_username.Text), True)
+                Me.DialogResult = Windows.Forms.DialogResult.OK
+            Else
+                Dim bb As New Aire.API.MessageBox("Username or password was incorrect.", "Error", MessageBox.MessageBoxButtons.OkOnly, MessageBox.MessageBoxIcon.Warning)
+            End If
+        Else
+            Dim bb As New Aire.API.MessageBox("Username or password was incorrect, or the user does not have the required permissions.", "Error", MessageBox.MessageBoxButtons.OkOnly, MessageBox.MessageBoxIcon.Warning)
+        End If
     End Sub
 
     Private Sub txt_password_KeyDown(sender As Object, e As Windows.Forms.KeyEventArgs) Handles txt_password.KeyDown
@@ -41,8 +55,13 @@
 
 #Region "Methods"
 
-    Private Sub CreateCertificate(ByVal user As String, ByVal perm As Integer, ByVal granted As Boolean)
-        Dim newcert As New PermissionCertificate(user, granted, perm)
+    Private Sub CreateCertificate(ByVal granted As Boolean)
+        Dim newcert As New PermissionCertificate(granted)
+        PermissionGranted = newcert
+    End Sub
+
+    Private Sub CreateCertificate(ByVal granted As Boolean, ByVal user As String, ByVal perm As Integer)
+        Dim newcert As New PermissionCertificate(granted, user, perm)
         PermissionGranted = newcert
     End Sub
 
