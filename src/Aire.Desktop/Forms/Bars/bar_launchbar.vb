@@ -51,6 +51,22 @@
         Aire.API.Audio.Volume.DisplayVolumeControl()
     End Sub
 
+    Private Sub btnMore_Click(sender As Object, e As EventArgs) Handles btnMore.Click
+
+    End Sub
+
+    Private Sub btnNotification_Click(sender As Object, e As EventArgs) Handles btnNotification.Click
+
+    End Sub
+
+    Private Sub btnNetwork_Click(sender As Object, e As EventArgs) Handles btnNetwork.Click
+
+    End Sub
+
+    Private Sub btnBattery_Click(sender As Object, e As EventArgs) Handles btnBattery.Click
+
+    End Sub
+
 #End Region
 
 #End Region
