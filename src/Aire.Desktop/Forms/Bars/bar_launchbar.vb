@@ -158,7 +158,15 @@
     End Sub
 
     Private Sub UpdateNetwork()
-
+        If Aire.API.Sys.Network.Info.GetIfNetworkConnection Then
+            If Aire.API.Sys.Network.Info.GetIfWireless Then
+                btnNetwork.BackgroundImage = My.Resources.network_wireless
+            Else
+                btnNetwork.BackgroundImage = My.Resources.network_wired
+            End If
+        Else
+            btnNetwork.BackgroundImage = My.Resources.networking_disconnected
+        End If
     End Sub
 
 #End Region
