@@ -153,6 +153,10 @@
       <Project>{8b285aed-9205-4cee-8955-c9c3c73408b9}</Project>
       <Name>Aire.API</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Aire.Desktop\Aire.Desktop.vbproj">
+      <Project>{c6f2b1cf-9393-41cd-a455-525522acc0dc}</Project>
+      <Name>Aire.Desktop</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
