@@ -4,7 +4,7 @@
 
     Private permlevel As Integer
     Private allowothers As Boolean
-
+    Public Property PermissionGranted As PermissionCertificate
 
 #End Region
 
@@ -23,6 +23,10 @@
     Private Sub HideOtherUsers(Optional ByVal button As Boolean = False)
 
     End Sub
+
+    Private Function VerifyFields() As Boolean
+        
+    End Function
 
 #End Region
 

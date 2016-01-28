@@ -131,10 +131,11 @@
     <Compile Include="Dialogs\dlgRun.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\UserPermissionDialog.Designer.vb">
+    <Compile Include="Dialogs\Permission\PermissionCertificate.vb" />
+    <Compile Include="Dialogs\Permission\UserPermissionDialog.Designer.vb">
       <DependentUpon>UserPermissionDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\UserPermissionDialog.vb">
+    <Compile Include="Dialogs\Permission\UserPermissionDialog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\Volume\dlgVolumeControl.Designer.vb">
@@ -198,7 +199,7 @@
     <EmbeddedResource Include="Dialogs\dlgPower.resx">
       <DependentUpon>dlgPower.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\UserPermissionDialog.resx">
+    <EmbeddedResource Include="Dialogs\Permission\UserPermissionDialog.resx">
       <DependentUpon>UserPermissionDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Volume\dlgVolumeControl.resx">
