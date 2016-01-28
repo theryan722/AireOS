@@ -77,7 +77,8 @@
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If VerifyFields() AndAlso VerifyPassword(txt_username.Text, txt_password.Text) Then
-            'login code to come once desktop is created
+            Aire.API.User.Users.Actions.LoginUser(txt_username.Text, txt_password.Text)
+            Aire.Desktop.Manager.LoadDesktopSession(txt_username.Text, txt_password.Text)
         Else
             Dim bb As New Aire.API.MessageBox("Invalid username or password, or the fields were not properly filled out.", "Error", API.MessageBox.MessageBoxButtons.OkOnly, API.MessageBox.MessageBoxIcon.Warning)
         End If

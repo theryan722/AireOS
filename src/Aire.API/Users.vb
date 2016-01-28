@@ -104,7 +104,8 @@
             End Function
 
             Public Shared Sub LogoutUser()
-
+                Users.Info.ActiveUsers.Remove(User.Current.Info.GetUsername)
+                Users.Actions.SetCurrentUser("")
             End Sub
 
             Public Shared Sub SwitchUser()
@@ -124,7 +125,7 @@
 
         Public Class Info
 
-            Private Shared Property ActiveUsers() As List(Of String)
+            Friend Shared Property ActiveUsers() As List(Of String)
 
             Public Shared Function GetActiveUsers() As List(Of String)
                 Return ActiveUsers
@@ -164,12 +165,21 @@
 
         Public Class Actions
 
-            Public Shared Sub LogoutUser(ByVal username As String)
+            Friend Shared Sub SetCurrentUser(ByVal username As String)
+                Aire.DataManager.TempData.LoggedInUser = username
+            End Sub
 
+            Public Shared Sub LogoutUser(ByVal username As String)
+                Users.Info.ActiveUsers.Remove(username)
             End Sub
 
             Public Shared Sub LoginUser(ByVal username As String, ByVal password As String)
-
+                If MatchPasswordForUser(username, password) Then
+                    SetCurrentUser(username)
+                    If Not Info.GetActiveUsers.Contains(username) Then
+                        Info.ActiveUsers.Add(username)
+                    End If
+                End If
             End Sub
 
             ' + Aire.DataManager.Databases.UserData.GetSalt(username)
