@@ -45,7 +45,8 @@
             End Function
 
             Public Shared Function GetTimeToBatteryFull() As String
-
+                Dim res As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0| grep -E ""to\ full""")
+                Return res.Split(":")(1).Replace(" ", "").Replace("minutes", "")
             End Function
 
             Public Shared Function GetTimeToBatteryEmpty() As String
