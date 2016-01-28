@@ -115,7 +115,7 @@
 
 #End Region
 
-#Region "bar_appbar"
+#Region "bar_launchbar"
 
     Public Sub New(ByVal frm As frmDesktop)
         desktop = frm
@@ -123,5 +123,4 @@
 
 #End Region
 
-    
 End Class
