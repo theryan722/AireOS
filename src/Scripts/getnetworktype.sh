@@ -12,8 +12,6 @@ if [ -z "$if" -o \! -e /sys/class/net/"$if" ]; then
 fi
 if /usr/sbin/iw dev "$if" info &>/dev/null; then
   echo "WIRELESS"
-  # uncomment the next line to start iwconfig
-  # iwconfig
 else
   echo "WIRED"
 fi
