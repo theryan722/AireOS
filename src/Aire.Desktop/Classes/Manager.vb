@@ -1,6 +1,6 @@
 ﻿Public Class Manager
 
-    Public Shared Sub ShowMainDesktop(ByVal user As String, ByVal pass As String)
+    Public Shared Sub LoadMainDesktop(ByVal user As String, ByVal pass As String)
         If Aire.API.User.Users.Actions.MatchPasswordForUser(user, pass) Then
 
         End If
