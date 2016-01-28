@@ -31,6 +31,7 @@
     Private desktop As frmDesktop
     Private launcher As frmLauncher
     Private batcount As Integer = 30
+
 #End Region
 
 #Region "UI"
@@ -137,6 +138,8 @@
 
 #End Region
 
+#Region "Update"
+
     Private Sub UpdateTimeDate()
         lbl_timedate.Text = DateTime.Now.ToString("hh:mm") & vbNewLine & Date.Today.ToString("dddd") & vbNewLine & DateTime.Today
     End Sub
@@ -234,6 +237,8 @@
             End If
         End If
     End Sub
+
+#End Region
 
 #End Region
 
