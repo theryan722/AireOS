@@ -10,7 +10,9 @@
 
 #Region "UI"
 
-
+    Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
+        ShowOtherUsers()
+    End Sub
 
 #End Region
 
@@ -66,4 +68,5 @@
 
 #End Region
 
+    
 End Class
