@@ -29,7 +29,7 @@
 
         Public Class Info
 
-            Dim batpercent As Double = 0
+            Private Shared batpercent As Double = -1
 
             Public Shared Function GetIfUsingBattery() As Boolean
                 Try
@@ -44,7 +44,16 @@
             Public Shared Function GetBatteryPercentage() As Integer
                 Try
                     Dim res As String = Sys.Process.ExecuteCommandWithOutput("upower", "-i /org/freedesktop/UPower/devices/battery_BAT0| grep -E ""percentage""")
-                    Return CDbl(res.Split(":")(1).Replace(" ", "").Replace("%", ""))
+                    Dim ret As Double = CDbl(res.Split(":")(1).Replace(" ", "").Replace("%", ""))
+                    If batpercent = -1 Then
+                        batpercent = ret
+                    Else
+                        If batpercent <> ret Then
+                            batpercent = ret
+                            Events.Raise_BatteryPercentChanged(ret)
+                        End If
+                    End If
+                    Return ret
                 Catch ex As Exception
                     Sys.Logging.Log.Write("ERROR: ", ex.ToString)
                     Return Nothing
