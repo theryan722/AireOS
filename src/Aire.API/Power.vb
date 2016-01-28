@@ -35,6 +35,7 @@
                     Return If(bb.StartsWith("failed"), False, True)
                 Catch ex As Exception
                     Sys.Logging.Log.Write("ERROR: ", ex.ToString)
+                    Return Nothing
                 End Try
             End Function
 
@@ -44,6 +45,7 @@
                     Return CDbl(res.Split(":")(1).Replace(" ", "").Replace("%", ""))
                 Catch ex As Exception
                     Sys.Logging.Log.Write("ERROR: ", ex.ToString)
+                    Return Nothing
                 End Try
             End Function
 
@@ -53,6 +55,7 @@
                     Return (res.Split(":")(1).Replace(" ", "")) = "charging"
                 Catch ex As Exception
                     Sys.Logging.Log.Write("ERROR: ", ex.ToString)
+                    Return Nothing
                 End Try
             End Function
 
