@@ -10,6 +10,14 @@
 
 #Region "UI"
 
+    Private Sub lb_users_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lb_users.SelectedIndexChanged
+        If lb_users.SelectedIndex <> -1 Then
+            txt_username.Text = lb_users.SelectedItem
+            txt_password.Clear()
+            lb_users.Hide()
+        End If
+    End Sub
+
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
         ShowOtherUsers()
     End Sub
@@ -66,7 +74,10 @@
         InitializeComponent()
         permlevel = requiredpermissionlevel
         txt_username.Text = defaultuser
-        If displayotherusers Then
+        If allowotherusers AndAlso displayotherusers Then
+            For Each item As String In Aire.API.User.Users.Info.GetAllUsers
+                lb_users.Items.Add(item)
+            Next
             ShowOtherUsers(True)
         End If
         allowothers = allowotherusers
@@ -81,5 +92,5 @@
     End Sub
 
 #End Region
-
+    
 End Class
