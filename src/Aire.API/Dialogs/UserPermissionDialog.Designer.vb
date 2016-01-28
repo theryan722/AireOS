@@ -33,6 +33,7 @@ Partial Class UserPermissionDialog
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lb_users = New System.Windows.Forms.ListBox()
         Me.btnUsers = New System.Windows.Forms.Button()
+        Me.txt_msg = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,9 +93,10 @@ Partial Class UserPermissionDialog
         'lbl_reqperm
         '
         Me.lbl_reqperm.AutoSize = True
-        Me.lbl_reqperm.Location = New System.Drawing.Point(14, 108)
+        Me.lbl_reqperm.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_reqperm.Location = New System.Drawing.Point(4, 105)
         Me.lbl_reqperm.Name = "lbl_reqperm"
-        Me.lbl_reqperm.Size = New System.Drawing.Size(135, 13)
+        Me.lbl_reqperm.Size = New System.Drawing.Size(161, 13)
         Me.lbl_reqperm.TabIndex = 6
         Me.lbl_reqperm.Text = "Required Permission Level:"
         '
@@ -113,7 +115,7 @@ Partial Class UserPermissionDialog
         Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Controls.Add(Me.btnOk)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 131)
+        Me.Panel1.Location = New System.Drawing.Point(0, 163)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(348, 23)
         Me.Panel1.TabIndex = 8
@@ -123,7 +125,7 @@ Partial Class UserPermissionDialog
         Me.lb_users.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb_users.FormattingEnabled = True
         Me.lb_users.ItemHeight = 20
-        Me.lb_users.Location = New System.Drawing.Point(228, 46)
+        Me.lb_users.Location = New System.Drawing.Point(228, 37)
         Me.lb_users.Name = "lb_users"
         Me.lb_users.ScrollAlwaysVisible = True
         Me.lb_users.Size = New System.Drawing.Size(120, 84)
@@ -132,7 +134,7 @@ Partial Class UserPermissionDialog
         '
         'btnUsers
         '
-        Me.btnUsers.Location = New System.Drawing.Point(305, 23)
+        Me.btnUsers.Location = New System.Drawing.Point(305, 13)
         Me.btnUsers.Name = "btnUsers"
         Me.btnUsers.Size = New System.Drawing.Size(43, 23)
         Me.btnUsers.TabIndex = 10
@@ -140,11 +142,24 @@ Partial Class UserPermissionDialog
         Me.btnUsers.UseVisualStyleBackColor = True
         Me.btnUsers.Visible = False
         '
+        'txt_msg
+        '
+        Me.txt_msg.BackColor = System.Drawing.SystemColors.Control
+        Me.txt_msg.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.txt_msg.Location = New System.Drawing.Point(0, 123)
+        Me.txt_msg.Multiline = True
+        Me.txt_msg.Name = "txt_msg"
+        Me.txt_msg.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txt_msg.Size = New System.Drawing.Size(348, 40)
+        Me.txt_msg.TabIndex = 11
+        Me.txt_msg.Visible = False
+        '
         'UserPermissionDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(348, 154)
+        Me.ClientSize = New System.Drawing.Size(348, 186)
+        Me.Controls.Add(Me.txt_msg)
         Me.Controls.Add(Me.btnUsers)
         Me.Controls.Add(Me.lb_users)
         Me.Controls.Add(Me.Panel1)
@@ -179,4 +194,5 @@ Partial Class UserPermissionDialog
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents lb_users As System.Windows.Forms.ListBox
     Friend WithEvents btnUsers As System.Windows.Forms.Button
+    Friend WithEvents txt_msg As System.Windows.Forms.TextBox
 End Class
