@@ -2,6 +2,7 @@
 
 #Region "Properties/Variables"
 
+    Private ouser As String
     Private permlevel As Integer
     Private allowothers As Boolean
     Public Property PermissionGranted As PermissionCertificate
@@ -56,8 +57,14 @@
 
     Private Function VerifyFields() As Boolean
         Dim ret As Boolean = True
-        If txt_username.Text = "" Or Not Aire.API.User.Users.Info.GetIfUserExists(txt_username.Text) Then
-            ret = False
+        If allowothers Then
+            If txt_username.Text = "" Or Not Aire.API.User.Users.Info.GetIfUserExists(txt_username.Text) Then
+                ret = False
+            End If
+        Else
+            If txt_username.Text <> ouser Then
+                ret = False
+            End If
         End If
         Return ret
     End Function
@@ -73,6 +80,7 @@
     Public Sub New(ByVal requiredpermissionlevel As Integer, Optional ByVal defaultuser As String = "", Optional ByVal allowotherusers As Boolean = True, Optional ByVal displayotherusers As Boolean = True, Optional ByVal title As String = "User Permission", Optional ByVal message As String = "")
         InitializeComponent()
         permlevel = requiredpermissionlevel
+        ouser = defaultuser
         txt_username.Text = defaultuser
         If allowotherusers AndAlso displayotherusers Then
             For Each item As String In Aire.API.User.Users.Info.GetAllUsers
