@@ -41,6 +41,11 @@
 
 #Region "Methods"
 
+    Private Sub CreateCertificate(ByVal user As String, ByVal perm As Integer, ByVal granted As Boolean)
+        Dim newcert As New PermissionCertificate(user, granted, perm)
+        PermissionGranted = newcert
+    End Sub
+
     Private Sub ShowOtherUsers(Optional ByVal button As Boolean = False)
         If button Then
             btnUsers.Show()
@@ -100,5 +105,5 @@
     End Sub
 
 #End Region
-    
+
 End Class
