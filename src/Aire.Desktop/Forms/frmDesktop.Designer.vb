@@ -23,8 +23,8 @@ Partial Class frmDesktop
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.pnl_launchbar_loc = New System.Windows.Forms.Panel()
-        Me.pnl_appbar_top_loc = New System.Windows.Forms.Panel()
-        Me.pnl_appbar_bottom_loc = New System.Windows.Forms.Panel()
+        Me.pnl_appbar_top = New System.Windows.Forms.Panel()
+        Me.pnl_appbar_bottom = New System.Windows.Forms.Panel()
         Me.pnl_desktop = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
@@ -37,23 +37,23 @@ Partial Class frmDesktop
         Me.pnl_launchbar_loc.Size = New System.Drawing.Size(80, 685)
         Me.pnl_launchbar_loc.TabIndex = 0
         '
-        'pnl_appbar_top_loc
+        'pnl_appbar_top
         '
-        Me.pnl_appbar_top_loc.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.pnl_appbar_top_loc.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnl_appbar_top_loc.Location = New System.Drawing.Point(80, 0)
-        Me.pnl_appbar_top_loc.Name = "pnl_appbar_top_loc"
-        Me.pnl_appbar_top_loc.Size = New System.Drawing.Size(901, 48)
-        Me.pnl_appbar_top_loc.TabIndex = 1
+        Me.pnl_appbar_top.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.pnl_appbar_top.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnl_appbar_top.Location = New System.Drawing.Point(80, 0)
+        Me.pnl_appbar_top.Name = "pnl_appbar_top"
+        Me.pnl_appbar_top.Size = New System.Drawing.Size(901, 48)
+        Me.pnl_appbar_top.TabIndex = 1
         '
-        'pnl_appbar_bottom_loc
+        'pnl_appbar_bottom
         '
-        Me.pnl_appbar_bottom_loc.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.pnl_appbar_bottom_loc.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnl_appbar_bottom_loc.Location = New System.Drawing.Point(80, 637)
-        Me.pnl_appbar_bottom_loc.Name = "pnl_appbar_bottom_loc"
-        Me.pnl_appbar_bottom_loc.Size = New System.Drawing.Size(901, 48)
-        Me.pnl_appbar_bottom_loc.TabIndex = 2
+        Me.pnl_appbar_bottom.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.pnl_appbar_bottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnl_appbar_bottom.Location = New System.Drawing.Point(80, 637)
+        Me.pnl_appbar_bottom.Name = "pnl_appbar_bottom"
+        Me.pnl_appbar_bottom.Size = New System.Drawing.Size(901, 48)
+        Me.pnl_appbar_bottom.TabIndex = 2
         '
         'pnl_desktop
         '
@@ -70,8 +70,8 @@ Partial Class frmDesktop
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(981, 685)
         Me.Controls.Add(Me.pnl_desktop)
-        Me.Controls.Add(Me.pnl_appbar_bottom_loc)
-        Me.Controls.Add(Me.pnl_appbar_top_loc)
+        Me.Controls.Add(Me.pnl_appbar_bottom)
+        Me.Controls.Add(Me.pnl_appbar_top)
         Me.Controls.Add(Me.pnl_launchbar_loc)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmDesktop"
@@ -83,7 +83,7 @@ Partial Class frmDesktop
 
     End Sub
     Friend WithEvents pnl_launchbar_loc As System.Windows.Forms.Panel
-    Friend WithEvents pnl_appbar_top_loc As System.Windows.Forms.Panel
-    Friend WithEvents pnl_appbar_bottom_loc As System.Windows.Forms.Panel
+    Friend WithEvents pnl_appbar_top As System.Windows.Forms.Panel
+    Friend WithEvents pnl_appbar_bottom As System.Windows.Forms.Panel
     Friend WithEvents pnl_desktop As System.Windows.Forms.Panel
 End Class

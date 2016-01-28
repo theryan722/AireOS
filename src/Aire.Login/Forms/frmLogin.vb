@@ -3,6 +3,18 @@
 
 #Region "UI"
 
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If VerifyFields() AndAlso VerifyPassword(txt_username.Text, txt_password.Text) Then
+            Aire.API.User.Users.Actions.LoginUser(txt_username.Text, txt_password.Text)
+            Aire.Desktop.Manager.LoadDesktopSession(txt_username.Text, txt_password.Text)
+            okaytoclose = True
+            Me.Close()
+            frmLoginBackground.Hide()
+        Else
+            Dim bb As New Aire.API.MessageBox("Invalid username or password, or the fields were not properly filled out.", "Error", API.MessageBox.MessageBoxButtons.OkOnly, API.MessageBox.MessageBoxIcon.Warning)
+        End If
+    End Sub
+
     Private Sub btn_otherusers_Click(sender As Object, e As EventArgs) Handles btnOtherUsers.Click
         If lb_users.Visible Then
             lb_users.Hide()
@@ -18,6 +30,12 @@
     Private Sub btnHint_Click(sender As Object, e As EventArgs) Handles btnHint.Click
         If Aire.API.User.Users.Info.GetIfUserExists(txt_username.Text) Then
             Dim bb As New Aire.API.MessageBox(Aire.API.User.Users.Info.GetPasswordHintForUser(txt_username.Text), "Password Hint", API.MessageBox.MessageBoxButtons.OkOnly, API.MessageBox.MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub txt_password_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_password.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnLogin.PerformClick()
         End If
     End Sub
 
@@ -72,15 +90,6 @@
         Next
         If lb_users.Items.Count > 0 Then
             btnOtherUsers.Visible = True
-        End If
-    End Sub
-
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If VerifyFields() AndAlso VerifyPassword(txt_username.Text, txt_password.Text) Then
-            Aire.API.User.Users.Actions.LoginUser(txt_username.Text, txt_password.Text)
-            Aire.Desktop.Manager.LoadDesktopSession(txt_username.Text, txt_password.Text)
-        Else
-            Dim bb As New Aire.API.MessageBox("Invalid username or password, or the fields were not properly filled out.", "Error", API.MessageBox.MessageBoxButtons.OkOnly, API.MessageBox.MessageBoxIcon.Warning)
         End If
     End Sub
 

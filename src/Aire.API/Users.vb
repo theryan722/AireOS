@@ -125,7 +125,7 @@
 
         Public Class Info
 
-            Friend Shared Property ActiveUsers() As List(Of String)
+            Friend Shared Property ActiveUsers() As New List(Of String)
 
             Public Shared Function GetActiveUsers() As List(Of String)
                 Return ActiveUsers

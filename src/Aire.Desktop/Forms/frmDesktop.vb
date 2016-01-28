@@ -2,8 +2,9 @@
 
 #Region "Properties"
 
-    Public Property Windows As List(Of DesktopWindows)
+    Public Property Windows As New List(Of DesktopWindows)
     Public Property User As String
+    Public Property Session As DesktopSession
 
 #End Region
 
@@ -21,11 +22,16 @@
 
 #Region "frmDesktop"
 
-    Public Sub New(ByVal ouser As String)
+    Public Sub New(ByVal ouser As String, Optional ByVal ses As DesktopSession = Nothing)
         InitializeComponent()
         User = ouser
+        Session = ses
     End Sub
 
 #End Region
+
+    Private Sub frmDesktop_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Session.DisplayBars()
+    End Sub
 
 End Class

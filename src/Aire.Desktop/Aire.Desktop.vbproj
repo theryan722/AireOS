@@ -96,12 +96,6 @@
     <Compile Include="Classes\DesktopWindows.vb" />
     <Compile Include="Classes\Manager.vb" />
     <Compile Include="Classes\DesktopSession.vb" />
-    <Compile Include="Forms\Bars\bar_appbar.Designer.vb">
-      <DependentUpon>bar_appbar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Bars\bar_appbar.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\Bars\bar_launchbar.Designer.vb">
       <DependentUpon>bar_launchbar.vb</DependentUpon>
     </Compile>
@@ -155,9 +149,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\Bars\bar_appbar.resx">
-      <DependentUpon>bar_appbar.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Bars\bar_launchbar.resx">
       <DependentUpon>bar_launchbar.vb</DependentUpon>
     </EmbeddedResource>
