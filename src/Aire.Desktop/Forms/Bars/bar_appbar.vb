@@ -3,6 +3,7 @@
 #Region "Variables/Properties"
 
     Private desktop As frmDesktop
+    Private top As Boolean
 
 #End Region
 
@@ -30,8 +31,10 @@
 
 #Region "bar_appbar"
 
-    Public Sub New(ByVal frm As frmDesktop)
+    Public Sub New(ByVal frm As frmDesktop, ByVal istop As Boolean)
+        InitializeComponent()
         desktop = frm
+        top = istop
     End Sub
 
 #End Region

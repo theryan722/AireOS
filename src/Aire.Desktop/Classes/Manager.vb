@@ -15,11 +15,22 @@
                 For Each item As DesktopSession In DesktopSessions
                     If item.User = user Then
                         ActiveSession = item
+                        For Each ses As DesktopSession In DesktopSessions
+                            ses.HideSession()
+                        Next
                         ActiveSession.LoadSession()
                     End If
                 Next
             Else
-
+                Dim newses As New DesktopSession
+                newses.User = user
+                newses.Desktop = New frmDesktop
+                newses.AppBarTop = New bar_appbar(newses.Desktop, True)
+                newses.AppBarBottom = New bar_appbar(newses.Desktop, False)
+                newses.LaunchBar = New bar_launchbar(newses.Desktop)
+                DesktopSessions.Add(newses)
+                ActiveSession = newses
+                ActiveSession.LoadSession()
             End If
             Dim newb As New frmDesktop
             newb.User = user

@@ -30,7 +30,7 @@
     End Sub
 
     Public Sub CloseSession()
-
+        Manager.DesktopSessions.Remove(Me)
     End Sub
 
 #End Region

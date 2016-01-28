@@ -25,7 +25,7 @@
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         If Aire.API.User.Users.Info.GetIfUserExists(txt_username.Text) Then
-            CreateCertificate(False, txt_username.Text, Aire.API.User.Users.Info.GetPermissionLevelForUser(txt_username.text)
+            CreateCertificate(False, txt_username.Text, Aire.API.User.Users.Info.GetPermissionLevelForUser(txt_username.Text))
         Else
             CreateCertificate(False)
         End If
