@@ -25,7 +25,6 @@ Partial Class frmSearch
         Me.txtSearch = New MetroFramework.Controls.MetroTextBox()
         Me.pnl_results = New System.Windows.Forms.Panel()
         Me.pnl_options = New System.Windows.Forms.Panel()
-        Me.btnOptions = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.toggleAll = New MetroFramework.Controls.MetroToggle()
@@ -43,6 +42,7 @@ Partial Class frmSearch
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.toggleWeb = New MetroFramework.Controls.MetroToggle()
+        Me.btnOptions = New System.Windows.Forms.Button()
         Me.pnl_options.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -90,19 +90,6 @@ Partial Class frmSearch
         Me.pnl_options.Name = "pnl_options"
         Me.pnl_options.Size = New System.Drawing.Size(16, 262)
         Me.pnl_options.TabIndex = 4
-        '
-        'btnOptions
-        '
-        Me.btnOptions.BackgroundImage = Global.Aire.Desktop.My.Resources.Resources._16_arrowright
-        Me.btnOptions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnOptions.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnOptions.FlatAppearance.BorderSize = 0
-        Me.btnOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOptions.Location = New System.Drawing.Point(0, 0)
-        Me.btnOptions.Name = "btnOptions"
-        Me.btnOptions.Size = New System.Drawing.Size(16, 16)
-        Me.btnOptions.TabIndex = 0
-        Me.btnOptions.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -281,10 +268,24 @@ Partial Class frmSearch
         Me.toggleWeb.Text = "Off"
         Me.toggleWeb.UseSelectable = True
         '
+        'btnOptions
+        '
+        Me.btnOptions.BackgroundImage = Global.Aire.Desktop.My.Resources.Resources._16_arrowright
+        Me.btnOptions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnOptions.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnOptions.FlatAppearance.BorderSize = 0
+        Me.btnOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOptions.Location = New System.Drawing.Point(0, 0)
+        Me.btnOptions.Name = "btnOptions"
+        Me.btnOptions.Size = New System.Drawing.Size(16, 16)
+        Me.btnOptions.TabIndex = 0
+        Me.btnOptions.UseVisualStyleBackColor = True
+        '
         'frmSearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(269, 292)
         Me.Controls.Add(Me.pnl_results)
         Me.Controls.Add(Me.pnl_options)
