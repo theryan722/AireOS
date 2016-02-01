@@ -32,6 +32,14 @@
         Me.Close()
     End Sub
 
+    Public Sub New()
+        InitializeComponent()
+    End Sub
+
+    Public Sub New(ByVal searchterm As String)
+        InitializeComponent()
+    End Sub
+
 #End Region
-    
+
 End Class
