@@ -34,7 +34,13 @@
     End Sub
 
     Private Sub txtSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtSearch.KeyDown
-
+        If e.KeyCode = Keys.Enter AndAlso txtSearch.Text <> "" Then
+            If Not frmSearch.Showing Then
+                Dim newb As New frmSearch
+                newb.Show()
+                newb.Location = PointToScreen(bar.btnLauncher.Location)
+            End If
+        End If
     End Sub
 
 #End Region
