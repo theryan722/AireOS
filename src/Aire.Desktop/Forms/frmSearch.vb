@@ -2,7 +2,7 @@
 
 #Region "Properties/Variables"
 
-
+    Public Shared Property Showing As Boolean = False
 
 #End Region
 
