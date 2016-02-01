@@ -23,6 +23,7 @@ Partial Class frmLauncher
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.pb_profilepicture = New System.Windows.Forms.PictureBox()
+        Me.txtSearch = New MetroFramework.Controls.MetroTextBox()
         CType(Me.pb_profilepicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -35,11 +36,26 @@ Partial Class frmLauncher
         Me.pb_profilepicture.TabIndex = 0
         Me.pb_profilepicture.TabStop = False
         '
+        'txtSearch
+        '
+        Me.txtSearch.Lines = New String(-1) {}
+        Me.txtSearch.Location = New System.Drawing.Point(32, 302)
+        Me.txtSearch.MaxLength = 32767
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtSearch.PromptText = "Search"
+        Me.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtSearch.SelectedText = ""
+        Me.txtSearch.Size = New System.Drawing.Size(169, 23)
+        Me.txtSearch.TabIndex = 1
+        Me.txtSearch.UseSelectable = True
+        '
         'frmLauncher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(367, 412)
+        Me.ClientSize = New System.Drawing.Size(364, 411)
+        Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.pb_profilepicture)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmLauncher"
@@ -52,4 +68,5 @@ Partial Class frmLauncher
 
     End Sub
     Friend WithEvents pb_profilepicture As System.Windows.Forms.PictureBox
+    Friend WithEvents txtSearch As MetroFramework.Controls.MetroTextBox
 End Class

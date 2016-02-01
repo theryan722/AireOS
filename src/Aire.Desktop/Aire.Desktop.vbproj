@@ -69,6 +69,12 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\DLLS\Organized\MetroFramework-winforms-modernui\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\..\..\DLLS\Organized\MetroFramework-winforms-modernui\MetroFramework.Design.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -124,6 +130,12 @@
       <DependentUpon>frmLauncher.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmLauncher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSearch.Designer.vb">
+      <DependentUpon>frmSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSearch.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUpdater.Designer.vb">
