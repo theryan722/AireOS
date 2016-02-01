@@ -10,7 +10,29 @@
 
 #Region "UI"
 
+    Private Sub btnProfile_Click(sender As Object, e As EventArgs) Handles btnProfile.Click
 
+    End Sub
+
+    Private Sub btnOptions_Click(sender As Object, e As EventArgs) Handles btnOptions.Click
+
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+
+    End Sub
+
+    Private Sub btnFileExplorer_Click(sender As Object, e As EventArgs) Handles btnFileExplorer.Click
+
+    End Sub
+
+    Private Sub btnPower_Click(sender As Object, e As EventArgs) Handles btnPower.Click
+
+    End Sub
+
+    Private Sub txtSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtSearch.KeyDown
+
+    End Sub
 
 #End Region
 
@@ -37,6 +59,10 @@
     Private Sub frmLauncher_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmLauncher.Showing = True
         LoadUI()
+    End Sub
+
+    Private Sub frmLauncher_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
+
     End Sub
 
 #End Region

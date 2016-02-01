@@ -35,9 +35,9 @@ Partial Class frmLauncher
         Me.pnl_applications = New System.Windows.Forms.Panel()
         Me.pnl_right_title = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnProfile = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnProfile = New System.Windows.Forms.Button()
         Me.pnl_pinned = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.pnl_right.SuspendLayout()
@@ -180,19 +180,6 @@ Partial Class frmLauncher
         Me.Label1.Text = "Applications"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnProfile
-        '
-        Me.btnProfile.BackgroundImage = Global.Aire.Desktop.My.Resources.Resources._72_profile
-        Me.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnProfile.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnProfile.FlatAppearance.BorderSize = 0
-        Me.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnProfile.Location = New System.Drawing.Point(0, 0)
-        Me.btnProfile.Name = "btnProfile"
-        Me.btnProfile.Size = New System.Drawing.Size(72, 72)
-        Me.btnProfile.TabIndex = 4
-        Me.btnProfile.UseVisualStyleBackColor = True
-        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.lblUsername)
@@ -202,6 +189,18 @@ Partial Class frmLauncher
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(164, 72)
         Me.Panel2.TabIndex = 6
+        '
+        'btnProfile
+        '
+        Me.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnProfile.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnProfile.FlatAppearance.BorderSize = 0
+        Me.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnProfile.Location = New System.Drawing.Point(0, 0)
+        Me.btnProfile.Name = "btnProfile"
+        Me.btnProfile.Size = New System.Drawing.Size(72, 72)
+        Me.btnProfile.TabIndex = 4
+        Me.btnProfile.UseVisualStyleBackColor = True
         '
         'pnl_pinned
         '
