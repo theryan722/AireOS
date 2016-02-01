@@ -16,6 +16,10 @@
 
 #Region "Methods"
 
+    Private Sub LoadUI()
+        If Aire.API.User.Current.Settings.ProfilePicture Then
+    End Sub
+
     Public Sub SetProfilePicture(ByVal img As String)
         pb_profilepicture.BackgroundImage = Image.FromFile(img)
     End Sub
