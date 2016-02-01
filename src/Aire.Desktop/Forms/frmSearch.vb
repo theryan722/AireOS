@@ -13,8 +13,12 @@
     Private Sub btnOptions_Click(sender As Object, e As EventArgs) Handles btnOptions.Click
         If pnl_options.Width = 16 Then
             pnl_options.Width = 80
+            btnOptions.BackgroundImage = My.Resources._16_arrowleft
+            btnOptions.Dock = DockStyle.Right
         Else
             pnl_options.Width = 16
+            btnOptions.BackgroundImage = My.Resources._16_arrowright
+            btnOptions.Dock = DockStyle.Left
         End If
     End Sub
 

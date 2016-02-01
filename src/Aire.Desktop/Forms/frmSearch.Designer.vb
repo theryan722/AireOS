@@ -22,7 +22,6 @@ Partial Class frmSearch
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSearch))
         Me.txtSearch = New MetroFramework.Controls.MetroTextBox()
         Me.pnl_results = New System.Windows.Forms.Panel()
         Me.pnl_options = New System.Windows.Forms.Panel()
@@ -94,7 +93,7 @@ Partial Class frmSearch
         '
         'btnOptions
         '
-        Me.btnOptions.BackgroundImage = CType(resources.GetObject("btnOptions.BackgroundImage"), System.Drawing.Image)
+        Me.btnOptions.BackgroundImage = Global.Aire.Desktop.My.Resources.Resources._16_arrowright
         Me.btnOptions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnOptions.Dock = System.Windows.Forms.DockStyle.Left
         Me.btnOptions.FlatAppearance.BorderSize = 0
