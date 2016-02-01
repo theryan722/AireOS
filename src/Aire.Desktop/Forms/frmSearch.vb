@@ -25,7 +25,7 @@
     End Sub
 
     Private Sub frmSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        frmSearch.Showing = True
     End Sub
 
     Private Sub frmSearch_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
