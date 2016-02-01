@@ -8,7 +8,17 @@
 
 #Region "UI"
 
+#Region "Options Panel"
 
+    Private Sub btnOptions_Click(sender As Object, e As EventArgs) Handles btnOptions.Click
+        If pnl_options.Width = 16 Then
+            pnl_options.Width = 80
+        Else
+            pnl_options.Width = 16
+        End If
+    End Sub
+
+#End Region
 
 #End Region
 
