@@ -5,7 +5,6 @@
     Private bar As bar_launchbar
     Private desktop As frmDesktop
     Public Shared Property Showing As Boolean = False
-
 #End Region
 
 #Region "UI"
@@ -19,7 +18,11 @@
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-
+        If Not frmSearch.Showing Then
+            Dim newb As New frmSearch
+            newb.Show()
+            newb.Location = PointToScreen(bar.btnLauncher.Location)
+        End If
     End Sub
 
     Private Sub btnFileExplorer_Click(sender As Object, e As EventArgs) Handles btnFileExplorer.Click
