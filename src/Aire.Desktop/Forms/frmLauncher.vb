@@ -11,7 +11,7 @@
 #Region "UI"
 
     Private Sub btnProfile_Click(sender As Object, e As EventArgs) Handles btnProfile.Click
-
+        Aire.API.User.Current.Actions.ShowLogoutDialog()
     End Sub
 
     Private Sub btnOptions_Click(sender As Object, e As EventArgs) Handles btnOptions.Click
