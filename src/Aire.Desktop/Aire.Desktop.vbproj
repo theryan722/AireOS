@@ -252,6 +252,18 @@
   <ItemGroup>
     <None Include="Resources\16_notification.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\72_profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\72_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\72_filebrowser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\72_wrench.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
