@@ -42,7 +42,7 @@
         Else
             launcher = New frmLauncher(Me, desktop)
             launcher.Show()
-            launcher.Location = PointToScreen(btnNetwork.Location)
+            launcher.Location = PointToScreen(btnLauncher.Location)
         End If
     End Sub
 
