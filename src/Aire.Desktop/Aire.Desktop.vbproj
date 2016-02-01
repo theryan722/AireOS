@@ -170,6 +170,9 @@
     <EmbeddedResource Include="Forms\frmLauncher.resx">
       <DependentUpon>frmLauncher.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSearch.resx">
+      <DependentUpon>frmSearch.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUpdater.resx">
       <DependentUpon>frmUpdater.vb</DependentUpon>
     </EmbeddedResource>

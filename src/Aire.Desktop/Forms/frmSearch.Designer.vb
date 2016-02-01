@@ -22,8 +22,22 @@ Partial Class frmSearch
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.SuspendLayout()
+        '
+        'frmSearch
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Text = "frmSearch"
+        Me.ClientSize = New System.Drawing.Size(269, 292)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "frmSearch"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
+        Me.Text = "Search"
+        Me.TopMost = True
+        Me.ResumeLayout(False)
+
     End Sub
 End Class
