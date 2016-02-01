@@ -29,7 +29,7 @@
     End Sub
 
     Private Sub frmSearch_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
-
+        Me.Close()
     End Sub
 
 #End Region
