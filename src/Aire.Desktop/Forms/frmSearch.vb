@@ -21,7 +21,7 @@
 #Region "frmSearch"
 
     Private Sub frmSearch_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-
+        frmSearch.Showing = False
     End Sub
 
     Private Sub frmSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
