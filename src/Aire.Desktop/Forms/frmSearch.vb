@@ -38,6 +38,7 @@
 
     Public Sub New(ByVal searchterm As String)
         InitializeComponent()
+        txtSearch.Text = searchterm
     End Sub
 
 #End Region
