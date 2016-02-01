@@ -22,6 +22,7 @@ Partial Class frmLauncher
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLauncher))
         Me.txtSearch = New MetroFramework.Controls.MetroTextBox()
         Me.lblUsername = New System.Windows.Forms.Label()
@@ -32,6 +33,7 @@ Partial Class frmLauncher
         Me.btnFileExplorer = New System.Windows.Forms.Button()
         Me.btnPower = New System.Windows.Forms.Button()
         Me.btnOptions = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -105,6 +107,7 @@ Partial Class frmLauncher
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(30, 30)
         Me.btnSearch.TabIndex = 5
+        Me.ToolTip1.SetToolTip(Me.btnSearch, "Search")
         Me.btnSearch.UseVisualStyleBackColor = True
         '
         'btnFileExplorer
@@ -118,6 +121,7 @@ Partial Class frmLauncher
         Me.btnFileExplorer.Name = "btnFileExplorer"
         Me.btnFileExplorer.Size = New System.Drawing.Size(30, 30)
         Me.btnFileExplorer.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.btnFileExplorer, "File Browser")
         Me.btnFileExplorer.UseVisualStyleBackColor = True
         '
         'btnPower
@@ -131,6 +135,7 @@ Partial Class frmLauncher
         Me.btnPower.Name = "btnPower"
         Me.btnPower.Size = New System.Drawing.Size(30, 30)
         Me.btnPower.TabIndex = 3
+        Me.ToolTip1.SetToolTip(Me.btnPower, "Power")
         Me.btnPower.UseVisualStyleBackColor = True
         '
         'btnOptions
@@ -144,6 +149,7 @@ Partial Class frmLauncher
         Me.btnOptions.Name = "btnOptions"
         Me.btnOptions.Size = New System.Drawing.Size(30, 30)
         Me.btnOptions.TabIndex = 6
+        Me.ToolTip1.SetToolTip(Me.btnOptions, "Options")
         Me.btnOptions.UseVisualStyleBackColor = True
         '
         'frmLauncher
@@ -176,4 +182,5 @@ Partial Class frmLauncher
     Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents btnFileExplorer As System.Windows.Forms.Button
     Friend WithEvents btnOptions As System.Windows.Forms.Button
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class
