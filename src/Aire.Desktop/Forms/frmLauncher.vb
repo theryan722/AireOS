@@ -62,7 +62,7 @@
     End Sub
 
     Private Sub frmLauncher_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
-
+        Me.Close()
     End Sub
 
 #End Region
