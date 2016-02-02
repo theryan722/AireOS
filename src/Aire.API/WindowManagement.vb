@@ -25,7 +25,7 @@
         Public Class Actions
 
             Public Shared Sub Minimize(ByVal win As String)
-
+                Sys.Process.ExecuteCommand("xdotool", "windowminimize " & win)
             End Sub
 
             Public Shared Sub Maximize(ByVal win As String)
