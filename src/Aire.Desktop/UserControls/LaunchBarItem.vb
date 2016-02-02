@@ -33,7 +33,7 @@
     End Sub
 
     Private Sub ContextMenu_Maximize()
-
+        Aire.API.Sys.Window.Actions.Maximize(Window)
     End Sub
 
     Private Sub ContextMenu_Activate()
