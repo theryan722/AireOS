@@ -34,7 +34,8 @@
             End Sub
 
             Public Shared Sub ToggleMaximizeNormal(ByVal win As String)
-
+                Activate(win)
+                Sys.Process.ExecuteCommand("wmctrl", "-i -r " & win & " -b toggle,maximized_vert,maximized_horz")
             End Sub
 
             Public Shared Sub Kill(ByVal win As String)
