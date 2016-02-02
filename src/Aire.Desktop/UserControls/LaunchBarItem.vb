@@ -38,6 +38,12 @@
         Text = Aire.API.Sys.Window.Info.GetName(Window)
     End Sub
 
+    Public Sub HandleWindowClosedEvent(ByVal win As String)
+        If win = Window Then
+            Me.Dispose()
+        End If
+    End Sub
+
 #End Region
 
 #Region "UI"
@@ -83,10 +89,7 @@
         InitializeComponent()
         Window = win
         Text = Aire.API.Sys.Window.Info.GetName(win)
-    End Sub
-
-    Private Sub LaunchBarItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        AddHandler Aire.API.Sys.Events.WindowClosed, AddressOf HandleWindowClosedEvent
     End Sub
 
     Private Sub LaunchBarItem_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
