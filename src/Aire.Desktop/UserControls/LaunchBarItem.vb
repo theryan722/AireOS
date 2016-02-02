@@ -37,7 +37,7 @@
     End Sub
 
     Private Sub ContextMenu_Activate()
-
+        Aire.API.Sys.Window.Actions.Activate(Window)
     End Sub
 
     Private Sub ContextMenu_Normal()
