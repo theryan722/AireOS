@@ -248,10 +248,16 @@
 
 #End Region
 
+    Public Sub AddApplication(ByVal win As String)
+
+    End Sub
+
 #Region "Event Handlers"
 
     Private Sub HandleWindowOpenedEvent(ByVal win As List(Of String))
-
+        For Each item As String In win
+            AddApplication(item)
+        Next
     End Sub
 
 #End Region
