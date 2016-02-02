@@ -33,6 +33,11 @@
         End If
     End Sub
 
+    Public Sub UpdateText()
+        RemoveIfWindowClosed()
+        Text = Aire.API.Sys.Window.Info.GetName(Window)
+    End Sub
+
 #End Region
 
 #Region "UI"
@@ -77,7 +82,7 @@
     Public Sub New(ByVal win As String)
         InitializeComponent()
         Window = win
-
+        Text = Aire.API.Sys.Window.Info.GetName(win)
     End Sub
 
     Private Sub LaunchBarItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
