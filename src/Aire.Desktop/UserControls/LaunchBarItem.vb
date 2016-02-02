@@ -4,6 +4,8 @@
 
     Private fname As String
 
+    Private lbar As bar_launchbar
+
     Public Property Window As String
 
     Public Shadows Property Text As String
@@ -27,21 +29,8 @@
 
 #Region "Methods"
 
-    Public Sub RemoveIfWindowClosed()
-        If Aire.API.Sys.Window.Info.GetIfClosed(Window) Then
-            Me.Dispose()
-        End If
-    End Sub
-
     Public Sub UpdateText()
-        RemoveIfWindowClosed()
         Text = Aire.API.Sys.Window.Info.GetName(Window)
-    End Sub
-
-    Public Sub HandleWindowClosedEvent(ByVal win As List(Of String))
-        If win.Contains(Window) Then
-            Me.Dispose()
-        End If
     End Sub
 
 #End Region
@@ -62,7 +51,6 @@
 
     Private Sub ContextMenu_Close()
         Aire.API.Sys.Window.Actions.Kill(Window)
-        RemoveIfWindowClosed()
     End Sub
 
     Private Sub ContextMenu_Maximize()
@@ -85,11 +73,11 @@
 
 #Region "LaunchBarItem"
 
-    Public Sub New(ByVal win As String)
+    Public Sub New(ByVal win As String, ByVal launchbar As bar_launchbar)
         InitializeComponent()
         Window = win
         Text = Aire.API.Sys.Window.Info.GetName(win)
-        AddHandler Aire.API.Sys.Events.WindowsClosed, AddressOf HandleWindowClosedEvent
+        lbar = launchbar
     End Sub
 
     Private Sub LaunchBarItem_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick

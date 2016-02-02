@@ -3,23 +3,15 @@
     Namespace Window
 
         Public Class Info
-            Private Shared runningwindows As List(Of String)
 
             Public Shared Function GetAndUpdateRunningWindows() As List(Of String)
                 Dim ret As New List(Of String)
-                Dim t As String = Sys.Process.ExecuteCommandWithOutput("wmctrl", "-l")
-                Dim arr() As String = t.Split(vbNewLine)
+                Dim arr() As String = Sys.Process.ExecuteCommandWithOutput("wmctrl", "-l").Split(Environment.NewLine)
                 For Each item As String In arr
-                    If Not (item.Contains("ubuntu Desktop") Or item.Contains("ubuntu unity-launcher") Or item.Contains("ubuntu unity-panel") Or item.Contains("ubuntu unity-dash") Or item.Contains("ubuntu Hud")) Then
+                    If Not item.Contains("ubuntu") AndAlso Not item.Length < 10 AndAlso Not item.Trim(" ") = "" AndAlso Not item = "" Then
                         ret.Add(item.Substring(0, 10))
                     End If
                 Next
-                If runningwindows Is Nothing Then
-                    runningwindows = ret
-                Else
-                    UpdateWindowChanges(ret)
-                End If
-                runningwindows = ret
                 Return ret
             End Function
 
@@ -30,27 +22,6 @@
             Public Shared Function GetIfClosed(ByVal win As String) As Boolean
                 Return Sys.Process.ExecuteCommandWithOutput("xdotool", "getwindowpid " & win).ToLower.Contains("error")
             End Function
-
-            Private Shared Sub UpdateWindowChanges(ByVal wlist As List(Of String))
-                Dim closed As New List(Of String)
-                Dim opened As New List(Of String)
-                For Each item As String In runningwindows
-                    If Not wlist.Contains(item) Then
-                        closed.Add(item)
-                    End If
-                Next
-                For Each item As String In wlist
-                    If Not runningwindows.Contains(item) Then
-                        opened.Add(item)
-                    End If
-                Next
-                If closed.Count > 0 Then
-                    Events.Raise_WindowsClosed(closed)
-                End If
-                If opened.Count > 0 Then
-                    Events.Raise_WindowsOpened(opened)
-                End If
-            End Sub
 
         End Class
 

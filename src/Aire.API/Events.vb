@@ -18,20 +18,10 @@
         Public Shared Event SystemPowerStateChanged(ByVal change As PowerState)
         Public Shared Event VolumeChanged(ByVal volume As Integer)
         Public Shared Event BatteryPercentChanged(ByVal percent As Integer)
-        Public Shared Event WindowsClosed(ByVal windows As List(Of String))
-        Public Shared Event WindowsOpened(ByVal windows As List(Of String))
 
 #End Region
 
 #Region "Raise Event Methods"
-
-        Public Shared Sub Raise_WindowsOpened(ByVal windows As List(Of String))
-            RaiseEvent WindowsOpened(windows)
-        End Sub
-
-        Public Shared Sub Raise_WindowsClosed(ByVal windows As List(Of String))
-            RaiseEvent WindowsClosed(windows)
-        End Sub
 
         Public Shared Sub Raise_SystemPowerStateChanged(ByVal change As PowerState)
             RaiseEvent SystemPowerStateChanged(change)

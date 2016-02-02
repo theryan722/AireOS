@@ -1,6 +1,6 @@
 ﻿Public Class DesktopWindows
 
-    Public Property Windows As New List(Of Process) 'Unsure of how will be storing window info, use process for now as placeholder
+    Public Property Windows As New List(Of String)
     Private desktop As frmDesktop
 
 #Region "Methods"

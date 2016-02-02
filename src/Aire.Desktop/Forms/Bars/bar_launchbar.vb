@@ -32,6 +32,9 @@
     Private launcher As frmLauncher
     Private batcount As Integer = 30
 
+    Public Property BarWinItems As New List(Of String)
+    Public Property BarItems As New List(Of LaunchBarItem)
+
 #End Region
 
 #Region "UI"
@@ -248,15 +251,36 @@
 
 #End Region
 
+    'Public Sub AddApplication(ByVal win As String)
+    '    Dim newb As New LaunchBarItem(win, Me)
+    '    newb.Dock = DockStyle.Top
+    '    BarWinItems.Add(win)
+    '    BarItems.Add(newb)
+    '    pnl_applications.Controls.Add(newb)
+    'End Sub
+
     Public Sub AddApplication(ByVal win As String)
-        Dim newb As New LaunchBarItem(win)
+        Dim newb As New LaunchBarItem(win, Me)
         newb.Dock = DockStyle.Top
         pnl_applications.Controls.Add(newb)
     End Sub
 
 #Region "Event Handlers"
 
-    Private Sub HandleWindowOpenedEvent(ByVal win As List(Of String))
+    'Private Sub UpdateApplications()
+    '    Dim win As List(Of String) = Aire.API.Sys.Window.Info.GetAndUpdateRunningWindows()
+    '    For Each item As String In win
+    '        If Not BarWinItems.Contains(item) Then
+    '            AddApplication(item)
+    '        End If
+    '    Next
+    'End Sub
+
+    Private Sub UpdateApplications()
+        Dim win As List(Of String) = Aire.API.Sys.Window.Info.GetAndUpdateRunningWindows()
+        For Each item As Control In pnl_applications.Controls
+            item.Dispose()
+        Next
         For Each item As String In win
             AddApplication(item)
         Next
@@ -271,7 +295,9 @@
     Public Sub New(ByVal frm As frmDesktop)
         InitializeComponent()
         desktop = frm
-        AddHandler Aire.API.Sys.Events.WindowsOpened, AddressOf HandleWindowOpenedEvent
+        For Each item As String In Aire.API.Sys.Window.Info.GetAndUpdateRunningWindows
+            AddApplication(item)
+        Next
     End Sub
 
     Private Sub bar_launchbar_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -292,6 +318,7 @@
         UpdateTimeDate()
         UpdateNetwork()
         UpdateVolume()
+        UpdateApplications()
     End Sub
 
 #End Region
