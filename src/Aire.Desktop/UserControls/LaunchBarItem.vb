@@ -26,6 +26,30 @@
 
 #End Region
 
+#Region "Context Menu"
+
+    Private Sub ContextMenu_Close()
+
+    End Sub
+
+    Private Sub ContextMenu_Maximize()
+
+    End Sub
+
+    Private Sub ContextMenu_Activate()
+
+    End Sub
+
+    Private Sub ContextMenu_Normal()
+
+    End Sub
+
+    Private Sub ContextMenu_Minimize()
+
+    End Sub
+
+#End Region
+
 #Region "LaunchBarItem"
 
     Private Sub LaunchBarItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -44,5 +68,5 @@
     End Sub
 
 #End Region
-    
+
 End Class
