@@ -39,7 +39,7 @@
             End Sub
 
             Public Shared Sub Kill(ByVal win As String)
-
+                Sys.Process.ExecuteCommand("xdotool", "windowkill " & win)
             End Sub
 
             Public Shared Sub Activate(ByVal win As String)
