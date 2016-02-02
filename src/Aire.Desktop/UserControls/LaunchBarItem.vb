@@ -45,7 +45,7 @@
     End Sub
 
     Private Sub ContextMenu_Minimize()
-
+        Aire.API.Sys.Window.Actions.Minimize(Window)
     End Sub
 
 #End Region
