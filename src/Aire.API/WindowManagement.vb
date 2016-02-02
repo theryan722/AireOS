@@ -29,7 +29,8 @@
             End Sub
 
             Public Shared Sub Maximize(ByVal win As String)
-
+                Activate(win)
+                Sys.Process.ExecuteCommand("wmctrl", "-i -r " & win & " -b add,maximized_vert,maximized_horz")
             End Sub
 
             Public Shared Sub ToggleMaximizeNormal(ByVal win As String)
