@@ -10,7 +10,11 @@
 
 #Region "Methods"
 
-
+    Public Sub RemoveIfWindowClosed()
+        If Aire.API.Sys.Window.Info.GetIfClosed(Window) Then
+            Me.Dispose()
+        End If
+    End Sub
 
 #End Region
 
