@@ -25,12 +25,8 @@
 
 #Region "UI"
 
-    Private Sub lblName_Click(sender As Object, e As EventArgs) Handles lblName.Click
-
-    End Sub
-
-    Private Sub lblName_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles lblName.MouseDoubleClick
-
+    Private Sub lblName_MouseClick(sender As Object, e As MouseEventArgs) Handles lblName.MouseClick
+        Call LaunchBarItem_MouseClick(sender, e)
     End Sub
 
 #End Region
@@ -42,7 +38,14 @@
     End Sub
 
     Private Sub LaunchBarItem_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
-
+        Select Case e.Clicks
+            Case 1
+                Aire.API.Sys.Window.Actions.Activate(Window)
+            Case 2
+                Aire.API.Sys.Window.Actions.Minimize(Window)
+            Case 3
+                Aire.API.Sys.Window.Actions.Kill(Window)
+        End Select
     End Sub
 
     Private Sub LaunchBarItem_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles Me.MouseDoubleClick
