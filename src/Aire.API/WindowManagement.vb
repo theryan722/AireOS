@@ -44,6 +44,12 @@
                         opened.Add(item)
                     End If
                 Next
+                If closed.Count > 0 Then
+                    Events.Raise_WindowClosed(closed)
+                End If
+                If opened.Count > 0 Then
+                    Events.Raise_WindowsOpened(opened)
+                End If
             End Sub
 
         End Class
