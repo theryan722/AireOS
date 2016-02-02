@@ -5,7 +5,7 @@
         Public Class Info
             Private Shared runningwindows As List(Of String)
 
-            Public Shared Function GetRunningWindows() As List(Of String)
+            Public Shared Function GetAndUpdateRunningWindows() As List(Of String)
                 Dim ret As New List(Of String)
                 Dim t As String = Sys.Process.ExecuteCommandWithOutput("wmctrl", "-l")
                 Dim arr() As String = t.Split(vbNewLine)
@@ -31,7 +31,7 @@
                 Return Sys.Process.ExecuteCommandWithOutput("xdotool", "getwindowpid " & win).ToLower.Contains("error")
             End Function
 
-            Public Shared Sub UpdateWindowChanges(ByVal wlist As List(Of String))
+            Private Shared Sub UpdateWindowChanges(ByVal wlist As List(Of String))
                 Dim closed As New List(Of String)
                 Dim opened As New List(Of String)
                 For Each item As String In runningwindows
