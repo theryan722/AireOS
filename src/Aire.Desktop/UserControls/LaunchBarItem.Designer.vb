@@ -26,6 +26,8 @@ Partial Class LaunchBarItem
         Me.lblName = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblName
@@ -40,8 +42,14 @@ Partial Class LaunchBarItem
         '
         'ContextMenuStrip1
         '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator1})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 10)
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
         '
         'LaunchBarItem
         '
@@ -50,6 +58,7 @@ Partial Class LaunchBarItem
         Me.Controls.Add(Me.lblName)
         Me.Name = "LaunchBarItem"
         Me.Size = New System.Drawing.Size(80, 30)
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -57,5 +66,6 @@ Partial Class LaunchBarItem
     Friend WithEvents lblName As System.Windows.Forms.Label
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
 
 End Class
