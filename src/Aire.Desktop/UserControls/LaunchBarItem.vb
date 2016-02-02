@@ -48,10 +48,6 @@
         End Select
     End Sub
 
-    Private Sub LaunchBarItem_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles Me.MouseDoubleClick
-
-    End Sub
-
 #End Region
     
 End Class
