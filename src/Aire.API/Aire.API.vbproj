@@ -175,6 +175,7 @@
     <Compile Include="SystemInfo.vb" />
     <Compile Include="Users.vb" />
     <Compile Include="Volume.vb" />
+    <Compile Include="WindowManagement.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dialogs\FileDialog.resx">
