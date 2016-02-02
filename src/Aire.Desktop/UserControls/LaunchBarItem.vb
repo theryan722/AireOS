@@ -41,7 +41,7 @@
     End Sub
 
     Private Sub ContextMenu_Normal()
-
+        Aire.API.Sys.Window.Actions.Normal(Window)
     End Sub
 
     Private Sub ContextMenu_Minimize()
