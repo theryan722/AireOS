@@ -2,9 +2,23 @@
 
 #Region "Properties/Variables"
 
+    Private fname As String
+
     Public Property Window As String
 
     Public Shadows Property Text As String
+        Get
+            Return fname
+        End Get
+        Set(value As String)
+            fname = value
+            If value.Length > 10 Then
+                lblName.Text = value.Substring(0, 10) & "..."
+            Else
+                lblName.Text = value
+            End If
+        End Set
+    End Property
 
     Private menuItems() As MenuItem = New MenuItem() {New MenuItem("Activate", New EventHandler(AddressOf ContextMenu_Activate)), New MenuItem("Close", New EventHandler(AddressOf ContextMenu_Close)), New MenuItem("Maximize", New EventHandler(AddressOf ContextMenu_Maximize)), New MenuItem("Normal", New EventHandler(AddressOf ContextMenu_Normal)), New MenuItem("Minimize", New EventHandler(AddressOf ContextMenu_Minimize))}
     Private buttonMenu As New ContextMenu(menuItems)
@@ -59,6 +73,12 @@
 #End Region
 
 #Region "LaunchBarItem"
+
+    Public Sub New(ByVal win As String)
+        InitializeComponent()
+        Window = win
+
+    End Sub
 
     Private Sub LaunchBarItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
