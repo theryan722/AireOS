@@ -29,7 +29,7 @@
 #Region "Context Menu"
 
     Private Sub ContextMenu_Close()
-
+        Aire.API.Sys.Window.Actions.Kill(Window)
     End Sub
 
     Private Sub ContextMenu_Maximize()
