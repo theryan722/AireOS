@@ -43,7 +43,7 @@
             End Sub
 
             Public Shared Sub Activate(ByVal win As String)
-
+                Sys.Process.ExecuteCommand("xdotool", "windowactivate " & win)
             End Sub
 
         End Class
