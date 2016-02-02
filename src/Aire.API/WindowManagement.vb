@@ -45,7 +45,7 @@
                     End If
                 Next
                 If closed.Count > 0 Then
-                    Events.Raise_WindowClosed(closed)
+                    Events.Raise_WindowsClosed(closed)
                 End If
                 If opened.Count > 0 Then
                     Events.Raise_WindowsOpened(opened)

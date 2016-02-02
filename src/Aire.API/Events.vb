@@ -29,7 +29,7 @@
             RaiseEvent WindowsOpened(windows)
         End Sub
 
-        Public Shared Sub Raise_WindowClosed(ByVal windows As List(Of String))
+        Public Shared Sub Raise_WindowsClosed(ByVal windows As List(Of String))
             RaiseEvent WindowsClosed(windows)
         End Sub
 

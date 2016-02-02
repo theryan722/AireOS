@@ -38,7 +38,7 @@
         Text = Aire.API.Sys.Window.Info.GetName(Window)
     End Sub
 
-    Public Sub HandleWindowClosedEvent(ByVal win As list(of string)
+    Public Sub HandleWindowClosedEvent(ByVal win As List(Of String))
         If win.Contains(Window) Then
             Me.Dispose()
         End If
