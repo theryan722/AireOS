@@ -16,6 +16,34 @@
                 Return ret
             End Function
 
+            Public Shared Function GetName(ByVal win As String) As String
+
+            End Function
+
+        End Class
+
+        Public Class Actions
+
+            Public Shared Sub Minimize(ByVal win As String)
+
+            End Sub
+
+            Public Shared Sub Maximize(ByVal win As String)
+
+            End Sub
+
+            Public Shared Sub ToggleMaximizeNormal(ByVal win As String)
+
+            End Sub
+
+            Public Shared Sub Kill(ByVal win As String)
+
+            End Sub
+
+            Public Shared Sub Activate(ByVal win As String)
+
+            End Sub
+
         End Class
 
     End Namespace
