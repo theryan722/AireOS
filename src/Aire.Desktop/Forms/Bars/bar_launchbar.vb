@@ -249,7 +249,9 @@
 #End Region
 
     Public Sub AddApplication(ByVal win As String)
-
+        Dim newb As New LaunchBarItem(win)
+        newb.Dock = DockStyle.Top
+        pnl_applications.Controls.Add(newb)
     End Sub
 
 #Region "Event Handlers"

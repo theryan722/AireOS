@@ -146,6 +146,7 @@ Partial Class bar_launchbar
         '
         'pnl_applications
         '
+        Me.pnl_applications.AutoScroll = True
         Me.pnl_applications.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnl_applications.Location = New System.Drawing.Point(0, 25)
         Me.pnl_applications.Name = "pnl_applications"
