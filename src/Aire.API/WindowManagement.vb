@@ -17,7 +17,7 @@
             End Function
 
             Public Shared Function GetName(ByVal win As String) As String
-
+                Return Sys.Process.ExecuteCommandWithOutput("xdotool", "getwindowname " & win)
             End Function
 
         End Class
