@@ -248,6 +248,14 @@
 
 #End Region
 
+#Region "Event Handlers"
+
+    Private Sub HandleWindowOpenedEvent(ByVal win As List(Of String))
+
+    End Sub
+
+#End Region
+
 #End Region
 
 #Region "bar_launchbar"
@@ -255,6 +263,7 @@
     Public Sub New(ByVal frm As frmDesktop)
         InitializeComponent()
         desktop = frm
+        AddHandler Aire.API.Sys.Events.WindowsOpened, AddressOf HandleWindowOpenedEvent
     End Sub
 
     Private Sub bar_launchbar_Load(sender As Object, e As EventArgs) Handles Me.Load
