@@ -159,6 +159,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UserControls\AppBarItem.Designer.vb">
+      <DependentUpon>AppBarItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AppBarItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LaunchBarItem.Designer.vb">
+      <DependentUpon>LaunchBarItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LaunchBarItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LauncherItem.Designer.vb">
+      <DependentUpon>LauncherItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LauncherItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SearchItem.Designer.vb">
+      <DependentUpon>SearchItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\Bars\bar_launchbar.resx">
