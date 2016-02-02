@@ -20,6 +20,10 @@
                 Return Sys.Process.ExecuteCommandWithOutput("xdotool", "getwindowname " & win)
             End Function
 
+            Public Shared Function GetIfClosed(ByVal win As String) As Boolean
+                Return Sys.Process.ExecuteCommandWithOutput("xdotool", "getwindowpid " & win).ToLower.Contains("error")
+            End Function
+
         End Class
 
         Public Class Actions
