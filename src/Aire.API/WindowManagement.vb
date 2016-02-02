@@ -28,18 +28,24 @@
                 Sys.Process.ExecuteCommand("xdotool", "windowminimize " & win)
             End Sub
 
-            Public Shared Sub Normal(ByVal win As String)
-                Activate(win)
+            Public Shared Sub Normal(ByVal win As String, Optional ByVal activatewin As Boolean = True)
+                If activatewin Then
+                    Activate(win)
+                End If
                 Sys.Process.ExecuteCommand("wmctrl", "-i -r " & win & " -b remove,maximized_vert,maximized_horz")
             End Sub
 
-            Public Shared Sub Maximize(ByVal win As String)
-                Activate(win)
+            Public Shared Sub Maximize(ByVal win As String, Optional ByVal activatewin As Boolean = True)
+                If activatewin Then
+                    Activate(win)
+                End If
                 Sys.Process.ExecuteCommand("wmctrl", "-i -r " & win & " -b add,maximized_vert,maximized_horz")
             End Sub
 
-            Public Shared Sub ToggleMaximizeNormal(ByVal win As String)
-                Activate(win)
+            Public Shared Sub ToggleMaximizeNormal(ByVal win As String, Optional ByVal activatewin As Boolean = True)
+                If activatewin Then
+                    Activate(win)
+                End If
                 Sys.Process.ExecuteCommand("wmctrl", "-i -r " & win & " -b toggle,maximized_vert,maximized_horz")
             End Sub
 
