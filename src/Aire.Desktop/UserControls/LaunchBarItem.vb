@@ -37,6 +37,7 @@
 
     Private Sub ContextMenu_Close()
         Aire.API.Sys.Window.Actions.Kill(Window)
+        RemoveIfWindowClosed()
     End Sub
 
     Private Sub ContextMenu_Maximize()
