@@ -3,6 +3,7 @@
     Namespace Window
 
         Public Class Info
+            Private Shared runningwindows As List(Of String)
 
             Public Shared Function GetRunningWindows() As List(Of String)
                 Dim ret As New List(Of String)
@@ -13,6 +14,12 @@
                         ret.Add(item.Substring(0, 10))
                     End If
                 Next
+                If runningwindows Is Nothing Then
+                    runningwindows = ret
+                Else
+                    UpdateWindowChanges(ret)
+                End If
+                runningwindows = ret
                 Return ret
             End Function
 
@@ -23,6 +30,21 @@
             Public Shared Function GetIfClosed(ByVal win As String) As Boolean
                 Return Sys.Process.ExecuteCommandWithOutput("xdotool", "getwindowpid " & win).ToLower.Contains("error")
             End Function
+
+            Public Shared Sub UpdateWindowChanges(ByVal wlist As List(Of String))
+                Dim closed As New List(Of String)
+                Dim opened As New List(Of String)
+                For Each item As String In runningwindows
+                    If Not wlist.Contains(item) Then
+                        closed.Add(item)
+                    End If
+                Next
+                For Each item As String In wlist
+                    If Not runningwindows.Contains(item) Then
+                        opened.Add(item)
+                    End If
+                Next
+            End Sub
 
         End Class
 
