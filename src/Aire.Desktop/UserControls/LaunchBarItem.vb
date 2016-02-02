@@ -6,7 +6,7 @@
 
     Public Shadows Property Text As String
 
-    Private menuItems() As MenuItem = New MenuItem() {New MenuItem("Activate"), New MenuItem("Close"), New MenuItem("Maximize"), New MenuItem("Normal"), New MenuItem("Minimize")}
+    Private menuItems() As MenuItem = New MenuItem() {New MenuItem("Activate", New EventHandler(AddressOf ContextMenu_Activate)), New MenuItem("Close", New EventHandler(AddressOf ContextMenu_Close)), New MenuItem("Maximize", New EventHandler(AddressOf ContextMenu_Maximize)), New MenuItem("Normal", New EventHandler(AddressOf ContextMenu_Normal)), New MenuItem("Minimize", New EventHandler(AddressOf ContextMenu_Minimize))}
     Private buttonMenu As New ContextMenu(menuItems)
 
 #End Region
