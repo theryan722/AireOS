@@ -9,7 +9,7 @@ An open source operating system developed in .Net.
 This project is in active development, and contributions are welcome (see below). This project is also extremely early in development, and most code is not properly commented (or at all) or organized, but bug reports are welcome.
 
 ###What is this?
-AireOS is an operating system I have been repeatedly attempting to create over the past several years. This project here is my current attempt, using everything I have learned from my previous attempts this project has made it further than any of the previous attempts. Simply put, AireOS is an operating system being developed in .Net on the Mono Framework. Please see the contributions section if you are interested in helping out!
+Simply put, AireOS is an operating system being developed in .Net on the Mono Framework. Please see the contributions section if you are interested in helping out!
 
 ###Contributions
 Please contact me for more information about contributing.
