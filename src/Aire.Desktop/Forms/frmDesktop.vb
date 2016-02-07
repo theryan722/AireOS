@@ -83,6 +83,108 @@
 
 #Region "Methods"
 
+#Region "Update"
+
+    Private Sub UpdateTimeDate()
+        lbl_timedate.Text = DateTime.Now.ToString("hh:mm") & vbNewLine & Date.Today.ToString("dddd") & vbNewLine & DateTime.Today
+    End Sub
+
+    Private Sub UpdateBattery()
+        If Aire.API.Sys.Power.Info.GetIfUsingBattery Then
+            Dim batpercent As Double = Aire.API.Sys.Power.Info.GetBatteryPercentage
+            Dim batcharging As Boolean = Aire.API.Sys.Power.Info.GetIfBatteryCharging
+            If batpercent > 75 Then
+                If batcharging Then
+                    btnBattery.BackgroundImage = My.Resources.battery_100_charging
+                    ToolTip1.SetToolTip(btnBattery, "Charging|" & batpercent & "%")
+                Else
+                    btnBattery.BackgroundImage = My.Resources.battery_100
+                    ToolTip1.SetToolTip(btnBattery, "Discharging|" & batpercent & "%")
+                End If
+            ElseIf batpercent > 50 Then
+                If batcharging Then
+                    btnBattery.BackgroundImage = My.Resources.battery_75_charging
+                    ToolTip1.SetToolTip(btnBattery, "Charging|" & batpercent & "%")
+                Else
+                    btnBattery.BackgroundImage = My.Resources.battery_75
+                    ToolTip1.SetToolTip(btnBattery, "Discharging|" & batpercent & "%")
+                End If
+            ElseIf batpercent > 25 Then
+                If batcharging Then
+                    btnBattery.BackgroundImage = My.Resources.battery_50_charging
+                    ToolTip1.SetToolTip(btnBattery, "Charging|" & batpercent & "%")
+                Else
+                    btnBattery.BackgroundImage = My.Resources.battery_50
+                    ToolTip1.SetToolTip(btnBattery, "Discharging|" & batpercent & "%")
+                End If
+            ElseIf batpercent > 15 Then
+                If batcharging Then
+                    btnBattery.BackgroundImage = My.Resources.battery_25_charging
+                    ToolTip1.SetToolTip(btnBattery, "Charging|" & batpercent & "%")
+                Else
+                    btnBattery.BackgroundImage = My.Resources.battery_25
+                    ToolTip1.SetToolTip(btnBattery, "Discharging|" & batpercent & "%")
+                End If
+            Else
+                If batcharging Then
+                    btnBattery.BackgroundImage = My.Resources.battery_danger_charging
+                    ToolTip1.SetToolTip(btnBattery, "Charging|" & batpercent & "%")
+                Else
+                    btnBattery.BackgroundImage = My.Resources.battery_danger
+                    ToolTip1.SetToolTip(btnBattery, "Discharging|" & batpercent & "%")
+                End If
+            End If
+        Else
+            btnBattery.Visible = False
+        End If
+    End Sub
+
+    Private Sub UpdateNetwork()
+        If Aire.API.Sys.Network.Info.GetIfNetworkConnection Then
+            If Aire.API.Sys.Network.Info.GetIfWireless Then
+                btnNetwork.BackgroundImage = My.Resources.network_wireless
+                Dim strength As Integer = Aire.API.Sys.Network.Info.GetWirelessStrengthInBars
+                Select Case strength
+                    Case 1
+                        ToolTip1.SetToolTip(btnNetwork, "Wireless Connection|Weak Signal")
+                    Case 2
+                        ToolTip1.SetToolTip(btnNetwork, "Wireless Connection|Fair Signal")
+                    Case 3
+                        ToolTip1.SetToolTip(btnNetwork, "Wireless Connection|Good Signal")
+                    Case 4
+                        ToolTip1.SetToolTip(btnNetwork, "Wireless Connection|Excellent Signal")
+                End Select
+            Else
+                btnNetwork.BackgroundImage = My.Resources.network_wired
+                ToolTip1.SetToolTip(btnNetwork, "Wired Connection")
+            End If
+        Else
+            btnNetwork.BackgroundImage = My.Resources.networking_disconnected
+            ToolTip1.SetToolTip(btnNetwork, "No Network Connection")
+        End If
+    End Sub
+
+    Private Sub UpdateVolume()
+        If Aire.API.Audio.Volume.GetIfMuted Then
+            btnVolume.BackgroundImage = My.Resources.volume_mute
+            ToolTip1.SetToolTip(btnVolume, "Muted")
+        Else
+            Dim vol As Integer = Aire.API.Audio.Volume.GetVolume
+            If vol > 65 Then
+                btnVolume.BackgroundImage = My.Resources.volume_high
+                ToolTip1.SetToolTip(btnVolume, vol & "%")
+            ElseIf vol > 35 Then
+                btnVolume.BackgroundImage = My.Resources.volume_medium
+                ToolTip1.SetToolTip(btnVolume, vol & "%")
+            Else
+                btnVolume.BackgroundImage = My.Resources.volume_low
+                ToolTip1.SetToolTip(btnVolume, vol & "%")
+            End If
+        End If
+    End Sub
+
+#End Region
+
     Public Sub SetBatteryIcon(ByVal icon As BatteryStatus)
         Select Case icon
             Case BatteryStatus.Battery100
