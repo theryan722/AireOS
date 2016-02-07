@@ -2,10 +2,10 @@
 
 #Region "Variables"
 
-    Dim drag As Boolean
-    Dim mousex As Integer
-    Dim mousey As Integer
-    Dim desk As frmDesktop
+    Private drag As Boolean
+    Private mousex As Integer
+    Private mousey As Integer
+    Private desk As frmDesktop
 
 #End Region
 
