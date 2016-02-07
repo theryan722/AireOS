@@ -1,10 +1,40 @@
 ﻿Public Class frmDesktop
 
-#Region "Properties"
+#Region "Properties/Variables/Enums"
 
     Public Property Windows As New List(Of DesktopWindows)
     Public Property User As String
     Public Property Session As DesktopSession
+
+#Region "LaunchBar"
+
+    Public Enum BatteryStatus
+        Battery100
+        Battery75
+        Battery50
+        Battery25
+        BatteryDanger
+        Battery100Charge
+        Battery75Charge
+        Battery50Charge
+        Battery25Charge
+        BatteryDangerCharge
+    End Enum
+
+    Public Enum NetworkStatus
+        Wired
+        Wireless
+        Disconnected
+    End Enum
+
+    Public Enum VolumeStatus
+        VolumeHigh
+        VolumeMedium
+        VolumeLow
+        VolumeMute
+    End Enum
+
+#End Region
 
 #End Region
 
