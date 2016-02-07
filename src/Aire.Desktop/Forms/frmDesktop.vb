@@ -297,6 +297,10 @@
         Session = ses
     End Sub
 
+    Private Sub frmDesktop_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        UpdateTimer.Start()
+    End Sub
+
 #End Region
 
 #Region "Timers"
@@ -314,5 +318,5 @@
     End Sub
 
 #End Region
-
+    
 End Class
