@@ -8,6 +8,9 @@
 
 #Region "LaunchBar"
 
+    Private launcher As frmLauncher
+    Private batcount As Integer = 30
+
     Public Enum BatteryStatus
         Battery100
         Battery75
