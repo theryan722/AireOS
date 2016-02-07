@@ -7,7 +7,7 @@
             Public Shared Function GetIfWireless() As Boolean
                 Try
                     Dim res As String = Sys.Process.ExecuteScriptWithOutput(Aire.DataManager.DataPaths.GetSysDataLocation & "/Scripts/getnetworktype.sh")
-                    Return res = "WIRELESS"
+                    Return res = "wireless"
                 Catch ex As Exception
                     Sys.Logging.Log.Write("ERROR: ", ex.ToString)
                     Return "ERROR"
