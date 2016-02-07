@@ -67,6 +67,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Logger", "Logger\Logger.vbp
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Aire.Info", "Aire.Info\Aire.Info.vbproj", "{622F3845-368A-460B-AF8E-942E76B32ED9}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Aire.Host", "Aire.Host\Aire.Host.vbproj", "{47D1D386-E73A-4780-9DD2-73DC4E171F45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -297,6 +299,12 @@ Global
 		{622F3845-368A-460B-AF8E-942E76B32ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{622F3845-368A-460B-AF8E-942E76B32ED9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{622F3845-368A-460B-AF8E-942E76B32ED9}.Release|x64.ActiveCfg = Release|Any CPU
+		{47D1D386-E73A-4780-9DD2-73DC4E171F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D1D386-E73A-4780-9DD2-73DC4E171F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D1D386-E73A-4780-9DD2-73DC4E171F45}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{47D1D386-E73A-4780-9DD2-73DC4E171F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D1D386-E73A-4780-9DD2-73DC4E171F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47D1D386-E73A-4780-9DD2-73DC4E171F45}.Release|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
