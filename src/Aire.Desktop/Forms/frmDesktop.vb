@@ -299,4 +299,20 @@
 
 #End Region
 
+#Region "Timers"
+
+    Private Sub UpdateTimer_Tick(sender As Object, e As EventArgs) Handles UpdateTimer.Tick
+        If batcount = 30 Then
+            UpdateBattery()
+            batcount = 0
+        Else
+            batcount += 1
+        End If
+        UpdateTimeDate()
+        UpdateNetwork()
+        UpdateVolume()
+    End Sub
+
+#End Region
+
 End Class
