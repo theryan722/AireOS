@@ -1,12 +1,12 @@
 ﻿Module Launch
-    Private loginloc As String = Aire.API.Compatibility.FixPath(AppDomain.CurrentDomain.BaseDirectory & "/Aire.Login.exe")
+    Private hostloc As String = Aire.API.Compatibility.FixPath(AppDomain.CurrentDomain.BaseDirectory & "/Aire.Host.exe")
 
     'Initializes Aire OS
     Sub Main()
         Console.Title = "Aire OS Initialization"
         Aire.API.Sys.Logging.Log.Write("System is initializing.")
         InitializeAudio()
-        Process.Start(loginloc)
+        Process.Start(hostloc)
     End Sub
 
     Private Sub InitializeAudio()
