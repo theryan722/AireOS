@@ -5,11 +5,16 @@
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
+    Dim desk As frmDesktop
 
 #End Region
 
 #Region "frmShowDesktop"
 
+    Public Sub New(ByVal desktop As frmDesktop)
+        InitializeComponent()
+        desk = desktop
+    End Sub
 
     Private Sub frmShowDesktop_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles Me.MouseDoubleClick
 
