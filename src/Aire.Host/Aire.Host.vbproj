@@ -116,6 +116,12 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aire.Login\Aire.Login.vbproj">
+      <Project>{5fa81dff-da2d-485a-9130-b809831bb002}</Project>
+      <Name>Aire.Login</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
