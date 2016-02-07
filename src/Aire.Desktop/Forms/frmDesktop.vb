@@ -49,7 +49,7 @@
         If frmLauncher.Showing Then
             launcher.Focus()
         Else
-            launcher = New frmLauncher(Me, Desktop)
+            launcher = New frmLauncher(Me)
             launcher.Show()
             launcher.Location = PointToScreen(btnLauncher.Location)
         End If

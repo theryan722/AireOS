@@ -25,31 +25,31 @@ Partial Class frmSearch
         Me.txtSearch = New MetroFramework.Controls.MetroTextBox()
         Me.pnl_results = New System.Windows.Forms.Panel()
         Me.pnl_options = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.toggleAll = New MetroFramework.Controls.MetroToggle()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.toggleHelp = New MetroFramework.Controls.MetroToggle()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.toggleDocuments = New MetroFramework.Controls.MetroToggle()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.toggleApplications = New MetroFramework.Controls.MetroToggle()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.toggleWeb = New MetroFramework.Controls.MetroToggle()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.toggleApplications = New MetroFramework.Controls.MetroToggle()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.toggleDocuments = New MetroFramework.Controls.MetroToggle()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.toggleHelp = New MetroFramework.Controls.MetroToggle()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.toggleAll = New MetroFramework.Controls.MetroToggle()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnOptions = New System.Windows.Forms.Button()
         Me.pnl_options.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtSearch
@@ -91,118 +91,37 @@ Partial Class frmSearch
         Me.pnl_options.Size = New System.Drawing.Size(16, 262)
         Me.pnl_options.TabIndex = 4
         '
-        'Panel1
+        'Panel7
         '
-        Me.Panel1.Controls.Add(Me.btnOptions)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(16, 16)
-        Me.Panel1.TabIndex = 1
+        Me.Panel7.Controls.Add(Me.Label5)
+        Me.Panel7.Controls.Add(Me.toggleWeb)
+        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel7.Location = New System.Drawing.Point(16, 136)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(0, 30)
+        Me.Panel7.TabIndex = 8
         '
-        'Panel2
+        'Label5
         '
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(0, 16)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(16, 246)
-        Me.Panel2.TabIndex = 2
+        Me.Label5.AutoSize = True
+        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label5.Location = New System.Drawing.Point(0, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(30, 13)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "Web"
         '
-        'toggleAll
+        'toggleWeb
         '
-        Me.toggleAll.AutoSize = True
-        Me.toggleAll.DisplayStatus = False
-        Me.toggleAll.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.toggleAll.Location = New System.Drawing.Point(0, 13)
-        Me.toggleAll.Name = "toggleAll"
-        Me.toggleAll.Size = New System.Drawing.Size(0, 17)
-        Me.toggleAll.TabIndex = 3
-        Me.toggleAll.Text = "Off"
-        Me.toggleAll.UseSelectable = True
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.Label1)
-        Me.Panel3.Controls.Add(Me.toggleAll)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(16, 16)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(0, 30)
-        Me.Panel3.TabIndex = 4
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(18, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "All"
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.Label2)
-        Me.Panel4.Controls.Add(Me.toggleHelp)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(16, 46)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(0, 30)
-        Me.Panel4.TabIndex = 5
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(0, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(29, 13)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Help"
-        '
-        'toggleHelp
-        '
-        Me.toggleHelp.AutoSize = True
-        Me.toggleHelp.DisplayStatus = False
-        Me.toggleHelp.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.toggleHelp.Location = New System.Drawing.Point(0, 13)
-        Me.toggleHelp.Name = "toggleHelp"
-        Me.toggleHelp.Size = New System.Drawing.Size(0, 17)
-        Me.toggleHelp.TabIndex = 3
-        Me.toggleHelp.Text = "Off"
-        Me.toggleHelp.UseSelectable = True
-        '
-        'Panel5
-        '
-        Me.Panel5.Controls.Add(Me.Label3)
-        Me.Panel5.Controls.Add(Me.toggleDocuments)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(16, 76)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(0, 30)
-        Me.Panel5.TabIndex = 6
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Location = New System.Drawing.Point(0, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 13)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Documents"
-        '
-        'toggleDocuments
-        '
-        Me.toggleDocuments.AutoSize = True
-        Me.toggleDocuments.DisplayStatus = False
-        Me.toggleDocuments.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.toggleDocuments.Location = New System.Drawing.Point(0, 13)
-        Me.toggleDocuments.Name = "toggleDocuments"
-        Me.toggleDocuments.Size = New System.Drawing.Size(0, 17)
-        Me.toggleDocuments.TabIndex = 3
-        Me.toggleDocuments.Text = "Off"
-        Me.toggleDocuments.UseSelectable = True
+        Me.toggleWeb.AutoSize = True
+        Me.toggleWeb.DisplayStatus = False
+        Me.toggleWeb.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.toggleWeb.Location = New System.Drawing.Point(0, 13)
+        Me.toggleWeb.Name = "toggleWeb"
+        Me.toggleWeb.Size = New System.Drawing.Size(0, 17)
+        Me.toggleWeb.TabIndex = 3
+        Me.toggleWeb.Text = "Off"
+        Me.toggleWeb.UseSelectable = True
         '
         'Panel6
         '
@@ -236,37 +155,118 @@ Partial Class frmSearch
         Me.toggleApplications.Text = "Off"
         Me.toggleApplications.UseSelectable = True
         '
-        'Panel7
+        'Panel5
         '
-        Me.Panel7.Controls.Add(Me.Label5)
-        Me.Panel7.Controls.Add(Me.toggleWeb)
-        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel7.Location = New System.Drawing.Point(16, 136)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(0, 30)
-        Me.Panel7.TabIndex = 8
+        Me.Panel5.Controls.Add(Me.Label3)
+        Me.Panel5.Controls.Add(Me.toggleDocuments)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel5.Location = New System.Drawing.Point(16, 76)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(0, 30)
+        Me.Panel5.TabIndex = 6
         '
-        'Label5
+        'Label3
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Location = New System.Drawing.Point(0, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(30, 13)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Web"
+        Me.Label3.AutoSize = True
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label3.Location = New System.Drawing.Point(0, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(61, 13)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Documents"
         '
-        'toggleWeb
+        'toggleDocuments
         '
-        Me.toggleWeb.AutoSize = True
-        Me.toggleWeb.DisplayStatus = False
-        Me.toggleWeb.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.toggleWeb.Location = New System.Drawing.Point(0, 13)
-        Me.toggleWeb.Name = "toggleWeb"
-        Me.toggleWeb.Size = New System.Drawing.Size(0, 17)
-        Me.toggleWeb.TabIndex = 3
-        Me.toggleWeb.Text = "Off"
-        Me.toggleWeb.UseSelectable = True
+        Me.toggleDocuments.AutoSize = True
+        Me.toggleDocuments.DisplayStatus = False
+        Me.toggleDocuments.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.toggleDocuments.Location = New System.Drawing.Point(0, 13)
+        Me.toggleDocuments.Name = "toggleDocuments"
+        Me.toggleDocuments.Size = New System.Drawing.Size(0, 17)
+        Me.toggleDocuments.TabIndex = 3
+        Me.toggleDocuments.Text = "Off"
+        Me.toggleDocuments.UseSelectable = True
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.Label2)
+        Me.Panel4.Controls.Add(Me.toggleHelp)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(16, 46)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(0, 30)
+        Me.Panel4.TabIndex = 5
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Location = New System.Drawing.Point(0, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(29, 13)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Help"
+        '
+        'toggleHelp
+        '
+        Me.toggleHelp.AutoSize = True
+        Me.toggleHelp.DisplayStatus = False
+        Me.toggleHelp.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.toggleHelp.Location = New System.Drawing.Point(0, 13)
+        Me.toggleHelp.Name = "toggleHelp"
+        Me.toggleHelp.Size = New System.Drawing.Size(0, 17)
+        Me.toggleHelp.TabIndex = 3
+        Me.toggleHelp.Text = "Off"
+        Me.toggleHelp.UseSelectable = True
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Controls.Add(Me.toggleAll)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(16, 16)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(0, 30)
+        Me.Panel3.TabIndex = 4
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(18, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "All"
+        '
+        'toggleAll
+        '
+        Me.toggleAll.AutoSize = True
+        Me.toggleAll.DisplayStatus = False
+        Me.toggleAll.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.toggleAll.Location = New System.Drawing.Point(0, 13)
+        Me.toggleAll.Name = "toggleAll"
+        Me.toggleAll.Size = New System.Drawing.Size(0, 17)
+        Me.toggleAll.TabIndex = 3
+        Me.toggleAll.Text = "Off"
+        Me.toggleAll.UseSelectable = True
+        '
+        'Panel2
+        '
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel2.Location = New System.Drawing.Point(0, 16)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(16, 246)
+        Me.Panel2.TabIndex = 2
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.btnOptions)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(16, 16)
+        Me.Panel1.TabIndex = 1
         '
         'btnOptions
         '
@@ -299,17 +299,17 @@ Partial Class frmSearch
         Me.Text = "Search"
         Me.TopMost = True
         Me.pnl_options.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
