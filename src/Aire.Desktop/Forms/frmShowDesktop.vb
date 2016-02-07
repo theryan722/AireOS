@@ -8,12 +8,6 @@
 
 #End Region
 
-#Region "Methods"
-
-
-
-#End Region
-
 #Region "frmShowDesktop"
 
     Private Sub frmShowDesktop_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
