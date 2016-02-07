@@ -2,7 +2,9 @@
 
 #Region "Variables"
 
-
+    Dim drag As Boolean
+    Dim mousex As Integer
+    Dim mousey As Integer
 
 #End Region
 
