@@ -22,7 +22,9 @@ Partial Class frmShowDesktop
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmShowDesktop))
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'frmShowDesktop
@@ -33,12 +35,15 @@ Partial Class frmShowDesktop
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(48, 20)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmShowDesktop"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
+        Me.ToolTip1.SetToolTip(Me, "Double click to view desktop")
         Me.TopMost = True
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class
