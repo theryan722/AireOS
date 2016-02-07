@@ -38,6 +38,28 @@
 
 #End Region
 
+#Region "LaunchBar"
+
+
+
+#End Region
+
+#Region "AppBars"
+
+#Region "Top"
+
+
+
+#End Region
+
+#Region "Bottom"
+
+
+
+#End Region
+
+#End Region
+
 #Region "Methods"
 
     Public Sub SetDesktopBackground(ByVal img As String, Optional ByVal layout As ImageLayout = ImageLayout.Stretch)
