@@ -25,7 +25,7 @@ Partial Class frmDesktop
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDesktop))
         Me.pnl_launchbar = New System.Windows.Forms.Panel()
-        Me.pnl_applications = New System.Windows.Forms.Panel()
+        Me.pnl_launchbar_applications = New System.Windows.Forms.Panel()
         Me.pnl_launchbar_tray = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnNotification = New System.Windows.Forms.Button()
@@ -48,7 +48,7 @@ Partial Class frmDesktop
         'pnl_launchbar
         '
         Me.pnl_launchbar.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.pnl_launchbar.Controls.Add(Me.pnl_applications)
+        Me.pnl_launchbar.Controls.Add(Me.pnl_launchbar_applications)
         Me.pnl_launchbar.Controls.Add(Me.pnl_launchbar_tray)
         Me.pnl_launchbar.Controls.Add(Me.btnLauncher)
         Me.pnl_launchbar.Dock = System.Windows.Forms.DockStyle.Left
@@ -57,14 +57,14 @@ Partial Class frmDesktop
         Me.pnl_launchbar.Size = New System.Drawing.Size(80, 685)
         Me.pnl_launchbar.TabIndex = 0
         '
-        'pnl_applications
+        'pnl_launchbar_applications
         '
-        Me.pnl_applications.AutoScroll = True
-        Me.pnl_applications.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_applications.Location = New System.Drawing.Point(0, 25)
-        Me.pnl_applications.Name = "pnl_applications"
-        Me.pnl_applications.Size = New System.Drawing.Size(80, 594)
-        Me.pnl_applications.TabIndex = 5
+        Me.pnl_launchbar_applications.AutoScroll = True
+        Me.pnl_launchbar_applications.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnl_launchbar_applications.Location = New System.Drawing.Point(0, 25)
+        Me.pnl_launchbar_applications.Name = "pnl_launchbar_applications"
+        Me.pnl_launchbar_applications.Size = New System.Drawing.Size(80, 594)
+        Me.pnl_launchbar_applications.TabIndex = 5
         '
         'pnl_launchbar_tray
         '
@@ -240,7 +240,7 @@ Partial Class frmDesktop
     Friend WithEvents pnl_appbar_top As System.Windows.Forms.Panel
     Friend WithEvents pnl_appbar_bottom As System.Windows.Forms.Panel
     Friend WithEvents pnl_desktop As System.Windows.Forms.Panel
-    Friend WithEvents pnl_applications As System.Windows.Forms.Panel
+    Friend WithEvents pnl_launchbar_applications As System.Windows.Forms.Panel
     Friend WithEvents pnl_launchbar_tray As System.Windows.Forms.Panel
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents btnNotification As System.Windows.Forms.Button
