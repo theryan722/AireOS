@@ -164,6 +164,13 @@
         pnl_appbar_bottom.BackColor = clr
     End Sub
 
+    Public Sub SetLaunchBarColor(ByVal ncolor As Color)
+        btnLauncher.BackColor = ncolor
+        pnl_applications.BackColor = ncolor
+        pnl_tray.BackColor = ncolor
+        pnl_launchbar.BackColor = ncolor
+    End Sub
+
     Public Sub StopUpdating()
         UpdateTimer.Stop()
     End Sub
