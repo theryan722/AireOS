@@ -44,12 +44,12 @@
     End Sub
 
     Private Sub DisplayLaunchBar()
-        Dim b As Point = Desktop.PointToScreen(Desktop.pnl_launchbar_loc.Location)
-        LaunchBar.Size = Desktop.pnl_launchbar_loc.Size
+        Dim b As Point = Desktop.PointToScreen(Desktop.pnl_launchbar.Location)
+        LaunchBar.Size = Desktop.pnl_launchbar.Size
         LaunchBar.Location = b
         LaunchBar.Show()
         LaunchBar.Height += Desktop.pnl_appbar_bottom.Height
-        LaunchBar.Width = Desktop.pnl_launchbar_loc.Width
+        LaunchBar.Width = Desktop.pnl_launchbar.Width
     End Sub
 
 #End Region

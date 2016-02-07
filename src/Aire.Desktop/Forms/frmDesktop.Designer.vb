@@ -22,20 +22,20 @@ Partial Class frmDesktop
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.pnl_launchbar_loc = New System.Windows.Forms.Panel()
+        Me.pnl_launchbar = New System.Windows.Forms.Panel()
         Me.pnl_appbar_top = New System.Windows.Forms.Panel()
         Me.pnl_appbar_bottom = New System.Windows.Forms.Panel()
         Me.pnl_desktop = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
-        'pnl_launchbar_loc
+        'pnl_launchbar
         '
-        Me.pnl_launchbar_loc.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.pnl_launchbar_loc.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnl_launchbar_loc.Location = New System.Drawing.Point(0, 0)
-        Me.pnl_launchbar_loc.Name = "pnl_launchbar_loc"
-        Me.pnl_launchbar_loc.Size = New System.Drawing.Size(80, 685)
-        Me.pnl_launchbar_loc.TabIndex = 0
+        Me.pnl_launchbar.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.pnl_launchbar.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnl_launchbar.Location = New System.Drawing.Point(0, 0)
+        Me.pnl_launchbar.Name = "pnl_launchbar"
+        Me.pnl_launchbar.Size = New System.Drawing.Size(80, 685)
+        Me.pnl_launchbar.TabIndex = 0
         '
         'pnl_appbar_top
         '
@@ -72,7 +72,7 @@ Partial Class frmDesktop
         Me.Controls.Add(Me.pnl_desktop)
         Me.Controls.Add(Me.pnl_appbar_bottom)
         Me.Controls.Add(Me.pnl_appbar_top)
-        Me.Controls.Add(Me.pnl_launchbar_loc)
+        Me.Controls.Add(Me.pnl_launchbar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmDesktop"
         Me.ShowIcon = False
@@ -82,7 +82,7 @@ Partial Class frmDesktop
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents pnl_launchbar_loc As System.Windows.Forms.Panel
+    Friend WithEvents pnl_launchbar As System.Windows.Forms.Panel
     Friend WithEvents pnl_appbar_top As System.Windows.Forms.Panel
     Friend WithEvents pnl_appbar_bottom As System.Windows.Forms.Panel
     Friend WithEvents pnl_desktop As System.Windows.Forms.Panel
