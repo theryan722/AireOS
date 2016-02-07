@@ -81,6 +81,59 @@
 
 #End Region
 
+#Region "Methods"
+
+    Public Sub SetBatteryIcon(ByVal icon As BatteryStatus)
+        Select Case icon
+            Case BatteryStatus.Battery100
+                btnBattery.BackgroundImage = My.Resources.battery_100
+            Case BatteryStatus.Battery75
+                btnBattery.BackgroundImage = My.Resources.battery_75
+            Case BatteryStatus.Battery50
+                btnBattery.BackgroundImage = My.Resources.battery_50
+            Case BatteryStatus.Battery25
+                btnBattery.BackgroundImage = My.Resources.battery_25
+            Case BatteryStatus.BatteryDanger
+                btnBattery.BackgroundImage = My.Resources.battery_danger
+            Case BatteryStatus.Battery100Charge
+                btnBattery.BackgroundImage = My.Resources.battery_100_charging
+            Case BatteryStatus.Battery75Charge
+                btnBattery.BackgroundImage = My.Resources.battery_75_charging
+            Case BatteryStatus.Battery50Charge
+                btnBattery.BackgroundImage = My.Resources.battery_50_charging
+            Case BatteryStatus.Battery25Charge
+                btnBattery.BackgroundImage = My.Resources.battery_25_charging
+            Case BatteryStatus.BatteryDangerCharge
+                btnBattery.BackgroundImage = My.Resources.battery_danger_charging
+        End Select
+    End Sub
+
+    Public Sub SetNetworkIcon(ByVal icon As NetworkStatus)
+        Select Case icon
+            Case NetworkStatus.Wired
+                btnNetwork.BackgroundImage = My.Resources.network_wired
+            Case NetworkStatus.Wireless
+                btnNetwork.BackgroundImage = My.Resources.network_wireless
+            Case NetworkStatus.Disconnected
+                btnNetwork.BackgroundImage = My.Resources.networking_disconnected
+        End Select
+    End Sub
+
+    Public Sub SetVolumeIcon(ByVal icon As VolumeStatus)
+        Select Case icon
+            Case VolumeStatus.VolumeHigh
+                btnVolume.BackgroundImage = My.Resources.volume_high
+            Case VolumeStatus.VolumeMedium
+                btnVolume.BackgroundImage = My.Resources.volume_medium
+            Case VolumeStatus.VolumeLow
+                btnVolume.BackgroundImage = My.Resources.volume_low
+            Case VolumeStatus.VolumeMute
+                btnVolume.BackgroundImage = My.Resources.volume_mute
+        End Select
+    End Sub
+
+#End Region
+
 #End Region
 
 #Region "AppBars"
@@ -111,6 +164,14 @@
         pnl_appbar_bottom.BackColor = clr
     End Sub
 
+    Public Sub StopUpdating()
+        UpdateTimer.Stop()
+    End Sub
+
+    Public Sub StartUpdating()
+        UpdateTimer.Start()
+    End Sub
+
 #End Region
 
 #Region "UI"
@@ -129,5 +190,4 @@
 
 #End Region
 
-    
 End Class
