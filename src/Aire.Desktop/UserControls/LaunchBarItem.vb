@@ -4,7 +4,7 @@
 
     Private fname As String
 
-    Private lbar As bar_launchbar
+    Private ldesk As frmDesktop
 
     Public Property Window As String
 
@@ -73,11 +73,11 @@
 
 #Region "LaunchBarItem"
 
-    Public Sub New(ByVal win As String, ByVal launchbar As bar_launchbar)
+    Public Sub New(ByVal win As String, ByVal desktop As frmDesktop)
         InitializeComponent()
         Window = win
         Text = Aire.API.Sys.Window.Info.GetName(win)
-        lbar = launchbar
+        ldesk = desktop
     End Sub
 
     Private Sub LaunchBarItem_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick

@@ -16,7 +16,6 @@
         Dim newses As New DesktopSession
         newses.User = user
         newses.Desktop = New frmDesktop(user, newses)
-        newses.LaunchBar = New bar_launchbar(newses.Desktop)
         DesktopSessions.Add(newses)
         ActiveSession = newses
         ActiveSession.LoadSession()
