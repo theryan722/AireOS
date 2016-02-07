@@ -23,7 +23,7 @@
     End Sub
 
     Private Sub frmShowDesktop_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
-
+        drag = False
     End Sub
 
 #End Region
