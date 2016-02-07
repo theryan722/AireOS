@@ -132,6 +132,10 @@
       <Project>{8b285aed-9205-4cee-8955-c9c3c73408b9}</Project>
       <Name>Aire.API</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Aire.Host\Aire.Host.vbproj">
+      <Project>{47d1d386-e73a-4780-9dd2-73dc4e171f45}</Project>
+      <Name>Aire.Host</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Aire.Login\Aire.Login.vbproj">
       <Project>{5fa81dff-da2d-485a-9130-b809831bb002}</Project>
       <Name>Aire.Login</Name>
