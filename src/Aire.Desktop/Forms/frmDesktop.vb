@@ -40,7 +40,19 @@
 
 #Region "LaunchBar"
 
+#Region "UI"
 
+    Private Sub btnLauncher_Click(sender As Object, e As EventArgs) Handles btnLauncher.Click
+        If frmLauncher.Showing Then
+            launcher.Focus()
+        Else
+            launcher = New frmLauncher(Me, Desktop)
+            launcher.Show()
+            launcher.Location = PointToScreen(btnLauncher.Location)
+        End If
+    End Sub
+
+#End Region
 
 #End Region
 
@@ -90,4 +102,5 @@
 
 #End Region
 
+    
 End Class

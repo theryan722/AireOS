@@ -117,22 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>360, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnMore.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAYVJREFUOE+1
-        kslKA0EQhmu6Z5JxVMhZg0cHjKPxEFRCECEowQUhATdEghgkGURQg0v0IEH6IHp0ubggbmQURPTgTfEB
-        BJ9DXyDwO0LfhJiIfvAfquvvoqq76M8xU2ZHQ7KhR4aVY8QNkT5LF7UhLUftpMjjCugnkX/JI+Nk4Bv1
-        OdRNtTJTJgkS9r0N+8HGzPUM/Cn/G8WoUWbLYIJEwkkgXohjpDCC8YtxmIvmOw1Rn3T8wLQiIlcRhM/D
-        6DrtQvQwith+DK1rrUU2zHM8wku/i5JhouWmBU2XTQicBGDtWQhuBxHKh2AtWghkmwsD6QEm7d9hc1ww
-        h4FOCWyXgW9yqPMq2ASDltAQXG1zJrOTXNq/wxZUwZ7cAncEOna15SpL8M7qRWXKHSGslh6BZzXBXzno
-        0b341cUOg75ufFBS6ZeW0qhLXqE+q6BbgufQA33DeKMxpfxv1JZ1oV1pMI6q4VmruqZBpbJFMlaqRf1B
-        XZEveHMU+cUq16T1zirb2yvD/4boE+ozfC1G5PUSAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnLauncher.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAAAYCAYAAABtGnqsAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAACH
@@ -185,6 +170,24 @@
         frTZwGh8GXnq6O0pGI0vP3Tq6O0pGI33f5rlXgujkYPb5F4Lo5GD2+ReC6ORg9vkXguj0X602cBotB9t
         NjBOOXX09hSMU04dvT0Fo/H+T7Pca2E0cnCb3GthNHJwm9xrYbz2Ybz2Ybx2recHGZCST5L56hgAAAAA
         SUVORK5CYII=
+</value>
+  </data>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>360, 17</value>
+  </metadata>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>360, 17</value>
+  </metadata>
+  <data name="btnMore.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAYVJREFUOE+1
+        kslKA0EQhmu6Z5JxVMhZg0cHjKPxEFRCECEowQUhATdEghgkGURQg0v0IEH6IHp0ubggbmQURPTgTfEB
+        BJ9DXyDwO0LfhJiIfvAfquvvoqq76M8xU2ZHQ7KhR4aVY8QNkT5LF7UhLUftpMjjCugnkX/JI+Nk4Bv1
+        OdRNtTJTJgkS9r0N+8HGzPUM/Cn/G8WoUWbLYIJEwkkgXohjpDCC8YtxmIvmOw1Rn3T8wLQiIlcRhM/D
+        6DrtQvQwith+DK1rrUU2zHM8wku/i5JhouWmBU2XTQicBGDtWQhuBxHKh2AtWghkmwsD6QEm7d9hc1ww
+        h4FOCWyXgW9yqPMq2ASDltAQXG1zJrOTXNq/wxZUwZ7cAncEOna15SpL8M7qRWXKHSGslh6BZzXBXzno
+        0b341cUOg75ufFBS6ZeW0qhLXqE+q6BbgufQA33DeKMxpfxv1JZ1oV1pMI6q4VmruqZBpbJFMlaqRf1B
+        XZEveHMU+cUq16T1zirb2yvD/4boE+ozfC1G5PUSAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="UpdateTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
