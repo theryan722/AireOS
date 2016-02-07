@@ -2,9 +2,9 @@
 
 #Region "Variables/Properties"
 
-    Private bar As bar_launchbar
     Private desktop As frmDesktop
     Public Shared Property Showing As Boolean = False
+
 #End Region
 
 #Region "UI"
@@ -55,10 +55,9 @@
 
 #Region "frmLauncher"
 
-    Public Sub New(ByVal frm As bar_launchbar, ByVal frm2 As frmDesktop)
+    Public Sub New(ByVal frm As frmDesktop)
         InitializeComponent()
-        bar = frm
-        desktop = frm2
+        desktop = frm
     End Sub
 
     Private Sub frmLauncher_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
