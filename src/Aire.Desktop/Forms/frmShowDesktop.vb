@@ -10,7 +10,8 @@
 
 #Region "frmShowDesktop"
 
-    Private Sub frmShowDesktop_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
+
+    Private Sub frmShowDesktop_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles Me.MouseDoubleClick
 
     End Sub
 
