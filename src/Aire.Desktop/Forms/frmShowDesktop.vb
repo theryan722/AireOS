@@ -17,7 +17,8 @@
     End Sub
 
     Private Sub frmShowDesktop_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles Me.MouseDoubleClick
-
+        desk.Focus()
+        Me.Close()
     End Sub
 
     Private Sub frmShowDesktop_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
