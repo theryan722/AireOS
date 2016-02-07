@@ -9,7 +9,7 @@
             Aire.Desktop.Manager.LoadDesktopSession(txt_username.Text, txt_password.Text)
             okaytoclose = True
             Me.Close()
-            frmLoginBackground.Hide()
+            frmLoginBackground.Close()
         Else
             Dim bb As New Aire.API.MessageBox("Invalid username or password, or the fields were not properly filled out.", "Error", API.MessageBox.MessageBoxButtons.OkOnly, API.MessageBox.MessageBoxIcon.Warning)
         End If
