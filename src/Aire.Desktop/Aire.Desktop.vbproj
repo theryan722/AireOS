@@ -102,12 +102,6 @@
     <Compile Include="Classes\DesktopWindows.vb" />
     <Compile Include="Classes\Manager.vb" />
     <Compile Include="Classes\DesktopSession.vb" />
-    <Compile Include="Forms\Bars\bar_launchbar.Designer.vb">
-      <DependentUpon>bar_launchbar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Bars\bar_launchbar.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\dlgTray.Designer.vb">
       <DependentUpon>dlgTray.vb</DependentUpon>
     </Compile>
@@ -185,9 +179,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\Bars\bar_launchbar.resx">
-      <DependentUpon>bar_launchbar.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDesktop.resx">
       <DependentUpon>frmDesktop.vb</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +290,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\16_arrowleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\Bars\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
