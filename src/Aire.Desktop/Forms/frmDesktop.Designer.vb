@@ -25,11 +25,8 @@ Partial Class frmDesktop
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDesktop))
         Me.pnl_launchbar = New System.Windows.Forms.Panel()
-        Me.pnl_appbar_top = New System.Windows.Forms.Panel()
-        Me.pnl_appbar_bottom = New System.Windows.Forms.Panel()
-        Me.pnl_desktop = New System.Windows.Forms.Panel()
         Me.pnl_applications = New System.Windows.Forms.Panel()
-        Me.pnl_tray = New System.Windows.Forms.Panel()
+        Me.pnl_launchbar_tray = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnNotification = New System.Windows.Forms.Button()
         Me.btnVolume = New System.Windows.Forms.Button()
@@ -38,10 +35,13 @@ Partial Class frmDesktop
         Me.btnBattery = New System.Windows.Forms.Button()
         Me.lbl_timedate = New System.Windows.Forms.Label()
         Me.btnLauncher = New System.Windows.Forms.Button()
+        Me.pnl_appbar_top = New System.Windows.Forms.Panel()
+        Me.pnl_appbar_bottom = New System.Windows.Forms.Panel()
+        Me.pnl_desktop = New System.Windows.Forms.Panel()
         Me.UpdateTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.pnl_launchbar.SuspendLayout()
-        Me.pnl_tray.SuspendLayout()
+        Me.pnl_launchbar_tray.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,40 +49,13 @@ Partial Class frmDesktop
         '
         Me.pnl_launchbar.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.pnl_launchbar.Controls.Add(Me.pnl_applications)
-        Me.pnl_launchbar.Controls.Add(Me.pnl_tray)
+        Me.pnl_launchbar.Controls.Add(Me.pnl_launchbar_tray)
         Me.pnl_launchbar.Controls.Add(Me.btnLauncher)
         Me.pnl_launchbar.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnl_launchbar.Location = New System.Drawing.Point(0, 0)
         Me.pnl_launchbar.Name = "pnl_launchbar"
         Me.pnl_launchbar.Size = New System.Drawing.Size(80, 685)
         Me.pnl_launchbar.TabIndex = 0
-        '
-        'pnl_appbar_top
-        '
-        Me.pnl_appbar_top.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.pnl_appbar_top.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnl_appbar_top.Location = New System.Drawing.Point(80, 0)
-        Me.pnl_appbar_top.Name = "pnl_appbar_top"
-        Me.pnl_appbar_top.Size = New System.Drawing.Size(901, 48)
-        Me.pnl_appbar_top.TabIndex = 1
-        '
-        'pnl_appbar_bottom
-        '
-        Me.pnl_appbar_bottom.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.pnl_appbar_bottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnl_appbar_bottom.Location = New System.Drawing.Point(80, 637)
-        Me.pnl_appbar_bottom.Name = "pnl_appbar_bottom"
-        Me.pnl_appbar_bottom.Size = New System.Drawing.Size(901, 48)
-        Me.pnl_appbar_bottom.TabIndex = 2
-        '
-        'pnl_desktop
-        '
-        Me.pnl_desktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pnl_desktop.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnl_desktop.Location = New System.Drawing.Point(80, 48)
-        Me.pnl_desktop.Name = "pnl_desktop"
-        Me.pnl_desktop.Size = New System.Drawing.Size(901, 589)
-        Me.pnl_desktop.TabIndex = 3
         '
         'pnl_applications
         '
@@ -93,15 +66,15 @@ Partial Class frmDesktop
         Me.pnl_applications.Size = New System.Drawing.Size(80, 594)
         Me.pnl_applications.TabIndex = 5
         '
-        'pnl_tray
+        'pnl_launchbar_tray
         '
-        Me.pnl_tray.Controls.Add(Me.Panel1)
-        Me.pnl_tray.Controls.Add(Me.lbl_timedate)
-        Me.pnl_tray.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnl_tray.Location = New System.Drawing.Point(0, 619)
-        Me.pnl_tray.Name = "pnl_tray"
-        Me.pnl_tray.Size = New System.Drawing.Size(80, 66)
-        Me.pnl_tray.TabIndex = 4
+        Me.pnl_launchbar_tray.Controls.Add(Me.Panel1)
+        Me.pnl_launchbar_tray.Controls.Add(Me.lbl_timedate)
+        Me.pnl_launchbar_tray.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnl_launchbar_tray.Location = New System.Drawing.Point(0, 619)
+        Me.pnl_launchbar_tray.Name = "pnl_launchbar_tray"
+        Me.pnl_launchbar_tray.Size = New System.Drawing.Size(80, 66)
+        Me.pnl_launchbar_tray.TabIndex = 4
         '
         'Panel1
         '
@@ -211,6 +184,33 @@ Partial Class frmDesktop
         Me.ToolTip1.SetToolTip(Me.btnLauncher, "Launcher")
         Me.btnLauncher.UseVisualStyleBackColor = True
         '
+        'pnl_appbar_top
+        '
+        Me.pnl_appbar_top.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.pnl_appbar_top.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnl_appbar_top.Location = New System.Drawing.Point(80, 0)
+        Me.pnl_appbar_top.Name = "pnl_appbar_top"
+        Me.pnl_appbar_top.Size = New System.Drawing.Size(901, 48)
+        Me.pnl_appbar_top.TabIndex = 1
+        '
+        'pnl_appbar_bottom
+        '
+        Me.pnl_appbar_bottom.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.pnl_appbar_bottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnl_appbar_bottom.Location = New System.Drawing.Point(80, 637)
+        Me.pnl_appbar_bottom.Name = "pnl_appbar_bottom"
+        Me.pnl_appbar_bottom.Size = New System.Drawing.Size(901, 48)
+        Me.pnl_appbar_bottom.TabIndex = 2
+        '
+        'pnl_desktop
+        '
+        Me.pnl_desktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pnl_desktop.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnl_desktop.Location = New System.Drawing.Point(80, 48)
+        Me.pnl_desktop.Name = "pnl_desktop"
+        Me.pnl_desktop.Size = New System.Drawing.Size(901, 589)
+        Me.pnl_desktop.TabIndex = 3
+        '
         'UpdateTimer
         '
         Me.UpdateTimer.Interval = 1000
@@ -231,7 +231,7 @@ Partial Class frmDesktop
         Me.Text = "frmDesktop"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.pnl_launchbar.ResumeLayout(False)
-        Me.pnl_tray.ResumeLayout(False)
+        Me.pnl_launchbar_tray.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -241,7 +241,7 @@ Partial Class frmDesktop
     Friend WithEvents pnl_appbar_bottom As System.Windows.Forms.Panel
     Friend WithEvents pnl_desktop As System.Windows.Forms.Panel
     Friend WithEvents pnl_applications As System.Windows.Forms.Panel
-    Friend WithEvents pnl_tray As System.Windows.Forms.Panel
+    Friend WithEvents pnl_launchbar_tray As System.Windows.Forms.Panel
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents btnNotification As System.Windows.Forms.Button
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip

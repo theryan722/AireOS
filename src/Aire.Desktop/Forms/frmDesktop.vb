@@ -167,7 +167,7 @@
     Public Sub SetLaunchBarColor(ByVal ncolor As Color)
         btnLauncher.BackColor = ncolor
         pnl_applications.BackColor = ncolor
-        pnl_tray.BackColor = ncolor
+        pnl_launchbar_tray.BackColor = ncolor
         pnl_launchbar.BackColor = ncolor
     End Sub
 
