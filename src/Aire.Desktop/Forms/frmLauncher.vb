@@ -16,7 +16,7 @@
     End Sub
 
     Private Sub btnProfile_MouseEnter(sender As Object, e As EventArgs) Handles btnProfile.MouseEnter
-
+        btnProfile.BackColor = Aire.SysColors.Colors.GradientActiveCaption
     End Sub
 
     Private Sub btnProfile_MouseLeave(sender As Object, e As EventArgs) Handles btnProfile.MouseLeave
