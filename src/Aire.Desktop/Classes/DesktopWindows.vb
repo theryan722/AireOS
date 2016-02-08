@@ -18,7 +18,9 @@
     End Sub
 
     Public Sub HideAll()
-        
+        For Each item As String In Windows
+            Aire.API.Sys.Window.Actions.Hide(item)
+        Next
     End Sub
 
     Public Sub MinimizeAll()
