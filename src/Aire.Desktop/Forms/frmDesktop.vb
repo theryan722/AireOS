@@ -346,6 +346,7 @@
         UpdateTimeDate()
         UpdateNetwork()
         UpdateVolume()
+        UpdateLaunchBar()
     End Sub
 
 #End Region
