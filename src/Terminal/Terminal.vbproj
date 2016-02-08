@@ -146,6 +146,12 @@
   <ItemGroup>
     <Content Include="icon_terminal.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aire.API\Aire.API.vbproj">
+      <Project>{8b285aed-9205-4cee-8955-c9c3c73408b9}</Project>
+      <Name>Aire.API</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

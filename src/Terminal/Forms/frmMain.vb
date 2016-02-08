@@ -31,7 +31,23 @@
     End Sub
 
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
-        
+        Try
+            If e.KeyChar = ChrW(Keys.Enter) Then
+                CommandManager.ExecuteCommand(TypedText)
+                TypedText = ""
+            ElseIf e.KeyChar = ChrW(Keys.Back) Then
+                If TypedText.Length > 0 Then
+                    TypedText = TypedText.Substring(0, TypedText.Length - 1)
+                Else
+                    e.Handled = True
+                End If
+            Else
+                TypedText += e.KeyChar
+            End If
+            TextBox1.SelectionStart = Len(TextBox1.Text)
+        Catch ex As Exception
+            Aire.API.Sys.Logging.Log.Write("ERROR: " & ex.ToString)
+        End Try
     End Sub
 
 #End Region
