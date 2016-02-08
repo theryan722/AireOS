@@ -48,7 +48,16 @@
 #Region "Methods"
 
     Private Sub LoadUI()
+        FixBackColor()
         btnProfile.BackgroundImage = Aire.API.User.Current.Settings.ProfilePicture
+    End Sub
+
+    Private Sub FixBackColor()
+        pnl_right.BackColor = Aire.SysColors.Colors.ActiveCaption
+        pnl_bottom.BackColor = Aire.SysColors.Colors.ActiveCaption
+        pnl_user.BackColor = Aire.SysColors.Colors.ActiveCaption
+        pnl_right_title.BackColor = Aire.SysColors.Colors.ActiveCaption
+        pnl_pinned.BackColor = Aire.SysColors.Colors.ActiveCaption
     End Sub
 
 #End Region

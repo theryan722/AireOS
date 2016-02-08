@@ -26,7 +26,7 @@ Partial Class frmLauncher
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLauncher))
         Me.txtSearch = New MetroFramework.Controls.MetroTextBox()
         Me.lblUsername = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pnl_bottom = New System.Windows.Forms.Panel()
         Me.btnOptions = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.btnFileExplorer = New System.Windows.Forms.Button()
@@ -36,13 +36,13 @@ Partial Class frmLauncher
         Me.pnl_right_title = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnl_user = New System.Windows.Forms.Panel()
         Me.btnProfile = New System.Windows.Forms.Button()
         Me.pnl_pinned = New System.Windows.Forms.Panel()
-        Me.Panel1.SuspendLayout()
+        Me.pnl_bottom.SuspendLayout()
         Me.pnl_right.SuspendLayout()
         Me.pnl_right_title.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.pnl_user.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtSearch
@@ -72,18 +72,18 @@ Partial Class frmLauncher
         Me.lblUsername.TabIndex = 2
         Me.lblUsername.Text = "Username"
         '
-        'Panel1
+        'pnl_bottom
         '
-        Me.Panel1.Controls.Add(Me.btnOptions)
-        Me.Panel1.Controls.Add(Me.btnSearch)
-        Me.Panel1.Controls.Add(Me.btnFileExplorer)
-        Me.Panel1.Controls.Add(Me.txtSearch)
-        Me.Panel1.Controls.Add(Me.btnPower)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 331)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(364, 30)
-        Me.Panel1.TabIndex = 4
+        Me.pnl_bottom.Controls.Add(Me.btnOptions)
+        Me.pnl_bottom.Controls.Add(Me.btnSearch)
+        Me.pnl_bottom.Controls.Add(Me.btnFileExplorer)
+        Me.pnl_bottom.Controls.Add(Me.txtSearch)
+        Me.pnl_bottom.Controls.Add(Me.btnPower)
+        Me.pnl_bottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnl_bottom.Location = New System.Drawing.Point(0, 331)
+        Me.pnl_bottom.Name = "pnl_bottom"
+        Me.pnl_bottom.Size = New System.Drawing.Size(364, 30)
+        Me.pnl_bottom.TabIndex = 4
         '
         'btnOptions
         '
@@ -180,15 +180,15 @@ Partial Class frmLauncher
         Me.Label1.Text = "Applications"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel2
+        'pnl_user
         '
-        Me.Panel2.Controls.Add(Me.lblUsername)
-        Me.Panel2.Controls.Add(Me.btnProfile)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(164, 72)
-        Me.Panel2.TabIndex = 6
+        Me.pnl_user.Controls.Add(Me.lblUsername)
+        Me.pnl_user.Controls.Add(Me.btnProfile)
+        Me.pnl_user.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnl_user.Location = New System.Drawing.Point(0, 0)
+        Me.pnl_user.Name = "pnl_user"
+        Me.pnl_user.Size = New System.Drawing.Size(164, 72)
+        Me.pnl_user.TabIndex = 6
         '
         'btnProfile
         '
@@ -218,33 +218,33 @@ Partial Class frmLauncher
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(364, 361)
         Me.Controls.Add(Me.pnl_pinned)
-        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.pnl_user)
         Me.Controls.Add(Me.pnl_right)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnl_bottom)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmLauncher"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.TopMost = True
-        Me.Panel1.ResumeLayout(False)
+        Me.pnl_bottom.ResumeLayout(False)
         Me.pnl_right.ResumeLayout(False)
         Me.pnl_right_title.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.pnl_user.ResumeLayout(False)
+        Me.pnl_user.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents txtSearch As MetroFramework.Controls.MetroTextBox
     Friend WithEvents lblUsername As System.Windows.Forms.Label
     Friend WithEvents btnPower As System.Windows.Forms.Button
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents pnl_bottom As System.Windows.Forms.Panel
     Friend WithEvents btnProfile As System.Windows.Forms.Button
     Friend WithEvents pnl_right As System.Windows.Forms.Panel
     Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents btnFileExplorer As System.Windows.Forms.Button
     Friend WithEvents btnOptions As System.Windows.Forms.Button
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents pnl_user As System.Windows.Forms.Panel
     Friend WithEvents pnl_right_title As System.Windows.Forms.Panel
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents pnl_pinned As System.Windows.Forms.Panel
