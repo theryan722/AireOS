@@ -23,6 +23,19 @@
 
 #End Region
 
+            Public Shared Function GetAllWindowsUnfiltered() As List(Of String)
+                Dim ret As New List(Of String)
+                Dim tname As String
+                Dim arr() As String = Sys.Process.ExecuteCommandWithOutput("wmctrl", "-l").Split(Environment.NewLine)
+                For Each item As String In arr
+                    tname = GetName(item.Substring(0, 10))
+                    If tname <> "" AndAlso tname <> Environment.NewLine Then
+                        ret.Add(item)
+                    End If
+                Next
+                Return ret
+            End Function
+
             Public Shared Function GetRunningWindows() As List(Of String)
                 Dim ret As New List(Of String)
                 Dim tname As String
