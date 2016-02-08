@@ -6,7 +6,9 @@
 #Region "Methods"
 
     Public Sub CloseAll()
-
+        For Each item As String In Windows
+            Aire.API.Sys.Window.Actions.Kill(item)
+        Next
     End Sub
 
     Public Sub ShowAll()
