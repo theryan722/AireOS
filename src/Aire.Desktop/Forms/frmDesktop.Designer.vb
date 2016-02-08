@@ -228,7 +228,7 @@ Partial Class frmDesktop
         Me.Name = "frmDesktop"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.Text = "frmDesktop"
+        Me.Text = "Aire.Desktop.frmDesktop"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.pnl_launchbar.ResumeLayout(False)
         Me.pnl_launchbar_tray.ResumeLayout(False)

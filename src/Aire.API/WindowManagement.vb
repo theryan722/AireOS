@@ -4,7 +4,7 @@
 
         Public Class Info
 
-            Public Shared Function GetAndUpdateRunningWindows() As List(Of String)
+            Public Shared Function GetRunningWindows() As List(Of String)
                 Dim ret As New List(Of String)
                 Dim arr() As String = Sys.Process.ExecuteCommandWithOutput("wmctrl", "-l").Split(Environment.NewLine)
                 For Each item As String In arr
@@ -26,6 +26,10 @@
         End Class
 
         Public Class Actions
+
+            Public Shared Sub SetAlwaysInBack(ByVal win As String)
+                Sys.Process.ExecuteCommand("wmctrl", "-i -r " & win & " -b add,below")
+            End Sub
 
             Public Shared Sub Minimize(ByVal win As String)
                 Sys.Process.ExecuteCommand("xdotool", "windowminimize " & win)
