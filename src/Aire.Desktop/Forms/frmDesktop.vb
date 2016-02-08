@@ -286,7 +286,31 @@
 
 #Region "Desktops"
 
+    Private Sub SwitchToDesktop(ByVal odesk As Integer, ByVal ndesk As Integer)
+        Windows(odesk).HideAll()
+        Windows(ndesk).ShowAll()
+        CurrentWindow = Windows(ndesk)
+    End Sub
 
+    Public Sub GotoDesktopLeft()
+
+    End Sub
+
+    Public Sub GotoDesktopRight()
+
+    End Sub
+
+    Public Sub GotoDesktop(ByVal d As Integer)
+
+    End Sub
+
+    Public Sub RemoveCurrentDesktop()
+
+    End Sub
+
+    Public Sub AddDesktop()
+
+    End Sub
 
 #End Region
 
