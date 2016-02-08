@@ -17,4 +17,5 @@
     Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Me.Visible = False
     End Sub
+
 End Class
