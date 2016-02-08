@@ -60,7 +60,9 @@
 
 #Region "About"
 
+    Private Sub AboutToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem1.Click
 
+    End Sub
 
 #End Region
 
