@@ -6,12 +6,15 @@
 
 #Region "Private"
 
-            Private Shared Function WindowIsNotBlackListed(ByVal wname As String) As Boolean
+            Private Shared Function WindowIsNotBlackListed(ByVal wstr As String) As Boolean
                 Dim ret As Boolean = True
-                Select Case wname
-                    Case "Aire.Desktop.frmDesktop"
+                If wstr = "" Then
+                    ret = False
+                ElseIf wstr.Contains("ubuntu ") Then
+                    If wstr.Contains("Hud") Or wstr.Contains("XdndCollectionWindowImp") Or wstr.Contains("Desktop") Or wstr.Contains("unity-launcher") Or wstr.Contains("unity-panel") Or wstr.Contains("unity-dash") Then
                         ret = False
-                End Select
+                    End If
+                End If
                 Return ret
             End Function
 
@@ -22,9 +25,11 @@
                 Dim tname As String
                 Dim arr() As String = Sys.Process.ExecuteCommandWithOutput("wmctrl", "-l").Split(Environment.NewLine)
                 For Each item As String In arr
-                    tname = GetName(item)
-                    If tname <> "" AndAlso tname <> Environment.NewLine AndAlso WindowIsNotBlackListed(tname) Then
-                        ret.Add(item.Substring(0, 10))
+                    If WindowIsNotBlackListed(item) Then
+                        tname = GetName(item.Substring(0, 10))
+                        If tname <> "" AndAlso tname <> Environment.NewLine Then
+                            ret.Add(item.Substring(0, 10))
+                        End If
                     End If
                 Next
                 Return ret
