@@ -68,7 +68,7 @@
     End Sub
 
     Private Sub btnFileBrowser_MouseEnter(sender As Object, e As EventArgs) Handles btnFileBrowser.MouseEnter
-
+        btnFileBrowser.BackColor = Aire.SysColors.Colors.GradientActiveCaption
     End Sub
 
     Private Sub btnFileBrowser_MouseLeave(sender As Object, e As EventArgs) Handles btnFileBrowser.MouseLeave
