@@ -157,6 +157,10 @@
       <Project>{c6f2b1cf-9393-41cd-a455-525522acc0dc}</Project>
       <Name>Aire.Desktop</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Aire.SysColors\Aire.SysColors.vbproj">
+      <Project>{7acc62d7-8653-4ffb-a37e-82b18f867673}</Project>
+      <Name>Aire.SysColors</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
