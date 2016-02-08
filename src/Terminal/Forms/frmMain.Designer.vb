@@ -38,7 +38,7 @@ Partial Class frmMain
         Me.TopmostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.TextBox1 = New System.Windows.Forms.RichTextBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -136,18 +136,18 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
-        'RichTextBox1
+        'TextBox1
         '
-        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.WindowText
-        Me.RichTextBox1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.ForeColor = System.Drawing.SystemColors.Window
-        Me.RichTextBox1.Location = New System.Drawing.Point(0, 24)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(699, 321)
-        Me.RichTextBox1.TabIndex = 1
-        Me.RichTextBox1.Text = ""
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.WindowText
+        Me.TextBox1.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.SystemColors.Window
+        Me.TextBox1.Location = New System.Drawing.Point(0, 24)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(699, 321)
+        Me.TextBox1.TabIndex = 1
+        Me.TextBox1.Text = ""
         '
         'ContextMenuStrip1
         '
@@ -172,7 +172,7 @@ Partial Class frmMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(699, 345)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -186,7 +186,7 @@ Partial Class frmMain
 
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewWindowToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
