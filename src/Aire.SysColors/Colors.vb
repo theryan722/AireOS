@@ -15,5 +15,6 @@ Public Class Colors
     Public Shared Desktop As Color = Color.FromArgb(0, 0, 0)
     Public Shared GrayText As Color = Color.FromArgb(109, 109, 109)
     Public Shared Highlight As Color = Color.FromArgb(51, 153, 255)
+    Public Shared HighlightText As Color = Color.FromArgb(255, 255, 255)
 
 End Class
