@@ -329,8 +329,11 @@
     End Sub
 
     Private Sub frmDesktop_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SetDesktopAlwaysInBackground()
         UpdateTimer.Start()
+    End Sub
+
+    Private Sub frmDesktop_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        SetDesktopAlwaysInBackground()
     End Sub
 
 #End Region
