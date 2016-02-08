@@ -25,5 +25,6 @@ Public Class Colors
     Public Shared Menu As Color = Color.FromArgb(240, 240, 240)
     Public Shared MenuText As Color = Color.FromArgb(0, 0, 0)
     Public Shared ScrollBar As Color = Color.FromArgb(200, 200, 200)
+    Public Shared Window As Color = Color.FromArgb(255, 255, 255)
 
 End Class
