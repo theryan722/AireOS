@@ -31,6 +31,14 @@
 
     End Sub
 
+    Private Sub btnOptions_MouseEnter(sender As Object, e As EventArgs) Handles btnOptions.MouseEnter
+
+    End Sub
+
+    Private Sub btnOptions_MouseLeave(sender As Object, e As EventArgs) Handles btnOptions.MouseLeave
+
+    End Sub
+
 #End Region
 
 #Region "btnSearch"
