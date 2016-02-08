@@ -19,5 +19,6 @@ Public Class Colors
     Public Shared HotTrack As Color = Color.FromArgb(0, 102, 204)
     Public Shared InactiveBorder As Color = Color.FromArgb(244, 247, 252)
     Public Shared InactiveCaption As Color = Color.FromArgb(191, 205, 219)
+    Public Shared InactiveCaptionText As Color = Color.FromArgb(0, 0, 0)
 
 End Class
