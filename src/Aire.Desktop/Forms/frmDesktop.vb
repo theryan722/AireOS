@@ -304,12 +304,13 @@
         End If
     End Sub
 
-    Public Sub GotoDesktop(ByVal d As Integer)
-
-    End Sub
-
     Public Sub RemoveCurrentDesktop()
-
+        If Windows.Count >= 2 AndAlso Windows.IndexOf(CurrentWindow) <> 0 Then
+            Dim b As Integer = Windows.IndexOf(CurrentWindow)
+            CurrentWindow.CloseAll()
+            GotoDesktopLeft()
+            Windows.RemoveAt(b)
+        End If
     End Sub
 
     Public Sub AddDesktop()
