@@ -20,7 +20,7 @@
     End Sub
 
     Private Sub btnProfile_MouseLeave(sender As Object, e As EventArgs) Handles btnProfile.MouseLeave
-
+        btnProfile.BackColor = Aire.SysColors.Colors.ActiveCaption
     End Sub
 
 #End Region
