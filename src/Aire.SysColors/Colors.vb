@@ -23,5 +23,6 @@ Public Class Colors
     Public Shared Info As Color = Color.FromArgb(255, 255, 225)
     Public Shared InfoText As Color = Color.FromArgb(0, 0, 0)
     Public Shared Menu As Color = Color.FromArgb(240, 240, 240)
+    Public Shared MenuText As Color = Color.FromArgb(0, 0, 0)
 
 End Class
