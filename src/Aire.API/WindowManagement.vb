@@ -6,9 +6,11 @@
 
             Public Shared Function GetRunningWindows() As List(Of String)
                 Dim ret As New List(Of String)
+                Dim tname As String
                 Dim arr() As String = Sys.Process.ExecuteCommandWithOutput("wmctrl", "-l").Split(Environment.NewLine)
                 For Each item As String In arr
-                    If Not item.Contains("ubuntu") AndAlso Not item.Length < 10 AndAlso Not item.Trim(" ") = "" AndAlso Not item = "" Then
+                    tname = GetName(item)
+                    If tname <> "" AndAlso tname <> Environment.NewLine Then
                         ret.Add(item.Substring(0, 10))
                     End If
                 Next
