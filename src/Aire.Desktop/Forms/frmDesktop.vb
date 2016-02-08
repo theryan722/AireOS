@@ -330,6 +330,7 @@
     Private Sub AddApplication(ByVal win As String)
         Dim newb As New LaunchBarItem(win, Me)
         newb.Dock = DockStyle.Top
+        CurrentWindow.Windows.Add(win)
         pnl_launchbar_applications.Controls.Add(newb)
     End Sub
 
