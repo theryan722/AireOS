@@ -16,6 +16,8 @@
         End If
     End Sub
 
+#Region "btnOtherUsers"
+
     Private Sub btn_otherusers_Click(sender As Object, e As EventArgs) Handles btnOtherUsers.Click
         If lb_users.Visible Then
             lb_users.Hide()
@@ -23,6 +25,18 @@
             lb_users.Show()
         End If
     End Sub
+
+    Private Sub btnOtherUsers_MouseEnter(sender As Object, e As EventArgs) Handles btnOtherUsers.MouseEnter
+        btnOtherUsers.BackColor = Aire.SysColors.Colors.ControlDark
+    End Sub
+
+    Private Sub btnOtherUsers_MouseLeave(sender As Object, e As EventArgs) Handles btnOtherUsers.MouseLeave
+        btnOtherUsers.BackColor = Aire.SysColors.Colors.Control
+    End Sub
+
+#End Region
+
+    
 
     Private Sub btnPower_Click(sender As Object, e As EventArgs) Handles btnPower.Click
         Aire.API.Sys.Power.Actions.ShowPowerDialog()

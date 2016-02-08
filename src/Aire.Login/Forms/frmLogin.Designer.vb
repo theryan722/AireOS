@@ -68,6 +68,7 @@ Partial Class frmLogin
         '
         'btnOtherUsers
         '
+        Me.btnOtherUsers.BackColor = System.Drawing.SystemColors.Control
         Me.btnOtherUsers.BackgroundImage = CType(resources.GetObject("btnOtherUsers.BackgroundImage"), System.Drawing.Image)
         Me.btnOtherUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnOtherUsers.Dock = System.Windows.Forms.DockStyle.Left
@@ -78,7 +79,7 @@ Partial Class frmLogin
         Me.btnOtherUsers.Size = New System.Drawing.Size(32, 32)
         Me.btnOtherUsers.TabIndex = 1
         Me.ToolTip1.SetToolTip(Me.btnOtherUsers, "Users")
-        Me.btnOtherUsers.UseVisualStyleBackColor = True
+        Me.btnOtherUsers.UseVisualStyleBackColor = False
         Me.btnOtherUsers.Visible = False
         '
         'txt_username
