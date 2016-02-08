@@ -13,7 +13,7 @@
 
     Public Sub ShowAll()
         For Each item As String In Windows
-            Aire.API.Sys.Window.Actions.Normal(item)
+            Aire.API.Sys.Window.Actions.Unhide(item)
         Next
     End Sub
 
