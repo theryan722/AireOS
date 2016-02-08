@@ -286,6 +286,12 @@
 
 #Region "Desktops"
 
+    Private Sub SwitchToDesktop(ByVal ndesk As Integer)
+        CurrentWindow.HideAll()
+        Windows(ndesk).ShowAll()
+        CurrentWindow = Windows(ndesk)
+    End Sub
+
     Private Sub SwitchToDesktop(ByVal odesk As Integer, ByVal ndesk As Integer)
         Windows(odesk).HideAll()
         Windows(ndesk).ShowAll()
@@ -294,13 +300,13 @@
 
     Public Sub GotoDesktopLeft()
         If Windows.IndexOf(CurrentWindow) - 1 >= 0 Then
-            SwitchToDesktop(Windows.IndexOf(CurrentWindow), Windows.IndexOf(CurrentWindow) - 1)
+            SwitchToDesktop(Windows.IndexOf(CurrentWindow) - 1)
         End If
     End Sub
 
     Public Sub GotoDesktopRight()
         If Windows.IndexOf(CurrentWindow) + 1 <= Windows.Count - 1 Then
-            SwitchToDesktop(Windows.IndexOf(CurrentWindow), Windows.IndexOf(CurrentWindow) + 1)
+            SwitchToDesktop(Windows.IndexOf(CurrentWindow) + 1)
         End If
     End Sub
 
@@ -314,7 +320,9 @@
     End Sub
 
     Public Sub AddDesktop()
-
+        Dim newb As New DesktopWindows(Me)
+        Windows.Add(newb)
+        SwitchToDesktop(Windows.Count - 1)
     End Sub
 
 #End Region
