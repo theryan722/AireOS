@@ -14,7 +14,29 @@
 
 #Region "Menu Strip"
 
+#Region "File"
 
+
+
+#End Region
+
+#Region "Edit"
+
+
+
+#End Region
+
+#Region "View"
+
+
+
+#End Region
+
+#Region "About"
+
+
+
+#End Region
 
 #End Region
 
@@ -51,7 +73,6 @@
     End Sub
 
 #End Region
-
 
 #Region "frmMain"
 
