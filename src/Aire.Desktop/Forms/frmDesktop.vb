@@ -278,7 +278,7 @@
 #Region "Methods"
 
     Public Sub SetDesktopAlwaysInBackground()
-        Aire.API.Sys.Window.Actions.SetAlwaysInBack(Aire.API.Sys.Window.Info.GetWindowByName("Aire.Desktop.frmDesktop"))
+        System.Diagnostics.Process.Start(Aire.API.Compatibility.FixPath(AppDomain.CurrentDomain.BaseDirectory & "/Aire.Desktop.SetBack.exe"))
     End Sub
 
     Public Sub SetDesktopBackground(ByVal img As String, Optional ByVal layout As ImageLayout = ImageLayout.Stretch)

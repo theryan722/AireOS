@@ -132,6 +132,10 @@
       <Project>{8b285aed-9205-4cee-8955-c9c3c73408b9}</Project>
       <Name>Aire.API</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Aire.Desktop.SetBack\Aire.Desktop.SetBack.vbproj">
+      <Project>{f27a0655-1074-4560-bb9f-bf0bc129dacf}</Project>
+      <Name>Aire.Desktop.SetBack</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Aire.Host\Aire.Host.vbproj">
       <Project>{47d1d386-e73a-4780-9dd2-73dc4e171f45}</Project>
       <Name>Aire.Host</Name>
