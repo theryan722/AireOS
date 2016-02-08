@@ -54,6 +54,7 @@ Partial Class frmMain
         Me.MenuStrip1.Size = New System.Drawing.Size(699, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
+        Me.MenuStrip1.Visible = False
         '
         'FileToolStripMenuItem
         '
@@ -143,9 +144,9 @@ Partial Class frmMain
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBox1.Location = New System.Drawing.Point(0, 24)
+        Me.TextBox1.Location = New System.Drawing.Point(0, 0)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(699, 321)
+        Me.TextBox1.Size = New System.Drawing.Size(699, 345)
         Me.TextBox1.TabIndex = 1
         Me.TextBox1.Text = ""
         '
