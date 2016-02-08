@@ -28,7 +28,10 @@
 
 #Region "Methods"
 
-
+    Private Sub FixBackColor()
+        pnl_options.BackColor = Aire.SysColors.Colors.ActiveCaption
+        pnl_results.BackColor = Aire.SysColors.Colors.ActiveCaption
+    End Sub
 
 #End Region
 
@@ -40,6 +43,7 @@
 
     Private Sub frmSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmSearch.Showing = True
+        FixBackColor()
     End Sub
 
     Private Sub frmSearch_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus

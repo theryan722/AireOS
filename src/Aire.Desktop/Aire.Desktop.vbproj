@@ -227,6 +227,10 @@
       <Project>{8b285aed-9205-4cee-8955-c9c3c73408b9}</Project>
       <Name>Aire.API</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Aire.SysColors\Aire.SysColors.vbproj">
+      <Project>{7acc62d7-8653-4ffb-a37e-82b18f867673}</Project>
+      <Name>Aire.SysColors</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\battery_50_charging.png" />
