@@ -4,7 +4,7 @@
 
     Public Property Windows As New List(Of DesktopWindows)
     Public Property User As String
-    Public Property Session As DesktopSession
+    Public Property Session As UserDesktopSession
 
 #Region "LaunchBar"
 
@@ -295,7 +295,7 @@
 
 #Region "frmDesktop"
 
-    Public Sub New(ByVal ouser As String, Optional ByVal ses As DesktopSession = Nothing)
+    Public Sub New(ByVal ouser As String, Optional ByVal ses As UserDesktopSession = Nothing)
         InitializeComponent()
         User = ouser
         Session = ses

@@ -101,7 +101,7 @@
   <ItemGroup>
     <Compile Include="Classes\DesktopWindows.vb" />
     <Compile Include="Classes\Manager.vb" />
-    <Compile Include="Classes\DesktopSession.vb" />
+    <Compile Include="Classes\UserDesktopSession.vb" />
     <Compile Include="Forms\dlgTray.Designer.vb">
       <DependentUpon>dlgTray.vb</DependentUpon>
     </Compile>

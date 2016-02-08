@@ -1,4 +1,4 @@
-﻿Public Class DesktopSession
+﻿Public Class UserDesktopSession
 
 #Region "Properties"
 

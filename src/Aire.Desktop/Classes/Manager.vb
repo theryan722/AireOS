@@ -2,18 +2,18 @@
 
 #Region "Properties/Variables"
 
-    Public Shared Property DesktopSessions As New List(Of DesktopSession)
-    Public Shared Property ActiveSession As DesktopSession
+    Public Shared Property DesktopSessions As New List(Of UserDesktopSession)
+    Public Shared Property ActiveSession As UserDesktopSession
 
 #End Region
 
 #Region "Methods"
 
     Private Shared Sub CreateSession(ByVal user)
-        For Each ses As DesktopSession In DesktopSessions
+        For Each ses As UserDesktopSession In DesktopSessions
             ses.HideSession()
         Next
-        Dim newses As New DesktopSession
+        Dim newses As New UserDesktopSession
         newses.User = user
         newses.Desktop = New frmDesktop(user, newses)
         DesktopSessions.Add(newses)
@@ -25,11 +25,11 @@
         If Aire.API.User.Users.Actions.MatchPasswordForUser(user, pass) Then
             If Aire.API.User.Users.Info.GetActiveUsers().Contains(user) Then
                 Dim found As Boolean = False
-                For Each item As DesktopSession In DesktopSessions
+                For Each item As UserDesktopSession In DesktopSessions
                     If item.User = user Then
                         found = True
                         ActiveSession = item
-                        For Each ses As DesktopSession In DesktopSessions
+                        For Each ses As UserDesktopSession In DesktopSessions
                             ses.HideSession()
                         Next
                         ActiveSession.LoadSession()
