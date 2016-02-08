@@ -30,5 +30,6 @@ Public Class Colors
     Public Shared WindowText As Color = Color.FromArgb(0, 0, 0)
     Public Shared ButtonFace As Color = Color.FromArgb(240, 240, 240)
     Public Shared ButtonHighlight As Color = Color.FromArgb(255, 255, 255)
+    Public Shared ButtonShadow As Color = Color.FromArgb(160, 160, 160)
 
 End Class
