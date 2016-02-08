@@ -32,7 +32,9 @@
                 proc.StartInfo.RedirectStandardOutput = True
                 proc.Start()
                 ret = proc.StandardOutput.ReadToEnd()
+                'proc.BeginOutputReadLine()
                 proc.WaitForExit()
+                proc.Close()
                 Return ret
             Catch ex As Exception
                 Sys.Logging.Log.Write("ERROR: " & ex.ToString)
@@ -66,8 +68,11 @@
                 proc.StartInfo.UseShellExecute = False
                 proc.StartInfo.RedirectStandardOutput = True
                 proc.Start()
+
                 ret = proc.StandardOutput.ReadToEnd()
+                'proc.BeginOutputReadLine()
                 proc.WaitForExit()
+                proc.Close()
                 Return ret
             Catch ex As Exception
                 Sys.Logging.Log.Write("ERROR: " & ex.ToString)

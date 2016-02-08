@@ -25,19 +25,16 @@
 
             Public Shared Function GetRunningWindows() As List(Of String)
                 Dim ret As New List(Of String)
-                Try
-                    Dim tname As String
-                    Dim arr() As String = Sys.Process.ExecuteCommandWithOutput("wmctrl", "-l").Split(Environment.NewLine)
-                    For Each item As String In arr
-                        If WindowIsNotBlackListed(item) Then
-                            tname = GetName(item.Substring(0, 10))
-                            If tname <> "" AndAlso tname <> Environment.NewLine Then
-                                ret.Add(item.Substring(0, 10))
-                            End If
+                Dim tname As String
+                Dim arr() As String = Sys.Process.ExecuteCommandWithOutput("wmctrl", "-l").Split(Environment.NewLine)
+                For Each item As String In arr
+                    If WindowIsNotBlackListed(item) Then
+                        tname = GetName(item.Substring(0, 10))
+                        If tname <> "" AndAlso tname <> Environment.NewLine Then
+                            ret.Add(item.Substring(0, 10))
                         End If
-                    Next
-                Catch ex As Exception
-                End Try
+                    End If
+                Next
                 Return ret
             End Function
 
