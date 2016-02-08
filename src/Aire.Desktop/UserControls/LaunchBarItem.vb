@@ -6,6 +6,8 @@
 
     Private ldesk As frmDesktop
 
+    Private ftext As String
+
     Public Property Window As String
 
     Public Shadows Property Text As String
@@ -36,9 +38,9 @@
     End Sub
 
     Public Sub UpdateText()
-        Dim bb As String = Aire.API.Sys.Window.Info.GetName(Window)
-        Text = bb
-        SetToolTip(bb)
+        ftext = Aire.API.Sys.Window.Info.GetName(Window)
+        Text = ftext
+        SetToolTip(ftext)
     End Sub
 
     Public Sub SetColor(ByVal clr As Color)
@@ -121,5 +123,4 @@
 
 #End Region
 
-    
 End Class
