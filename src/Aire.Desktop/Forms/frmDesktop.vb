@@ -166,18 +166,18 @@
 
     Private Sub UpdateVolume()
         If Aire.API.Audio.Volume.GetIfMuted Then
-            btnVolume.BackgroundImage = My.Resources.volume_mute
+            SetVolumeIcon(VolumeStatus.VolumeMute)
             ToolTip1.SetToolTip(btnVolume, "Muted")
         Else
             Dim vol As Integer = Aire.API.Audio.Volume.GetVolume
             If vol > 65 Then
-                btnVolume.BackgroundImage = My.Resources.volume_high
+                SetVolumeIcon(VolumeStatus.VolumeHigh)
                 ToolTip1.SetToolTip(btnVolume, vol & "%")
             ElseIf vol > 35 Then
-                btnVolume.BackgroundImage = My.Resources.volume_medium
+                SetVolumeIcon(VolumeStatus.VolumeMedium)
                 ToolTip1.SetToolTip(btnVolume, vol & "%")
             Else
-                btnVolume.BackgroundImage = My.Resources.volume_low
+                SetVolumeIcon(VolumeStatus.VolumeLow)
                 ToolTip1.SetToolTip(btnVolume, vol & "%")
             End If
         End If
