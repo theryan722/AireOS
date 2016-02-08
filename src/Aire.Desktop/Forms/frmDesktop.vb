@@ -257,12 +257,7 @@
 #Region "Methods"
 
     Public Sub SetDesktopAlwaysInBackground()
-        For Each item As String In Aire.API.Sys.Window.Info.GetRunningWindows
-            If Aire.API.Sys.Window.Info.GetName(item).Contains("Aire.Desktop.frmDesktop") Then
-                Aire.API.Sys.Window.Actions.SetAlwaysInBack(item)
-                Exit For
-            End If
-        Next
+        Aire.API.Sys.Window.Actions.SetAlwaysInBack(Aire.API.Sys.Window.Info.GetWindowByName("Aire.Desktop.frmDesktop"))
     End Sub
 
     Public Sub SetDesktopBackground(ByVal img As String, Optional ByVal layout As ImageLayout = ImageLayout.Stretch)

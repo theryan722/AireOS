@@ -29,14 +29,14 @@ Partial Class frmMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(10, 10)
+        Me.ClientSize = New System.Drawing.Size(162, 60)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMain"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
+        Me.Text = "Aire.Host.frmMain"
         Me.ResumeLayout(False)
 
     End Sub
