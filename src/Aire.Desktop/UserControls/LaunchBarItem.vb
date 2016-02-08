@@ -110,6 +110,15 @@
         
     End Sub
 
+    Private Sub LaunchBarItem_MouseEnter(sender As Object, e As EventArgs) Handles Me.MouseEnter
+
+    End Sub
+
+    Private Sub LaunchBarItem_MouseLeave(sender As Object, e As EventArgs) Handles Me.MouseLeave
+
+    End Sub
+
 #End Region
 
+    
 End Class
