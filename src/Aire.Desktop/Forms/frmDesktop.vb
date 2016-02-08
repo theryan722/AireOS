@@ -210,12 +210,6 @@
         Next
     End Sub
 
-    Private Sub AddApplication(ByVal win As String)
-        Dim newb As New LaunchBarItem(win, Me)
-        newb.Dock = DockStyle.Top
-        pnl_launchbar_applications.Controls.Add(newb)
-    End Sub
-
 #End Region
 
     Public Sub SetBatteryIcon(ByVal icon As BatteryStatus)
@@ -288,6 +282,12 @@
 #End Region
 
 #Region "Methods"
+
+    Private Sub AddApplication(ByVal win As String)
+        Dim newb As New LaunchBarItem(win, Me)
+        newb.Dock = DockStyle.Top
+        pnl_launchbar_applications.Controls.Add(newb)
+    End Sub
 
     Public Sub SetDesktopAlwaysInBackground()
         System.Diagnostics.Process.Start(Aire.API.Compatibility.FixPath(AppDomain.CurrentDomain.BaseDirectory & "/Aire.Desktop.SetBack.exe"))
