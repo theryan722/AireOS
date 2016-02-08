@@ -56,7 +56,7 @@
     End Sub
 
     Private Sub btnSearch_Leave(sender As Object, e As EventArgs) Handles btnSearch.Leave
-
+        btnSearch.BackColor = Aire.SysColors.Colors.ActiveCaption
     End Sub
 
 #End Region
