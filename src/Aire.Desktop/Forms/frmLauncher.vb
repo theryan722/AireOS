@@ -51,11 +51,11 @@
         End If
     End Sub
 
-    Private Sub btnSearch_Leave(sender As Object, e As EventArgs) Handles btnSearch.Leave
-
+    Private Sub btnSearch_MouseEnter(sender As Object, e As EventArgs) Handles btnSearch.MouseEnter
+        btnSearch.BackColor = Aire.SysColors.Colors.GradientActiveCaption
     End Sub
 
-    Private Sub btnSearch_MouseEnter(sender As Object, e As EventArgs) Handles btnSearch.MouseEnter
+    Private Sub btnSearch_Leave(sender As Object, e As EventArgs) Handles btnSearch.Leave
 
     End Sub
 
