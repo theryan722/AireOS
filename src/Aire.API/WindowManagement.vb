@@ -8,7 +8,7 @@
 
             Private Shared Function WindowIsNotBlackListed(ByVal wstr As String) As Boolean
                 Dim ret As Boolean = True
-                If wstr.Contains("Aire.Desktop.frmDesktop") Or wstr.Contains("Aire.Login.frmLoginBackground") Then
+                If wstr.Contains("Aire.Desktop.frmDesktop") Or wstr.Contains("Aire.Login.frmLoginBackground") Or wstr.Contains("Aire.Host.frmMain") Then
                     ret = False
                 End If
                 If wstr = "" Then
@@ -25,16 +25,19 @@
 
             Public Shared Function GetRunningWindows() As List(Of String)
                 Dim ret As New List(Of String)
-                Dim tname As String
-                Dim arr() As String = Sys.Process.ExecuteCommandWithOutput("wmctrl", "-l").Split(Environment.NewLine)
-                For Each item As String In arr
-                    If WindowIsNotBlackListed(item) Then
-                        tname = GetName(item.Substring(0, 10))
-                        If tname <> "" AndAlso tname <> Environment.NewLine Then
-                            ret.Add(item.Substring(0, 10))
+                Try
+                    Dim tname As String
+                    Dim arr() As String = Sys.Process.ExecuteCommandWithOutput("wmctrl", "-l").Split(Environment.NewLine)
+                    For Each item As String In arr
+                        If WindowIsNotBlackListed(item) Then
+                            tname = GetName(item.Substring(0, 10))
+                            If tname <> "" AndAlso tname <> Environment.NewLine Then
+                                ret.Add(item.Substring(0, 10))
+                            End If
                         End If
-                    End If
-                Next
+                    Next
+                Catch ex As Exception
+                End Try
                 Return ret
             End Function
 

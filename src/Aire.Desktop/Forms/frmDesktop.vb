@@ -184,18 +184,21 @@
     End Sub
 
     Private Sub UpdateLaunchBar()
-        Dim temp As List(Of String) = Aire.API.Sys.Window.Info.GetRunningWindows
-        For Each item As LaunchBarItem In pnl_launchbar_applications.Controls
-            If temp.Contains(item.Window) Then
-                temp.Remove(item.Window)
-                item.UpdateText()
-            Else
-                item.Dispose()
-            End If
-        Next
-        For Each item As String In temp
-            AddApplication(item)
-        Next
+        Try
+            Dim temp As List(Of String) = Aire.API.Sys.Window.Info.GetRunningWindows
+            For Each item As LaunchBarItem In pnl_launchbar_applications.Controls
+                If temp.Contains(item.Window) Then
+                    temp.Remove(item.Window)
+                    item.UpdateText()
+                Else
+                    item.Dispose()
+                End If
+            Next
+            For Each item As String In temp
+                AddApplication(item)
+            Next
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub AddApplication(ByVal win As String)
