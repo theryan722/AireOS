@@ -18,11 +18,13 @@
     End Sub
 
     Public Sub HideAll()
-
+        
     End Sub
 
     Public Sub MinimizeAll()
-
+        For Each item As String In Windows
+            Aire.API.Sys.Window.Actions.Minimize(item)
+        Next
     End Sub
 
     Public Sub MaximizeAll()
