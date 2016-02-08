@@ -374,8 +374,7 @@
 
     Public Sub New(ByVal ouser As String, Optional ByVal ses As UserDesktopSession = Nothing)
         InitializeComponent()
-        Windows.Add(New DesktopWindows(Me))
-        CurrentWindow = Windows(0)
+        AddDesktop()
         User = ouser
         Session = ses
     End Sub
