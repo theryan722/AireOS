@@ -15,6 +15,14 @@
         Aire.API.User.Current.Actions.ShowLogoutDialog()
     End Sub
 
+    Private Sub btnProfile_MouseEnter(sender As Object, e As EventArgs) Handles btnProfile.MouseEnter
+
+    End Sub
+
+    Private Sub btnProfile_MouseLeave(sender As Object, e As EventArgs) Handles btnProfile.MouseLeave
+
+    End Sub
+
 #End Region
 
 #Region "btnOptions"
