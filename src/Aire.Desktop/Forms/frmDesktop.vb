@@ -301,6 +301,12 @@
         Session = ses
     End Sub
 
+    Private Sub frmDesktop_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        For Each item As DesktopWindows In Windows
+            item.CloseAll()
+        Next
+    End Sub
+
     Private Sub frmDesktop_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetDesktopAlwaysInBackground()
         UpdateTimer.Start()
