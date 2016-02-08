@@ -90,6 +90,7 @@
         Window = win
         UpdateText()
         ldesk = desktop
+        Me.BackColor = Aire.SysColors.Colors.ActiveCaption
     End Sub
 
     Private Sub LaunchBarItem_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
