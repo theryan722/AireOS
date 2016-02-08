@@ -11,13 +11,16 @@
 
     Public Sub LoadSession()
         DisplayDesktop()
+        For Each item As String In Desktop.Windows
+            Aire.API.Sys.Window.Actions.Show(item)
+        Next
     End Sub
 
     Public Sub HideSession()
         Desktop.Hide()
         Desktop.StopUpdating()
-        For Each item As DesktopWindows In Desktop.Windows
-            item.HideAll()
+        For Each item As String In Desktop.Windows
+            Aire.API.Sys.Window.Actions.Hide(item)
         Next
     End Sub
 

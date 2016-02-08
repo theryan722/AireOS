@@ -2,10 +2,9 @@
 
 #Region "Properties/Variables/Enums"
 
-    Public Property CurrentWindow As DesktopWindows
-    Public Property Windows As New List(Of DesktopWindows)
     Public Property User As String
     Public Property Session As UserDesktopSession
+    Public Property Windows As New List(Of String)
 
 #Region "LaunchBar"
 
@@ -204,6 +203,7 @@
                 item.UpdateText()
             Else
                 item.Dispose()
+                Windows.Remove(item.Window)
             End If
         Next
         For Each item As String In temp
@@ -212,6 +212,8 @@
     End Sub
 
 #End Region
+
+#Region "Set Icons"
 
     Public Sub SetBatteryIcon(ByVal icon As BatteryStatus)
         Select Case icon
@@ -266,6 +268,8 @@
 
 #End Region
 
+#End Region
+
 #Region "AppBars"
 
 #Region "Top"
@@ -284,54 +288,21 @@
 
 #Region "Methods"
 
-#Region "Desktops"
-
-    Private Sub SwitchToDesktop(ByVal ndesk As Integer)
-        CurrentWindow.HideAll()
-        Windows(ndesk).ShowAll()
-        CurrentWindow = Windows(ndesk)
-    End Sub
-
-    Private Sub SwitchToDesktop(ByVal odesk As Integer, ByVal ndesk As Integer)
-        Windows(odesk).HideAll()
-        Windows(ndesk).ShowAll()
-        CurrentWindow = Windows(ndesk)
-    End Sub
-
-    Public Sub GotoDesktopLeft()
-        If Windows.IndexOf(CurrentWindow) - 1 >= 0 Then
-            SwitchToDesktop(Windows.IndexOf(CurrentWindow) - 1)
-        End If
-    End Sub
-
-    Public Sub GotoDesktopRight()
-        If Windows.IndexOf(CurrentWindow) + 1 <= Windows.Count - 1 Then
-            SwitchToDesktop(Windows.IndexOf(CurrentWindow) + 1)
-        End If
-    End Sub
-
-    Public Sub RemoveCurrentDesktop()
-        If Windows.Count >= 2 AndAlso Windows.IndexOf(CurrentWindow) <> 0 Then
-            Dim b As Integer = Windows.IndexOf(CurrentWindow)
-            CurrentWindow.CloseAll()
-            GotoDesktopLeft()
-            Windows.RemoveAt(b)
-        End If
-    End Sub
-
-    Public Sub AddDesktop()
-        Dim newb As New DesktopWindows(Me)
-        Windows.Add(newb)
-        SwitchToDesktop(Windows.Count - 1)
-    End Sub
-
-#End Region
-
-    Private Sub AddApplication(ByVal win As String)
+    Public Sub AddTaskBarItem(ByVal win As String)
         Dim newb As New LaunchBarItem(win, Me)
         newb.Dock = DockStyle.Top
-        CurrentWindow.Windows.Add(win)
         pnl_launchbar_applications.Controls.Add(newb)
+    End Sub
+
+    Public Sub ClearTaskBarItems()
+        For Each item As LaunchBarItem In pnl_launchbar_applications.Controls
+            item.Dispose()
+        Next
+    End Sub
+
+    Private Sub AddApplication(ByVal win As String)
+        Windows.Add(win)
+        AddTaskBarItem(win)
     End Sub
 
     Public Sub SetDesktopAlwaysInBackground()
@@ -375,14 +346,13 @@
 
     Public Sub New(ByVal ouser As String, Optional ByVal ses As UserDesktopSession = Nothing)
         InitializeComponent()
-        AddDesktop()
         User = ouser
         Session = ses
     End Sub
 
     Private Sub frmDesktop_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        For Each item As DesktopWindows In Windows
-            item.CloseAll()
+        For Each item As String In Windows
+            Aire.API.Sys.Window.Actions.Kill(item)
         Next
     End Sub
 
