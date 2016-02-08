@@ -89,7 +89,7 @@
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
         Try
             If e.KeyChar = ChrW(Keys.Enter) Then
-                CommandManager.ExecuteCommand(TypedText)
+                CommandManager.ExecuteCommand(TypedText, Me)
                 TypedText = ""
             ElseIf e.KeyChar = ChrW(Keys.Back) Then
                 If TypedText.Length > 0 Then
