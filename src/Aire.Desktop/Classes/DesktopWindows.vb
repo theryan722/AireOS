@@ -28,7 +28,9 @@
     End Sub
 
     Public Sub MaximizeAll()
-
+        For Each item As String In Windows
+            Aire.API.Sys.Window.Actions.Maximize(item)
+        Next
     End Sub
 
 #End Region
