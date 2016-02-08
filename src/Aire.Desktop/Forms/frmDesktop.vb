@@ -2,6 +2,7 @@
 
 #Region "Properties/Variables/Enums"
 
+    Public Property CurrentWindow As DesktopWindows
     Public Property Windows As New List(Of DesktopWindows)
     Public Property User As String
     Public Property Session As UserDesktopSession
@@ -283,6 +284,12 @@
 
 #Region "Methods"
 
+#Region "Desktops"
+
+
+
+#End Region
+
     Private Sub AddApplication(ByVal win As String)
         Dim newb As New LaunchBarItem(win, Me)
         newb.Dock = DockStyle.Top
@@ -330,6 +337,8 @@
 
     Public Sub New(ByVal ouser As String, Optional ByVal ses As UserDesktopSession = Nothing)
         InitializeComponent()
+        Windows.Add(New DesktopWindows(Me))
+        CurrentWindow = Windows(0)
         User = ouser
         Session = ses
     End Sub
