@@ -21,5 +21,6 @@ Public Class Colors
     Public Shared InactiveCaption As Color = Color.FromArgb(191, 205, 219)
     Public Shared InactiveCaptionText As Color = Color.FromArgb(0, 0, 0)
     Public Shared Info As Color = Color.FromArgb(255, 255, 225)
+    Public Shared InfoText As Color = Color.FromArgb(0, 0, 0)
 
 End Class
