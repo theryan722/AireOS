@@ -88,7 +88,7 @@
     Public Sub New(ByVal win As String, ByVal desktop As frmDesktop)
         InitializeComponent()
         Window = win
-        Text = Aire.API.Sys.Window.Info.GetName(win)
+        UpdateText()
         ldesk = desktop
     End Sub
 
