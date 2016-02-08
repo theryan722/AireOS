@@ -9,13 +9,23 @@
 
 #Region "UI"
 
+#Region "btnProfile"
+
     Private Sub btnProfile_Click(sender As Object, e As EventArgs) Handles btnProfile.Click
         Aire.API.User.Current.Actions.ShowLogoutDialog()
     End Sub
 
+#End Region
+
+#Region "btnOptions"
+
     Private Sub btnOptions_Click(sender As Object, e As EventArgs) Handles btnOptions.Click
 
     End Sub
+
+#End Region
+
+#Region "btnSearch"
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         If Not frmSearch.Showing Then
@@ -25,13 +35,23 @@
         End If
     End Sub
 
+#End Region
+
+#Region "btnFileExplorer"
+
     Private Sub btnFileExplorer_Click(sender As Object, e As EventArgs) Handles btnFileExplorer.Click
 
     End Sub
 
+#End Region
+
+#Region "btnPower"
+
     Private Sub btnPower_Click(sender As Object, e As EventArgs) Handles btnPower.Click
         Aire.API.Sys.Power.Actions.ShowPowerDialog()
     End Sub
+
+#End Region
 
     Private Sub txtSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtSearch.KeyDown
         If e.KeyCode = Keys.Enter AndAlso txtSearch.Text <> "" Then
