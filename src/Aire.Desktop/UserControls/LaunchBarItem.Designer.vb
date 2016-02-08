@@ -30,13 +30,13 @@ Partial Class LaunchBarItem
         '
         'lblName
         '
-        Me.lblName.AutoSize = True
         Me.lblName.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblName.Location = New System.Drawing.Point(0, 0)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(13, 13)
+        Me.lblName.Size = New System.Drawing.Size(80, 30)
         Me.lblName.TabIndex = 0
         Me.lblName.Text = "[]"
+        Me.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'pnl_divider
         '
@@ -57,7 +57,6 @@ Partial Class LaunchBarItem
         Me.Name = "LaunchBarItem"
         Me.Size = New System.Drawing.Size(80, 30)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents lblName As System.Windows.Forms.Label
