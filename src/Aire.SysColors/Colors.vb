@@ -6,5 +6,6 @@ Public Class Colors
     Public Shared ActiveCaption As Color = Color.FromArgb(153, 180, 209)
     Public Shared ActiveCaptionText As Color = Color.FromArgb(0, 0, 0)
     Public Shared AppWorkspace As Color = Color.FromArgb(171, 171, 171)
+    Public Shared Control As Color = Color.FromArgb(240, 240, 240)
 
 End Class
