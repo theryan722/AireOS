@@ -26,7 +26,13 @@
 
 #Region "TextBox1"
 
+    Private Sub TextBox1_GotFocus(sender As Object, e As EventArgs) Handles TextBox1.GotFocus
 
+    End Sub
+
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+        
+    End Sub
 
 #End Region
 
