@@ -12,7 +12,9 @@
     End Sub
 
     Public Sub ShowAll()
-
+        For Each item As String In Windows
+            Aire.API.Sys.Window.Actions.Normal(item)
+        Next
     End Sub
 
     Public Sub HideAll()
