@@ -72,7 +72,7 @@
     End Sub
 
     Private Sub btnFileBrowser_MouseLeave(sender As Object, e As EventArgs) Handles btnFileBrowser.MouseLeave
-
+        btnFileBrowser.BackColor = Aire.SysColors.Colors.ActiveCaption
     End Sub
 
 #End Region
