@@ -45,6 +45,8 @@
 
 #Region "UI"
 
+#Region "btnLauncher"
+
     Private Sub btnLauncher_Click(sender As Object, e As EventArgs) Handles btnLauncher.Click
         If frmLauncher.Showing Then
             launcher.Focus()
@@ -54,6 +56,16 @@
             launcher.Location = PointToScreen(btnLauncher.Location)
         End If
     End Sub
+
+    Private Sub btnLauncher_MouseEnter(sender As Object, e As EventArgs) Handles btnLauncher.MouseEnter
+
+    End Sub
+
+    Private Sub btnLauncher_MouseLeave(sender As Object, e As EventArgs) Handles btnLauncher.MouseLeave
+
+    End Sub
+
+#End Region
 
 #Region "Tray"
 
