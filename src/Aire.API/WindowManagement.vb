@@ -8,6 +8,9 @@
 
             Private Shared Function WindowIsNotBlackListed(ByVal wstr As String) As Boolean
                 Dim ret As Boolean = True
+                If wstr.Contains("Aire.Desktop.frmDesktop") Or wstr.Contains("Aire.Login.frmLoginBackground") Then
+                    ret = False
+                End If
                 If wstr = "" Then
                     ret = False
                 ElseIf wstr.Contains("ubuntu ") Then
