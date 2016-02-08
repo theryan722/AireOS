@@ -23,6 +23,17 @@
                 Return Sys.Process.ExecuteCommandWithOutput("xdotool", "getwindowpid " & win).ToLower.Contains("error")
             End Function
 
+            Public Shared Function GetWindowByName(ByVal fname As String) As String
+                Dim ret As String = ""
+                For Each item As String In Aire.API.Sys.Window.Info.GetRunningWindows
+                    If Aire.API.Sys.Window.Info.GetName(item).Contains(fname) Then
+                        ret = item
+                        Exit For
+                    End If
+                Next
+                Return ret
+            End Function
+
         End Class
 
         Public Class Actions
