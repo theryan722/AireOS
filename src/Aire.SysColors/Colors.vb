@@ -9,5 +9,6 @@ Public Class Colors
     Public Shared Control As Color = Color.FromArgb(240, 240, 240)
     Public Shared ControlDark As Color = Color.FromArgb(160, 160, 160)
     Public Shared ControlDarkDark As Color = Color.FromArgb(105, 105, 105)
+    Public Shared ControlLight As Color = Color.FromArgb(227, 227, 227)
 
 End Class
