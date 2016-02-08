@@ -4,6 +4,8 @@
 
         Public Class Info
 
+#Region "Private"
+
             Private Shared Function WindowIsNotBlackListed(ByVal wname As String) As Boolean
                 Dim ret As Boolean = True
                 Select Case wname
@@ -12,6 +14,8 @@
                 End Select
                 Return ret
             End Function
+
+#End Region
 
             Public Shared Function GetRunningWindows() As List(Of String)
                 Dim ret As New List(Of String)
