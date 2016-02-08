@@ -95,6 +95,14 @@
                 Sys.Process.ExecuteCommand("xdotool", "windowactivate " & win)
             End Sub
 
+            Public Shared Sub Hide(ByVal win As String)
+
+            End Sub
+
+            Public Shared Sub Unhide(ByVal win As String)
+
+            End Sub
+
         End Class
 
     End Namespace
