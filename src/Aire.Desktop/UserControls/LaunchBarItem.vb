@@ -33,6 +33,10 @@
         Text = Aire.API.Sys.Window.Info.GetName(Window)
     End Sub
 
+    Public Sub SetColor(ByVal clr As Color)
+        Me.BackColor = clr
+    End Sub
+
 #End Region
 
 #Region "UI"
