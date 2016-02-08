@@ -188,6 +188,7 @@
         For Each item As LaunchBarItem In pnl_launchbar_applications.Controls
             If temp.Contains(item.Window) Then
                 temp.Remove(item.Window)
+                item.UpdateText()
             Else
                 item.Dispose()
             End If
