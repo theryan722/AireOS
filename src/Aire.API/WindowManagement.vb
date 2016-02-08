@@ -7,7 +7,7 @@
             Private Shared Function WindowIsNotBlackListed(ByVal wname As String) As Boolean
                 Dim ret As Boolean = True
                 Select Case wname
-                    Case "Aire.Desktop.frmDesktop", "Aire.Desktop.frmLauncher", "Aire.Desktop.frmSearch"
+                    Case "Aire.Desktop.frmDesktop"
                         ret = False
                 End Select
                 Return ret

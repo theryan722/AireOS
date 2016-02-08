@@ -296,7 +296,6 @@ Partial Class frmSearch
         Me.Name = "frmSearch"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.Text = "Search"
         Me.TopMost = True
         Me.pnl_options.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)

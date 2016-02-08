@@ -225,7 +225,6 @@ Partial Class frmLauncher
         Me.Name = "frmLauncher"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.Text = "Launcher"
         Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.pnl_right.ResumeLayout(False)
