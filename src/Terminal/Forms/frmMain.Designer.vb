@@ -144,9 +144,9 @@ Partial Class frmMain
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBox1.Location = New System.Drawing.Point(0, 24)
+        Me.TextBox1.Location = New System.Drawing.Point(0, 0)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(699, 321)
+        Me.TextBox1.Size = New System.Drawing.Size(699, 345)
         Me.TextBox1.TabIndex = 1
         Me.TextBox1.Text = ""
         '
@@ -154,18 +154,18 @@ Partial Class frmMain
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem1, Me.PasteToolStripMenuItem1})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(103, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 70)
         '
         'CopyToolStripMenuItem1
         '
         Me.CopyToolStripMenuItem1.Name = "CopyToolStripMenuItem1"
-        Me.CopyToolStripMenuItem1.Size = New System.Drawing.Size(102, 22)
+        Me.CopyToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.CopyToolStripMenuItem1.Text = "Copy"
         '
         'PasteToolStripMenuItem1
         '
         Me.PasteToolStripMenuItem1.Name = "PasteToolStripMenuItem1"
-        Me.PasteToolStripMenuItem1.Size = New System.Drawing.Size(102, 22)
+        Me.PasteToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.PasteToolStripMenuItem1.Text = "Paste"
         '
         'frmMain
