@@ -29,6 +29,12 @@
 
 #Region "Methods"
 
+    Public Sub SetToolTip(ByVal txt As String)
+        ToolTip1.SetToolTip(lblName, txt)
+        ToolTip1.SetToolTip(Me, txt)
+        ToolTip1.SetToolTip(pnl_divider, txt)
+    End Sub
+
     Public Sub UpdateText()
         Text = Aire.API.Sys.Window.Info.GetName(Window)
     End Sub
