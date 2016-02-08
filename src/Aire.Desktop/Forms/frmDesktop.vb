@@ -183,6 +183,26 @@
         End If
     End Sub
 
+    Private Sub UpdateLaunchBar()
+        Dim temp As List(Of String) = Aire.API.Sys.Window.Info.GetRunningWindows
+        For Each item As LaunchBarItem In pnl_launchbar_applications.Controls
+            If temp.Contains(item.Window) Then
+                temp.Remove(item.Window)
+            Else
+                item.Dispose()
+            End If
+        Next
+        For Each item As String In temp
+            AddApplication(item)
+        Next
+    End Sub
+
+    Private Sub AddApplication(ByVal win As String)
+        Dim newb As New LaunchBarItem(win, Me)
+        newb.Dock = DockStyle.Top
+        pnl_launchbar_applications.Controls.Add(newb)
+    End Sub
+
 #End Region
 
     Public Sub SetBatteryIcon(ByVal icon As BatteryStatus)
