@@ -40,7 +40,7 @@ Partial Class LaunchBarItem
         '
         'pnl_divider
         '
-        Me.pnl_divider.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.pnl_divider.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.pnl_divider.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.pnl_divider.Location = New System.Drawing.Point(0, 27)
         Me.pnl_divider.Name = "pnl_divider"
@@ -51,7 +51,7 @@ Partial Class LaunchBarItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Controls.Add(Me.pnl_divider)
         Me.Controls.Add(Me.lblName)
         Me.Name = "LaunchBarItem"
