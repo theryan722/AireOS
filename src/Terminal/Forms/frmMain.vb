@@ -2,7 +2,7 @@
 
 #Region "Properties/Variables"
 
-
+    Private TypedText As String = ""
 
 #End Region
 
