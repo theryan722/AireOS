@@ -36,7 +36,7 @@
     End Sub
 
     Private Sub btnOptions_MouseLeave(sender As Object, e As EventArgs) Handles btnOptions.MouseLeave
-
+        btnOptions.BackColor = Aire.SysColors.Colors.ActiveCaption
     End Sub
 
 #End Region
