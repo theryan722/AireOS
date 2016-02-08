@@ -99,7 +99,7 @@
                 Sys.Process.ExecuteCommand("xdotool", "windowunmap " & win)
             End Sub
 
-            Public Shared Sub Unhide(ByVal win As String)
+            Public Shared Sub Show(ByVal win As String)
                 Sys.Process.ExecuteCommand("xdotool", "windowmap " & win)
             End Sub
 
