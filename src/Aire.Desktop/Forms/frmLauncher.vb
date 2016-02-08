@@ -37,9 +37,9 @@
 
 #End Region
 
-#Region "btnFileExplorer"
+#Region "btnFileBrowser"
 
-    Private Sub btnFileExplorer_Click(sender As Object, e As EventArgs) Handles btnFileExplorer.Click
+    Private Sub btnFileBrowser_Click(sender As Object, e As EventArgs) Handles btnFileBrowser.Click
 
     End Sub
 

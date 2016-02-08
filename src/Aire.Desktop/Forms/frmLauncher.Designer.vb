@@ -29,7 +29,7 @@ Partial Class frmLauncher
         Me.pnl_bottom = New System.Windows.Forms.Panel()
         Me.btnOptions = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
-        Me.btnFileExplorer = New System.Windows.Forms.Button()
+        Me.btnFileBrowser = New System.Windows.Forms.Button()
         Me.btnPower = New System.Windows.Forms.Button()
         Me.pnl_right = New System.Windows.Forms.Panel()
         Me.pnl_applications = New System.Windows.Forms.Panel()
@@ -76,7 +76,7 @@ Partial Class frmLauncher
         '
         Me.pnl_bottom.Controls.Add(Me.btnOptions)
         Me.pnl_bottom.Controls.Add(Me.btnSearch)
-        Me.pnl_bottom.Controls.Add(Me.btnFileExplorer)
+        Me.pnl_bottom.Controls.Add(Me.btnFileBrowser)
         Me.pnl_bottom.Controls.Add(Me.txtSearch)
         Me.pnl_bottom.Controls.Add(Me.btnPower)
         Me.pnl_bottom.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -113,19 +113,19 @@ Partial Class frmLauncher
         Me.ToolTip1.SetToolTip(Me.btnSearch, "Search")
         Me.btnSearch.UseVisualStyleBackColor = True
         '
-        'btnFileExplorer
+        'btnFileBrowser
         '
-        Me.btnFileExplorer.BackgroundImage = Global.Aire.Desktop.My.Resources.Resources._72_filebrowser
-        Me.btnFileExplorer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnFileExplorer.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btnFileExplorer.FlatAppearance.BorderSize = 0
-        Me.btnFileExplorer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFileExplorer.Location = New System.Drawing.Point(304, 0)
-        Me.btnFileExplorer.Name = "btnFileExplorer"
-        Me.btnFileExplorer.Size = New System.Drawing.Size(30, 30)
-        Me.btnFileExplorer.TabIndex = 4
-        Me.ToolTip1.SetToolTip(Me.btnFileExplorer, "File Browser")
-        Me.btnFileExplorer.UseVisualStyleBackColor = True
+        Me.btnFileBrowser.BackgroundImage = Global.Aire.Desktop.My.Resources.Resources._72_filebrowser
+        Me.btnFileBrowser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnFileBrowser.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnFileBrowser.FlatAppearance.BorderSize = 0
+        Me.btnFileBrowser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFileBrowser.Location = New System.Drawing.Point(304, 0)
+        Me.btnFileBrowser.Name = "btnFileBrowser"
+        Me.btnFileBrowser.Size = New System.Drawing.Size(30, 30)
+        Me.btnFileBrowser.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.btnFileBrowser, "File Browser")
+        Me.btnFileBrowser.UseVisualStyleBackColor = True
         '
         'btnPower
         '
@@ -241,7 +241,7 @@ Partial Class frmLauncher
     Friend WithEvents btnProfile As System.Windows.Forms.Button
     Friend WithEvents pnl_right As System.Windows.Forms.Panel
     Friend WithEvents btnSearch As System.Windows.Forms.Button
-    Friend WithEvents btnFileExplorer As System.Windows.Forms.Button
+    Friend WithEvents btnFileBrowser As System.Windows.Forms.Button
     Friend WithEvents btnOptions As System.Windows.Forms.Button
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents pnl_user As System.Windows.Forms.Panel
