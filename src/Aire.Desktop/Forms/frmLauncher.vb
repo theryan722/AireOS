@@ -67,6 +67,14 @@
 
     End Sub
 
+    Private Sub btnFileBrowser_MouseEnter(sender As Object, e As EventArgs) Handles btnFileBrowser.MouseEnter
+
+    End Sub
+
+    Private Sub btnFileBrowser_MouseLeave(sender As Object, e As EventArgs) Handles btnFileBrowser.MouseLeave
+
+    End Sub
+
 #End Region
 
 #Region "btnPower"
