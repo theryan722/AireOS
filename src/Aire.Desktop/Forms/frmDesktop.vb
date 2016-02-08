@@ -142,7 +142,7 @@
     Private Sub UpdateNetwork()
         If Aire.API.Sys.Network.Info.GetIfNetworkConnection Then
             If Aire.API.Sys.Network.Info.GetIfWireless Then
-                btnNetwork.BackgroundImage = My.Resources.network_wireless
+                SetNetworkIcon(NetworkStatus.Wireless)
                 Dim strength As Integer = Aire.API.Sys.Network.Info.GetWirelessStrengthInBars
                 Select Case strength
                     Case 1
@@ -155,11 +155,11 @@
                         ToolTip1.SetToolTip(btnNetwork, "Wireless Connection|Excellent Signal")
                 End Select
             Else
-                btnNetwork.BackgroundImage = My.Resources.network_wired
+                SetNetworkIcon(NetworkStatus.Wired)
                 ToolTip1.SetToolTip(btnNetwork, "Wired Connection")
             End If
         Else
-            btnNetwork.BackgroundImage = My.Resources.networking_disconnected
+            SetNetworkIcon(NetworkStatus.Disconnected)
             ToolTip1.SetToolTip(btnNetwork, "No Network Connection")
         End If
     End Sub
