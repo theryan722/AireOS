@@ -32,5 +32,6 @@ Public Class Colors
     Public Shared ButtonHighlight As Color = Color.FromArgb(255, 255, 255)
     Public Shared ButtonShadow As Color = Color.FromArgb(160, 160, 160)
     Public Shared GradientActiveCaption As Color = Color.FromArgb(185, 209, 234)
+    Public Shared GradientInactiveCaption As Color = Color.FromArgb(215, 228, 242)
 
 End Class
