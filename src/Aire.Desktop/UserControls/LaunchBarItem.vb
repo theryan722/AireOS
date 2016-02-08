@@ -36,7 +36,9 @@
     End Sub
 
     Public Sub UpdateText()
-        Text = Aire.API.Sys.Window.Info.GetName(Window)
+        Dim bb As String = Aire.API.Sys.Window.Info.GetName(Window)
+        Text = bb
+        SetToolTip(bb)
     End Sub
 
     Public Sub SetColor(ByVal clr As Color)
