@@ -293,7 +293,9 @@
     End Sub
 
     Public Sub GotoDesktopLeft()
-
+        If Windows.IndexOf(CurrentWindow) - 1 >= 0 Then
+            SwitchToDesktop(Windows.IndexOf(CurrentWindow), Windows.IndexOf(CurrentWindow) - 1)
+        End If
     End Sub
 
     Public Sub GotoDesktopRight()
