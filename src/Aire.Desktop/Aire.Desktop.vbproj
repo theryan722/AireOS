@@ -208,6 +208,9 @@
     <EmbeddedResource Include="UserControls\LaunchBarItem.resx">
       <DependentUpon>LaunchBarItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LauncherItem.resx">
+      <DependentUpon>LauncherItem.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">

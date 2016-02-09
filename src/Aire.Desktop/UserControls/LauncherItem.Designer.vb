@@ -22,8 +22,33 @@ Partial Class LauncherItem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.components = New System.ComponentModel.Container()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.lblText = New System.Windows.Forms.Label()
+        Me.SuspendLayout()
+        '
+        'lblText
+        '
+        Me.lblText.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblText.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblText.Location = New System.Drawing.Point(0, 0)
+        Me.lblText.Name = "lblText"
+        Me.lblText.Size = New System.Drawing.Size(200, 30)
+        Me.lblText.TabIndex = 0
+        Me.lblText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LauncherItem
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DimGray
+        Me.Controls.Add(Me.lblText)
+        Me.Name = "LauncherItem"
+        Me.Size = New System.Drawing.Size(200, 30)
+        Me.ResumeLayout(False)
+
     End Sub
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents lblText As System.Windows.Forms.Label
 
 End Class
