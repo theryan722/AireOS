@@ -22,7 +22,15 @@
     End Sub
 
     Public Sub SetFullscreen(ByVal val As Boolean)
-
+        If val Then
+            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+            Me.WindowState = FormWindowState.Maximized
+            FullScreenToolStripMenuItem.Checked = True
+        Else
+            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.Sizable
+            Me.WindowState = FormWindowState.Normal
+            FullScreenToolStripMenuItem.Checked = False
+        End If
     End Sub
 
 #End Region
