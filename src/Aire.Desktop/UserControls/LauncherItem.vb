@@ -75,7 +75,7 @@
     End Sub
 
     Private Sub LauncherItem_MouseEnter(sender As Object, e As EventArgs) Handles Me.MouseEnter
-
+        SetBackColorGray()
     End Sub
 
     Private Sub LauncherItem_MouseLeave(sender As Object, e As EventArgs) Handles Me.MouseLeave
