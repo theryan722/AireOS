@@ -113,6 +113,7 @@
         FixBackColor()
         btnProfile.BackgroundImage = Image.FromFile(Aire.API.User.Current.Settings.ProfilePicture)
         lblUsername.Text = Aire.API.User.Current.Info.GetUsername
+        LoadApplications()
     End Sub
 
     Private Sub FixBackColor()
