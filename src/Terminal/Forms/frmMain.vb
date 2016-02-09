@@ -22,7 +22,7 @@
     End Sub
 
     Private Sub CloseWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseWindowToolStripMenuItem.Click
-
+        Me.Close()
     End Sub
 
     Private Sub ExitTerminalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitTerminalToolStripMenuItem.Click
