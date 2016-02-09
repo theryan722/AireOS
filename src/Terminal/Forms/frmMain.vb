@@ -80,13 +80,9 @@
 
     Private Sub FullScreenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FullScreenToolStripMenuItem.Click
         If Me.FormBorderStyle = Windows.Forms.FormBorderStyle.Sizable Then
-            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-            Me.WindowState = FormWindowState.Maximized
-            FullScreenToolStripMenuItem.Checked = True
+            SetFullscreen(True)
         Else
-            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.Sizable
-            Me.WindowState = FormWindowState.Normal
-            FullScreenToolStripMenuItem.Checked = False
+            SetFullscreen(False)
         End If
     End Sub
 
