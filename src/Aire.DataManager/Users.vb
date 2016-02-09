@@ -6,6 +6,7 @@
         System.IO.Directory.CreateDirectory(loc & "/Apps/Terminal")
         System.IO.File.Create(loc & "/log.txt")
         System.IO.File.Create(loc & "/Apps/Terminal/config.txt")
+        System.IO.File.Create(loc & "/Apps/Terminal/external.txt")
         System.IO.File.Copy(DataPaths.GetSysDataLocation & "/Default/defbg.jpg", loc & "/bg.jpg")
         System.IO.File.Copy(DataPaths.GetSysDataLocation & "/Default/defprofile.jpg", loc & "/profile.jpg")
     End Sub
