@@ -26,12 +26,12 @@ Partial Class dlgOptions
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnReset = New System.Windows.Forms.Button()
         Me.check_allowexternal = New System.Windows.Forms.CheckBox()
         Me.check_topmost = New System.Windows.Forms.CheckBox()
         Me.check_fullscreen = New System.Windows.Forms.CheckBox()
         Me.btnForecolor = New System.Windows.Forms.Button()
         Me.btnBackcolor = New System.Windows.Forms.Button()
-        Me.btnReset = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,54 +66,6 @@ Partial Class dlgOptions
         Me.Panel1.Size = New System.Drawing.Size(281, 23)
         Me.Panel1.TabIndex = 2
         '
-        'check_allowexternal
-        '
-        Me.check_allowexternal.AutoSize = True
-        Me.check_allowexternal.Location = New System.Drawing.Point(0, 0)
-        Me.check_allowexternal.Name = "check_allowexternal"
-        Me.check_allowexternal.Size = New System.Drawing.Size(147, 17)
-        Me.check_allowexternal.TabIndex = 3
-        Me.check_allowexternal.Text = "Allow External Commands"
-        Me.check_allowexternal.UseVisualStyleBackColor = True
-        '
-        'check_topmost
-        '
-        Me.check_topmost.AutoSize = True
-        Me.check_topmost.Location = New System.Drawing.Point(0, 23)
-        Me.check_topmost.Name = "check_topmost"
-        Me.check_topmost.Size = New System.Drawing.Size(116, 17)
-        Me.check_topmost.TabIndex = 4
-        Me.check_topmost.Text = "Topmost at Startup"
-        Me.check_topmost.UseVisualStyleBackColor = True
-        '
-        'check_fullscreen
-        '
-        Me.check_fullscreen.AutoSize = True
-        Me.check_fullscreen.Location = New System.Drawing.Point(0, 46)
-        Me.check_fullscreen.Name = "check_fullscreen"
-        Me.check_fullscreen.Size = New System.Drawing.Size(123, 17)
-        Me.check_fullscreen.TabIndex = 5
-        Me.check_fullscreen.Text = "Fullscreen at Startup"
-        Me.check_fullscreen.UseVisualStyleBackColor = True
-        '
-        'btnForecolor
-        '
-        Me.btnForecolor.Location = New System.Drawing.Point(0, 69)
-        Me.btnForecolor.Name = "btnForecolor"
-        Me.btnForecolor.Size = New System.Drawing.Size(75, 23)
-        Me.btnForecolor.TabIndex = 6
-        Me.btnForecolor.Text = "Forecolor"
-        Me.btnForecolor.UseVisualStyleBackColor = True
-        '
-        'btnBackcolor
-        '
-        Me.btnBackcolor.Location = New System.Drawing.Point(81, 69)
-        Me.btnBackcolor.Name = "btnBackcolor"
-        Me.btnBackcolor.Size = New System.Drawing.Size(75, 23)
-        Me.btnBackcolor.TabIndex = 7
-        Me.btnBackcolor.Text = "Backcolor"
-        Me.btnBackcolor.UseVisualStyleBackColor = True
-        '
         'btnReset
         '
         Me.btnReset.Dock = System.Windows.Forms.DockStyle.Right
@@ -123,6 +75,54 @@ Partial Class dlgOptions
         Me.btnReset.TabIndex = 2
         Me.btnReset.Text = "Reset"
         Me.btnReset.UseVisualStyleBackColor = True
+        '
+        'check_allowexternal
+        '
+        Me.check_allowexternal.AutoSize = True
+        Me.check_allowexternal.Location = New System.Drawing.Point(0, 0)
+        Me.check_allowexternal.Name = "check_allowexternal"
+        Me.check_allowexternal.Size = New System.Drawing.Size(147, 17)
+        Me.check_allowexternal.TabIndex = 0
+        Me.check_allowexternal.Text = "Allow External Commands"
+        Me.check_allowexternal.UseVisualStyleBackColor = True
+        '
+        'check_topmost
+        '
+        Me.check_topmost.AutoSize = True
+        Me.check_topmost.Location = New System.Drawing.Point(0, 23)
+        Me.check_topmost.Name = "check_topmost"
+        Me.check_topmost.Size = New System.Drawing.Size(116, 17)
+        Me.check_topmost.TabIndex = 1
+        Me.check_topmost.Text = "Topmost at Startup"
+        Me.check_topmost.UseVisualStyleBackColor = True
+        '
+        'check_fullscreen
+        '
+        Me.check_fullscreen.AutoSize = True
+        Me.check_fullscreen.Location = New System.Drawing.Point(0, 46)
+        Me.check_fullscreen.Name = "check_fullscreen"
+        Me.check_fullscreen.Size = New System.Drawing.Size(123, 17)
+        Me.check_fullscreen.TabIndex = 2
+        Me.check_fullscreen.Text = "Fullscreen at Startup"
+        Me.check_fullscreen.UseVisualStyleBackColor = True
+        '
+        'btnForecolor
+        '
+        Me.btnForecolor.Location = New System.Drawing.Point(0, 69)
+        Me.btnForecolor.Name = "btnForecolor"
+        Me.btnForecolor.Size = New System.Drawing.Size(75, 23)
+        Me.btnForecolor.TabIndex = 3
+        Me.btnForecolor.Text = "Forecolor"
+        Me.btnForecolor.UseVisualStyleBackColor = True
+        '
+        'btnBackcolor
+        '
+        Me.btnBackcolor.Location = New System.Drawing.Point(81, 69)
+        Me.btnBackcolor.Name = "btnBackcolor"
+        Me.btnBackcolor.Size = New System.Drawing.Size(75, 23)
+        Me.btnBackcolor.TabIndex = 4
+        Me.btnBackcolor.Text = "Backcolor"
+        Me.btnBackcolor.UseVisualStyleBackColor = True
         '
         'dlgOptions
         '
