@@ -85,7 +85,10 @@ Public Class SettingsReader
     End Sub
 
     Public Shared Sub SetIfFullscreen(ByVal fullscreen As Boolean)
-
+        Dim ss() As String
+        ss = File.ReadAllLines(setloc)
+        ss(Array.IndexOf(ss, Array.Find(ss, Function(x) (x.StartsWith("FS:"))))) = "FS:" & fullscreen.ToString
+        File.WriteAllLines(setloc, ss)
     End Sub
 
     Public Shared Sub SetIfAllowExternal(ByVal allow As Boolean)
