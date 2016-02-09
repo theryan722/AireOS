@@ -29,6 +29,7 @@ Partial Class LauncherItem
         '
         'lblTitle
         '
+        Me.lblTitle.BackColor = System.Drawing.Color.DimGray
         Me.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.Location = New System.Drawing.Point(0, 0)
