@@ -54,7 +54,13 @@
     End Sub
 
     Private Sub TopmostToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TopmostToolStripMenuItem.Click
-
+        If Me.TopMost Then
+            Me.TopMost = False
+            TopmostToolStripMenuItem.Checked = False
+        Else
+            Me.TopMost = True
+            TopmostToolStripMenuItem.Checked = True
+        End If
     End Sub
 
 #End Region
