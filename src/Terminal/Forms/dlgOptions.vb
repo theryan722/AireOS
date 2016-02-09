@@ -1,12 +1,5 @@
 ﻿Public Class dlgOptions
 
-#Region "Variables"
-
-    Private fcolor As Color
-    Private bcolor As Color
-
-#End Region
-
 #Region "UI"
 
     Private Sub btnForecolor_Click(sender As Object, e As EventArgs) Handles btnForecolor.Click
@@ -38,16 +31,15 @@
     End Sub
 
     Private Sub SaveSettings()
+
     End Sub
 
     Private Sub ResetSettings()
         check_topmost.Checked = False
         check_fullscreen.Checked = False
         check_allowexternal.Checked = False
-        fcolor = System.Drawing.SystemColors.Window
-        bcolor = System.Drawing.SystemColors.WindowText
-        btnForecolor.BackColor = fcolor
-        btnBackcolor.BackColor = bcolor
+        btnForecolor.BackColor = System.Drawing.SystemColors.Window
+        btnBackcolor.BackColor = System.Drawing.SystemColors.WindowText
     End Sub
 
 #End Region
