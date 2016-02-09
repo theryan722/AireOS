@@ -31,13 +31,14 @@ Partial Class dlgOptions
         Me.check_fullscreen = New System.Windows.Forms.CheckBox()
         Me.btnForecolor = New System.Windows.Forms.Button()
         Me.btnBackcolor = New System.Windows.Forms.Button()
+        Me.btnReset = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnSave
         '
         Me.btnSave.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btnSave.Location = New System.Drawing.Point(90, 0)
+        Me.btnSave.Location = New System.Drawing.Point(206, 0)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 0
@@ -56,12 +57,13 @@ Partial Class dlgOptions
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.btnReset)
         Me.Panel1.Controls.Add(Me.btnSave)
         Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 99)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(165, 23)
+        Me.Panel1.Size = New System.Drawing.Size(281, 23)
         Me.Panel1.TabIndex = 2
         '
         'check_allowexternal
@@ -112,11 +114,21 @@ Partial Class dlgOptions
         Me.btnBackcolor.Text = "Backcolor"
         Me.btnBackcolor.UseVisualStyleBackColor = True
         '
+        'btnReset
+        '
+        Me.btnReset.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnReset.Location = New System.Drawing.Point(131, 0)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(75, 23)
+        Me.btnReset.TabIndex = 2
+        Me.btnReset.Text = "Reset"
+        Me.btnReset.UseVisualStyleBackColor = True
+        '
         'dlgOptions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(165, 122)
+        Me.ClientSize = New System.Drawing.Size(281, 122)
         Me.Controls.Add(Me.btnBackcolor)
         Me.Controls.Add(Me.btnForecolor)
         Me.Controls.Add(Me.check_fullscreen)
@@ -141,4 +153,5 @@ Partial Class dlgOptions
     Friend WithEvents check_fullscreen As System.Windows.Forms.CheckBox
     Friend WithEvents btnForecolor As System.Windows.Forms.Button
     Friend WithEvents btnBackcolor As System.Windows.Forms.Button
+    Friend WithEvents btnReset As System.Windows.Forms.Button
 End Class
