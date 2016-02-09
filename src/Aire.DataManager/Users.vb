@@ -29,6 +29,7 @@
         'appbarcolor
         'backgroundimagelayout
         'lognotificationtext
+        'confirmshutdown
     End Sub
 
 #End Region
