@@ -38,7 +38,12 @@ Namespace User
         Public Class Settings
 
             Public Shared Property DesktopBackgroundImage() As String
-                
+                Get
+                    Return User.Current.Info.GetDataStorageLocation & "/bg.jpg"
+                End Get
+                Set(value As String)
+                    System.IO.File.Copy(value, User.Current.Info.GetDataStorageLocation & "/bg.jpg", True)
+                End Set
             End Property
 
             Public Shared Property LaunchBarColor() As Color
