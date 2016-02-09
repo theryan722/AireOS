@@ -40,11 +40,11 @@ Partial Class frmMain
         Me.TopmostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TextBox1 = New System.Windows.Forms.RichTextBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -69,24 +69,25 @@ Partial Class frmMain
         'NewWindowToolStripMenuItem
         '
         Me.NewWindowToolStripMenuItem.Name = "NewWindowToolStripMenuItem"
-        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewWindowToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
+        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.NewWindowToolStripMenuItem.Text = "New Window"
         '
         'CloseWindowToolStripMenuItem
         '
         Me.CloseWindowToolStripMenuItem.Name = "CloseWindowToolStripMenuItem"
-        Me.CloseWindowToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseWindowToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.CloseWindowToolStripMenuItem.Text = "Close Window"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(185, 6)
         '
         'ExitTerminalToolStripMenuItem
         '
         Me.ExitTerminalToolStripMenuItem.Name = "ExitTerminalToolStripMenuItem"
-        Me.ExitTerminalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitTerminalToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
         Me.ExitTerminalToolStripMenuItem.Text = "Exit Terminal"
         '
         'EditToolStripMenuItem
@@ -99,24 +100,24 @@ Partial Class frmMain
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(116, 6)
         '
         'CopyAllToolStripMenuItem
         '
         Me.CopyAllToolStripMenuItem.Name = "CopyAllToolStripMenuItem"
-        Me.CopyAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CopyAllToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.CopyAllToolStripMenuItem.Text = "Copy All"
         '
         'ViewToolStripMenuItem
@@ -148,8 +149,15 @@ Partial Class frmMain
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(159, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
+        '
+        'OptionsToolStripMenuItem
+        '
+        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+        Me.OptionsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.OptionsToolStripMenuItem.Text = "Options"
         '
         'TextBox1
         '
@@ -158,9 +166,9 @@ Partial Class frmMain
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBox1.Location = New System.Drawing.Point(0, 24)
+        Me.TextBox1.Location = New System.Drawing.Point(0, 0)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(699, 321)
+        Me.TextBox1.Size = New System.Drawing.Size(699, 345)
         Me.TextBox1.TabIndex = 1
         Me.TextBox1.Text = ""
         '
@@ -181,12 +189,6 @@ Partial Class frmMain
         Me.PasteToolStripMenuItem1.Name = "PasteToolStripMenuItem1"
         Me.PasteToolStripMenuItem1.Size = New System.Drawing.Size(102, 22)
         Me.PasteToolStripMenuItem1.Text = "Paste"
-        '
-        'OptionsToolStripMenuItem
-        '
-        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.OptionsToolStripMenuItem.Text = "Options"
         '
         'frmMain
         '
