@@ -27,7 +27,11 @@
 #Region "Methods"
 
     Private Sub LoadSettings()
-
+        check_topmost.Checked = ConfigManager.GetIfTopmost
+        check_fullscreen.Checked = ConfigManager.GetIfFullscreen
+        check_allowexternal.Checked = ConfigManager.GetIfAllowExternal
+        btnForecolor.BackColor = ConfigManager.GetForeColor
+        btnBackcolor.BackColor = ConfigManager.GetBackColor
     End Sub
 
     Private Sub SaveSettings()
