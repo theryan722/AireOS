@@ -104,7 +104,8 @@
     End Sub
 
     Private Sub OptionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionsToolStripMenuItem.Click
-
+        Dim newb As New dlgOptions
+        newb.ShowDialog()
     End Sub
 
 #End Region
