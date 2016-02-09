@@ -101,7 +101,7 @@
 
     Private Sub LoadUI()
         FixBackColor()
-        btnProfile.BackgroundImage = Aire.API.User.Current.Settings.ProfilePicture
+        btnProfile.BackgroundImage = Image.FromFile(Aire.API.User.Current.Settings.ProfilePicture)
         lblUsername.Text = Aire.API.User.Current.Info.GetUsername
     End Sub
 
