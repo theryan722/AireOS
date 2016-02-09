@@ -42,7 +42,7 @@
     End Sub
 
     Private Sub CopyAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyAllToolStripMenuItem.Click
-
+        My.Computer.Clipboard.SetText(TextBox1.Text)
     End Sub
 
 #End Region
