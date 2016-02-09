@@ -9,7 +9,9 @@
 
 #Region "Methods"
 
+    Public Sub LoadSettings()
 
+    End Sub
 
 #End Region
 
@@ -133,6 +135,7 @@
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox1.Text = "Terminal@" & Aire.API.User.Current.Info.GetUsername & ":>"
+        LoadSettings()
     End Sub
 
 #End Region
