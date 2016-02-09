@@ -31,7 +31,11 @@
     End Sub
 
     Private Sub SaveSettings()
-
+        ConfigManager.SetBackColor(btnBackcolor.BackColor)
+        ConfigManager.SetForeColor(btnForecolor.BackColor)
+        ConfigManager.SetIfAllowExternal(check_allowexternal.Checked)
+        ConfigManager.SetIfFullscreen(check_fullscreen.Checked)
+        ConfigManager.SetIfTopmost(check_topmost.Checked)
     End Sub
 
     Private Sub ResetSettings()
