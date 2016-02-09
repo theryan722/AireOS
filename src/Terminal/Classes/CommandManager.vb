@@ -52,17 +52,43 @@
                 Case cmd.ToLower.StartsWith("launch")
                 Case cmd.ToLower.StartsWith("get")
                 Case "aire -user logout"
+                    sText = "Logging out User"
+                    Aire.API.User.Current.Actions.LogoutUser()
                 Case "aire -user lock"
+                    sText = "Locking User"
+                    Aire.API.User.Current.Actions.LockUser()
                 Case "aire -user switch"
+                    sText = "Switching User"
+                    Aire.API.User.Current.Actions.SwitchUser()
                 Case "aire -power shutdown"
+                    sText = "Setting powerstate to shutdown"
+                    Aire.API.Sys.Power.Actions.Shutdown()
                 Case "aire -power restart"
+                    sText = "Setting powerstate to restart"
+                    Aire.API.Sys.Power.Actions.Restart()
                 Case "aire -power sleep"
+                    sText = "Setting powerstate to sleep"
+                    Aire.API.Sys.Power.Actions.Sleep()
                 Case "aire -power hibernate"
+                    sText = "Setting powerstate to hibernate"
+                    Aire.API.Sys.Power.Actions.Hibernate()
                 Case "aire -version"
+                    sText = "Aire OS Version: " & Aire.API.Sys.Info.OS.Version
+                Case "aire -release"
+                    sText = "Aire OS Release: " & Aire.API.Sys.Info.OS.Release
                 Case cmd.ToLower.StartsWith("log -write")
+                    sText = "Writing to Log: " & cmd.Split(""""c)(1)
+                    Aire.API.Sys.Logging.Log.Write(cmd.Split(""""c)(1), Aire.API.Sys.Logging.Log.LogSource.General)
                 Case cmd.ToLower.StartsWith("aire -notification toast")
+                    sText = "Displaying Toast: " & cmd.Split(""""c)(1)
+                    Dim bb As New Aire.API.Toast(cmd.Split(""""c)(1), 2500, "Terminal")
                 Case cmd.ToLower.StartsWith("aire -notification msgbox")
+                    sText = "Displaying Message Box: " & cmd.Split(""""c)(1)
+                    Dim bb As New Aire.API.MessageBox(cmd.Split(""""c)(1), "Terminal")
                 Case cmd.ToLower.StartsWith("aire -volume -set")
+                    Dim bb As Integer = CInt(cmd.Split(""""c)(1))
+                    Aire.API.Audio.Volume.SetVolume(bb)
+                    sText = "Set Volume To: " & bb & "%"
                 Case "aire -volume get"
                     sText = "Volume: " & Aire.API.Audio.Volume.GetVolume
                 Case Else
