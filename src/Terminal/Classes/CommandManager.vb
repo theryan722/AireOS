@@ -14,7 +14,7 @@
 "help -- Displays help" & vbNewLine & _
 "terminal -about -- Displays Information about Terminal" & vbNewLine & _
 "terminal -about version -- Displays the terminal version" & vbNewLine & _
-"terminal -exit window -- Closes the current terminal window" & vbNewLine & _
+"terminal -exit -- Closes the current terminal window" & vbNewLine & _
 "terminal -exit all -- Exits the terminal application" & vbNewLine & _
 "terminal -menu show -- Displays the terminal menu" & vbNewLine & _
 "terminal -menu hide -- Hides the terminal menu" & vbNewLine & _
@@ -57,7 +57,7 @@
                     cmdform.AboutToolStripMenuItem1.PerformClick()
                 Case "terminal -about version"
                     sText = "Terminal Version: " & My.Application.Info.Version.ToString
-                Case "terminal -exit window"
+                Case "terminal -exit"
                     sText = "Exiting Window"
                     cmdform.Close()
                 Case "terminal -exit all"
