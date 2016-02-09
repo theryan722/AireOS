@@ -53,7 +53,7 @@
     End Sub
 
     Private Sub lblTitle_MouseLeave(sender As Object, e As EventArgs) Handles lblTitle.MouseLeave
-
+        SetBackColorGray()
     End Sub
 
 #End Region
