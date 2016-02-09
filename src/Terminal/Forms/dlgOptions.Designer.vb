@@ -38,7 +38,7 @@ Partial Class dlgOptions
         'btnSave
         '
         Me.btnSave.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btnSave.Location = New System.Drawing.Point(206, 0)
+        Me.btnSave.Location = New System.Drawing.Point(150, 0)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 0
@@ -63,13 +63,13 @@ Partial Class dlgOptions
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 99)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(281, 23)
+        Me.Panel1.Size = New System.Drawing.Size(225, 23)
         Me.Panel1.TabIndex = 2
         '
         'btnReset
         '
         Me.btnReset.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btnReset.Location = New System.Drawing.Point(131, 0)
+        Me.btnReset.Location = New System.Drawing.Point(75, 0)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(75, 23)
         Me.btnReset.TabIndex = 2
@@ -128,7 +128,7 @@ Partial Class dlgOptions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(281, 122)
+        Me.ClientSize = New System.Drawing.Size(225, 122)
         Me.Controls.Add(Me.btnBackcolor)
         Me.Controls.Add(Me.btnForecolor)
         Me.Controls.Add(Me.check_fullscreen)
