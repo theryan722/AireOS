@@ -35,6 +35,11 @@
         Me.BackColor = Color.DimGray
     End Sub
 
+    Private Sub SetBackColorGray()
+        lblTitle.BackColor = Color.Gray
+        Me.BackColor = Color.Gray
+    End Sub
+
 #End Region
 
 #Region "lblTitle"
