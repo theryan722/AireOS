@@ -25,6 +25,8 @@
     End Sub
 
     Private Shared Sub SetDefaultSettings(ByVal loc As String)
+        'launchbarcolor
+        'appbarcolor
 
     End Sub
 

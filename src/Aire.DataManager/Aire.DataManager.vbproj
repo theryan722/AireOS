@@ -88,6 +88,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converter.vb" />
     <Compile Include="Databases\UserData\DBUserData_Access.vb" />
     <Compile Include="Databases\UserData\DBUserData.vb" />
     <Compile Include="DataPaths.vb" />

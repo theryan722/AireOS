@@ -75,7 +75,7 @@ Namespace User
 
             Public Shared Property DesktopBackgroundImageLayout() As ImageLayout
                 Get
-
+                   
                 End Get
                 Set(value As ImageLayout)
 
