@@ -7,9 +7,14 @@
                 Case "clear"
                     sText = ""
                     cmdform.TextBox1.Clear()
-                Case "exit"
                 Case "help"
                 Case "about"
+                Case "terminal -exit window"
+                    sText = "Exiting Window"
+                    cmdform.Close()
+                Case "terminal -exit all"
+                    sText = "Exiting Terminal"
+                    Application.Exit()
                 Case "terminal -menu show"
                 Case "terminal -menu hide"
                 Case "terminal -topmost true"
@@ -33,7 +38,7 @@
                 Case cmd.ToLower.StartsWith("aire -notification toast")
                 Case cmd.ToLower.StartsWith("aire -notification msgbox")
                 Case cmd.ToLower.StartsWith("aire -volume -set")
-                Case "aire -volume -get"
+                Case "aire -volume get"
 
                 Case Else
                     sText = "Unrecognized command. Enter HELP for help."
