@@ -19,6 +19,7 @@
 "terminal -externalcmd -allow true -- Allows external commands to be run" & vbNewLine & _
 "terminal -externalcmd -allow false -- Does not allow external commands to be run" & vbNewLine & _
 "terminal -externalcmd clear -- Clears the external commands list" & vbNewLine & _
+"terminal -externalcmd add ""COMMANDNAME|OUTPUTTEXT|CMDTYPE|CMD"" -- Adds the command to the external command list. Read documentation on how to use." & vbNewLine & _
 "terminal -menu show -- Displays the terminal menu" & vbNewLine & _
 "terminal -menu hide -- Hides the terminal menu" & vbNewLine & _
 "terminal -topmost true -- Makes the terminal display above all other windows" & vbNewLine & _
@@ -187,6 +188,9 @@
                     ElseIf cmd.ToLower.StartsWith("directory -delete recursive") Then
                         sText = "Deleting Directory Recursively: " & cmd.Split(""""c)(1)
                         System.IO.Directory.Delete(cmd.Split(""""c)(1), True)
+                    ElseIf cmd.ToLower.StartsWith("terminal -externalcmd add") Then
+                        sText = "Added new command to external commands list"
+                        DataManager.AddToExternalCommands(cmd.Split(""""c)(1))
                     Else
                         If cmdform.allowexternal Then
                             Dim temp As String = ProcessExternalCommand(cmd)
