@@ -3,7 +3,11 @@
 #Region "UI"
 
     Private Sub btnForecolor_Click(sender As Object, e As EventArgs) Handles btnForecolor.Click
-
+        Dim newb As New ColorDialog
+        newb.Color = btnForecolor.BackColor
+        If newb.ShowDialog = Windows.Forms.DialogResult.OK Then
+            btnForecolor.BackColor = newb.Color
+        End If
     End Sub
 
     Private Sub btnBackcolor_Click(sender As Object, e As EventArgs) Handles btnBackcolor.Click
