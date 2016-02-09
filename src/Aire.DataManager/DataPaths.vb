@@ -8,4 +8,8 @@
         Return AppDomain.CurrentDomain.BaseDirectory & "/SysData"
     End Function
 
+    Public Shared Function GetSystemApplicationList() As String
+        Return AppDomain.CurrentDomain.BaseDirectory & "/SysData/sysapplist.txt"
+    End Function
+
 End Class
