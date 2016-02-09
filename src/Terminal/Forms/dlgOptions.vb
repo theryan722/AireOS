@@ -38,7 +38,6 @@
     End Sub
 
     Private Sub SaveSettings()
-
     End Sub
 
     Private Sub ResetSettings()

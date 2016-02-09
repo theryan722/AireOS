@@ -1,6 +1,6 @@
 ﻿Imports System.IO
 
-Public Class SettingsReader
+Public Class ConfigManager
 
     Private Shared setloc As String = Aire.API.User.Current.Info.GetDataStorageLocation & "/Apps/Terminal/config.txt"
 
