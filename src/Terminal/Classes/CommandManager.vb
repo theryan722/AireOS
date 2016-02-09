@@ -207,6 +207,8 @@
         cmdform.TextBox1.SelectionStart = Len(cmdform.TextBox1.Text)
     End Sub
 
+#Region "Helper"
+
     Private Shared Function ProcessExternalCommand(ByVal cmd As String) As String
         Dim arr() As String
         Dim ret As String
@@ -233,5 +235,7 @@
         Loop
         Return TextLine
     End Function
+
+#End Region
 
 End Class
