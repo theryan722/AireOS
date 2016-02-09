@@ -206,4 +206,31 @@
         cmdform.TextBox1.SelectionStart = Len(cmdform.TextBox1.Text)
     End Sub
 
+    Private Shared Function ProcessExternalCommand(ByVal cmd As String) As String
+        Dim arr() As String
+        Dim ret As String
+        For Each item As String In ReadExternal()
+            arr = item.Split("|")
+            If arr(0).ToLower = cmd.ToLower Then
+                ret = arr(1)
+                If (arr(2)) = "start" Then
+                    Aire.API.Sys.Process.Start(arr(3))
+                ElseIf (arr(2)) = "exec" Then
+                    ret &= Aire.API.Sys.Process.ExecuteCommandWithOutput(arr(3), arr(4))
+                End If
+                Return ret
+            End If
+        Next
+        Return "|DNE|"
+    End Function
+
+    Private Shared Function ReadExternal() As List(Of String)
+        Dim TextLine As New List(Of String)
+        Dim objReader As New System.IO.StreamReader(Aire.API.User.Current.Info.GetDataStorageLocation & "/Apps/Terminal/external.txt")
+        Do While objReader.Peek() <> -1
+            TextLine.Add(objReader.ReadLine())
+        Loop
+        Return TextLine
+    End Function
+
 End Class
