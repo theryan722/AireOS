@@ -60,6 +60,7 @@ Partial Class frmDesktop
         'pnl_launchbar_applications
         '
         Me.pnl_launchbar_applications.AutoScroll = True
+        Me.pnl_launchbar_applications.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.pnl_launchbar_applications.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnl_launchbar_applications.Location = New System.Drawing.Point(0, 25)
         Me.pnl_launchbar_applications.Name = "pnl_launchbar_applications"
@@ -68,6 +69,7 @@ Partial Class frmDesktop
         '
         'pnl_launchbar_tray
         '
+        Me.pnl_launchbar_tray.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.pnl_launchbar_tray.Controls.Add(Me.Panel1)
         Me.pnl_launchbar_tray.Controls.Add(Me.lbl_timedate)
         Me.pnl_launchbar_tray.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -172,6 +174,7 @@ Partial Class frmDesktop
         '
         'btnLauncher
         '
+        Me.btnLauncher.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnLauncher.BackgroundImage = CType(resources.GetObject("btnLauncher.BackgroundImage"), System.Drawing.Image)
         Me.btnLauncher.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnLauncher.Dock = System.Windows.Forms.DockStyle.Top
@@ -182,11 +185,11 @@ Partial Class frmDesktop
         Me.btnLauncher.Size = New System.Drawing.Size(80, 25)
         Me.btnLauncher.TabIndex = 3
         Me.ToolTip1.SetToolTip(Me.btnLauncher, "Launcher")
-        Me.btnLauncher.UseVisualStyleBackColor = True
+        Me.btnLauncher.UseVisualStyleBackColor = False
         '
         'pnl_appbar_top
         '
-        Me.pnl_appbar_top.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.pnl_appbar_top.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.pnl_appbar_top.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnl_appbar_top.Location = New System.Drawing.Point(80, 0)
         Me.pnl_appbar_top.Name = "pnl_appbar_top"
@@ -195,7 +198,7 @@ Partial Class frmDesktop
         '
         'pnl_appbar_bottom
         '
-        Me.pnl_appbar_bottom.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.pnl_appbar_bottom.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.pnl_appbar_bottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.pnl_appbar_bottom.Location = New System.Drawing.Point(80, 637)
         Me.pnl_appbar_bottom.Name = "pnl_appbar_bottom"

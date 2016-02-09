@@ -58,11 +58,11 @@
     End Sub
 
     Private Sub btnLauncher_MouseEnter(sender As Object, e As EventArgs) Handles btnLauncher.MouseEnter
-        btnLauncher.BackColor = Aire.SysColors.Colors.ControlDarkDark
+        btnLauncher.BackColor = Aire.SysColors.Colors.GradientActiveCaption
     End Sub
 
     Private Sub btnLauncher_MouseLeave(sender As Object, e As EventArgs) Handles btnLauncher.MouseLeave
-        btnLauncher.BackColor = Aire.SysColors.Colors.AppWorkspace
+        btnLauncher.BackColor = Aire.SysColors.Colors.ActiveCaption
     End Sub
 
 #End Region
