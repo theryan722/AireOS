@@ -32,6 +32,8 @@ Namespace User
                 Return Aire.DataManager.Databases.UserData.GetPasswordHint(GetUsername)
             End Function
 
+
+
         End Class
 
         'The user settings for the currently logged in user

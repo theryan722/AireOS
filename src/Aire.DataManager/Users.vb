@@ -6,13 +6,14 @@
         System.IO.Directory.CreateDirectory(loc)
         System.IO.Directory.CreateDirectory(loc & "/Apps")
         System.IO.Directory.CreateDirectory(loc & "/Apps/Terminal")
+        System.IO.Directory.CreateDirectory(loc & "/Data")
     End Sub
 
     Private Shared Sub CreateFiles(ByVal loc As String)
-        System.IO.File.Create(loc & "/log.txt")
+        System.IO.File.Create(loc & "/Data/log.txt")
         System.IO.File.Create(loc & "/Apps/Terminal/config.txt")
         System.IO.File.Create(loc & "/Apps/Terminal/external.txt")
-        System.IO.File.Create(loc & "/applist.txt")
+        System.IO.File.Create(loc & "/Data/applist.txt")
     End Sub
 
     Private Shared Sub CopyDefaultFiles(ByVal loc As String)
