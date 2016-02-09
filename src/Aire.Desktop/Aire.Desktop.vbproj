@@ -229,6 +229,10 @@
       <Project>{8b285aed-9205-4cee-8955-c9c3c73408b9}</Project>
       <Name>Aire.API</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Aire.DataManager\Aire.DataManager.vbproj">
+      <Project>{e0cc3d59-2ef1-4459-9fce-02a3cceba7b1}</Project>
+      <Name>Aire.DataManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Aire.SysColors\Aire.SysColors.vbproj">
       <Project>{7acc62d7-8653-4ffb-a37e-82b18f867673}</Project>
       <Name>Aire.SysColors</Name>
