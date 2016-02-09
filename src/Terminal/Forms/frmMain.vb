@@ -18,7 +18,13 @@
     End Sub
 
     Public Sub SetTopmost(ByVal val As Boolean)
-
+        If val Then
+            Me.TopMost = True
+            TopmostToolStripMenuItem.Checked = True
+        Else
+            Me.TopMost = False
+            TopmostToolStripMenuItem.Checked = False
+        End If
     End Sub
 
     Public Sub SetFullscreen(ByVal val As Boolean)
