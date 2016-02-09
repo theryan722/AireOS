@@ -30,10 +30,25 @@
                     cmdform.TopMost = False
                     cmdform.TopmostToolStripMenuItem.Checked = False
                 Case "terminal -windowstate minimize"
+                    sText = "Terminal WindowState Minimized"
+                    cmdform.WindowState = FormWindowState.Minimized
                 Case "terminal -windowstate maximize"
+                    sText = "Terminal WindowState Maximized"
+                    cmdform.WindowState = FormWindowState.Maximized
                 Case "terminal -windowstate normal"
+                    sText = "Terminal WindowState Normal"
+                    cmdform.WindowState = FormWindowState.Normal
                 Case cmd.ToLower.StartsWith("terminal -title")
-                Case cmd.ToLower.StartsWith("start")
+                    sText = "Terminal Title Set To: " & cmd.Split(""""c)(1)
+                    cmdform.Text = cmd.Split(""""c)(1)
+                Case cmd.ToLower.StartsWith("process -start")
+                    sText = "Starting Process: " & cmd.Split(""""c)(1)
+                    Aire.API.Sys.Process.Start(cmd.Split(""""c)(1))
+                Case cmd.ToLower.StartsWith("command -exec")
+                    Dim p1 As String = cmd.Split({"(", ","}, StringSplitOptions.None)(1)
+                    Dim p2 As String = cmd.Split({",", ")"}, StringSplitOptions.None)(2)
+                    sText = "Executing Command: " & p1
+                    sText = vbNewLine & "Command Output: " & vbNewLine & Aire.API.Sys.Process.ExecuteCommandWithOutput(p1, p2)
                 Case cmd.ToLower.StartsWith("launch")
                 Case cmd.ToLower.StartsWith("get")
                 Case "aire -user logout"
@@ -49,7 +64,7 @@
                 Case cmd.ToLower.StartsWith("aire -notification msgbox")
                 Case cmd.ToLower.StartsWith("aire -volume -set")
                 Case "aire -volume get"
-
+                    sText = "Volume: " & Aire.API.Audio.Volume.GetVolume
                 Case Else
                     sText = "Unrecognized command. Enter HELP for help."
             End Select
