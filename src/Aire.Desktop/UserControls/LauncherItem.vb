@@ -27,7 +27,9 @@
 #Region "Methods"
 
     Private Sub LaunchFile()
-
+        If System.IO.File.Exists(FileLocation) Then
+            Aire.API.Sys.Process.Start(FileLocation)
+        End If
     End Sub
 
     Private Sub SetBackColorDimGray()
@@ -79,6 +81,5 @@
     End Sub
 
 #End Region
-
     
 End Class
