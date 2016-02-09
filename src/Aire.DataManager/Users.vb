@@ -16,6 +16,7 @@
         System.IO.File.Create(loc & "/Apps/Terminal/external.txt")
         System.IO.File.Create(loc & "/Data/applist.txt")
         System.IO.File.Create(loc & "/Data/Config/launchbarcolor.txt")
+        System.IO.File.Create(loc & "/Data/Config/appbarcolor.txt")
     End Sub
 
     Private Shared Sub CopyDefaultFiles(ByVal loc As String)

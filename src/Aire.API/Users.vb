@@ -66,10 +66,10 @@ Namespace User
 
             Public Shared Property AppBarColor() As Color
                 Get
-
+                    Return Color.FromArgb(System.IO.File.ReadAllText(User.Current.Info.GetDataStorageLocation & "/Data/Config/appbarcolor.txt"))
                 End Get
                 Set(value As Color)
-
+                    System.IO.File.WriteAllText(User.Current.Info.GetDataStorageLocation & "/Data/Config/appbarcolor.txt", value.ToArgb.ToString)
                 End Set
             End Property
 
