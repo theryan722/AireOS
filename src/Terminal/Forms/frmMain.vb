@@ -155,6 +155,7 @@
 #Region "frmMain"
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CheckAndRepairData()
         TextBox1.Text = "Terminal@" & Aire.API.User.Current.Info.GetUsername & ":>"
         LoadSettings()
     End Sub
