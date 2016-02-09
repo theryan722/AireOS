@@ -96,17 +96,6 @@
                     cmdform.FormBorderStyle = Windows.Forms.FormBorderStyle.Sizable
                     cmdform.WindowState = FormWindowState.Normal
                     cmdform.FullScreenToolStripMenuItem.Checked = False
-                Case cmd.ToLower.StartsWith("terminal -title")
-                    sText = "Terminal Title Set To: " & cmd.Split(""""c)(1)
-                    cmdform.Text = cmd.Split(""""c)(1)
-                Case cmd.ToLower.StartsWith("process -start")
-                    sText = "Starting Process: " & cmd.Split(""""c)(1)
-                    Aire.API.Sys.Process.Start(cmd.Split(""""c)(1))
-                Case cmd.ToLower.StartsWith("command -exec")
-                    Dim p1 As String = cmd.Split({"(", ","}, StringSplitOptions.None)(1)
-                    Dim p2 As String = cmd.Split({",", ")"}, StringSplitOptions.None)(2)
-                    sText = "Executing Command: " & p1
-                    sText = vbNewLine & "Command Output: " & vbNewLine & Aire.API.Sys.Process.ExecuteCommandWithOutput(p1, p2)
                     'Case cmd.ToLower.StartsWith("launch") 'todo
                     'Case cmd.ToLower.StartsWith("get") 'todo
                 Case "aire -user -get permissionlevel"
@@ -142,40 +131,53 @@
                     sText = "Aire OS Version: " & Aire.API.Sys.Info.OS.Version
                 Case "aire -release"
                     sText = "Aire OS Release: " & Aire.API.Sys.Info.OS.Release
-                Case cmd.ToLower.StartsWith("aire -notification toast")
-                    sText = "Displaying Toast: " & cmd.Split(""""c)(1)
-                    Dim bb As New Aire.API.Toast(cmd.Split(""""c)(1), 2500, "Terminal")
-                Case cmd.ToLower.StartsWith("aire -notification msgbox")
-                    sText = "Displaying Message Box: " & cmd.Split(""""c)(1)
-                    Dim bb As New Aire.API.MessageBox(cmd.Split(""""c)(1), "Terminal")
-                Case cmd.ToLower.StartsWith("aire -volume set")
-                    Dim bb As Integer = CInt(cmd.Split(""""c)(1))
-                    Aire.API.Audio.Volume.SetVolume(bb)
-                    sText = "Set Volume To: " & bb & "%"
                 Case "aire -volume get"
                     sText = "Volume: " & Aire.API.Audio.Volume.GetVolume
-                Case cmd.ToLower.StartsWith("log -write")
-                    sText = "Writing to Log: " & cmd.Split(""""c)(1)
-                    Aire.API.Sys.Logging.Log.Write(cmd.Split(""""c)(1), Aire.API.Sys.Logging.Log.LogSource.General)
-                Case cmd.ToLower.StartsWith("echo")
-                    sText = cmd.Split(""""c)(1)
-                Case cmd.ToLower.StartsWith("file -create")
-                    sText = "Creating File: " & cmd.Split(""""c)(1)
-                    System.IO.File.Create(cmd.Split(""""c)(1))
-                Case cmd.ToLower.StartsWith("file -delete")
-                    sText = "Deleting File: " & cmd.Split(""""c)(1)
-                    System.IO.File.Delete(cmd.Split(""""c)(1))
-                Case cmd.ToLower.StartsWith("directory -create")
-                    sText = "Creating Directory: " & cmd.Split(""""c)(1)
-                    System.IO.Directory.CreateDirectory(cmd.Split(""""c)(1))
-                Case cmd.ToLower.StartsWith("directory -delete")
-                    sText = "Deleting Directory: " & cmd.Split(""""c)(1)
-                    System.IO.Directory.Delete(cmd.Split(""""c)(1))
-                Case cmd.ToLower.StartsWith("directory -delete recursive")
-                    sText = "Deleting Directory Recursively: " & cmd.Split(""""c)(1)
-                    System.IO.Directory.Delete(cmd.Split(""""c)(1), True)
                 Case Else
-                    sText = "Unrecognized command. Enter HELP for help."
+                    If cmd.ToLower.StartsWith("terminal -title") Then
+                        sText = "Terminal Title Set To: " & cmd.Split(""""c)(1)
+                        cmdform.Text = cmd.Split(""""c)(1)
+                    ElseIf cmd.ToLower.StartsWith("process -start") Then
+                        sText = "Starting Process: " & cmd.Split(""""c)(1)
+                        Aire.API.Sys.Process.Start(cmd.Split(""""c)(1))
+                    ElseIf cmd.ToLower.StartsWith("command -exec") Then
+                        Dim p1 As String = cmd.Split({"(", ","}, StringSplitOptions.None)(1)
+                        Dim p2 As String = cmd.Split({",", ")"}, StringSplitOptions.None)(2)
+                        sText = "Executing Command: " & p1
+                        sText = vbNewLine & "Command Output: " & vbNewLine & Aire.API.Sys.Process.ExecuteCommandWithOutput(p1, p2)
+                    ElseIf cmd.ToLower.StartsWith("aire -notification toast") Then
+                        sText = "Displaying Toast: " & cmd.Split(""""c)(1)
+                        Dim bb As New Aire.API.Toast(cmd.Split(""""c)(1), 2500, "Terminal")
+                    ElseIf cmd.ToLower.StartsWith("aire -notification msgbox") Then
+                        sText = "Displaying Message Box: " & cmd.Split(""""c)(1)
+                        Dim bb As New Aire.API.MessageBox(cmd.Split(""""c)(1), "Terminal")
+                    ElseIf cmd.ToLower.StartsWith("aire -volume set") Then
+                        Dim bb As Integer = CInt(cmd.Split(""""c)(1))
+                        Aire.API.Audio.Volume.SetVolume(bb)
+                        sText = "Set Volume To: " & bb & "%"
+                    ElseIf cmd.ToLower.StartsWith("log -write") Then
+                        sText = "Writing to Log: " & cmd.Split(""""c)(1)
+                        Aire.API.Sys.Logging.Log.Write(cmd.Split(""""c)(1), Aire.API.Sys.Logging.Log.LogSource.General)
+                    ElseIf cmd.ToLower.StartsWith("echo") Then
+                        sText = cmd.Split(""""c)(1)
+                    ElseIf cmd.ToLower.StartsWith("file -create") Then
+                        sText = "Creating File: " & cmd.Split(""""c)(1)
+                        System.IO.File.Create(cmd.Split(""""c)(1))
+                    ElseIf cmd.ToLower.StartsWith("file -delete") Then
+                        sText = "Deleting File: " & cmd.Split(""""c)(1)
+                        System.IO.File.Delete(cmd.Split(""""c)(1))
+                    ElseIf cmd.ToLower.StartsWith("directory -create") Then
+                        sText = "Creating Directory: " & cmd.Split(""""c)(1)
+                        System.IO.Directory.CreateDirectory(cmd.Split(""""c)(1))
+                    ElseIf cmd.ToLower.StartsWith("directory -delete") Then
+                        sText = "Deleting Directory: " & cmd.Split(""""c)(1)
+                        System.IO.Directory.Delete(cmd.Split(""""c)(1))
+                    ElseIf cmd.ToLower.StartsWith("directory -delete recursive") Then
+                        sText = "Deleting Directory Recursively: " & cmd.Split(""""c)(1)
+                        System.IO.Directory.Delete(cmd.Split(""""c)(1), True)
+                    Else
+                        sText = "Unrecognized command. Enter HELP for help."
+                    End If
             End Select
         Catch ex As Exception
             sText = "There was an error attempting to perform the command or action."
