@@ -18,6 +18,7 @@
 "terminal -exit all -- Exits the terminal application" & vbNewLine & _
 "terminal -externalcmd -allow true -- Allows external commands to be run" & vbNewLine & _
 "terminal -externalcmd -allow false -- Does not allow external commands to be run" & vbNewLine & _
+"terminal -externalcmd clear -- Clears the external commands list" & vbNewLine & _
 "terminal -menu show -- Displays the terminal menu" & vbNewLine & _
 "terminal -menu hide -- Hides the terminal menu" & vbNewLine & _
 "terminal -topmost true -- Makes the terminal display above all other windows" & vbNewLine & _
