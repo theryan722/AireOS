@@ -14,6 +14,7 @@
         TextBox1.ForeColor = ConfigManager.GetForeColor
         SetTopmost(ConfigManager.GetIfTopmost)
         SetFullscreen(ConfigManager.GetIfFullscreen)
+        allowexternal = ConfigManager.GetIfAllowExternal
     End Sub
 
     Public Sub SetTopmost(ByVal val As Boolean)
