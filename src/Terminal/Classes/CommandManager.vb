@@ -103,6 +103,23 @@
                 Case cmd.ToLower.StartsWith("log -write")
                     sText = "Writing to Log: " & cmd.Split(""""c)(1)
                     Aire.API.Sys.Logging.Log.Write(cmd.Split(""""c)(1), Aire.API.Sys.Logging.Log.LogSource.General)
+                Case cmd.ToLower.StartsWith("echo")
+                    sText = cmd.Split(""""c)(1)
+                Case cmd.ToLower.StartsWith("file -create")
+                    sText = "Creating File: " & cmd.Split(""""c)(1)
+                    System.IO.File.Create(cmd.Split(""""c)(1))
+                Case cmd.ToLower.StartsWith("file -delete")
+                    sText = "Deleting File: " & cmd.Split(""""c)(1)
+                    System.IO.File.Delete(cmd.Split(""""c)(1))
+                Case cmd.ToLower.StartsWith("directory -create")
+                    sText = "Creating Directory: " & cmd.Split(""""c)(1)
+                    System.IO.Directory.CreateDirectory(cmd.Split(""""c)(1))
+                Case cmd.ToLower.StartsWith("directory -delete")
+                    sText = "Deleting Directory: " & cmd.Split(""""c)(1)
+                    System.IO.Directory.Delete(cmd.Split(""""c)(1))
+                Case cmd.ToLower.StartsWith("directory -delete recursive")
+                    sText = "Deleting Directory Recursively: " & cmd.Split(""""c)(1)
+                    System.IO.Directory.Delete(cmd.Split(""""c)(1), True)
                 Case Else
                     sText = "Unrecognized command. Enter HELP for help."
             End Select
