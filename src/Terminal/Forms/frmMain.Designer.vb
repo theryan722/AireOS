@@ -33,6 +33,8 @@ Partial Class frmMain
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CopyAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FullScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TopmostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,8 +44,6 @@ Partial Class frmMain
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.CopyAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -98,14 +98,25 @@ Partial Class frmMain
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(116, 6)
+        '
+        'CopyAllToolStripMenuItem
+        '
+        Me.CopyAllToolStripMenuItem.Name = "CopyAllToolStripMenuItem"
+        Me.CopyAllToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.CopyAllToolStripMenuItem.Text = "Copy All"
         '
         'ViewToolStripMenuItem
         '
@@ -117,13 +128,13 @@ Partial Class frmMain
         'FullScreenToolStripMenuItem
         '
         Me.FullScreenToolStripMenuItem.Name = "FullScreenToolStripMenuItem"
-        Me.FullScreenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FullScreenToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.FullScreenToolStripMenuItem.Text = "Full Screen"
         '
         'TopmostToolStripMenuItem
         '
         Me.TopmostToolStripMenuItem.Name = "TopmostToolStripMenuItem"
-        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.TopmostToolStripMenuItem.Text = "Topmost"
         '
         'AboutToolStripMenuItem
@@ -136,7 +147,7 @@ Partial Class frmMain
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
         'TextBox1
@@ -169,17 +180,6 @@ Partial Class frmMain
         Me.PasteToolStripMenuItem1.Name = "PasteToolStripMenuItem1"
         Me.PasteToolStripMenuItem1.Size = New System.Drawing.Size(102, 22)
         Me.PasteToolStripMenuItem1.Text = "Paste"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
-        '
-        'CopyAllToolStripMenuItem
-        '
-        Me.CopyAllToolStripMenuItem.Name = "CopyAllToolStripMenuItem"
-        Me.CopyAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CopyAllToolStripMenuItem.Text = "Copy All"
         '
         'frmMain
         '

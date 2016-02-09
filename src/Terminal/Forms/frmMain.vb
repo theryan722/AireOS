@@ -17,7 +17,8 @@
 #Region "File"
 
     Private Sub NewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewWindowToolStripMenuItem.Click
-
+        Dim newb As New frmMain
+        newb.Show()
     End Sub
 
     Private Sub CloseWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseWindowToolStripMenuItem.Click
