@@ -38,7 +38,7 @@ Public Class SettingsReader
     Public Shared Function GetIfTopmost() As Boolean
         For Each item As String In ReadConfig()
             If item.StartsWith("TM:") Then
-                Return If(item.Split(":")(1) = "T", True, False)
+                Return If(item.Split(":")(1) = "True", True, False)
             End If
         Next
     End Function
@@ -46,7 +46,7 @@ Public Class SettingsReader
     Public Shared Function GetIfFullscreen() As Boolean
         For Each item As String In ReadConfig()
             If item.StartsWith("FS:") Then
-                Return If(item.Split(":")(1) = "T", True, False)
+                Return If(item.Split(":")(1) = "True", True, False)
             End If
         Next
     End Function
@@ -54,7 +54,7 @@ Public Class SettingsReader
     Public Shared Function GetIfAllowExternal() As Boolean
         For Each item As String In ReadConfig()
             If item.StartsWith("AE:") Then
-                Return If(item.Split(":")(1) = "T", True, False)
+                Return If(item.Split(":")(1) = "True", True, False)
             End If
         Next
     End Function
@@ -78,7 +78,10 @@ Public Class SettingsReader
     End Sub
 
     Public Shared Sub SetIfTopmost(ByVal topmost As Boolean)
-
+        Dim ss() As String
+        ss = File.ReadAllLines(setloc)
+        ss(Array.IndexOf(ss, Array.Find(ss, Function(x) (x.StartsWith("TM:"))))) = "TM:" & topmost.ToString
+        File.WriteAllLines(setloc, ss)
     End Sub
 
     Public Shared Sub SetIfFullscreen(ByVal fullscreen As Boolean)
