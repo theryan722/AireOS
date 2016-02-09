@@ -18,7 +18,11 @@
 #Region "Get"
 
     Public Shared Function GetBackColor() As Color
-        
+        For Each item As String In ReadConfig()
+            If item.StartsWith("BC:") Then
+                Return Color.FromArgb(item.Split(":")(1))
+            End If
+        Next
     End Function
 
     Public Shared Function GetForeColor() As Color
