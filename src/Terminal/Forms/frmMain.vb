@@ -72,7 +72,7 @@
 #Region "Context Menu Strip"
 
     Private Sub CopyToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem1.Click
-
+        TextBox1.Copy()
     End Sub
 
     Private Sub PasteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem1.Click
