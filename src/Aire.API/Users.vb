@@ -82,12 +82,12 @@ Namespace User
                 End Set
             End Property
 
-            Public Shared Property ProfilePicture() As System.Drawing.Image
+            Public Shared Property ProfilePicture() As String
                 Get
-
+                    Return User.Current.Info.GetDataStorageLocation & "/profile.jpg"
                 End Get
-                Set(value As System.Drawing.Image)
-
+                Set(value As String)
+                    System.IO.File.Copy(value, User.Current.Info.GetDataStorageLocation & "/profile.jpg", True)
                 End Set
             End Property
 
