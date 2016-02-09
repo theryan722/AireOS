@@ -170,6 +170,7 @@
     </Compile>
     <Compile Include="Network.vb" />
     <Compile Include="CryptographyManager.vb" />
+    <Compile Include="Notifications.vb" />
     <Compile Include="Power.vb" />
     <Compile Include="ProcessManager.vb" />
     <Compile Include="SystemInfo.vb" />
