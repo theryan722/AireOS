@@ -88,21 +88,21 @@
                     sText = "Aire OS Version: " & Aire.API.Sys.Info.OS.Version
                 Case "aire -release"
                     sText = "Aire OS Release: " & Aire.API.Sys.Info.OS.Release
-                Case cmd.ToLower.StartsWith("log -write")
-                    sText = "Writing to Log: " & cmd.Split(""""c)(1)
-                    Aire.API.Sys.Logging.Log.Write(cmd.Split(""""c)(1), Aire.API.Sys.Logging.Log.LogSource.General)
                 Case cmd.ToLower.StartsWith("aire -notification toast")
                     sText = "Displaying Toast: " & cmd.Split(""""c)(1)
                     Dim bb As New Aire.API.Toast(cmd.Split(""""c)(1), 2500, "Terminal")
                 Case cmd.ToLower.StartsWith("aire -notification msgbox")
                     sText = "Displaying Message Box: " & cmd.Split(""""c)(1)
                     Dim bb As New Aire.API.MessageBox(cmd.Split(""""c)(1), "Terminal")
-                Case cmd.ToLower.StartsWith("aire -volume -set")
+                Case cmd.ToLower.StartsWith("aire -volume set")
                     Dim bb As Integer = CInt(cmd.Split(""""c)(1))
                     Aire.API.Audio.Volume.SetVolume(bb)
                     sText = "Set Volume To: " & bb & "%"
                 Case "aire -volume get"
                     sText = "Volume: " & Aire.API.Audio.Volume.GetVolume
+                Case cmd.ToLower.StartsWith("log -write")
+                    sText = "Writing to Log: " & cmd.Split(""""c)(1)
+                    Aire.API.Sys.Logging.Log.Write(cmd.Split(""""c)(1), Aire.API.Sys.Logging.Log.LogSource.General)
                 Case Else
                     sText = "Unrecognized command. Enter HELP for help."
             End Select
