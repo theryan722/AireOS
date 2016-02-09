@@ -65,6 +65,9 @@
                 Case "terminal -externalcmd -allow false"
                     sText = "Terminal Allow External Commands set to false"
                     cmdform.allowexternal = False
+                Case "terminal -externalcmd clear"
+                    sText = "Cleared External Commands list"
+                    DataManager.ClearExternalCommands()
                 Case "terminal -exit"
                     sText = "Exiting Window"
                     cmdform.Close()

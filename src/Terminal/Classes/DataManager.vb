@@ -21,4 +21,12 @@
         End If
     End Sub
 
+    Public Shared Sub ClearExternalCommands()
+
+    End Sub
+
+    Public Shared Sub AddToExternalCommands(ByVal cmd As String)
+
+    End Sub
+
 End Class
