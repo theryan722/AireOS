@@ -7,8 +7,10 @@
                 Case "clear"
                     sText = ""
                     cmdform.TextBox1.Clear()
-                Case "help"
+                Case "help" 'todo
                 Case "about"
+                    sText = "Displaying about information"
+                    cmdform.AboutToolStripMenuItem1.PerformClick()
                 Case "terminal -exit window"
                     sText = "Exiting Window"
                     cmdform.Close()
@@ -49,8 +51,16 @@
                     Dim p2 As String = cmd.Split({",", ")"}, StringSplitOptions.None)(2)
                     sText = "Executing Command: " & p1
                     sText = vbNewLine & "Command Output: " & vbNewLine & Aire.API.Sys.Process.ExecuteCommandWithOutput(p1, p2)
-                Case cmd.ToLower.StartsWith("launch")
-                Case cmd.ToLower.StartsWith("get")
+                Case cmd.ToLower.StartsWith("launch") 'todo
+                Case cmd.ToLower.StartsWith("get") 'todo
+                Case "aire -user -get permissionlevel"
+                    sText = "Permission Level: " & Aire.API.User.Current.Info.GetPermissionLevel
+                Case "aire -user -get datastoragelocation"
+                    sText = "Data Storage Location: " & Aire.API.User.Current.Info.GetDataStorageLocation
+                Case "aire -user -get loglocation"
+                    sText = "Log Location: " & Aire.API.User.Current.Info.GetLogLocation
+                Case "aire -user -get passwordhint"
+                    sText = "Password Hint: " & Aire.API.User.Current.Info.GetPasswordHint
                 Case "aire -user logout"
                     sText = "Logging out User"
                     Aire.API.User.Current.Actions.LogoutUser()
