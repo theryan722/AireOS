@@ -93,10 +93,10 @@ Namespace User
 
             Public Shared Property ProfilePicture() As String
                 Get
-                    Return User.Current.Info.GetDataStorageLocation & "/profile.jpg"
+                    Return User.Current.Info.GetDataStorageLocation & "/Data/profile.jpg"
                 End Get
                 Set(value As String)
-                    System.IO.File.Copy(value, User.Current.Info.GetDataStorageLocation & "/profile.jpg", True)
+                    System.IO.File.Copy(value, User.Current.Info.GetDataStorageLocation & "/Data/profile.jpg", True)
                 End Set
             End Property
 
