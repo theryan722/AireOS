@@ -12,9 +12,8 @@
     Public Sub LoadSettings()
         TextBox1.BackColor = ConfigManager.GetBackColor
         TextBox1.ForeColor = ConfigManager.GetForeColor
-
-        Me.TopMost = ConfigManager.GetIfTopmost
-
+        SetTopmost(ConfigManager.GetIfTopmost)
+        SetFullscreen(ConfigManager.GetIfFullscreen)
     End Sub
 
     Public Sub SetTopmost(ByVal val As Boolean)
