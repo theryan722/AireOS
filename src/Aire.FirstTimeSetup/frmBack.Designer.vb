@@ -32,7 +32,10 @@ Partial Class frmBack
         Me.ClientSize = New System.Drawing.Size(713, 584)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmBack"
-        Me.Text = "frmBack"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
+        Me.Text = "Aire.FirstTimeSetup.frmBack"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub

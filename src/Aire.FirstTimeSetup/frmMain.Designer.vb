@@ -38,6 +38,7 @@ Partial Class frmMain
         Me.WizardControl1.CancelButtonVisible = True
         Me.WizardControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.WizardControl1.EulaButtonEnabled = False
+        Me.WizardControl1.EulaButtonText = "eula"
         Me.WizardControl1.EulaButtonVisible = False
         Me.WizardControl1.HelpButtonEnabled = True
         Me.WizardControl1.HelpButtonVisible = True
@@ -50,9 +51,11 @@ Partial Class frmMain
         '
         'StartStep1
         '
-        Me.StartStep1.BindingImage = CType(resources.GetObject("StartStep1.BindingImage"), System.Drawing.Image)
-        Me.StartStep1.Icon = CType(resources.GetObject("StartStep1.Icon"), System.Drawing.Image)
+        Me.StartStep1.BindingImage = Nothing
+        Me.StartStep1.Icon = Nothing
         Me.StartStep1.Name = "StartStep1"
+        Me.StartStep1.Subtitle = "This setup will help you create a user account and get started."
+        Me.StartStep1.Title = "Welcome to AireOS"
         '
         'LicenceStep1
         '
@@ -75,14 +78,14 @@ Partial Class frmMain
         Me.FinishStep1.BindingImage = CType(resources.GetObject("FinishStep1.BindingImage"), System.Drawing.Image)
         Me.FinishStep1.Name = "FinishStep1"
         '
-        'Form1
+        'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(550, 435)
         Me.Controls.Add(Me.WizardControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Name = "Form1"
+        Me.Name = "frmMain"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
