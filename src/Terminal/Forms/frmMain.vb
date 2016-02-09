@@ -76,7 +76,8 @@
 #Region "About"
 
     Private Sub AboutToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem1.Click
-
+        Dim newb As New dlgAbout
+        newb.ShowDialog()
     End Sub
 
 #End Region

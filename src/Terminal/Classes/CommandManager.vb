@@ -8,6 +8,50 @@
                     sText = ""
                     cmdform.TextBox1.Clear()
                 Case "help" 'todo
+                    sText = "Basic Command List" & vbNewLine & _
+"-------------------" & vbNewLine & _
+"clear -- Clears the terminal" & vbNewLine & _
+"help -- Displays help" & vbNewLine & _
+"terminal -about -- Displays Information about Terminal" & vbNewLine & _
+"terminal -about version -- Displays the terminal version" & vbNewLine & _
+"terminal -exit window -- Closes the current terminal window" & vbNewLine & _
+"terminal -exit all -- Exits the terminal application" & vbNewLine & _
+"terminal -menu show -- Displays the terminal menu" & vbNewLine & _
+"terminal -menu hide -- Hides the terminal menu" & vbNewLine & _
+"terminal -topmost true -- Makes the terminal display above all other windows" & vbNewLine & _
+"terminal -topmost false -- Makes the terminal display like a normal form" & vbNewLine & _
+"terminal -windowstate minimize -- Minimizes the terminal" & vbNewLine & _
+"terminal -windowstate maximize -- Maximizes the terminal" & vbNewLine & _
+"terminal -windowstate normal -- Displays the terminal as normal" & vbNewLine & _
+"terminal -title ""TITLEHERE"" -- Sets the terminal title" & vbNewLine & _
+"terminal -fullscreen true -- Displays the terminal in fullscreen" & vbNewLine & _
+"terminal -fullscreen false -- Returns the terminal to normal" & vbNewLine & _
+"process -start ""PROCESSHERE"" -- Starts a process" & vbNewLine & _
+"command -exec (PROCESS,ARGUMENTS) -- Executes a command, displays any output" & vbNewLine & _
+"aire -user -get permissionlevel -- Displays the current user's permission level" & vbNewLine & _
+"aire -user -get datastoragelocation -- Displays the current user's data storage location" & vbNewLine & _
+"aire -user -get loglocation -- Displays the current user's log location" & vbNewLine & _
+"aire -user -get passwordhint -- Displays the current user's password hint" & vbNewLine & _
+"aire -user logout -- Logs out the current user" & vbNewLine & _
+"aire -user lock -- Locks the current user" & vbNewLine & _
+"aire -user switch -- Switches the user" & vbNewLine & _
+"aire -power shutdown -- Shuts down the computer" & vbNewLine & _
+"aire -power restart -- Restarts the computer" & vbNewLine & _
+"aire -power sleep -- Puts the computer to sleep" & vbNewLine & _
+"aire -power hibernate -- Puts the computer in hibernation" & vbNewLine & _
+"aire -version -- Displays the OS version" & vbNewLine & _
+"aire -release -- Displays the OS release" & vbNewLine & _
+"aire -notification toast ""TEXTHERE"" -- Displays a toast notification" & vbNewLine & _
+"aire -notification msgbox ""TEXTHERE"" -- Displays a messagebox notification" & vbNewLine & _
+"aire -volume set VOLUME -- Sets the volume" & vbNewLine & _
+"aire -volume get -- Displays the volume" & vbNewLine & _
+"log -write ""TEXTHERE"" -- Writes to the system log" & vbNewLine & _
+"echo ""TEXTHERE"" -- Displays the specified text" & vbNewLine & _
+"file -create ""PATHHERE"" -- Creates a file" & vbNewLine & _
+"file -delete ""PATHHERE"" -- Deletes a file" & vbNewLine & _
+"directory -create ""PATHHERE"" -- Creates a directory" & vbNewLine & _
+"directory -delete ""PATHHERE"" -- Deletes a directory" & vbNewLine & _
+"directory -delete recursive ""PATHHERE"" -- Recursively deletes a directory (all sub folders and files)"
                 Case "terminal -about"
                     sText = "Displaying about information"
                     cmdform.AboutToolStripMenuItem1.PerformClick()
@@ -42,6 +86,16 @@
                 Case "terminal -windowstate normal"
                     sText = "Terminal WindowState Normal"
                     cmdform.WindowState = FormWindowState.Normal
+                Case "terminal -fullscreen true"
+                    sText = "Terminal Fullscreen set to true"
+                    cmdform.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+                    cmdform.WindowState = FormWindowState.Maximized
+                    cmdform.FullScreenToolStripMenuItem.Checked = True
+                Case "terminal -fullscreen false"
+                    sText = "Terminal Fullscreen set to false"
+                    cmdform.FormBorderStyle = Windows.Forms.FormBorderStyle.Sizable
+                    cmdform.WindowState = FormWindowState.Normal
+                    cmdform.FullScreenToolStripMenuItem.Checked = False
                 Case cmd.ToLower.StartsWith("terminal -title")
                     sText = "Terminal Title Set To: " & cmd.Split(""""c)(1)
                     cmdform.Text = cmd.Split(""""c)(1)
@@ -126,7 +180,7 @@
         Catch ex As Exception
             sText = "There was an error attempting to perform the command or action."
         End Try
-        cmdform.TextBox1.Text = cmdform.TextBox1.Text & vbNewLine & vbNewLine & sText & vbNewLine & vbNewLine & "Studio:>"
+        cmdform.TextBox1.Text = cmdform.TextBox1.Text & vbNewLine & sText & vbNewLine & "Terminal@" & Aire.API.User.Current.Info.GetUsername & ":>"
         cmdform.TextBox1.SelectionStart = Len(cmdform.TextBox1.Text)
     End Sub
 
