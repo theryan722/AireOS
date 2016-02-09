@@ -29,11 +29,12 @@
     End Sub
 
     Private Shared Sub SetDefaultSettings(ByVal loc As String)
-        'launchbarcolor
-        'appbarcolor
-        'backgroundimagelayout
-        'lognotificationtext
-        'confirmshutdown
+        'System.IO.File.WriteAllText(loc & "/Data/Config/", "")
+        System.IO.File.WriteAllText(loc & "/Data/Config/launchbarcolor.txt", "-6703919")
+        System.IO.File.WriteAllText(loc & "/Data/Config/appbarcolor.txt", "-6703919")
+        System.IO.File.WriteAllText(loc & "/Data/Config/backgroundimagelayout.txt", "Stretch")
+        System.IO.File.WriteAllText(loc & "/Data/Config/lognotificationtext.txt", "True")
+        System.IO.File.WriteAllText(loc & "/Data/Config/confirmshutdown.txt", "True")
     End Sub
 
 #End Region
