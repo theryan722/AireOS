@@ -34,7 +34,11 @@
     End Function
 
     Public Shared Function GetIfTopmost() As Boolean
-
+        For Each item As String In ReadConfig()
+            If item.StartsWith("TM:") Then
+                Return If(item.Split(":")(1) = "T", True, False)
+            End If
+        Next
     End Function
 
     Public Shared Function GetIfFullscreen() As Boolean
