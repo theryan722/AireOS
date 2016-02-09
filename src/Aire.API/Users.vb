@@ -32,7 +32,14 @@ Namespace User
                 Return Aire.DataManager.Databases.UserData.GetPasswordHint(GetUsername)
             End Function
 
-
+            Public Shared Function GetAppList() As List(Of String)
+                Dim TextLine As New List(Of String)
+                Dim objReader As New System.IO.StreamReader(Aire.DataManager.Databases.UserData.GetDataStorageLoc(GetUsername) & "/Data/applist.txt")
+                Do While objReader.Peek() <> -1
+                    TextLine.Add(objReader.ReadLine())
+                Loop
+                Return TextLine
+            End Function
 
         End Class
 
@@ -41,10 +48,10 @@ Namespace User
 
             Public Shared Property DesktopBackgroundImage() As String
                 Get
-                    Return User.Current.Info.GetDataStorageLocation & "/bg.jpg"
+                    Return User.Current.Info.GetDataStorageLocation & "/Data/bg.jpg"
                 End Get
                 Set(value As String)
-                    System.IO.File.Copy(value, User.Current.Info.GetDataStorageLocation & "/bg.jpg", True)
+                    System.IO.File.Copy(value, User.Current.Info.GetDataStorageLocation & "/Data/bg.jpg", True)
                 End Set
             End Property
 
