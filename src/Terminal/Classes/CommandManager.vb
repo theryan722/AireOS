@@ -8,9 +8,11 @@
                     sText = ""
                     cmdform.TextBox1.Clear()
                 Case "help" 'todo
-                Case "about"
+                Case "terminal -about"
                     sText = "Displaying about information"
                     cmdform.AboutToolStripMenuItem1.PerformClick()
+                Case "terminal -about version"
+                    sText = "Terminal Version: " & My.Application.Info.Version.ToString
                 Case "terminal -exit window"
                     sText = "Exiting Window"
                     cmdform.Close()
