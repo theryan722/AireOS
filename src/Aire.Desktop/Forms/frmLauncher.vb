@@ -107,6 +107,13 @@
             newb.Dock = DockStyle.Top
             pnl_applications.Controls.Add(newb)
         Next
+        'Load User Applications
+        For Each item As String In Aire.API.User.Current.Info.GetAppList
+            Dim arr() As String = item.Split("|")
+            Dim newb As New LauncherItem(arr(0), arr(1))
+            newb.Dock = DockStyle.Top
+            pnl_applications.Controls.Add(newb)
+        Next
     End Sub
 
     Private Sub LoadUI()
