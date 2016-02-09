@@ -84,10 +84,10 @@ Namespace User
 
             Public Shared Property LogNotificationText() As Boolean
                 Get
-
+                    Return Convert.ToBoolean(System.IO.File.ReadAllText(User.Current.Info.GetDataStorageLocation & "/Data/Config/lognotificationtext.txt"))
                 End Get
                 Set(value As Boolean)
-
+                    System.IO.File.WriteAllText(User.Current.Info.GetDataStorageLocation & "/Data/Config/lognotificationtext.txt", value.ToString)
                 End Set
             End Property
 

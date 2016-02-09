@@ -27,7 +27,8 @@
     Private Shared Sub SetDefaultSettings(ByVal loc As String)
         'launchbarcolor
         'appbarcolor
-
+        'backgroundimagelayout
+        'lognotificationtext
     End Sub
 
 #End Region
