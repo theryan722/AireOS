@@ -12,6 +12,7 @@
         System.IO.File.Create(loc & "/log.txt")
         System.IO.File.Create(loc & "/Apps/Terminal/config.txt")
         System.IO.File.Create(loc & "/Apps/Terminal/external.txt")
+        System.IO.File.Create(loc & "/applist.txt")
     End Sub
 
     Private Shared Sub CopyDefaultFiles(ByVal loc As String)
