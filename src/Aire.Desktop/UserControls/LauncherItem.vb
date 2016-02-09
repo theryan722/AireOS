@@ -47,7 +47,7 @@
     End Sub
 
     Private Sub LauncherItem_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
-
+        LaunchFile()
     End Sub
 
 #End Region
