@@ -17,6 +17,10 @@
         System.IO.File.Create(loc & "/Data/applist.txt")
         System.IO.File.Create(loc & "/Data/Config/launchbarcolor.txt")
         System.IO.File.Create(loc & "/Data/Config/appbarcolor.txt")
+        System.IO.File.Create(loc & "/Data/Config/backgroundimagelayout.txt")
+        System.IO.File.Create(loc & "/Data/Config/lognotificationtext.txt")
+        System.IO.File.Create(loc & "/Data/Config/confirmshutdown.txt")
+        'System.IO.File.Create(loc & "/Data/Config/")
     End Sub
 
     Private Shared Sub CopyDefaultFiles(ByVal loc As String)
