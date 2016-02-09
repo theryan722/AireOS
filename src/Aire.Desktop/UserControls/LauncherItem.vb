@@ -2,7 +2,16 @@
 
 #Region "Properties/Variables"
 
+    Private ftitle As String
+    Public Property Title As String
+        Get
 
+        End Get
+        Set(value As String)
+
+        End Set
+    End Property
+    Public Property FileLocation As String
 
 #End Region
 
