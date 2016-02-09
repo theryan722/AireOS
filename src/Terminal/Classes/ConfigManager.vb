@@ -4,11 +4,11 @@
 
 #Region "Helper"
 
-    Private Shared Function ReadConfig() As String
-        Dim TextLine As String
+    Private Shared Function ReadConfig() As List(Of String)
+        Dim TextLine As New List(Of String)
         Dim objReader As New System.IO.StreamReader(setloc)
         Do While objReader.Peek() <> -1
-            TextLine = TextLine & objReader.ReadLine() & vbNewLine
+            TextLine.Add(objReader.ReadLine())
         Loop
         Return TextLine
     End Function
