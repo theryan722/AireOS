@@ -189,6 +189,8 @@ Partial Class frmMain
         Me.Step_Network.BindingImage = CType(resources.GetObject("Step_Network.BindingImage"), System.Drawing.Image)
         Me.Step_Network.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Step_Network.Name = "Step_Network"
+        Me.Step_Network.Subtitle = "Setup network settings"
+        Me.Step_Network.Title = "Network"
         '
         'Step_User
         '
