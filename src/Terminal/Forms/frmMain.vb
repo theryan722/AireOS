@@ -81,6 +81,10 @@
         newb.ShowDialog()
     End Sub
 
+    Private Sub OptionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionsToolStripMenuItem.Click
+
+    End Sub
+
 #End Region
 
 #End Region
