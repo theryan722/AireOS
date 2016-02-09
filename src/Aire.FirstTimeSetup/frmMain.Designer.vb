@@ -28,7 +28,7 @@ Partial Class frmMain
         Me.Step_Language = New WizardBase.IntermediateStep()
         Me.FinishStep1 = New WizardBase.FinishStep()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.tab_language_combo_language = New System.Windows.Forms.ComboBox()
+        Me.combo_language = New System.Windows.Forms.ComboBox()
         Me.Step_Time = New WizardBase.IntermediateStep()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.combo_timezone = New System.Windows.Forms.ComboBox()
@@ -39,13 +39,26 @@ Partial Class frmMain
         Me.Step_Network = New WizardBase.IntermediateStep()
         Me.Step_User = New WizardBase.IntermediateStep()
         Me.Step_ComputerInfo = New WizardBase.IntermediateStep()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txt_computername = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.check_hidden = New System.Windows.Forms.CheckBox()
+        Me.txt_username = New System.Windows.Forms.TextBox()
+        Me.txt_password = New System.Windows.Forms.TextBox()
+        Me.txt_confirm = New System.Windows.Forms.TextBox()
+        Me.txt_passwordhint = New System.Windows.Forms.TextBox()
         Me.Step_Language.SuspendLayout()
         Me.Step_Time.SuspendLayout()
+        Me.Step_User.SuspendLayout()
+        Me.Step_ComputerInfo.SuspendLayout()
         Me.SuspendLayout()
         '
         'WizardControl1
         '
-        Me.WizardControl1.BackButtonEnabled = False
+        Me.WizardControl1.BackButtonEnabled = True
         Me.WizardControl1.BackButtonVisible = True
         Me.WizardControl1.CancelButtonEnabled = True
         Me.WizardControl1.CancelButtonVisible = True
@@ -73,7 +86,7 @@ Partial Class frmMain
         'Step_Language
         '
         Me.Step_Language.BindingImage = CType(resources.GetObject("Step_Language.BindingImage"), System.Drawing.Image)
-        Me.Step_Language.Controls.Add(Me.tab_language_combo_language)
+        Me.Step_Language.Controls.Add(Me.combo_language)
         Me.Step_Language.Controls.Add(Me.Label1)
         Me.Step_Language.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Step_Language.Name = "Step_Language"
@@ -94,16 +107,16 @@ Partial Class frmMain
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Language:"
         '
-        'tab_language_combo_language
+        'combo_language
         '
-        Me.tab_language_combo_language.Enabled = False
-        Me.tab_language_combo_language.FormattingEnabled = True
-        Me.tab_language_combo_language.Items.AddRange(New Object() {"English"})
-        Me.tab_language_combo_language.Location = New System.Drawing.Point(67, 80)
-        Me.tab_language_combo_language.Name = "tab_language_combo_language"
-        Me.tab_language_combo_language.Size = New System.Drawing.Size(82, 21)
-        Me.tab_language_combo_language.TabIndex = 1
-        Me.tab_language_combo_language.Text = "English"
+        Me.combo_language.Enabled = False
+        Me.combo_language.FormattingEnabled = True
+        Me.combo_language.Items.AddRange(New Object() {"English"})
+        Me.combo_language.Location = New System.Drawing.Point(67, 80)
+        Me.combo_language.Name = "combo_language"
+        Me.combo_language.Size = New System.Drawing.Size(82, 21)
+        Me.combo_language.TabIndex = 1
+        Me.combo_language.Text = "English"
         '
         'Step_Time
         '
@@ -180,14 +193,121 @@ Partial Class frmMain
         'Step_User
         '
         Me.Step_User.BindingImage = CType(resources.GetObject("Step_User.BindingImage"), System.Drawing.Image)
+        Me.Step_User.Controls.Add(Me.txt_passwordhint)
+        Me.Step_User.Controls.Add(Me.txt_confirm)
+        Me.Step_User.Controls.Add(Me.txt_password)
+        Me.Step_User.Controls.Add(Me.txt_username)
+        Me.Step_User.Controls.Add(Me.check_hidden)
+        Me.Step_User.Controls.Add(Me.Label9)
+        Me.Step_User.Controls.Add(Me.Label8)
+        Me.Step_User.Controls.Add(Me.Label7)
+        Me.Step_User.Controls.Add(Me.Label6)
         Me.Step_User.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Step_User.Name = "Step_User"
+        Me.Step_User.Subtitle = "Setup your user account."
+        Me.Step_User.Title = "User Account"
         '
         'Step_ComputerInfo
         '
         Me.Step_ComputerInfo.BindingImage = CType(resources.GetObject("Step_ComputerInfo.BindingImage"), System.Drawing.Image)
+        Me.Step_ComputerInfo.Controls.Add(Me.txt_computername)
+        Me.Step_ComputerInfo.Controls.Add(Me.Label5)
         Me.Step_ComputerInfo.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Step_ComputerInfo.Name = "Step_ComputerInfo"
+        Me.Step_ComputerInfo.Subtitle = ""
+        Me.Step_ComputerInfo.Title = "Computer Info"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(3, 70)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(86, 13)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "Computer Name:"
+        '
+        'txt_computername
+        '
+        Me.txt_computername.Location = New System.Drawing.Point(95, 70)
+        Me.txt_computername.Name = "txt_computername"
+        Me.txt_computername.Size = New System.Drawing.Size(144, 20)
+        Me.txt_computername.TabIndex = 1
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(3, 67)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(58, 13)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "Username:"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(5, 93)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(56, 13)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "Password:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(12, 119)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(45, 13)
+        Me.Label8.TabIndex = 2
+        Me.Label8.Text = "Confirm:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(3, 145)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(78, 13)
+        Me.Label9.TabIndex = 3
+        Me.Label9.Text = "Password Hint:"
+        '
+        'check_hidden
+        '
+        Me.check_hidden.AutoSize = True
+        Me.check_hidden.Location = New System.Drawing.Point(6, 172)
+        Me.check_hidden.Name = "check_hidden"
+        Me.check_hidden.Size = New System.Drawing.Size(60, 17)
+        Me.check_hidden.TabIndex = 4
+        Me.check_hidden.Text = "Hidden"
+        Me.check_hidden.UseVisualStyleBackColor = True
+        '
+        'txt_username
+        '
+        Me.txt_username.Location = New System.Drawing.Point(67, 67)
+        Me.txt_username.Name = "txt_username"
+        Me.txt_username.Size = New System.Drawing.Size(106, 20)
+        Me.txt_username.TabIndex = 5
+        '
+        'txt_password
+        '
+        Me.txt_password.Location = New System.Drawing.Point(67, 93)
+        Me.txt_password.Name = "txt_password"
+        Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.txt_password.Size = New System.Drawing.Size(174, 20)
+        Me.txt_password.TabIndex = 6
+        '
+        'txt_confirm
+        '
+        Me.txt_confirm.Location = New System.Drawing.Point(67, 119)
+        Me.txt_confirm.Name = "txt_confirm"
+        Me.txt_confirm.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.txt_confirm.Size = New System.Drawing.Size(174, 20)
+        Me.txt_confirm.TabIndex = 7
+        '
+        'txt_passwordhint
+        '
+        Me.txt_passwordhint.Location = New System.Drawing.Point(87, 145)
+        Me.txt_passwordhint.Name = "txt_passwordhint"
+        Me.txt_passwordhint.Size = New System.Drawing.Size(232, 20)
+        Me.txt_passwordhint.TabIndex = 8
         '
         'frmMain
         '
@@ -208,6 +328,10 @@ Partial Class frmMain
         Me.Step_Language.PerformLayout()
         Me.Step_Time.ResumeLayout(False)
         Me.Step_Time.PerformLayout()
+        Me.Step_User.ResumeLayout(False)
+        Me.Step_User.PerformLayout()
+        Me.Step_ComputerInfo.ResumeLayout(False)
+        Me.Step_ComputerInfo.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -215,7 +339,7 @@ Partial Class frmMain
     Friend WithEvents StartStep1 As WizardBase.StartStep
     Friend WithEvents Step_Language As WizardBase.IntermediateStep
     Friend WithEvents FinishStep1 As WizardBase.FinishStep
-    Friend WithEvents tab_language_combo_language As System.Windows.Forms.ComboBox
+    Friend WithEvents combo_language As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Step_Time As WizardBase.IntermediateStep
     Friend WithEvents combo_timezone As System.Windows.Forms.ComboBox
@@ -227,5 +351,16 @@ Partial Class frmMain
     Friend WithEvents Step_ComputerInfo As WizardBase.IntermediateStep
     Friend WithEvents Step_User As WizardBase.IntermediateStep
     Friend WithEvents Step_Network As WizardBase.IntermediateStep
+    Friend WithEvents txt_computername As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents txt_password As System.Windows.Forms.TextBox
+    Friend WithEvents txt_username As System.Windows.Forms.TextBox
+    Friend WithEvents check_hidden As System.Windows.Forms.CheckBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents txt_passwordhint As System.Windows.Forms.TextBox
+    Friend WithEvents txt_confirm As System.Windows.Forms.TextBox
 
 End Class
