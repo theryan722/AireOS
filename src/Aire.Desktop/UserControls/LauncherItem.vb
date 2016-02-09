@@ -26,13 +26,17 @@
 
 #Region "Methods"
 
+    Private Sub LaunchFile()
 
+    End Sub
 
 #End Region
 
 #Region "lblText"
 
+    Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
 
+    End Sub
 
 #End Region
 
@@ -42,6 +46,10 @@
 
     End Sub
 
-#End Region
+    Private Sub LauncherItem_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
 
+    End Sub
+
+#End Region
+    
 End Class
