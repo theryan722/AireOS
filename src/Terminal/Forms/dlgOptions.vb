@@ -55,7 +55,7 @@
 #Region "dlgOptions"
 
     Private Sub dlgOptions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        LoadSettings()
     End Sub
 
 #End Region
