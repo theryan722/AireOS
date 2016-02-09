@@ -71,7 +71,10 @@ Public Class SettingsReader
     End Sub
 
     Public Shared Sub SetForeColor(ByVal clr As Color)
-
+        Dim ss() As String
+        ss = File.ReadAllLines(setloc)
+        ss(Array.IndexOf(ss, Array.Find(ss, Function(x) (x.StartsWith("FC:"))))) = "FC:" & clr.ToArgb.ToString
+        File.WriteAllLines(setloc, ss)
     End Sub
 
     Public Shared Sub SetIfTopmost(ByVal topmost As Boolean)
