@@ -26,7 +26,7 @@
     End Sub
 
     Private Sub ExitTerminalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitTerminalToolStripMenuItem.Click
-
+        Application.Exit()
     End Sub
 
 #End Region
