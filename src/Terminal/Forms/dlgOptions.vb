@@ -20,7 +20,10 @@
     End Sub
 
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
-
+        Dim bb As New Aire.API.MessageBox("Are you sure you want to reset the settings to their default values?", "Reset Settings", Aire.API.MessageBox.MessageBoxButtons.YesNo, Aire.API.MessageBox.MessageBoxIcon.Question)
+        If bb.DialogResult = Windows.Forms.DialogResult.Yes Then
+            ResetSettings()
+        End If
     End Sub
 
 #End Region
