@@ -42,7 +42,13 @@
     End Sub
 
     Private Sub ResetSettings()
-
+        check_topmost.Checked = False
+        check_fullscreen.Checked = False
+        check_allowexternal.Checked = False
+        fcolor = System.Drawing.SystemColors.Window
+        bcolor = System.Drawing.SystemColors.WindowText
+        btnForecolor.BackColor = fcolor
+        btnBackcolor.BackColor = bcolor
     End Sub
 
 #End Region
