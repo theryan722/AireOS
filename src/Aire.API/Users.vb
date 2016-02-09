@@ -38,12 +38,7 @@ Namespace User
         Public Class Settings
 
             Public Shared Property DesktopBackgroundImage() As String
-                Get
-
-                End Get
-                Set(value As String)
-
-                End Set
+                
             End Property
 
             Public Shared Property LaunchBarColor() As Color
@@ -220,6 +215,7 @@ Namespace User
             Public Shared Sub CreateUser(ByVal username As String, ByVal password As String, ByVal salt As String, ByVal datastorageloc As String, ByVal hidden As Boolean, ByVal passwordhint As String, ByVal permissionlevel As Integer)
                 Dim hid As String = If(hidden, "YES", "NO")
                 Aire.DataManager.Databases.UserData.AddUser(username, Cryptography.Passwords.HashPassword(password, salt), datastorageloc, hid, passwordhint, CInt(permissionlevel))
+                Aire.DataManager.Users.SetupUserDataStorage(datastorageloc)
             End Sub
 
             Public Shared Sub RemoveUser(ByVal username As String)
