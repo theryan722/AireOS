@@ -185,10 +185,11 @@
                         System.IO.Directory.Delete(cmd.Split(""""c)(1), True)
                     Else
                         If cmdform.allowexternal Then
-                            If cmd = "" Then
-
-                            Else
+                            Dim temp As String = ProcessExternalCommand(cmd)
+                            If temp = "|DNE|" Then
                                 sText = "Unrecognized command. Enter HELP for help."
+                            Else
+                                sText = temp
                             End If
                         Else
                             sText = "Unrecognized command. Enter HELP for help."
