@@ -49,7 +49,7 @@
     End Sub
 
     Private Sub lblTitle_MouseEnter(sender As Object, e As EventArgs) Handles lblTitle.MouseEnter
-
+        SetBackColorDimGray()
     End Sub
 
     Private Sub lblTitle_MouseLeave(sender As Object, e As EventArgs) Handles lblTitle.MouseLeave
