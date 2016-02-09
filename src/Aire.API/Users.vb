@@ -75,10 +75,10 @@ Namespace User
 
             Public Shared Property DesktopBackgroundImageLayout() As ImageLayout
                 Get
-                   
+                    Return Aire.DataManager.Converter.ConvertStringToImageLayout(System.IO.File.ReadAllText(User.Current.Info.GetDataStorageLocation & "/Data/Config/backgroundimagelayout.txt"))
                 End Get
                 Set(value As ImageLayout)
-
+                    System.IO.File.WriteAllText(User.Current.Info.GetDataStorageLocation & "/Data/Config/backgroundimagelayout.txt", value.ToString)
                 End Set
             End Property
 
