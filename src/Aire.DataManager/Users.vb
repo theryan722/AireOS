@@ -17,8 +17,8 @@
     End Sub
 
     Private Shared Sub CopyDefaultFiles(ByVal loc As String)
-        System.IO.File.Copy(DataPaths.GetSysDataLocation & "/Default/defbg.jpg", loc & "/bg.jpg")
-        System.IO.File.Copy(DataPaths.GetSysDataLocation & "/Default/defprofile.jpg", loc & "/profile.jpg")
+        System.IO.File.Copy(DataPaths.GetSysDataLocation & "/Default/defbg.jpg", loc & "/Data/bg.jpg")
+        System.IO.File.Copy(DataPaths.GetSysDataLocation & "/Default/defprofile.jpg", loc & "/Data/profile.jpg")
     End Sub
 
 #End Region
