@@ -28,7 +28,9 @@
     End Sub
 
     Public Shared Sub AddToExternalCommands(ByVal cmd As String)
-
+        Dim objWriter As New System.IO.StreamWriter(loc & "/external.txt", True)
+        objWriter.Write(vbNewLine & cmd)
+        objWriter.Close()
     End Sub
 
 End Class
