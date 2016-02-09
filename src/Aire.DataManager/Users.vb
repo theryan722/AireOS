@@ -24,12 +24,17 @@
         System.IO.File.Copy(DataPaths.GetSysDataLocation & "/Default/defprofile.jpg", loc & "/Data/profile.jpg")
     End Sub
 
+    Private Shared Sub SetDefaultSettings(ByVal loc As String)
+
+    End Sub
+
 #End Region
 
     Public Shared Sub SetupUserDataStorage(ByVal loc As String)
         CreateDirectories(loc)
         CreateFiles(loc)
         CopyDefaultFiles(loc)
+        SetDefaultSettings(loc)
     End Sub
 
 End Class
