@@ -2,10 +2,23 @@
 
     Private Shared setloc As String = Aire.API.User.Current.Info.GetDataStorageLocation & "/Apps/Terminal/config.txt"
 
+#Region "Helper"
+
+    Private Shared Function ReadConfig() As String
+        Dim TextLine As String
+        Dim objReader As New System.IO.StreamReader(setloc)
+        Do While objReader.Peek() <> -1
+            TextLine = TextLine & objReader.ReadLine() & vbNewLine
+        Loop
+        Return TextLine
+    End Function
+
+#End Region
+
 #Region "Get"
 
     Public Shared Function GetBackColor() As Color
-
+        
     End Function
 
     Public Shared Function GetForeColor() As Color
