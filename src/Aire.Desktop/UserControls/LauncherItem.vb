@@ -42,6 +42,12 @@
 
 #Region "LauncherItem"
 
+    Public Sub New(ByVal ntitle As String, ByVal floc As String)
+        InitializeComponent()
+        Title = ntitle
+        FileLocation = floc
+    End Sub
+
     Private Sub LauncherItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
