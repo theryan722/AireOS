@@ -7,6 +7,7 @@
         System.IO.Directory.CreateDirectory(loc & "/Apps")
         System.IO.Directory.CreateDirectory(loc & "/Apps/Terminal")
         System.IO.Directory.CreateDirectory(loc & "/Data")
+        System.IO.Directory.CreateDirectory(loc & "/Data/Config")
     End Sub
 
     Private Shared Sub CreateFiles(ByVal loc As String)
