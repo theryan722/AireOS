@@ -7,7 +7,11 @@
     End Sub
 
     Private Sub btnBackcolor_Click(sender As Object, e As EventArgs) Handles btnBackcolor.Click
-
+        Dim newb As New ColorDialog
+        newb.Color = btnBackcolor.BackColor
+        If newb.ShowDialog = Windows.Forms.DialogResult.OK Then
+            btnBackcolor.BackColor = newb.Color
+        End If
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
