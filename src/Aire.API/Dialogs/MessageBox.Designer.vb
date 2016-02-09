@@ -156,6 +156,7 @@ Partial Class MessageBox
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.pnl_picture)
         Me.Controls.Add(Me.pnl_buttons)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "MessageBox"
