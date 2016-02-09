@@ -59,6 +59,14 @@ Public Class ConfigManager
         Next
     End Function
 
+    Public Shared Function GetIfDisplayMenu() As Boolean
+        For Each item As String In ReadConfig()
+            If item.StartsWith("DM:") Then
+                Return If(item.Split(":")(1) = "True", True, False)
+            End If
+        Next
+    End Function
+
 #End Region
 
 #Region "Set"
@@ -95,6 +103,13 @@ Public Class ConfigManager
         Dim ss() As String
         ss = File.ReadAllLines(setloc)
         ss(Array.IndexOf(ss, Array.Find(ss, Function(x) (x.StartsWith("AE:"))))) = "AE:" & allow.ToString
+        File.WriteAllLines(setloc, ss)
+    End Sub
+
+    Public Shared Sub SetIfDisplayMenu(ByVal display As Boolean)
+        Dim ss() As String
+        ss = File.ReadAllLines(setloc)
+        ss(Array.IndexOf(ss, Array.Find(ss, Function(x) (x.StartsWith("DM:"))))) = "DM:" & display.ToString
         File.WriteAllLines(setloc, ss)
     End Sub
 

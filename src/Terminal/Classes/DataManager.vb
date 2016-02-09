@@ -13,7 +13,7 @@
     End Sub
 
     Public Shared Sub CheckAndRepairConfig()
-        Dim oconf As String = "BC:-16777216" & vbNewLine & "FC:-1" & vbNewLine & "TM:False" & vbNewLine & "FS:False" & vbNewLine & "AE:False"
+        Dim oconf As String = "BC:-16777216" & vbNewLine & "FC:-1" & vbNewLine & "TM:False" & vbNewLine & "FS:False" & vbNewLine & "AE:False" & vbNewLine & "DM:False"
         If ConfigManager.ReadConfig.Count < 5 Then
             Dim objWriter As New System.IO.StreamWriter(loc & "/config.txt")
             objWriter.Write(oconf)

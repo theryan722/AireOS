@@ -15,6 +15,7 @@
         SetTopmost(ConfigManager.GetIfTopmost)
         SetFullscreen(ConfigManager.GetIfFullscreen)
         allowexternal = ConfigManager.GetIfAllowExternal
+        MenuStrip1.Visible = ConfigManager.GetIfDisplayMenu
     End Sub
 
     Public Sub SetTopmost(ByVal val As Boolean)

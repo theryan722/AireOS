@@ -32,6 +32,7 @@ Partial Class dlgOptions
         Me.check_fullscreen = New System.Windows.Forms.CheckBox()
         Me.btnForecolor = New System.Windows.Forms.Button()
         Me.btnBackcolor = New System.Windows.Forms.Button()
+        Me.check_displaymenu = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -61,7 +62,7 @@ Partial Class dlgOptions
         Me.Panel1.Controls.Add(Me.btnSave)
         Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 99)
+        Me.Panel1.Location = New System.Drawing.Point(0, 118)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(225, 23)
         Me.Panel1.TabIndex = 2
@@ -108,7 +109,7 @@ Partial Class dlgOptions
         '
         'btnForecolor
         '
-        Me.btnForecolor.Location = New System.Drawing.Point(0, 69)
+        Me.btnForecolor.Location = New System.Drawing.Point(0, 92)
         Me.btnForecolor.Name = "btnForecolor"
         Me.btnForecolor.Size = New System.Drawing.Size(75, 23)
         Me.btnForecolor.TabIndex = 3
@@ -117,18 +118,29 @@ Partial Class dlgOptions
         '
         'btnBackcolor
         '
-        Me.btnBackcolor.Location = New System.Drawing.Point(81, 69)
+        Me.btnBackcolor.Location = New System.Drawing.Point(81, 92)
         Me.btnBackcolor.Name = "btnBackcolor"
         Me.btnBackcolor.Size = New System.Drawing.Size(75, 23)
         Me.btnBackcolor.TabIndex = 4
         Me.btnBackcolor.Text = "Backcolor"
         Me.btnBackcolor.UseVisualStyleBackColor = True
         '
+        'check_displaymenu
+        '
+        Me.check_displaymenu.AutoSize = True
+        Me.check_displaymenu.Location = New System.Drawing.Point(0, 69)
+        Me.check_displaymenu.Name = "check_displaymenu"
+        Me.check_displaymenu.Size = New System.Drawing.Size(138, 17)
+        Me.check_displaymenu.TabIndex = 5
+        Me.check_displaymenu.Text = "Display menu at Startup"
+        Me.check_displaymenu.UseVisualStyleBackColor = True
+        '
         'dlgOptions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(225, 122)
+        Me.ClientSize = New System.Drawing.Size(225, 141)
+        Me.Controls.Add(Me.check_displaymenu)
         Me.Controls.Add(Me.btnBackcolor)
         Me.Controls.Add(Me.btnForecolor)
         Me.Controls.Add(Me.check_fullscreen)
@@ -154,4 +166,5 @@ Partial Class dlgOptions
     Friend WithEvents btnForecolor As System.Windows.Forms.Button
     Friend WithEvents btnBackcolor As System.Windows.Forms.Button
     Friend WithEvents btnReset As System.Windows.Forms.Button
+    Friend WithEvents check_displaymenu As System.Windows.Forms.CheckBox
 End Class

@@ -42,6 +42,7 @@
         check_topmost.Checked = ConfigManager.GetIfTopmost
         check_fullscreen.Checked = ConfigManager.GetIfFullscreen
         check_allowexternal.Checked = ConfigManager.GetIfAllowExternal
+        check_displaymenu.Checked = ConfigManager.GetIfDisplayMenu
         btnForecolor.BackColor = ConfigManager.GetForeColor
         btnBackcolor.BackColor = ConfigManager.GetBackColor
     End Sub
@@ -52,12 +53,14 @@
         ConfigManager.SetIfAllowExternal(check_allowexternal.Checked)
         ConfigManager.SetIfFullscreen(check_fullscreen.Checked)
         ConfigManager.SetIfTopmost(check_topmost.Checked)
+        ConfigManager.SetIfDisplayMenu(check_displaymenu.Checked)
     End Sub
 
     Private Sub ResetSettings()
         check_topmost.Checked = False
         check_fullscreen.Checked = False
         check_allowexternal.Checked = False
+        check_displaymenu.Checked = False
         btnForecolor.BackColor = System.Drawing.SystemColors.Window
         btnBackcolor.BackColor = System.Drawing.SystemColors.WindowText
     End Sub
