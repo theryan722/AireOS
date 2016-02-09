@@ -79,7 +79,7 @@
     End Sub
 
     Private Sub LauncherItem_MouseLeave(sender As Object, e As EventArgs) Handles Me.MouseLeave
-
+        SetBackColorDimGray()
     End Sub
 
 #End Region
