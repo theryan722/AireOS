@@ -3,6 +3,7 @@
 #Region "Properties/Variables"
 
     Private TypedText As String = ""
+    Public Property allowexternal As Boolean = False
 
 #End Region
 

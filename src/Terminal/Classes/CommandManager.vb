@@ -176,7 +176,15 @@
                         sText = "Deleting Directory Recursively: " & cmd.Split(""""c)(1)
                         System.IO.Directory.Delete(cmd.Split(""""c)(1), True)
                     Else
-                        sText = "Unrecognized command. Enter HELP for help."
+                        If cmdform.allowexternal Then
+                            If cmd = "" Then
+
+                            Else
+                                sText = "Unrecognized command. Enter HELP for help."
+                            End If
+                        Else
+                            sText = "Unrecognized command. Enter HELP for help."
+                        End If
                     End If
             End Select
         Catch ex As Exception
