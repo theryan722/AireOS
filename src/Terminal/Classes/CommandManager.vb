@@ -16,9 +16,19 @@
                     sText = "Exiting Terminal"
                     Application.Exit()
                 Case "terminal -menu show"
+                    sText = "Terminal Menu Visible"
+                    cmdform.MenuStrip1.Show()
                 Case "terminal -menu hide"
+                    sText = "Terminal Menu Hidden"
+                    cmdform.MenuStrip1.Hide()
                 Case "terminal -topmost true"
+                    sText = "Terminal Topmost set to true"
+                    cmdform.TopMost = True
+                    cmdform.TopmostToolStripMenuItem.Checked = True
                 Case "terminal -topmost false"
+                    sText = "Terminal Topmost set to false"
+                    cmdform.TopMost = False
+                    cmdform.TopmostToolStripMenuItem.Checked = False
                 Case "terminal -windowstate minimize"
                 Case "terminal -windowstate maximize"
                 Case "terminal -windowstate normal"
