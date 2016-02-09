@@ -92,7 +92,10 @@ Public Class SettingsReader
     End Sub
 
     Public Shared Sub SetIfAllowExternal(ByVal allow As Boolean)
-
+        Dim ss() As String
+        ss = File.ReadAllLines(setloc)
+        ss(Array.IndexOf(ss, Array.Find(ss, Function(x) (x.StartsWith("AE:"))))) = "AE:" & allow.ToString
+        File.WriteAllLines(setloc, ss)
     End Sub
 
 #End Region
