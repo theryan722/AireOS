@@ -22,7 +22,9 @@
     End Sub
 
     Public Shared Sub ClearExternalCommands()
-
+        Dim objWriter As New System.IO.StreamWriter(loc & "/external.txt")
+        objWriter.Write("")
+        objWriter.Close()
     End Sub
 
     Public Shared Sub AddToExternalCommands(ByVal cmd As String)
