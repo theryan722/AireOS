@@ -16,8 +16,8 @@
 "terminal -about version -- Displays the terminal version" & vbNewLine & _
 "terminal -exit -- Closes the current terminal window" & vbNewLine & _
 "terminal -exit all -- Exits the terminal application" & vbNewLine & _
-"terminal -allowexternal true -- Allows external commands to be run" & vbNewLine & _
-"terminal -allowexternal false -- Does not allow external commands to be run" & vbNewLine & _
+"terminal -externalcmd -allow true -- Allows external commands to be run" & vbNewLine & _
+"terminal -externalcmd -allow false -- Does not allow external commands to be run" & vbNewLine & _
 "terminal -menu show -- Displays the terminal menu" & vbNewLine & _
 "terminal -menu hide -- Hides the terminal menu" & vbNewLine & _
 "terminal -topmost true -- Makes the terminal display above all other windows" & vbNewLine & _
@@ -59,10 +59,10 @@
                     cmdform.AboutToolStripMenuItem1.PerformClick()
                 Case "terminal -about version"
                     sText = "Terminal Version: " & My.Application.Info.Version.ToString
-                Case "terminal -allowexternal true"
+                Case "terminal -externalcmd -allow true"
                     sText = "Terminal Allow External Commands set to true"
                     cmdform.allowexternal = True
-                Case "terminal -allowexternal false"
+                Case "terminal -externalcmd -allow false"
                     sText = "Terminal Allow External Commands set to false"
                     cmdform.allowexternal = False
                 Case "terminal -exit"
