@@ -1,4 +1,6 @@
-﻿Public Class SettingsReader
+﻿Imports System.IO
+
+Public Class SettingsReader
 
     Private Shared setloc As String = Aire.API.User.Current.Info.GetDataStorageLocation & "/Apps/Terminal/config.txt"
 
@@ -62,7 +64,10 @@
 #Region "Set"
 
     Public Shared Sub SetBackColor(ByVal clr As Color)
-
+        Dim ss() As String
+        ss = File.ReadAllLines(setloc)
+        ss(Array.IndexOf(ss, Array.Find(ss, Function(x) (x.StartsWith("BC:"))))) = "BC:" & clr.ToArgb.ToString
+        File.WriteAllLines(setloc, ss)
     End Sub
 
     Public Shared Sub SetForeColor(ByVal clr As Color)
