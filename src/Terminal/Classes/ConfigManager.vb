@@ -6,7 +6,7 @@ Public Class ConfigManager
 
 #Region "Helper"
 
-    Private Shared Function ReadConfig() As List(Of String)
+    Public Shared Function ReadConfig() As List(Of String)
         Dim TextLine As New List(Of String)
         Dim objReader As New System.IO.StreamReader(setloc)
         Do While objReader.Peek() <> -1

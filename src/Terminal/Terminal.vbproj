@@ -98,6 +98,7 @@
   <ItemGroup>
     <Compile Include="Classes\CommandManager.vb" />
     <Compile Include="Classes\ConfigManager.vb" />
+    <Compile Include="Classes\DataManager.vb" />
     <Compile Include="Forms\dlgAbout.Designer.vb">
       <DependentUpon>dlgAbout.vb</DependentUpon>
     </Compile>
