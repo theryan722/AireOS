@@ -7,7 +7,7 @@
                 Case "clear"
                     sText = ""
                     cmdform.TextBox1.Clear()
-                Case "help" 'todo
+                Case "help"
                     sText = "Basic Command List" & vbNewLine & _
 "-------------------" & vbNewLine & _
 "clear -- Clears the terminal" & vbNewLine & _
@@ -107,8 +107,8 @@
                     Dim p2 As String = cmd.Split({",", ")"}, StringSplitOptions.None)(2)
                     sText = "Executing Command: " & p1
                     sText = vbNewLine & "Command Output: " & vbNewLine & Aire.API.Sys.Process.ExecuteCommandWithOutput(p1, p2)
-                Case cmd.ToLower.StartsWith("launch") 'todo
-                Case cmd.ToLower.StartsWith("get") 'todo
+                    'Case cmd.ToLower.StartsWith("launch") 'todo
+                    'Case cmd.ToLower.StartsWith("get") 'todo
                 Case "aire -user -get permissionlevel"
                     sText = "Permission Level: " & Aire.API.User.Current.Info.GetPermissionLevel
                 Case "aire -user -get datastoragelocation"
@@ -180,7 +180,11 @@
         Catch ex As Exception
             sText = "There was an error attempting to perform the command or action."
         End Try
-        cmdform.TextBox1.Text = cmdform.TextBox1.Text & vbNewLine & sText & vbNewLine & "Terminal@" & Aire.API.User.Current.Info.GetUsername & ":>"
+        If sText <> "" Then
+            cmdform.TextBox1.Text = cmdform.TextBox1.Text & vbNewLine & sText & vbNewLine & "Terminal@" & Aire.API.User.Current.Info.GetUsername & ":>"
+        Else
+            cmdform.TextBox1.Text = cmdform.TextBox1.Text & "Terminal@" & Aire.API.User.Current.Info.GetUsername & ":>"
+        End If
         cmdform.TextBox1.SelectionStart = Len(cmdform.TextBox1.Text)
     End Sub
 
