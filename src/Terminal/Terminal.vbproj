@@ -104,6 +104,12 @@
     <Compile Include="Forms\dlgAbout.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\dlgOptions.Designer.vb">
+      <DependentUpon>dlgOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgOptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\dlgAbout.resx">
       <DependentUpon>dlgAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgOptions.resx">
+      <DependentUpon>dlgOptions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
