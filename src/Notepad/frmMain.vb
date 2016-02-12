@@ -136,7 +136,7 @@
 #Region "Format"
 
     Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
-
+        SetFont()
     End Sub
 
     Private Sub BackcolorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackcolorToolStripMenuItem.Click
