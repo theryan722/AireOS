@@ -87,6 +87,8 @@
             SaveAs()
         Else
             My.Computer.FileSystem.WriteAllText(fileloc, TextBox1.Text, False)
+            otxt = TextBox1.Text
+            SetChanged(False)
             UpdateTitle()
         End If
     End Sub
@@ -96,6 +98,8 @@
         newb.Filter = filefilter
         If newb.ShowDialog = Windows.Forms.DialogResult.OK Then
             My.Computer.FileSystem.WriteAllText(newb.FileName, TextBox1.Text, False)
+            otxt = TextBox1.Text
+            SetChanged(False)
             UpdateTitle()
         End If
     End Sub
