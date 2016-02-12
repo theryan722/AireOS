@@ -106,7 +106,9 @@
     End Sub
 
     Private Sub Print()
-        
+        If PrintDialog1.ShowDialog() = DialogResult.OK Then
+            PrintDocument1.Print()
+        End If
     End Sub
 
     Private Sub SetFont()
