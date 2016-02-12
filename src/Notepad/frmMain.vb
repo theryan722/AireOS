@@ -27,7 +27,7 @@
     End Sub
 
     Private Sub Copy()
-
+        TextBox1.Copy()
     End Sub
 
     Private Sub Paste()
