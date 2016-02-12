@@ -2,6 +2,10 @@
 
 #Region "Methods"
 
+    Private Sub SetRepeatAction(ByVal val As Boolean)
+
+    End Sub
+
     Private Sub Copy()
         My.Computer.Clipboard.SetText(Calculator1.Value.ToString)
     End Sub
@@ -39,6 +43,10 @@
 #Region "UI"
 
 #Region "btnMenu"
+
+    Private Sub RepeatActionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RepeatActionToolStripMenuItem.Click
+
+    End Sub
 
     Private Sub TopmostToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TopmostToolStripMenuItem.Click
         If Me.TopMost Then

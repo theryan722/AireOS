@@ -25,18 +25,20 @@ Partial Class frmMain
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Calculator1 = New Syncfusion.Windows.Forms.Tools.CalculatorControl()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.btnMenu = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.TouchModeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FinancialViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TopmostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatusStrip1.SuspendLayout()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.btnMenu = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TopmostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FinancialViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TouchModeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RepeatActionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ContextMenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Calculator1
@@ -53,8 +55,27 @@ Partial Class frmMain
         Me.Calculator1.Location = New System.Drawing.Point(0, 0)
         Me.Calculator1.MetroColor = System.Drawing.SystemColors.Control
         Me.Calculator1.Name = "Calculator1"
+        Me.Calculator1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Calculator1.Size = New System.Drawing.Size(309, 389)
         Me.Calculator1.TabIndex = 0
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(103, 48)
+        '
+        'CopyToolStripMenuItem
+        '
+        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
+        Me.CopyToolStripMenuItem.Text = "Copy"
+        '
+        'PasteToolStripMenuItem
+        '
+        Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
+        Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'StatusStrip1
         '
@@ -69,41 +90,12 @@ Partial Class frmMain
         '
         Me.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnMenu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewWindowToolStripMenuItem, Me.ToolStripSeparator1, Me.TopmostToolStripMenuItem, Me.FinancialViewToolStripMenuItem, Me.TouchModeToolStripMenuItem})
+        Me.btnMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewWindowToolStripMenuItem, Me.ToolStripSeparator2, Me.RepeatActionToolStripMenuItem, Me.ToolStripSeparator1, Me.TopmostToolStripMenuItem, Me.FinancialViewToolStripMenuItem, Me.TouchModeToolStripMenuItem})
         Me.btnMenu.Image = CType(resources.GetObject("btnMenu.Image"), System.Drawing.Image)
         Me.btnMenu.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnMenu.Name = "btnMenu"
         Me.btnMenu.Size = New System.Drawing.Size(29, 20)
         Me.btnMenu.Text = "ToolStripDropDownButton1"
-        '
-        'TouchModeToolStripMenuItem
-        '
-        Me.TouchModeToolStripMenuItem.Name = "TouchModeToolStripMenuItem"
-        Me.TouchModeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.TouchModeToolStripMenuItem.Text = "Touch Mode"
-        '
-        'FinancialViewToolStripMenuItem
-        '
-        Me.FinancialViewToolStripMenuItem.Name = "FinancialViewToolStripMenuItem"
-        Me.FinancialViewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.FinancialViewToolStripMenuItem.Text = "Financial View"
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 70)
-        '
-        'CopyToolStripMenuItem
-        '
-        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CopyToolStripMenuItem.Text = "Copy"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
         '
         'NewWindowToolStripMenuItem
         '
@@ -111,17 +103,39 @@ Partial Class frmMain
         Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewWindowToolStripMenuItem.Text = "New Window"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
+        '
         'TopmostToolStripMenuItem
         '
         Me.TopmostToolStripMenuItem.Name = "TopmostToolStripMenuItem"
         Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TopmostToolStripMenuItem.Text = "Topmost"
         '
-        'PasteToolStripMenuItem
+        'FinancialViewToolStripMenuItem
         '
-        Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PasteToolStripMenuItem.Text = "Paste"
+        Me.FinancialViewToolStripMenuItem.Name = "FinancialViewToolStripMenuItem"
+        Me.FinancialViewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FinancialViewToolStripMenuItem.Text = "Financial View"
+        '
+        'TouchModeToolStripMenuItem
+        '
+        Me.TouchModeToolStripMenuItem.Name = "TouchModeToolStripMenuItem"
+        Me.TouchModeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TouchModeToolStripMenuItem.Text = "Touch Mode"
+        '
+        'RepeatActionToolStripMenuItem
+        '
+        Me.RepeatActionToolStripMenuItem.Name = "RepeatActionToolStripMenuItem"
+        Me.RepeatActionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RepeatActionToolStripMenuItem.Text = "Repeat Action"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
         '
         'frmMain
         '
@@ -135,9 +149,9 @@ Partial Class frmMain
         Me.MaximizeBox = False
         Me.Name = "frmMain"
         Me.Text = "Calculator"
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -153,5 +167,7 @@ Partial Class frmMain
     Friend WithEvents NewWindowToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents PasteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents RepeatActionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
