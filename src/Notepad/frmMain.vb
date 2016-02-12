@@ -35,7 +35,7 @@
     End Sub
 
     Private Sub SelectAll()
-
+        TextBox1.SelectAll()
     End Sub
 
     Private Sub ClearAll()
