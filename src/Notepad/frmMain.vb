@@ -11,7 +11,9 @@
 #Region "Edit"
 
     Private Sub Undo()
-
+        If TextBox1.CanUndo Then
+            TextBox1.Undo()
+        End If
     End Sub
 
     Private Sub Redo()
