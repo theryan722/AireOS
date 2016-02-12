@@ -2,7 +2,8 @@
 
 #Region "Properties/Variables"
 
-
+    Private fileloc As String
+    Private otxt As String
 
 #End Region
 
