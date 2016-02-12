@@ -40,6 +40,14 @@
 
 #End Region
 
+    Private Sub Print()
+
+    End Sub
+
+    Private Sub SetFont()
+
+    End Sub
+
 #End Region
 
 #Region "Menu Strip"
