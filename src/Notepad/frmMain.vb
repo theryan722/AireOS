@@ -32,7 +32,9 @@
 
 #Region "frmMain"
 
-
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox1.AutoWordSelection = False
+    End Sub
 
 #End Region
 
