@@ -32,6 +32,14 @@
 
 #Region "UI"
 
+    Private Sub TopmostToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TopmostToolStripMenuItem.Click
+        If Me.TopMost Then
+            SetTopmost(False)
+        Else
+            SetTopmost(True)
+        End If
+    End Sub
+
     Private Sub NewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewWindowToolStripMenuItem.Click
         Dim newb As New frmMain
         newb.Show()
