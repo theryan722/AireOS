@@ -251,6 +251,15 @@
         checkPrint = 0
     End Sub
 
+    Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        checkPrint = TextBox1.Print(checkPrint, TextBox1.TextLength, e)
+        If checkPrint < TextBox1.TextLength Then
+            e.HasMorePages = True
+        Else
+            e.HasMorePages = False
+        End If
+    End Sub
+
 #End Region
 
 #Region "Context Menu Strip"
