@@ -44,6 +44,8 @@
 
 #Region "UI"
 
+#Region "btnMenu"
+
     Private Sub TopmostToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TopmostToolStripMenuItem.Click
         If Me.TopMost Then
             SetTopmost(False)
@@ -72,6 +74,8 @@
             SetTouchMode(True)
         End If
     End Sub
+
+#End Region
 
 #End Region
 
