@@ -6,6 +6,7 @@
     Private otxt As String = ""
     Private filefilter As String = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
     Private changed As Boolean = False
+    Private checkPrint As Integer
 
 #End Region
 
@@ -241,6 +242,14 @@
     End Sub
 
 #End Region
+
+#End Region
+
+#Region "PrintDocument1"
+
+    Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.BeginPrint
+        checkPrint = 0
+    End Sub
 
 #End Region
 
