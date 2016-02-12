@@ -65,7 +65,11 @@
     End Sub
 
     Private Function OkayToExit() As Boolean
-
+        Dim ret As Boolean = True
+        If otxt <> TextBox1.Text Then
+            ret = False
+        End If
+        Return ret
     End Function
 
     Private Sub Open()
