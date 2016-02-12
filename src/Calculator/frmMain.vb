@@ -3,7 +3,8 @@
 #Region "Methods"
 
     Private Sub SetRepeatAction(ByVal val As Boolean)
-
+        Calculator1.RepeatAssignAction = val
+        RepeatActionToolStripMenuItem.Checked = val
     End Sub
 
     Private Sub Copy()
