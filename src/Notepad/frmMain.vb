@@ -8,7 +8,37 @@
 
 #Region "Methods"
 
+#Region "Edit"
 
+    Private Sub Undo()
+
+    End Sub
+
+    Private Sub Redo()
+
+    End Sub
+
+    Private Sub Cut()
+
+    End Sub
+
+    Private Sub Copy()
+
+    End Sub
+
+    Private Sub Paste()
+
+    End Sub
+
+    Private Sub SelectAll()
+
+    End Sub
+
+    Private Sub ClearAll()
+
+    End Sub
+
+#End Region
 
 #End Region
 
@@ -81,7 +111,6 @@
     End Sub
 
 #End Region
-
 
 #Region "Format"
 
