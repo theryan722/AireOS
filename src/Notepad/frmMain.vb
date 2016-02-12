@@ -3,8 +3,9 @@
 #Region "Properties/Variables"
 
     Private fileloc As String
-    Private otxt As String
+    Private otxt As String = ""
     Private filefilter As String = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
+
 #End Region
 
 #Region "Methods"
@@ -45,12 +46,21 @@
 
 #End Region
 
+    Private Sub SetTitle(ByVal str As String)
+
+    End Sub
+
     Private Function OkayToExit() As Boolean
 
     End Function
 
     Private Sub Open()
-
+        Dim newb As New OpenFileDialog
+        newb.Filter = filefilter
+        If newb.ShowDialog = Windows.Forms.DialogResult.OK Then
+            TextBox1.Text = My.Computer.FileSystem.ReadAllText(newb.FileName)
+            otxt = TextBox1.Text
+        End If
     End Sub
 
     Private Sub Save()
