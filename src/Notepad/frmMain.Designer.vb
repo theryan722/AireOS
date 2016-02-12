@@ -66,6 +66,9 @@ Partial Class frmMain
         Me.ClearAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PageSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -327,6 +330,15 @@ Partial Class frmMain
         Me.PrintPreviewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PrintPreviewToolStripMenuItem.Text = "Print Preview"
         '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.Document = Me.PrintDocument1
+        Me.PrintDialog1.UseEXDialog = True
+        '
+        'PageSetupDialog1
+        '
+        Me.PageSetupDialog1.Document = Me.PrintDocument1
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -387,5 +399,8 @@ Partial Class frmMain
     Friend WithEvents ClearAllToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PageSetupToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PrintPreviewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
+    Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
+    Friend WithEvents PageSetupDialog1 As System.Windows.Forms.PageSetupDialog
 
 End Class
