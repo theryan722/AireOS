@@ -13,7 +13,11 @@
     End Sub
 
     Private Sub Paste()
-
+        If My.Computer.Clipboard.GetText.Contains(".") Then
+            Calculator1.Value = New Syncfusion.Windows.Forms.Tools.CalculatorValue(CDbl(My.Computer.Clipboard.GetText))
+        Else
+            Calculator1.Value = New Syncfusion.Windows.Forms.Tools.CalculatorValue(CInt(My.Computer.Clipboard.GetText))
+        End If
     End Sub
 
     Private Sub SetTopmost(ByVal val As Boolean)
