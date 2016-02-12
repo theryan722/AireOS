@@ -162,7 +162,7 @@
 #Region "Context Menu Strip"
 
     Private Sub UndoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles UndoToolStripMenuItem1.Click
-
+        Undo()
     End Sub
 
     Private Sub RedoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RedoToolStripMenuItem1.Click
