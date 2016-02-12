@@ -61,6 +61,22 @@
         TopmostToolStripMenuItem.Checked = val
     End Sub
 
+    Private Sub SetColor(ByVal back As Boolean)
+        If back Then
+            Dim newb As New ColorDialog
+            newb.Color = TextBox1.BackColor
+            If newb.ShowDialog = Windows.Forms.DialogResult.OK Then
+                TextBox1.BackColor = newb.Color
+            End If
+        Else
+            Dim newb As New ColorDialog
+            newb.Color = TextBox1.ForeColor
+            If newb.ShowDialog = Windows.Forms.DialogResult.OK Then
+                TextBox1.ForeColor = newb.Color
+            End If
+        End If
+    End Sub
+
 #End Region
 
 #Region "Menu Strip"
