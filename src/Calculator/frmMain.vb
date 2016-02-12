@@ -18,7 +18,13 @@
     End Sub
 
     Private Sub SetFinancialView(ByVal val As Boolean)
-
+        If val Then
+            Calculator1.LayoutType = Syncfusion.Windows.Forms.Tools.CalculatorLayoutTypes.Financial
+            FinancialViewToolStripMenuItem.Checked = True
+        Else
+            Calculator1.LayoutType = Syncfusion.Windows.Forms.Tools.CalculatorLayoutTypes.WindowsStandard
+            FinancialViewToolStripMenuItem.Checked = False
+        End If
     End Sub
 
 #End Region
