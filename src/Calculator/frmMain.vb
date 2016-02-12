@@ -46,7 +46,11 @@
 #Region "btnMenu"
 
     Private Sub RepeatActionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RepeatActionToolStripMenuItem.Click
-
+        If Calculator1.RepeatAssignAction Then
+            SetRepeatAction(False)
+        Else
+            SetRepeatAction(True)
+        End If
     End Sub
 
     Private Sub TopmostToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TopmostToolStripMenuItem.Click
