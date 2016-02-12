@@ -8,6 +8,14 @@
 
 #Region "Methods"
 
+    Private Sub Copy()
+
+    End Sub
+
+    Private Sub Paste()
+
+    End Sub
+
     Private Sub SetTopmost(ByVal val As Boolean)
         Me.TopMost = val
         TopmostToolStripMenuItem.Checked = val
@@ -71,4 +79,7 @@
 
 #End Region
     
+    Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
+        Calculator1
+    End Sub
 End Class
