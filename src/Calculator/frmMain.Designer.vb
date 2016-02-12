@@ -68,7 +68,7 @@ Partial Class frmMain
         '
         Me.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnMenu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TopmostToolStripMenuItem, Me.NewWindowToolStripMenuItem, Me.ToolStripSeparator1, Me.FinancialViewToolStripMenuItem, Me.TouchModeToolStripMenuItem})
+        Me.btnMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewWindowToolStripMenuItem, Me.ToolStripSeparator1, Me.TopmostToolStripMenuItem, Me.FinancialViewToolStripMenuItem, Me.TouchModeToolStripMenuItem})
         Me.btnMenu.Image = CType(resources.GetObject("btnMenu.Image"), System.Drawing.Image)
         Me.btnMenu.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnMenu.Name = "btnMenu"
