@@ -82,17 +82,17 @@
         If fileloc = "" Then
             SaveAs()
         Else
-            Dim newb As New SaveFileDialog
-            newb.Filter = filefilter
-            If newb.ShowDialog = Windows.Forms.DialogResult.OK Then
-                My.Computer.FileSystem.WriteAllText(newb.FileName, TextBox1.Text, False)
-                UpdateTitle()
-            End If
+            
         End If
     End Sub
 
     Private Sub SaveAs()
-
+        Dim newb As New SaveFileDialog
+        newb.Filter = filefilter
+        If newb.ShowDialog = Windows.Forms.DialogResult.OK Then
+            My.Computer.FileSystem.WriteAllText(newb.FileName, TextBox1.Text, False)
+            UpdateTitle()
+        End If
     End Sub
 
     Private Sub Print()
