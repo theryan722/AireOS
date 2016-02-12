@@ -32,6 +32,11 @@
 
 #Region "UI"
 
+    Private Sub NewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewWindowToolStripMenuItem.Click
+        Dim newb As New frmMain
+        newb.Show()
+    End Sub
+
     Private Sub FinancialViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FinancialViewToolStripMenuItem.Click
         If Calculator1.LayoutType = Syncfusion.Windows.Forms.Tools.CalculatorLayoutTypes.WindowsStandard Then
             SetFinancialView(True)
