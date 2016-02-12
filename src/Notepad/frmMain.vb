@@ -45,7 +45,11 @@
     End Sub
 
     Private Sub SetFont()
-
+        Dim newb As New FontDialog
+        newb.Font = TextBox1.Font
+        If newb.ShowDialog = Windows.Forms.DialogResult.OK Then
+            TextBox1.Font = newb.Font
+        End If
     End Sub
 
     Private Sub SetTopmost(ByVal val As Boolean)
