@@ -32,7 +32,13 @@
 
 #Region "UI"
 
-
+    Private Sub TouchModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TouchModeToolStripMenuItem.Click
+        If Calculator1.EnableTouchMode Then
+            SetTouchMode(False)
+        Else
+            SetTouchMode(True)
+        End If
+    End Sub
 
 #End Region
 
@@ -43,13 +49,5 @@
     End Sub
 
 #End Region
-
-    Private Sub TouchModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TouchModeToolStripMenuItem.Click
-        If Calculator1.EnableTouchMode Then
-           
-        Else
-
-        End If
-    End Sub
     
 End Class
