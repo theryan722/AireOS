@@ -77,6 +77,18 @@
 
 #End Region
 
+#Region "Context Menu Strip"
+
+    Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
+
+    End Sub
+
+#End Region
+
 #End Region
 
 #Region "frmMain"
@@ -87,7 +99,4 @@
 
 #End Region
     
-    Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
-        Calculator1
-    End Sub
 End Class

@@ -34,6 +34,7 @@ Partial Class frmMain
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TopmostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -89,9 +90,9 @@ Partial Class frmMain
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 70)
         '
         'CopyToolStripMenuItem
         '
@@ -115,6 +116,12 @@ Partial Class frmMain
         Me.TopmostToolStripMenuItem.Name = "TopmostToolStripMenuItem"
         Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TopmostToolStripMenuItem.Text = "Topmost"
+        '
+        'PasteToolStripMenuItem
+        '
+        Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'frmMain
         '
@@ -145,5 +152,6 @@ Partial Class frmMain
     Friend WithEvents TopmostToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewWindowToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents PasteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
