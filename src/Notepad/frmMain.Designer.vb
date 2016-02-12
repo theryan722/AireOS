@@ -126,7 +126,7 @@ Partial Class frmMain
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoToolStripMenuItem1, Me.RedoToolStripMenuItem1, Me.ToolStripSeparator6, Me.CutToolStripMenuItem1, Me.CopyToolStripMenuItem1, Me.PasteToolStripMenuItem1, Me.ToolStripSeparator7, Me.SelectAllToolStripMenuItem1, Me.ClearAllToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(123, 170)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 192)
         '
         'OpenToolStripMenuItem
         '
@@ -264,53 +264,53 @@ Partial Class frmMain
         'UndoToolStripMenuItem1
         '
         Me.UndoToolStripMenuItem1.Name = "UndoToolStripMenuItem1"
-        Me.UndoToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
+        Me.UndoToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.UndoToolStripMenuItem1.Text = "Undo"
         '
         'RedoToolStripMenuItem1
         '
         Me.RedoToolStripMenuItem1.Name = "RedoToolStripMenuItem1"
-        Me.RedoToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
+        Me.RedoToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.RedoToolStripMenuItem1.Text = "Redo"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(119, 6)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(149, 6)
         '
         'CutToolStripMenuItem1
         '
         Me.CutToolStripMenuItem1.Name = "CutToolStripMenuItem1"
-        Me.CutToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
+        Me.CutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.CutToolStripMenuItem1.Text = "Cut"
         '
         'CopyToolStripMenuItem1
         '
         Me.CopyToolStripMenuItem1.Name = "CopyToolStripMenuItem1"
-        Me.CopyToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
+        Me.CopyToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.CopyToolStripMenuItem1.Text = "Copy"
         '
         'PasteToolStripMenuItem1
         '
         Me.PasteToolStripMenuItem1.Name = "PasteToolStripMenuItem1"
-        Me.PasteToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
+        Me.PasteToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.PasteToolStripMenuItem1.Text = "Paste"
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(119, 6)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(149, 6)
         '
         'SelectAllToolStripMenuItem1
         '
         Me.SelectAllToolStripMenuItem1.Name = "SelectAllToolStripMenuItem1"
-        Me.SelectAllToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
+        Me.SelectAllToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.SelectAllToolStripMenuItem1.Text = "Select All"
         '
         'ClearAllToolStripMenuItem
         '
         Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
-        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
         'frmMain
