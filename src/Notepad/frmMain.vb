@@ -31,7 +31,7 @@
     End Sub
 
     Private Sub Paste()
-
+        TextBox1.Paste()
     End Sub
 
     Private Sub SelectAll()
