@@ -13,7 +13,8 @@
     End Sub
 
     Private Sub SetTouchMode(ByVal val As Boolean)
-
+        Calculator1.EnableTouchMode = val
+        TouchModeToolStripMenuItem.Checked = val
     End Sub
 
     Private Sub SetFinancialView(ByVal val As Boolean)
@@ -38,8 +39,7 @@
 
     Private Sub TouchModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TouchModeToolStripMenuItem.Click
         If Calculator1.EnableTouchMode Then
-            Calculator1.EnableTouchMode = False
-            TouchModeToolStripMenuItem.Checked = False
+           
         Else
 
         End If
