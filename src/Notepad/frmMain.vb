@@ -161,9 +161,7 @@
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-        If OkayToExit() Then
-            Me.Close()
-        End If
+        Me.Close()
     End Sub
 
 #End Region
@@ -279,6 +277,16 @@
 #End Region
 
 #Region "frmMain"
+
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If Not OkayToExit() Then
+            Dim bb As New Aire.API.MessageBox("You have unsaved changes. Are you sure you want to exit?", "Unsaved Changes", Aire.API.MessageBox.MessageBoxButtons.YesNo, Aire.API.MessageBox.MessageBoxIcon.Question)
+            If bb.DialogResult = Windows.Forms.DialogResult.Yes Then
+                Save()
+                Me.Close()
+            End If
+        End If
+    End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox1.AutoWordSelection = False
