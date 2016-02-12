@@ -32,6 +32,14 @@
 
 #Region "UI"
 
+    Private Sub FinancialViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FinancialViewToolStripMenuItem.Click
+        If Calculator1.LayoutType = Syncfusion.Windows.Forms.Tools.CalculatorLayoutTypes.WindowsStandard Then
+            SetFinancialView(True)
+        Else
+            SetFinancialView(False)
+        End If
+    End Sub
+
     Private Sub TouchModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TouchModeToolStripMenuItem.Click
         If Calculator1.EnableTouchMode Then
             SetTouchMode(False)
