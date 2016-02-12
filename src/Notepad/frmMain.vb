@@ -4,7 +4,7 @@
 
     Private fileloc As String
     Private otxt As String
-
+    Private filefilter As String = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
 #End Region
 
 #Region "Methods"
