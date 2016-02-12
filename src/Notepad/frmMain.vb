@@ -48,6 +48,10 @@
 
     End Sub
 
+    Private Sub SetTopmost(ByVal val As Boolean)
+
+    End Sub
+
 #End Region
 
 #Region "Menu Strip"
