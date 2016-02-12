@@ -120,7 +120,7 @@
     End Sub
 
     Private Sub ClearToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearToolStripMenuItem.Click
-
+        ClearAll()
     End Sub
 
 #End Region
