@@ -9,7 +9,7 @@
 #Region "Methods"
 
     Private Sub Copy()
-
+        My.Computer.Clipboard.SetText(Calculator1.Value.ToString)
     End Sub
 
     Private Sub Paste()
