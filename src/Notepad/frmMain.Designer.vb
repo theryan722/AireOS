@@ -53,7 +53,6 @@ Partial Class frmMain
         Me.TopmostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TextBox1 = New System.Windows.Forms.RichTextBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.UndoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RedoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,6 +68,7 @@ Partial Class frmMain
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
+        Me.TextBox1 = New Notepad.RichTextBoxPrintCtrl.RichTextBoxPrintCtrl()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -250,16 +250,6 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
-        'TextBox1
-        '
-        Me.TextBox1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox1.Location = New System.Drawing.Point(0, 24)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(565, 227)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = ""
-        '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoToolStripMenuItem1, Me.RedoToolStripMenuItem1, Me.ToolStripSeparator6, Me.CutToolStripMenuItem1, Me.CopyToolStripMenuItem1, Me.PasteToolStripMenuItem1, Me.ToolStripSeparator7, Me.SelectAllToolStripMenuItem1, Me.ClearAllToolStripMenuItem})
@@ -339,6 +329,15 @@ Partial Class frmMain
         '
         Me.PageSetupDialog1.Document = Me.PrintDocument1
         '
+        'TextBox1
+        '
+        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox1.Location = New System.Drawing.Point(0, 24)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(565, 227)
+        Me.TextBox1.TabIndex = 1
+        Me.TextBox1.Text = ""
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -363,7 +362,6 @@ Partial Class frmMain
     Friend WithEvents FormatToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents NewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
@@ -402,5 +400,6 @@ Partial Class frmMain
     Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
     Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
     Friend WithEvents PageSetupDialog1 As System.Windows.Forms.PageSetupDialog
+    Friend WithEvents TextBox1 As Notepad.RichTextBoxPrintCtrl.RichTextBoxPrintCtrl
 
 End Class
