@@ -44,6 +44,10 @@
 
 #End Region
 
+    Private Function OkayToExit() As Boolean
+
+    End Function
+
     Private Sub Open()
 
     End Sub
