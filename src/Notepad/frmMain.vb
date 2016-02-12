@@ -82,7 +82,8 @@
         If fileloc = "" Then
             SaveAs()
         Else
-            
+            My.Computer.FileSystem.WriteAllText(fileloc, TextBox1.Text, False)
+            UpdateTitle()
         End If
     End Sub
 
