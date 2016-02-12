@@ -17,7 +17,9 @@
     End Sub
 
     Private Sub Redo()
-
+        If TextBox1.CanRedo Then
+            TextBox1.Redo()
+        End If
     End Sub
 
     Private Sub Cut()
