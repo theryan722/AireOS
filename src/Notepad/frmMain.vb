@@ -74,6 +74,7 @@
         If newb.ShowDialog = Windows.Forms.DialogResult.OK Then
             TextBox1.Text = My.Computer.FileSystem.ReadAllText(newb.FileName)
             otxt = TextBox1.Text
+            UpdateTitle()
         End If
     End Sub
 
