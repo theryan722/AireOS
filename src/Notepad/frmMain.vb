@@ -121,7 +121,9 @@
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-
+        If OkayToExit() Then
+            Me.Close()
+        End If
     End Sub
 
 #End Region
