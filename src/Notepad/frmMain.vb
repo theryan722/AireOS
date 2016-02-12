@@ -160,7 +160,7 @@
     End Sub
 
     Private Sub ForecolorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForecolorToolStripMenuItem.Click
-
+        SetColor(False)
     End Sub
 
 #End Region
