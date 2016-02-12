@@ -174,7 +174,7 @@
     End Sub
 
     Private Sub PrintPreviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintPreviewToolStripMenuItem.Click
-
+        PrintPreviewDialog1.ShowDialog()
     End Sub
 
 #End Region

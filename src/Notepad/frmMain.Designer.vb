@@ -32,7 +32,9 @@ Partial Class frmMain
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PageSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrintPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -63,12 +65,11 @@ Partial Class frmMain
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.SelectAllToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClearAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PageSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PrintPreviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
         Me.TextBox1 = New Notepad.RichTextBoxPrintCtrl.RichTextBoxPrintCtrl()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -123,11 +124,23 @@ Partial Class frmMain
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
         '
+        'PageSetupToolStripMenuItem
+        '
+        Me.PageSetupToolStripMenuItem.Name = "PageSetupToolStripMenuItem"
+        Me.PageSetupToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PageSetupToolStripMenuItem.Text = "Page Setup"
+        '
         'PrintToolStripMenuItem
         '
         Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
         Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PrintToolStripMenuItem.Text = "Print"
+        '
+        'PrintPreviewToolStripMenuItem
+        '
+        Me.PrintPreviewToolStripMenuItem.Name = "PrintPreviewToolStripMenuItem"
+        Me.PrintPreviewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PrintPreviewToolStripMenuItem.Text = "Print Preview"
         '
         'ToolStripSeparator3
         '
@@ -150,53 +163,53 @@ Partial Class frmMain
         'UndoToolStripMenuItem
         '
         Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
-        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.UndoToolStripMenuItem.Text = "Undo"
         '
         'RedoToolStripMenuItem
         '
         Me.RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
-        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.RedoToolStripMenuItem.Text = "Redo"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(119, 6)
         '
         'CutToolStripMenuItem
         '
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.CutToolStripMenuItem.Text = "Cut"
         '
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(119, 6)
         '
         'SelectAllToolStripMenuItem
         '
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.SelectAllToolStripMenuItem.Text = "Select All"
         '
         'ClearToolStripMenuItem
         '
         Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
-        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.ClearToolStripMenuItem.Text = "Clear"
         '
         'FormatToolStripMenuItem
@@ -209,19 +222,19 @@ Partial Class frmMain
         'FontToolStripMenuItem
         '
         Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
-        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.FontToolStripMenuItem.Text = "Font"
         '
         'BackcolorToolStripMenuItem
         '
         Me.BackcolorToolStripMenuItem.Name = "BackcolorToolStripMenuItem"
-        Me.BackcolorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackcolorToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.BackcolorToolStripMenuItem.Text = "Backcolor"
         '
         'ForecolorToolStripMenuItem
         '
         Me.ForecolorToolStripMenuItem.Name = "ForecolorToolStripMenuItem"
-        Me.ForecolorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ForecolorToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.ForecolorToolStripMenuItem.Text = "Forecolor"
         '
         'ViewToolStripMenuItem
@@ -234,7 +247,7 @@ Partial Class frmMain
         'TopmostToolStripMenuItem
         '
         Me.TopmostToolStripMenuItem.Name = "TopmostToolStripMenuItem"
-        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.TopmostToolStripMenuItem.Text = "Topmost"
         '
         'AboutToolStripMenuItem
@@ -308,17 +321,8 @@ Partial Class frmMain
         Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.ClearAllToolStripMenuItem.Text = "Clear All"
         '
-        'PageSetupToolStripMenuItem
+        'PrintDocument1
         '
-        Me.PageSetupToolStripMenuItem.Name = "PageSetupToolStripMenuItem"
-        Me.PageSetupToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PageSetupToolStripMenuItem.Text = "Page Setup"
-        '
-        'PrintPreviewToolStripMenuItem
-        '
-        Me.PrintPreviewToolStripMenuItem.Name = "PrintPreviewToolStripMenuItem"
-        Me.PrintPreviewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PrintPreviewToolStripMenuItem.Text = "Print Preview"
         '
         'PrintDialog1
         '
@@ -337,6 +341,17 @@ Partial Class frmMain
         Me.TextBox1.Size = New System.Drawing.Size(565, 227)
         Me.TextBox1.TabIndex = 1
         Me.TextBox1.Text = ""
+        '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Document = Me.PrintDocument1
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
         '
         'frmMain
         '
@@ -401,5 +416,6 @@ Partial Class frmMain
     Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
     Friend WithEvents PageSetupDialog1 As System.Windows.Forms.PageSetupDialog
     Friend WithEvents TextBox1 As Notepad.RichTextBoxPrintCtrl.RichTextBoxPrintCtrl
+    Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
 
 End Class
