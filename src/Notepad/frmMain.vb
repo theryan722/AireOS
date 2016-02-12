@@ -23,7 +23,7 @@
     End Sub
 
     Private Sub Cut()
-
+        TextBox1.Cut()
     End Sub
 
     Private Sub Copy()
