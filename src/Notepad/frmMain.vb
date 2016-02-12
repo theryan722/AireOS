@@ -2,7 +2,7 @@
 
 #Region "Properties/Variables"
 
-    Private fileloc As String
+    Private fileloc As String = ""
     Private otxt As String = ""
     Private filefilter As String = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
     Private changed As Boolean = False
@@ -53,7 +53,15 @@
     End Sub
 
     Private Sub UpdateTitle()
-
+        If fileloc = "" Then
+            Me.Text = "Notepad"
+        Else
+            If changed Then
+                Me.Text = System.IO.Path.GetFileName(fileloc) & "* - Notepad"
+            Else
+                Me.Text = System.IO.Path.GetFileName(fileloc) & " - Notepad"
+            End If
+        End If
     End Sub
 
     Private Function OkayToExit() As Boolean
