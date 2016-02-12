@@ -39,7 +39,7 @@
     End Sub
 
     Private Sub ClearAll()
-
+        TextBox1.Clear()
     End Sub
 
 #End Region
