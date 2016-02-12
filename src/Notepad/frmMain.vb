@@ -5,6 +5,7 @@
     Private fileloc As String
     Private otxt As String = ""
     Private filefilter As String = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
+    Private changed As Boolean = False
 
 #End Region
 
@@ -46,7 +47,12 @@
 
 #End Region
 
-    Private Sub SetTitle(ByVal str As String)
+    Private Sub SetChanged(ByVal val As Boolean)
+        changed = val
+        UpdateTitle()
+    End Sub
+
+    Private Sub UpdateTitle()
 
     End Sub
 
@@ -239,7 +245,13 @@
 
 #Region "TextBox1"
 
-
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        If otxt <> TextBox1.Text Then
+            SetChanged(True)
+        Else
+            SetChanged(False)
+        End If
+    End Sub
 
 #End Region
 
