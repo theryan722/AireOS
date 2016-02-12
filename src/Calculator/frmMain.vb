@@ -1,11 +1,5 @@
 ﻿Public Class frmMain
 
-#Region "Properties"
-
-
-
-#End Region
-
 #Region "Methods"
 
     Private Sub Copy()
@@ -88,14 +82,6 @@
     End Sub
 
 #End Region
-
-#End Region
-
-#Region "frmMain"
-
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
 #End Region
     
