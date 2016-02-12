@@ -172,6 +172,7 @@
     <Compile Include="CryptographyManager.vb" />
     <Compile Include="Notifications.vb" />
     <Compile Include="Power.vb" />
+    <Compile Include="Print.vb" />
     <Compile Include="ProcessManager.vb" />
     <Compile Include="SystemInfo.vb" />
     <Compile Include="Users.vb" />
