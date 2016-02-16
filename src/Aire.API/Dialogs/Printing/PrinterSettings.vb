@@ -83,14 +83,24 @@
     Public Property PrettyPrint As Boolean
     Public Property NoWrap As Boolean
     Public Property Priority As Integer '1 - 100
+    Public Property File As String
 
 #End Region
 
 #Region "Methods"
 
     Public Function ConvertToCommandString() As String
-        Dim ret As String
-
+        Dim ret As String = ""
+        If Not Media Is Nothing Then
+            ret &= "-0 media="
+            For i As Integer = 0 To Media.Count - 1
+                If i = Media.Count - 1 Then
+                    ret &= Media(i).ToString
+                Else
+                    ret &= Media(i).ToString & ","
+                End If
+            Next
+        End If
         Return ret
     End Function
 
