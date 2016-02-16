@@ -113,6 +113,7 @@
     <Compile Include="Dialogs\Printing\PrintDialog.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Dialogs\Printing\Printer.vb" />
     <Compile Include="Dialogs\Printing\PrinterSettings.vb" />
     <Compile Include="Dialogs\Printing\PrintJobsDialog.Designer.vb">
       <DependentUpon>PrintJobsDialog.vb</DependentUpon>
