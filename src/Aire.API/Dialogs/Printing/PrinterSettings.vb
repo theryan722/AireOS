@@ -62,7 +62,7 @@
 
 #Region "Properties"
 
-    Public Property Media As MediaType
+    Public Property Media As List(Of MediaType)
     Public Property Copies As Integer
     Public Property FitToPage As Boolean
     Public Property Orientation As PageOrientation
