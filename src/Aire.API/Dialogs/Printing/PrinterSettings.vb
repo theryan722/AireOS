@@ -135,6 +135,29 @@
         Return ret
     End Function
 
+    Private Function ConvertNUpLayoutToString() As String
+        Dim ret As String = " -o "
+        Select Case NUpLayout
+            Case NUpLayoutStyle.BottomToTop_LeftToRight
+                ret &= "number-up-layout=btlr"
+            Case NUpLayoutStyle.BottomToTop_RightToLeft
+                ret &= "number-up-layout=btrl"
+            Case NUpLayoutStyle.LeftToRight_BottomToTop
+                ret &= "number-up-layout=lrbt"
+            Case NUpLayoutStyle.LeftToRight_TopToBottom
+                ret &= "number-up-layout=lrtb"
+            Case NUpLayoutStyle.RightToLeft_BottomToTop
+                ret &= "number-up-layout=rlbt"
+            Case NUpLayoutStyle.RightToLeft_TopToBottom
+                ret &= "number-up-layout=rltb"
+            Case NUpLayoutStyle.TopToBottom_LeftToRight
+                ret &= "number-up-layout=tblr"
+            Case NUpLayoutStyle.TopToBottom_RightToLeft
+                ret &= "number-up-layout=tbrl"
+        End Select
+        Return ret
+    End Function
+
 #End Region
 
 #Region "Methods"
