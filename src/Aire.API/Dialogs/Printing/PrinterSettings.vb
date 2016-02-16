@@ -93,13 +93,26 @@
         Dim ret As String = " -o "
         Select Case Orientation
             Case PageOrientation.Landscape
-                ret &= " orientation-requested=4"
+                ret &= "orientation-requested=4"
             Case PageOrientation.Portrait
                 ret &= "orientation-requested=3"
             Case PageOrientation.ReverseLandscape
                 ret &= "orientation-requested=5"
             Case PageOrientation.ReversePortrait
                 ret &= "orientation-requested=6"
+        End Select
+        Return ret
+    End Function
+
+    Private Function ConvertSidesToString() As String
+        Dim ret As String = " -o "
+        Select Case Sides
+            Case SideStyle.OneSided
+                ret &= "sides=one-sided"
+            Case SideStyle.TwoSidedLongEdge
+                ret &= "sides=two-sided-long-edge"
+            Case SideStyle.TwoSidedShortEdge
+                ret &= "sides=two-sided-short-edge"
         End Select
         Return ret
     End Function
@@ -125,6 +138,7 @@
         If FitToPage Then 'FitToPage
             ret &= " -o fit-to-page"
         End If
+        ret &= ConvertOrientationToString() ' Orientation
 
         Return ret
     End Function
