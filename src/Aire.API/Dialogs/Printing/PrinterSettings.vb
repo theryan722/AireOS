@@ -53,6 +53,11 @@
         TopToBottom_RightToLeft
     End Enum
 
+    Enum OutputOrderStyle
+        Normal
+        Reverse
+    End Enum
+
 #End Region
 
 #Region "Properties"
@@ -67,6 +72,7 @@
     Public Property Parity As ParityStyle
     Public Property NUp As NUpStyle
     Public Property NUpLayout As NUpLayoutStyle
+    Public Property OutputOrder As OutputOrderStyle
 
 #End Region
 
