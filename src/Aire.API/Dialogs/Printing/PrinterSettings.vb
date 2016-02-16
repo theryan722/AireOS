@@ -85,4 +85,14 @@
 
 #End Region
 
+#Region "Methods"
+
+    Public Function ConvertToCommandString() As String
+        Dim ret As String
+
+        Return ret
+    End Function
+
+#End Region
+
 End Class
