@@ -87,11 +87,30 @@
 
 #End Region
 
+#Region "Helper"
+
+    Private Function ConvertOrientationToString() As String
+        Dim ret As String = " -o "
+        Select Case Orientation
+            Case PageOrientation.Landscape
+                ret &= " orientation-requested=4"
+            Case PageOrientation.Portrait
+                ret &= "orientation-requested=3"
+            Case PageOrientation.ReverseLandscape
+                ret &= "orientation-requested=5"
+            Case PageOrientation.ReversePortrait
+                ret &= "orientation-requested=6"
+        End Select
+        Return ret
+    End Function
+
+#End Region
+
 #Region "Methods"
 
     Public Function ConvertToCommand() As String
         Dim ret As String = ""
-        If Not Media Is Nothing Then
+        If Not Media Is Nothing Then 'Media
             ret &= "-0 media="
             For i As Integer = 0 To Media.Count - 1
                 If i = Media.Count - 1 Then
@@ -101,6 +120,12 @@
                 End If
             Next
         End If
+        ret &= " -n " & Copies 'Copies
+        ret &= " -o Collate=" & Collate.ToString 'Collate
+        If FitToPage Then 'FitToPage
+            ret &= " -o fit-to-page"
+        End If
+
         Return ret
     End Function
 
