@@ -71,6 +71,34 @@
 
 #Region "Methods"
 
+    Private Sub LoadCopiesUI()
+
+    End Sub
+
+    Private Sub LoadPageRangeUI()
+
+    End Sub
+
+    Private Sub LoadSidesUI()
+
+    End Sub
+
+    Private Sub LoadMarginsUI()
+
+    End Sub
+
+    Private Sub LoadMediaUI()
+
+    End Sub
+
+    Private Sub LoadDocumentsUI()
+
+    End Sub
+
+    Private Sub LoadOptionsUI()
+
+    End Sub
+
     Private Sub LoadPrinters()
         printerlist.Clear()
         lb_printers.Items.Clear()
