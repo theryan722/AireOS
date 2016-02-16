@@ -2,7 +2,7 @@
 
 #Region "Enums"
 
-    Enum Media
+    Enum MediaType
         Letter
         Legal
         A4
@@ -15,11 +15,20 @@
         LargeCapacity
     End Enum
 
+    Enum PageOrientation
+        Landscape
+        Portrait
+    End Enum
+
 #End Region
 
 #Region "Properties"
 
-
+    Public Property Media As MediaType
+    Public Property Copies As Integer
+    Public Property FitToPage As Boolean
+    Public Property Orientation As PageOrientation
+    Public Property Collate As Boolean
 
 #End Region
 
