@@ -2,7 +2,7 @@
 
 #Region "Properties/Variables/Enums"
 
-
+    Public Property PrinterOptions As PrinterSettings
 
 #End Region
 
