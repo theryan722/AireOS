@@ -23,6 +23,10 @@
 
     Public Class Actions
 
+        Public Shared Sub SetDefaultPrinter(ByVal dprint As Printer)
+            Sys.Process.ExecuteCommand("lpoptions", "-d " & dprint.Name)
+        End Sub
+
         Public Shared Sub PrintFile(ByVal file As String, Optional ByVal printer As Printer = Nothing, Optional ByVal printsettings As PrinterSettings = Nothing)
             Dim pstr As String = ""
             If printer.Name <> "" Then
