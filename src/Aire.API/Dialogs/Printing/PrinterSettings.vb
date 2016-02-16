@@ -192,9 +192,16 @@
                 ret &= " -o page-set=even"
             End If
         End If
-        ret &= " -o number-up=" & ConvertNUpToString() 'NUp
-
-
+        ret &= ConvertNUpToString() 'NUp
+        ret &= ConvertNUpLayoutToString() 'NUp Layout
+        If OutputOrder = OutputOrderStyle.Normal Then 'Output Order
+            ret &= " -o outputorder=normal"
+        Else
+            ret &= " -o outputorder=reverse"
+        End If
+        If Mirror Then
+            ret &= " -o mirror"
+        End If
         Return ret
     End Function
 
