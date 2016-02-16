@@ -73,6 +73,8 @@
     Public Property NUp As NUpStyle
     Public Property NUpLayout As NUpLayoutStyle
     Public Property OutputOrder As OutputOrderStyle
+    Public Property Mirror As Boolean
+    Public Property CharactersPerInch As Integer 'Default 10
 
 #End Region
 
