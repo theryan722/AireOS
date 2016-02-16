@@ -76,6 +76,10 @@
     Public Property Mirror As Boolean
     Public Property CharactersPerInch As Integer 'Default 10
     Public Property LinesPerInch As Integer 'Default 6
+    Public Property MarginLeft As Integer 'Each point is 1/72 inch or 0.35mm
+    Public Property MarginRight As Integer 'Each point is 1/72 inch or 0.35mm
+    Public Property MarginTop As Integer 'Each point is 1/72 inch or 0.35mm
+    Public Property MarginBottom As Integer 'Each point is 1/72 inch or 0.35mm
 
 #End Region
 
