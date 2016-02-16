@@ -89,7 +89,7 @@
 
 #Region "Methods"
 
-    Public Function ConvertToCommandString() As String
+    Public Function ConvertToCommand() As String
         Dim ret As String = ""
         If Not Media Is Nothing Then
             ret &= "-0 media="
