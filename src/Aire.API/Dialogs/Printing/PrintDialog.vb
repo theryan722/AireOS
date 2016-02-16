@@ -70,7 +70,17 @@
 
 #Region "Methods"
 
+    Private Sub LoadPrinters()
 
+    End Sub
+
+    Private Sub LoadUI()
+
+    End Sub
+
+    Private Function CheckIfFieldsValid() As Boolean
+
+    End Function
 
 #End Region
 
