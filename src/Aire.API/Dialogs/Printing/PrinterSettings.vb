@@ -16,8 +16,10 @@
     End Enum
 
     Enum PageOrientation
-        Landscape
         Portrait
+        Landscape '90 degrees
+        ReverseLandscape '270 degrees
+        ReversePortrait '180 degrees
     End Enum
 
 #End Region
