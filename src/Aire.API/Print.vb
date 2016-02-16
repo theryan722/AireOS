@@ -7,7 +7,15 @@
         End Function
 
         Public Shared Function GetPrinters() As List(Of Printer)
-
+            Dim ret As New List(Of Printer)
+            Dim bb() As String = Sys.Process.ExecuteCommandWithOutput("lpstat", "-p").Split(Environment.NewLine)
+            For Each item As String In bb
+                If item <> "" Then
+                    Dim arr() As String = item.Split(" ")
+                    ret.Add(New Printer(arr(1), item.ToLower.Contains("enabled")))
+                End If
+            Next
+            Return ret
         End Function
 
     End Class
