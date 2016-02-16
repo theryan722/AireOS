@@ -42,6 +42,17 @@
         Sixteen
     End Enum
 
+    Enum NUpLayoutStyle
+        BottomToTop_LeftToRight
+        BottomToTop_RightToLeft
+        LeftToRight_BottomToTop
+        LeftToRight_TopToBottom 'default
+        RightToLeft_BottomToTop
+        RightToLeft_TopToBottom
+        TopToBottom_LeftToRight
+        TopToBottom_RightToLeft
+    End Enum
+
 #End Region
 
 #Region "Properties"
@@ -55,6 +66,7 @@
     Public Property PageRanges As String
     Public Property Parity As ParityStyle
     Public Property NUp As NUpStyle
+    Public Property NUpLayout As NUpLayoutStyle
 
 #End Region
 
