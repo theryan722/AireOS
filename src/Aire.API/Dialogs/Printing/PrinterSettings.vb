@@ -29,6 +29,7 @@
     End Enum
 
     Enum ParityStyle
+        Normal
         Even
         Odd
     End Enum
@@ -117,6 +118,23 @@
         Return ret
     End Function
 
+    Private Function ConvertNUpToString() As String
+        Dim ret As String = " -o "
+        Select Case NUp
+            Case NUpStyle.One
+                ret &= "number-up=1"
+            Case NUpStyle.Two
+                ret &= "number-up=2"
+            Case NUpStyle.Four
+                ret &= "number-up=4"
+            Case NUpStyle.Six
+                ret &= "number-up=6"
+            Case NUpStyle.Sixteen
+                ret &= "number-up=16"
+        End Select
+        Return ret
+    End Function
+
 #End Region
 
 #Region "Methods"
@@ -124,7 +142,7 @@
     Public Function ConvertToCommand() As String
         Dim ret As String = ""
         If Not Media Is Nothing Then 'Media
-            ret &= "-0 media="
+            ret &= "-o media="
             For i As Integer = 0 To Media.Count - 1
                 If i = Media.Count - 1 Then
                     ret &= Media(i).ToString
@@ -139,6 +157,20 @@
             ret &= " -o fit-to-page"
         End If
         ret &= ConvertOrientationToString() ' Orientation
+        ret &= ConvertSidesToString() 'Sides
+        If Parity = ParityStyle.Normal Then
+            If PageRanges <> "" Then 'Page Ranges
+                ret &= " -o page-ranges=" & PageRanges
+            End If
+        Else
+            If Parity = ParityStyle.Odd Then 'Parity
+                ret &= " -o page-set=odd"
+            Else
+                ret &= " -o page-set=even"
+            End If
+        End If
+        ret &= " -o number-up=" & ConvertNUpToString() 'NUp
+
 
         Return ret
     End Function
