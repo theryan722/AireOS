@@ -80,6 +80,7 @@
     Public Property MarginRight As Integer 'Each point is 1/72 inch or 0.35mm
     Public Property MarginTop As Integer 'Each point is 1/72 inch or 0.35mm
     Public Property MarginBottom As Integer 'Each point is 1/72 inch or 0.35mm
+    Public Property PrettyPrint As Boolean
 
 #End Region
 
