@@ -22,6 +22,12 @@
         ReversePortrait '180 degrees
     End Enum
 
+    Enum SideStyle
+        OneSided
+        TwoSidedShortEdge
+        TwoSidedLongEdge
+    End Enum
+
 #End Region
 
 #Region "Properties"
@@ -31,6 +37,7 @@
     Public Property FitToPage As Boolean
     Public Property Orientation As PageOrientation
     Public Property Collate As Boolean
+    Public Property Sides As SideStyle
 
 #End Region
 
