@@ -107,6 +107,12 @@
     <Compile Include="Dialogs\dlgLogout.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Dialogs\PrintDialog.Designer.vb">
+      <DependentUpon>PrintDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PrintDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\Toast.Designer.vb">
       <DependentUpon>Toast.vb</DependentUpon>
     </Compile>
