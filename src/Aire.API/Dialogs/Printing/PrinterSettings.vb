@@ -28,6 +28,11 @@
         TwoSidedLongEdge
     End Enum
 
+    Enum ParityStyle
+        Even
+        Odd
+    End Enum
+
 #End Region
 
 #Region "Properties"
@@ -38,6 +43,8 @@
     Public Property Orientation As PageOrientation
     Public Property Collate As Boolean
     Public Property Sides As SideStyle
+    Public Property PageRanges As String
+    Public Property Parity As ParityStyle
 
 #End Region
 
