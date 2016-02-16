@@ -207,6 +207,9 @@
     <EmbeddedResource Include="Dialogs\dlgRun.resx">
       <DependentUpon>dlgRun.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Printing\PrintDialog.resx">
+      <DependentUpon>PrintDialog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Toast.resx">
       <DependentUpon>Toast.vb</DependentUpon>
     </EmbeddedResource>
