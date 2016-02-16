@@ -3,7 +3,8 @@
     Public Class Info
 
         Public Shared Function GetDefaultPrinter() As Printer
-
+            Dim bb() As String = Sys.Process.ExecuteCommandWithOutput("lpstat", "-d").Split(" ")
+            Return New Printer(bb(3))
         End Function
 
         Public Shared Function GetPrinters() As List(Of Printer)

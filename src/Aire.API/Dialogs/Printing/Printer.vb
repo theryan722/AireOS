@@ -1,11 +1,11 @@
 ﻿Public Class Printer
 
     Public Property Name As String
-    Public Property Active As Boolean
+    Public Property Enabled As Boolean
 
-    Public Sub New(ByVal pname As String, Optional pactive As Boolean = False)
+    Public Sub New(ByVal pname As String, Optional penabled As Boolean = False)
         Name = pname
-        Active = pactive
+        Enabled = penabled
     End Sub
 
 End Class
