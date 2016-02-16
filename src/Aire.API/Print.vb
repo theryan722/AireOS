@@ -31,6 +31,10 @@
             Sys.Process.ExecuteCommand("lprm")
         End Sub
 
+        Public Shared Sub CancelAllPrintJobs()
+            Sys.Process.ExecuteCommand("lpq", "cancel -a")
+        End Sub
+
     End Class
 
 End Namespace
