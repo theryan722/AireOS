@@ -72,7 +72,8 @@
 #Region "Methods"
 
     Private Sub LoadCopiesUI()
-
+        num_copies.Value = 1
+        check_collated.Checked = False
     End Sub
 
     Private Sub LoadPageRangeUI()
