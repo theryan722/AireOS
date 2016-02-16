@@ -2,11 +2,11 @@
 
     Public Class Info
 
-        Public Shared Function GetDefaultPrinter() As String
+        Public Shared Function GetDefaultPrinter() As Printer
 
         End Function
 
-        Public Shared Function GetPrinters() As List(Of String)
+        Public Shared Function GetPrinters() As List(Of Printer)
 
         End Function
 
@@ -14,10 +14,10 @@
 
     Public Class Actions
 
-        Public Shared Sub PrintFile(ByVal file As String, Optional ByVal printer As String = "", Optional ByVal printsettings As PrinterSettings = Nothing)
+        Public Shared Sub PrintFile(ByVal file As String, Optional ByVal printer As Printer = Nothing, Optional ByVal printsettings As PrinterSettings = Nothing)
             Dim pstr As String = ""
-            If printer <> "" Then
-                pstr &= "-d " & printer & " "
+            If printer.Name <> "" Then
+                pstr &= "-d " & printer.Name & " "
             End If
             If printsettings Is Nothing Then
                 pstr &= file
