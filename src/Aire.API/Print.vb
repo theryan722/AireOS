@@ -27,8 +27,8 @@
             Sys.Process.ExecuteCommand("lp", pstr)
         End Sub
 
-        Public Shared Sub ClearPrintQeue()
-
+        Public Shared Sub RemoveLastPrintJob()
+            Sys.Process.ExecuteCommand("lprm")
         End Sub
 
     End Class
