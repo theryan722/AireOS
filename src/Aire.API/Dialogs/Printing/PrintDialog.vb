@@ -77,7 +77,8 @@
     End Sub
 
     Private Sub LoadPageRangeUI()
-
+        radio_all.Checked = True
+        txt_custompagerange.Enabled = False
     End Sub
 
     Private Sub LoadSidesUI()
