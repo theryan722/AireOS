@@ -162,11 +162,33 @@
 
 #Region "PrinterSettings"
 
-    Public Sub New(Optional ByVal pmedia As List(Of MediaType), Optional ByVal pcopies As Integer = 1, Optional ByVal pfittopage As Boolean = True, Optional ByVal porientation As PageOrientation = PageOrientation.Portrait, Optional ByVal pcollate As Boolean = False, Optional ByVal psides As SideStyle = SideStyle.OneSided, Optional ByVal ppageranges As String = "", Optional ByVal pparity As ParityStyle = ParityStyle.Normal, Optional ByVal pnup As NUpStyle = NUpStyle.One, Optional ByVal pnuplayout As NUpLayoutStyle = NUpLayoutStyle.LeftToRight_TopToBottom, Optional ByVal pmirror As Boolean = False, Optional ByVal pcharactersperinch As integer = 10, Optional ByVal plinesperinch As integer = 6, Optional ByVal pmarginleft As Integer = 72, Optional ByVal pmarginright As Integer = 72, Optional ByVal pmargintop As Integer = 72, Optional pmarginbottom As Integer = 72, Optional ByVal pprettyprint As Boolean = False, Optional ByVal pnowrap As Boolean = False, Optional ByVal ppriority As Integer = 50, Optional ByVal pfile As String = "")
+    Public Sub New(Optional ByVal pmedia As List(Of MediaType) = Nothing, Optional ByVal pcopies As Integer = 1, Optional ByVal pfittopage As Boolean = True, Optional ByVal porientation As PageOrientation = PageOrientation.Portrait, Optional ByVal pcollate As Boolean = False, Optional ByVal psides As SideStyle = SideStyle.OneSided, Optional ByVal ppageranges As String = "", Optional ByVal pparity As ParityStyle = ParityStyle.Normal, Optional ByVal pnup As NUpStyle = NUpStyle.One, Optional ByVal pnuplayout As NUpLayoutStyle = NUpLayoutStyle.LeftToRight_TopToBottom, Optional ByVal poutputorder As OutputOrderStyle = OutputOrderStyle.Normal, Optional ByVal pmirror As Boolean = False, Optional ByVal pcharactersperinch As Integer = 10, Optional ByVal plinesperinch As Integer = 6, Optional ByVal pmarginleft As Integer = 72, Optional ByVal pmarginright As Integer = 72, Optional ByVal pmargintop As Integer = 72, Optional pmarginbottom As Integer = 72, Optional ByVal pprettyprint As Boolean = False, Optional ByVal pnowrap As Boolean = False, Optional ByVal ppriority As Integer = 50, Optional ByVal pfile As String = "")
         If pmedia Is Nothing Then
             pmedia = New List(Of MediaType)
             pmedia.Add(MediaType.Letter)
         End If
+        Media = pmedia
+        Copies = pcopies
+        FitToPage = pfittopage
+        Orientation = porientation
+        Collate = pcollate
+        Sides = psides
+        PageRanges = ppageranges
+        Parity = pparity
+        NUp = pnup
+        NUpLayout = pnuplayout
+        OutputOrder = poutputorder
+        Mirror = pmirror
+        CharactersPerInch = pcharactersperinch
+        LinesPerInch = plinesperinch
+        MarginLeft = pmarginleft
+        MarginRight = pmarginright
+        MarginTop = pmargintop
+        MarginBottom = pmarginbottom
+        PrettyPrint = pprettyprint
+        NoWrap = pnowrap
+        Priority = ppriority
+        File = pfile
     End Sub
 
 #End Region
