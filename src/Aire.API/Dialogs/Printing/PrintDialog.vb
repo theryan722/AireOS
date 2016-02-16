@@ -82,7 +82,7 @@
     End Sub
 
     Private Sub LoadSidesUI()
-
+        radio_onesided.Checked = True
     End Sub
 
     Private Sub LoadMarginsUI()
