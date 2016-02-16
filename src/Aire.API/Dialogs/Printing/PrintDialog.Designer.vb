@@ -30,56 +30,56 @@ Partial Class PrintDialog
         Me.lbl_status = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Tab_Copies = New System.Windows.Forms.TabPage()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.check_collated = New System.Windows.Forms.CheckBox()
+        Me.num_copies = New System.Windows.Forms.NumericUpDown()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Tab_PageRange = New System.Windows.Forms.TabPage()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.radio_evens = New System.Windows.Forms.RadioButton()
+        Me.radio_odds = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.txt_custompagerange = New System.Windows.Forms.TextBox()
+        Me.radio_custom = New System.Windows.Forms.RadioButton()
+        Me.radio_all = New System.Windows.Forms.RadioButton()
         Me.Tab_Sides = New System.Windows.Forms.TabPage()
-        Me.RadioButton7 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.radio_twosidedlongedge = New System.Windows.Forms.RadioButton()
+        Me.radio_twosidedshortedge = New System.Windows.Forms.RadioButton()
+        Me.radio_onesided = New System.Windows.Forms.RadioButton()
         Me.Tab_Margins = New System.Windows.Forms.TabPage()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.NumericUpDown5 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown4 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
+        Me.num_marginbottom = New System.Windows.Forms.NumericUpDown()
+        Me.num_margintop = New System.Windows.Forms.NumericUpDown()
+        Me.num_marginright = New System.Windows.Forms.NumericUpDown()
+        Me.num_marginleft = New System.Windows.Forms.NumericUpDown()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Tab_Media = New System.Windows.Forms.TabPage()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.combo_media = New System.Windows.Forms.ComboBox()
+        Me.btn_addmedia = New System.Windows.Forms.Button()
+        Me.btn_removemedia = New System.Windows.Forms.Button()
+        Me.btn_clearmedia = New System.Windows.Forms.Button()
+        Me.lb_media = New System.Windows.Forms.ListBox()
         Me.Tab_Documents = New System.Windows.Forms.TabPage()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.combo_documentslayout = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.combo_documents = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Tab_Options = New System.Windows.Forms.TabPage()
-        Me.NumericUpDown8 = New System.Windows.Forms.NumericUpDown()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.num_priority = New System.Windows.Forms.NumericUpDown()
+        Me.check_nowrap = New System.Windows.Forms.CheckBox()
+        Me.check_prettyprint = New System.Windows.Forms.CheckBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.check_fittopage = New System.Windows.Forms.CheckBox()
+        Me.combo_orientation = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.RadioButton9 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton8 = New System.Windows.Forms.RadioButton()
+        Me.radio_reverseorder = New System.Windows.Forms.RadioButton()
+        Me.radio_normalorder = New System.Windows.Forms.RadioButton()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown7 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown6 = New System.Windows.Forms.NumericUpDown()
+        Me.check_mirror = New System.Windows.Forms.CheckBox()
+        Me.num_charactersinch = New System.Windows.Forms.NumericUpDown()
+        Me.num_linesinch = New System.Windows.Forms.NumericUpDown()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.pnl_info = New System.Windows.Forms.Panel()
@@ -87,21 +87,21 @@ Partial Class PrintDialog
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.Tab_Copies.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.num_copies, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tab_PageRange.SuspendLayout()
         Me.Tab_Sides.SuspendLayout()
         Me.Tab_Margins.SuspendLayout()
-        CType(Me.NumericUpDown5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.num_marginbottom, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.num_margintop, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.num_marginright, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.num_marginleft, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Tab_Media.SuspendLayout()
         Me.Tab_Documents.SuspendLayout()
         Me.Tab_Options.SuspendLayout()
-        CType(Me.NumericUpDown8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.num_priority, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.num_charactersinch, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.num_linesinch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_info.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -185,8 +185,8 @@ Partial Class PrintDialog
         '
         'Tab_Copies
         '
-        Me.Tab_Copies.Controls.Add(Me.CheckBox1)
-        Me.Tab_Copies.Controls.Add(Me.NumericUpDown1)
+        Me.Tab_Copies.Controls.Add(Me.check_collated)
+        Me.Tab_Copies.Controls.Add(Me.num_copies)
         Me.Tab_Copies.Controls.Add(Me.Label1)
         Me.Tab_Copies.Location = New System.Drawing.Point(4, 22)
         Me.Tab_Copies.Name = "Tab_Copies"
@@ -195,22 +195,22 @@ Partial Class PrintDialog
         Me.Tab_Copies.Text = "Copies"
         Me.Tab_Copies.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'check_collated
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 32)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(64, 17)
-        Me.CheckBox1.TabIndex = 2
-        Me.CheckBox1.Text = "Collated"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.check_collated.AutoSize = True
+        Me.check_collated.Location = New System.Drawing.Point(6, 32)
+        Me.check_collated.Name = "check_collated"
+        Me.check_collated.Size = New System.Drawing.Size(64, 17)
+        Me.check_collated.TabIndex = 2
+        Me.check_collated.Text = "Collated"
+        Me.check_collated.UseVisualStyleBackColor = True
         '
-        'NumericUpDown1
+        'num_copies
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(51, 6)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(67, 20)
-        Me.NumericUpDown1.TabIndex = 1
+        Me.num_copies.Location = New System.Drawing.Point(51, 6)
+        Me.num_copies.Name = "num_copies"
+        Me.num_copies.Size = New System.Drawing.Size(67, 20)
+        Me.num_copies.TabIndex = 1
         '
         'Label1
         '
@@ -223,40 +223,40 @@ Partial Class PrintDialog
         '
         'Tab_PageRange
         '
-        Me.Tab_PageRange.Controls.Add(Me.RadioButton4)
-        Me.Tab_PageRange.Controls.Add(Me.RadioButton3)
+        Me.Tab_PageRange.Controls.Add(Me.radio_evens)
+        Me.Tab_PageRange.Controls.Add(Me.radio_odds)
         Me.Tab_PageRange.Controls.Add(Me.Label2)
-        Me.Tab_PageRange.Controls.Add(Me.TextBox1)
-        Me.Tab_PageRange.Controls.Add(Me.RadioButton2)
-        Me.Tab_PageRange.Controls.Add(Me.RadioButton1)
+        Me.Tab_PageRange.Controls.Add(Me.txt_custompagerange)
+        Me.Tab_PageRange.Controls.Add(Me.radio_custom)
+        Me.Tab_PageRange.Controls.Add(Me.radio_all)
         Me.Tab_PageRange.Location = New System.Drawing.Point(4, 22)
         Me.Tab_PageRange.Name = "Tab_PageRange"
-        Me.Tab_PageRange.Size = New System.Drawing.Size(366, 120)
+        Me.Tab_PageRange.Size = New System.Drawing.Size(366, 125)
         Me.Tab_PageRange.TabIndex = 0
         Me.Tab_PageRange.Text = "Page Range"
         Me.Tab_PageRange.UseVisualStyleBackColor = True
         '
-        'RadioButton4
+        'radio_evens
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(7, 75)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(55, 17)
-        Me.RadioButton4.TabIndex = 5
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Evens"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.radio_evens.AutoSize = True
+        Me.radio_evens.Location = New System.Drawing.Point(7, 75)
+        Me.radio_evens.Name = "radio_evens"
+        Me.radio_evens.Size = New System.Drawing.Size(55, 17)
+        Me.radio_evens.TabIndex = 5
+        Me.radio_evens.TabStop = True
+        Me.radio_evens.Text = "Evens"
+        Me.radio_evens.UseVisualStyleBackColor = True
         '
-        'RadioButton3
+        'radio_odds
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(7, 52)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(50, 17)
-        Me.RadioButton3.TabIndex = 4
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Odds"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.radio_odds.AutoSize = True
+        Me.radio_odds.Location = New System.Drawing.Point(7, 52)
+        Me.radio_odds.Name = "radio_odds"
+        Me.radio_odds.Size = New System.Drawing.Size(50, 17)
+        Me.radio_odds.TabIndex = 4
+        Me.radio_odds.TabStop = True
+        Me.radio_odds.Text = "Odds"
+        Me.radio_odds.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -268,94 +268,94 @@ Partial Class PrintDialog
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Ex: 1-4,10-15"
         '
-        'TextBox1
+        'txt_custompagerange
         '
-        Me.TextBox1.Location = New System.Drawing.Point(73, 29)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.txt_custompagerange.Location = New System.Drawing.Point(73, 29)
+        Me.txt_custompagerange.Name = "txt_custompagerange"
+        Me.txt_custompagerange.Size = New System.Drawing.Size(100, 20)
+        Me.txt_custompagerange.TabIndex = 2
         '
-        'RadioButton2
+        'radio_custom
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(7, 29)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(60, 17)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Custom"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.radio_custom.AutoSize = True
+        Me.radio_custom.Location = New System.Drawing.Point(7, 29)
+        Me.radio_custom.Name = "radio_custom"
+        Me.radio_custom.Size = New System.Drawing.Size(60, 17)
+        Me.radio_custom.TabIndex = 1
+        Me.radio_custom.TabStop = True
+        Me.radio_custom.Text = "Custom"
+        Me.radio_custom.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'radio_all
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(7, 6)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(36, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "All"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.radio_all.AutoSize = True
+        Me.radio_all.Location = New System.Drawing.Point(7, 6)
+        Me.radio_all.Name = "radio_all"
+        Me.radio_all.Size = New System.Drawing.Size(36, 17)
+        Me.radio_all.TabIndex = 0
+        Me.radio_all.TabStop = True
+        Me.radio_all.Text = "All"
+        Me.radio_all.UseVisualStyleBackColor = True
         '
         'Tab_Sides
         '
-        Me.Tab_Sides.Controls.Add(Me.RadioButton7)
-        Me.Tab_Sides.Controls.Add(Me.RadioButton6)
-        Me.Tab_Sides.Controls.Add(Me.RadioButton5)
+        Me.Tab_Sides.Controls.Add(Me.radio_twosidedlongedge)
+        Me.Tab_Sides.Controls.Add(Me.radio_twosidedshortedge)
+        Me.Tab_Sides.Controls.Add(Me.radio_onesided)
         Me.Tab_Sides.Location = New System.Drawing.Point(4, 22)
         Me.Tab_Sides.Name = "Tab_Sides"
-        Me.Tab_Sides.Size = New System.Drawing.Size(366, 120)
+        Me.Tab_Sides.Size = New System.Drawing.Size(366, 125)
         Me.Tab_Sides.TabIndex = 5
         Me.Tab_Sides.Text = "Sides"
         Me.Tab_Sides.UseVisualStyleBackColor = True
         '
-        'RadioButton7
+        'radio_twosidedlongedge
         '
-        Me.RadioButton7.AutoSize = True
-        Me.RadioButton7.Location = New System.Drawing.Point(3, 26)
-        Me.RadioButton7.Name = "RadioButton7"
-        Me.RadioButton7.Size = New System.Drawing.Size(179, 17)
-        Me.RadioButton7.TabIndex = 2
-        Me.RadioButton7.TabStop = True
-        Me.RadioButton7.Text = "Two Sided - Long Edge (Portrait)"
-        Me.RadioButton7.UseVisualStyleBackColor = True
+        Me.radio_twosidedlongedge.AutoSize = True
+        Me.radio_twosidedlongedge.Location = New System.Drawing.Point(3, 26)
+        Me.radio_twosidedlongedge.Name = "radio_twosidedlongedge"
+        Me.radio_twosidedlongedge.Size = New System.Drawing.Size(179, 17)
+        Me.radio_twosidedlongedge.TabIndex = 2
+        Me.radio_twosidedlongedge.TabStop = True
+        Me.radio_twosidedlongedge.Text = "Two Sided - Long Edge (Portrait)"
+        Me.radio_twosidedlongedge.UseVisualStyleBackColor = True
         '
-        'RadioButton6
+        'radio_twosidedshortedge
         '
-        Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Location = New System.Drawing.Point(3, 49)
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(200, 17)
-        Me.RadioButton6.TabIndex = 1
-        Me.RadioButton6.TabStop = True
-        Me.RadioButton6.Text = "Two Sided - Short Edge (Landscape)"
-        Me.RadioButton6.UseVisualStyleBackColor = True
+        Me.radio_twosidedshortedge.AutoSize = True
+        Me.radio_twosidedshortedge.Location = New System.Drawing.Point(3, 49)
+        Me.radio_twosidedshortedge.Name = "radio_twosidedshortedge"
+        Me.radio_twosidedshortedge.Size = New System.Drawing.Size(200, 17)
+        Me.radio_twosidedshortedge.TabIndex = 1
+        Me.radio_twosidedshortedge.TabStop = True
+        Me.radio_twosidedshortedge.Text = "Two Sided - Short Edge (Landscape)"
+        Me.radio_twosidedshortedge.UseVisualStyleBackColor = True
         '
-        'RadioButton5
+        'radio_onesided
         '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Location = New System.Drawing.Point(3, 3)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(75, 17)
-        Me.RadioButton5.TabIndex = 0
-        Me.RadioButton5.TabStop = True
-        Me.RadioButton5.Text = "One Sided"
-        Me.RadioButton5.UseVisualStyleBackColor = True
+        Me.radio_onesided.AutoSize = True
+        Me.radio_onesided.Location = New System.Drawing.Point(3, 3)
+        Me.radio_onesided.Name = "radio_onesided"
+        Me.radio_onesided.Size = New System.Drawing.Size(75, 17)
+        Me.radio_onesided.TabIndex = 0
+        Me.radio_onesided.TabStop = True
+        Me.radio_onesided.Text = "One Sided"
+        Me.radio_onesided.UseVisualStyleBackColor = True
         '
         'Tab_Margins
         '
         Me.Tab_Margins.Controls.Add(Me.Label7)
-        Me.Tab_Margins.Controls.Add(Me.NumericUpDown5)
-        Me.Tab_Margins.Controls.Add(Me.NumericUpDown4)
-        Me.Tab_Margins.Controls.Add(Me.NumericUpDown3)
-        Me.Tab_Margins.Controls.Add(Me.NumericUpDown2)
+        Me.Tab_Margins.Controls.Add(Me.num_marginbottom)
+        Me.Tab_Margins.Controls.Add(Me.num_margintop)
+        Me.Tab_Margins.Controls.Add(Me.num_marginright)
+        Me.Tab_Margins.Controls.Add(Me.num_marginleft)
         Me.Tab_Margins.Controls.Add(Me.Label6)
         Me.Tab_Margins.Controls.Add(Me.Label5)
         Me.Tab_Margins.Controls.Add(Me.Label4)
         Me.Tab_Margins.Controls.Add(Me.Label3)
         Me.Tab_Margins.Location = New System.Drawing.Point(4, 22)
         Me.Tab_Margins.Name = "Tab_Margins"
-        Me.Tab_Margins.Size = New System.Drawing.Size(366, 120)
+        Me.Tab_Margins.Size = New System.Drawing.Size(366, 125)
         Me.Tab_Margins.TabIndex = 2
         Me.Tab_Margins.Text = "Margins"
         Me.Tab_Margins.UseVisualStyleBackColor = True
@@ -370,33 +370,33 @@ Partial Class PrintDialog
         Me.Label7.TabIndex = 8
         Me.Label7.Text = "One point = 1/72 inch or 0.35mm"
         '
-        'NumericUpDown5
+        'num_marginbottom
         '
-        Me.NumericUpDown5.Location = New System.Drawing.Point(51, 82)
-        Me.NumericUpDown5.Name = "NumericUpDown5"
-        Me.NumericUpDown5.Size = New System.Drawing.Size(47, 20)
-        Me.NumericUpDown5.TabIndex = 7
+        Me.num_marginbottom.Location = New System.Drawing.Point(51, 82)
+        Me.num_marginbottom.Name = "num_marginbottom"
+        Me.num_marginbottom.Size = New System.Drawing.Size(47, 20)
+        Me.num_marginbottom.TabIndex = 7
         '
-        'NumericUpDown4
+        'num_margintop
         '
-        Me.NumericUpDown4.Location = New System.Drawing.Point(51, 56)
-        Me.NumericUpDown4.Name = "NumericUpDown4"
-        Me.NumericUpDown4.Size = New System.Drawing.Size(47, 20)
-        Me.NumericUpDown4.TabIndex = 6
+        Me.num_margintop.Location = New System.Drawing.Point(51, 56)
+        Me.num_margintop.Name = "num_margintop"
+        Me.num_margintop.Size = New System.Drawing.Size(47, 20)
+        Me.num_margintop.TabIndex = 6
         '
-        'NumericUpDown3
+        'num_marginright
         '
-        Me.NumericUpDown3.Location = New System.Drawing.Point(51, 29)
-        Me.NumericUpDown3.Name = "NumericUpDown3"
-        Me.NumericUpDown3.Size = New System.Drawing.Size(47, 20)
-        Me.NumericUpDown3.TabIndex = 5
+        Me.num_marginright.Location = New System.Drawing.Point(51, 29)
+        Me.num_marginright.Name = "num_marginright"
+        Me.num_marginright.Size = New System.Drawing.Size(47, 20)
+        Me.num_marginright.TabIndex = 5
         '
-        'NumericUpDown2
+        'num_marginleft
         '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(51, 3)
-        Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(47, 20)
-        Me.NumericUpDown2.TabIndex = 4
+        Me.num_marginleft.Location = New System.Drawing.Point(51, 3)
+        Me.num_marginleft.Name = "num_marginleft"
+        Me.num_marginleft.Size = New System.Drawing.Size(47, 20)
+        Me.num_marginleft.TabIndex = 4
         '
         'Label6
         '
@@ -436,84 +436,84 @@ Partial Class PrintDialog
         '
         'Tab_Media
         '
-        Me.Tab_Media.Controls.Add(Me.ComboBox1)
-        Me.Tab_Media.Controls.Add(Me.Button3)
-        Me.Tab_Media.Controls.Add(Me.Button2)
-        Me.Tab_Media.Controls.Add(Me.Button1)
-        Me.Tab_Media.Controls.Add(Me.ListBox1)
+        Me.Tab_Media.Controls.Add(Me.combo_media)
+        Me.Tab_Media.Controls.Add(Me.btn_addmedia)
+        Me.Tab_Media.Controls.Add(Me.btn_removemedia)
+        Me.Tab_Media.Controls.Add(Me.btn_clearmedia)
+        Me.Tab_Media.Controls.Add(Me.lb_media)
         Me.Tab_Media.Location = New System.Drawing.Point(4, 22)
         Me.Tab_Media.Name = "Tab_Media"
-        Me.Tab_Media.Size = New System.Drawing.Size(366, 120)
+        Me.Tab_Media.Size = New System.Drawing.Size(366, 125)
         Me.Tab_Media.TabIndex = 6
         Me.Tab_Media.Text = "Media"
         Me.Tab_Media.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'combo_media
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Letter", "Legal", "A4", "COM10", "DL", "Transparency", "Upper", "Lower", "MultiPurpose", "LargeCapacity"})
-        Me.ComboBox1.Location = New System.Drawing.Point(2, 3)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 4
+        Me.combo_media.FormattingEnabled = True
+        Me.combo_media.Items.AddRange(New Object() {"Letter", "Legal", "A4", "COM10", "DL", "Transparency", "Upper", "Lower", "MultiPurpose", "LargeCapacity"})
+        Me.combo_media.Location = New System.Drawing.Point(2, 3)
+        Me.combo_media.Name = "combo_media"
+        Me.combo_media.Size = New System.Drawing.Size(121, 21)
+        Me.combo_media.TabIndex = 4
         '
-        'Button3
+        'btn_addmedia
         '
-        Me.Button3.Location = New System.Drawing.Point(129, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(39, 21)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Add"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btn_addmedia.Location = New System.Drawing.Point(129, 3)
+        Me.btn_addmedia.Name = "btn_addmedia"
+        Me.btn_addmedia.Size = New System.Drawing.Size(39, 21)
+        Me.btn_addmedia.TabIndex = 3
+        Me.btn_addmedia.Text = "Add"
+        Me.btn_addmedia.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btn_removemedia
         '
-        Me.Button2.Location = New System.Drawing.Point(129, 61)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(59, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Remove"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btn_removemedia.Location = New System.Drawing.Point(129, 61)
+        Me.btn_removemedia.Name = "btn_removemedia"
+        Me.btn_removemedia.Size = New System.Drawing.Size(59, 23)
+        Me.btn_removemedia.TabIndex = 2
+        Me.btn_removemedia.Text = "Remove"
+        Me.btn_removemedia.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btn_clearmedia
         '
-        Me.Button1.Location = New System.Drawing.Point(129, 90)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(49, 22)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Clear"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_clearmedia.Location = New System.Drawing.Point(129, 90)
+        Me.btn_clearmedia.Name = "btn_clearmedia"
+        Me.btn_clearmedia.Size = New System.Drawing.Size(49, 22)
+        Me.btn_clearmedia.TabIndex = 1
+        Me.btn_clearmedia.Text = "Clear"
+        Me.btn_clearmedia.UseVisualStyleBackColor = True
         '
-        'ListBox1
+        'lb_media
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(3, 30)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.ScrollAlwaysVisible = True
-        Me.ListBox1.Size = New System.Drawing.Size(120, 82)
-        Me.ListBox1.TabIndex = 0
+        Me.lb_media.FormattingEnabled = True
+        Me.lb_media.Location = New System.Drawing.Point(3, 30)
+        Me.lb_media.Name = "lb_media"
+        Me.lb_media.ScrollAlwaysVisible = True
+        Me.lb_media.Size = New System.Drawing.Size(120, 82)
+        Me.lb_media.TabIndex = 0
         '
         'Tab_Documents
         '
-        Me.Tab_Documents.Controls.Add(Me.ComboBox4)
+        Me.Tab_Documents.Controls.Add(Me.combo_documentslayout)
         Me.Tab_Documents.Controls.Add(Me.Label13)
-        Me.Tab_Documents.Controls.Add(Me.ComboBox3)
+        Me.Tab_Documents.Controls.Add(Me.combo_documents)
         Me.Tab_Documents.Controls.Add(Me.Label12)
         Me.Tab_Documents.Location = New System.Drawing.Point(4, 22)
         Me.Tab_Documents.Name = "Tab_Documents"
-        Me.Tab_Documents.Size = New System.Drawing.Size(366, 120)
+        Me.Tab_Documents.Size = New System.Drawing.Size(366, 125)
         Me.Tab_Documents.TabIndex = 4
         Me.Tab_Documents.Text = "Documents"
         Me.Tab_Documents.UseVisualStyleBackColor = True
         '
-        'ComboBox4
+        'combo_documentslayout
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"BottomToTop_LeftToRight", "BottomToTop_RightToLeft", "LeftToRight_BottomToTop", "LeftToRight_TopToBottom", "RightToLeft_BottomToTop", "RightToLeft_TopToBottom", "TopToBottom_LeftToRight", "TopToBottom_RightToLeft"})
-        Me.ComboBox4.Location = New System.Drawing.Point(56, 32)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(148, 21)
-        Me.ComboBox4.TabIndex = 3
+        Me.combo_documentslayout.FormattingEnabled = True
+        Me.combo_documentslayout.Items.AddRange(New Object() {"BottomToTop_LeftToRight", "BottomToTop_RightToLeft", "LeftToRight_BottomToTop", "LeftToRight_TopToBottom", "RightToLeft_BottomToTop", "RightToLeft_TopToBottom", "TopToBottom_LeftToRight", "TopToBottom_RightToLeft"})
+        Me.combo_documentslayout.Location = New System.Drawing.Point(56, 32)
+        Me.combo_documentslayout.Name = "combo_documentslayout"
+        Me.combo_documentslayout.Size = New System.Drawing.Size(148, 21)
+        Me.combo_documentslayout.TabIndex = 3
         '
         'Label13
         '
@@ -524,14 +524,14 @@ Partial Class PrintDialog
         Me.Label13.TabIndex = 2
         Me.Label13.Text = "Layout:"
         '
-        'ComboBox3
+        'combo_documents
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"1", "2", "4", "6", "9", "16"})
-        Me.ComboBox3.Location = New System.Drawing.Point(118, 5)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(86, 21)
-        Me.ComboBox3.TabIndex = 1
+        Me.combo_documents.FormattingEnabled = True
+        Me.combo_documents.Items.AddRange(New Object() {"1", "2", "4", "6", "9", "16"})
+        Me.combo_documents.Location = New System.Drawing.Point(118, 5)
+        Me.combo_documents.Name = "combo_documents"
+        Me.combo_documents.Size = New System.Drawing.Size(86, 21)
+        Me.combo_documents.TabIndex = 1
         '
         'Label12
         '
@@ -544,53 +544,53 @@ Partial Class PrintDialog
         '
         'Tab_Options
         '
-        Me.Tab_Options.Controls.Add(Me.NumericUpDown8)
-        Me.Tab_Options.Controls.Add(Me.CheckBox5)
-        Me.Tab_Options.Controls.Add(Me.CheckBox4)
+        Me.Tab_Options.Controls.Add(Me.num_priority)
+        Me.Tab_Options.Controls.Add(Me.check_nowrap)
+        Me.Tab_Options.Controls.Add(Me.check_prettyprint)
         Me.Tab_Options.Controls.Add(Me.Label14)
-        Me.Tab_Options.Controls.Add(Me.CheckBox3)
-        Me.Tab_Options.Controls.Add(Me.ComboBox2)
+        Me.Tab_Options.Controls.Add(Me.check_fittopage)
+        Me.Tab_Options.Controls.Add(Me.combo_orientation)
         Me.Tab_Options.Controls.Add(Me.Label11)
         Me.Tab_Options.Controls.Add(Me.Panel1)
         Me.Tab_Options.Controls.Add(Me.Label10)
-        Me.Tab_Options.Controls.Add(Me.CheckBox2)
-        Me.Tab_Options.Controls.Add(Me.NumericUpDown7)
-        Me.Tab_Options.Controls.Add(Me.NumericUpDown6)
+        Me.Tab_Options.Controls.Add(Me.check_mirror)
+        Me.Tab_Options.Controls.Add(Me.num_charactersinch)
+        Me.Tab_Options.Controls.Add(Me.num_linesinch)
         Me.Tab_Options.Controls.Add(Me.Label9)
         Me.Tab_Options.Controls.Add(Me.Label8)
         Me.Tab_Options.Location = New System.Drawing.Point(4, 22)
         Me.Tab_Options.Name = "Tab_Options"
-        Me.Tab_Options.Size = New System.Drawing.Size(366, 120)
+        Me.Tab_Options.Size = New System.Drawing.Size(366, 125)
         Me.Tab_Options.TabIndex = 1
         Me.Tab_Options.Text = "Options"
         Me.Tab_Options.UseVisualStyleBackColor = True
         '
-        'NumericUpDown8
+        'num_priority
         '
-        Me.NumericUpDown8.Location = New System.Drawing.Point(224, 79)
-        Me.NumericUpDown8.Name = "NumericUpDown8"
-        Me.NumericUpDown8.Size = New System.Drawing.Size(51, 20)
-        Me.NumericUpDown8.TabIndex = 13
+        Me.num_priority.Location = New System.Drawing.Point(224, 79)
+        Me.num_priority.Name = "num_priority"
+        Me.num_priority.Size = New System.Drawing.Size(51, 20)
+        Me.num_priority.TabIndex = 13
         '
-        'CheckBox5
+        'check_nowrap
         '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(174, 59)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(69, 17)
-        Me.CheckBox5.TabIndex = 12
-        Me.CheckBox5.Text = "No Wrap"
-        Me.CheckBox5.UseVisualStyleBackColor = True
+        Me.check_nowrap.AutoSize = True
+        Me.check_nowrap.Location = New System.Drawing.Point(174, 59)
+        Me.check_nowrap.Name = "check_nowrap"
+        Me.check_nowrap.Size = New System.Drawing.Size(69, 17)
+        Me.check_nowrap.TabIndex = 12
+        Me.check_nowrap.Text = "No Wrap"
+        Me.check_nowrap.UseVisualStyleBackColor = True
         '
-        'CheckBox4
+        'check_prettyprint
         '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(166, 36)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(77, 17)
-        Me.CheckBox4.TabIndex = 11
-        Me.CheckBox4.Text = "Pretty Print"
-        Me.CheckBox4.UseVisualStyleBackColor = True
+        Me.check_prettyprint.AutoSize = True
+        Me.check_prettyprint.Location = New System.Drawing.Point(166, 36)
+        Me.check_prettyprint.Name = "check_prettyprint"
+        Me.check_prettyprint.Size = New System.Drawing.Size(77, 17)
+        Me.check_prettyprint.TabIndex = 11
+        Me.check_prettyprint.Text = "Pretty Print"
+        Me.check_prettyprint.UseVisualStyleBackColor = True
         '
         'Label14
         '
@@ -601,24 +601,24 @@ Partial Class PrintDialog
         Me.Label14.TabIndex = 10
         Me.Label14.Text = "Priority:"
         '
-        'CheckBox3
+        'check_fittopage
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(6, 100)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(77, 17)
-        Me.CheckBox3.TabIndex = 9
-        Me.CheckBox3.Text = "Fit to Page"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.check_fittopage.AutoSize = True
+        Me.check_fittopage.Location = New System.Drawing.Point(6, 100)
+        Me.check_fittopage.Name = "check_fittopage"
+        Me.check_fittopage.Size = New System.Drawing.Size(77, 17)
+        Me.check_fittopage.TabIndex = 9
+        Me.check_fittopage.Text = "Fit to Page"
+        Me.check_fittopage.UseVisualStyleBackColor = True
         '
-        'ComboBox2
+        'combo_orientation
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {" Portrait", " Landscape", " ReverseLandscape", " ReversePortrait"})
-        Me.ComboBox2.Location = New System.Drawing.Point(230, 9)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(99, 21)
-        Me.ComboBox2.TabIndex = 8
+        Me.combo_orientation.FormattingEnabled = True
+        Me.combo_orientation.Items.AddRange(New Object() {" Portrait", " Landscape", " ReverseLandscape", " ReversePortrait"})
+        Me.combo_orientation.Location = New System.Drawing.Point(230, 9)
+        Me.combo_orientation.Name = "combo_orientation"
+        Me.combo_orientation.Size = New System.Drawing.Size(99, 21)
+        Me.combo_orientation.TabIndex = 8
         '
         'Label11
         '
@@ -631,36 +631,36 @@ Partial Class PrintDialog
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.RadioButton9)
-        Me.Panel1.Controls.Add(Me.RadioButton8)
+        Me.Panel1.Controls.Add(Me.radio_reverseorder)
+        Me.Panel1.Controls.Add(Me.radio_normalorder)
         Me.Panel1.Location = New System.Drawing.Point(48, 79)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(127, 17)
         Me.Panel1.TabIndex = 6
         '
-        'RadioButton9
+        'radio_reverseorder
         '
-        Me.RadioButton9.AutoSize = True
-        Me.RadioButton9.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RadioButton9.Location = New System.Drawing.Point(58, 0)
-        Me.RadioButton9.Name = "RadioButton9"
-        Me.RadioButton9.Size = New System.Drawing.Size(65, 17)
-        Me.RadioButton9.TabIndex = 1
-        Me.RadioButton9.TabStop = True
-        Me.RadioButton9.Text = "Reverse"
-        Me.RadioButton9.UseVisualStyleBackColor = True
+        Me.radio_reverseorder.AutoSize = True
+        Me.radio_reverseorder.Dock = System.Windows.Forms.DockStyle.Left
+        Me.radio_reverseorder.Location = New System.Drawing.Point(58, 0)
+        Me.radio_reverseorder.Name = "radio_reverseorder"
+        Me.radio_reverseorder.Size = New System.Drawing.Size(65, 17)
+        Me.radio_reverseorder.TabIndex = 1
+        Me.radio_reverseorder.TabStop = True
+        Me.radio_reverseorder.Text = "Reverse"
+        Me.radio_reverseorder.UseVisualStyleBackColor = True
         '
-        'RadioButton8
+        'radio_normalorder
         '
-        Me.RadioButton8.AutoSize = True
-        Me.RadioButton8.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RadioButton8.Location = New System.Drawing.Point(0, 0)
-        Me.RadioButton8.Name = "RadioButton8"
-        Me.RadioButton8.Size = New System.Drawing.Size(58, 17)
-        Me.RadioButton8.TabIndex = 0
-        Me.RadioButton8.TabStop = True
-        Me.RadioButton8.Text = "Normal"
-        Me.RadioButton8.UseVisualStyleBackColor = True
+        Me.radio_normalorder.AutoSize = True
+        Me.radio_normalorder.Dock = System.Windows.Forms.DockStyle.Left
+        Me.radio_normalorder.Location = New System.Drawing.Point(0, 0)
+        Me.radio_normalorder.Name = "radio_normalorder"
+        Me.radio_normalorder.Size = New System.Drawing.Size(58, 17)
+        Me.radio_normalorder.TabIndex = 0
+        Me.radio_normalorder.TabStop = True
+        Me.radio_normalorder.Text = "Normal"
+        Me.radio_normalorder.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -671,29 +671,29 @@ Partial Class PrintDialog
         Me.Label10.TabIndex = 5
         Me.Label10.Text = "Order:"
         '
-        'CheckBox2
+        'check_mirror
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(6, 54)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(52, 17)
-        Me.CheckBox2.TabIndex = 4
-        Me.CheckBox2.Text = "Mirror"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.check_mirror.AutoSize = True
+        Me.check_mirror.Location = New System.Drawing.Point(6, 54)
+        Me.check_mirror.Name = "check_mirror"
+        Me.check_mirror.Size = New System.Drawing.Size(52, 17)
+        Me.check_mirror.TabIndex = 4
+        Me.check_mirror.Text = "Mirror"
+        Me.check_mirror.UseVisualStyleBackColor = True
         '
-        'NumericUpDown7
+        'num_charactersinch
         '
-        Me.NumericUpDown7.Location = New System.Drawing.Point(96, 29)
-        Me.NumericUpDown7.Name = "NumericUpDown7"
-        Me.NumericUpDown7.Size = New System.Drawing.Size(46, 20)
-        Me.NumericUpDown7.TabIndex = 3
+        Me.num_charactersinch.Location = New System.Drawing.Point(96, 29)
+        Me.num_charactersinch.Name = "num_charactersinch"
+        Me.num_charactersinch.Size = New System.Drawing.Size(46, 20)
+        Me.num_charactersinch.TabIndex = 3
         '
-        'NumericUpDown6
+        'num_linesinch
         '
-        Me.NumericUpDown6.Location = New System.Drawing.Point(70, 3)
-        Me.NumericUpDown6.Name = "NumericUpDown6"
-        Me.NumericUpDown6.Size = New System.Drawing.Size(46, 20)
-        Me.NumericUpDown6.TabIndex = 2
+        Me.num_linesinch.Location = New System.Drawing.Point(70, 3)
+        Me.num_linesinch.Name = "num_linesinch"
+        Me.num_linesinch.Size = New System.Drawing.Size(46, 20)
+        Me.num_linesinch.TabIndex = 2
         '
         'Label9
         '
@@ -745,27 +745,27 @@ Partial Class PrintDialog
         Me.TabControl1.ResumeLayout(False)
         Me.Tab_Copies.ResumeLayout(False)
         Me.Tab_Copies.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.num_copies, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tab_PageRange.ResumeLayout(False)
         Me.Tab_PageRange.PerformLayout()
         Me.Tab_Sides.ResumeLayout(False)
         Me.Tab_Sides.PerformLayout()
         Me.Tab_Margins.ResumeLayout(False)
         Me.Tab_Margins.PerformLayout()
-        CType(Me.NumericUpDown5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.num_marginbottom, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.num_margintop, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.num_marginright, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.num_marginleft, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Tab_Media.ResumeLayout(False)
         Me.Tab_Documents.ResumeLayout(False)
         Me.Tab_Documents.PerformLayout()
         Me.Tab_Options.ResumeLayout(False)
         Me.Tab_Options.PerformLayout()
-        CType(Me.NumericUpDown8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.num_priority, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.num_charactersinch, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.num_linesinch, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnl_info.ResumeLayout(False)
         Me.pnl_info.PerformLayout()
         Me.ResumeLayout(False)
@@ -784,52 +784,52 @@ Partial Class PrintDialog
     Friend WithEvents Tab_Copies As System.Windows.Forms.TabPage
     Friend WithEvents Tab_Margins As System.Windows.Forms.TabPage
     Friend WithEvents Tab_Documents As System.Windows.Forms.TabPage
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
+    Friend WithEvents check_collated As System.Windows.Forms.CheckBox
+    Friend WithEvents num_copies As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents txt_custompagerange As System.Windows.Forms.TextBox
+    Friend WithEvents radio_custom As System.Windows.Forms.RadioButton
+    Friend WithEvents radio_all As System.Windows.Forms.RadioButton
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents NumericUpDown5 As System.Windows.Forms.NumericUpDown
-    Friend WithEvents NumericUpDown4 As System.Windows.Forms.NumericUpDown
-    Friend WithEvents NumericUpDown3 As System.Windows.Forms.NumericUpDown
-    Friend WithEvents NumericUpDown2 As System.Windows.Forms.NumericUpDown
+    Friend WithEvents num_marginbottom As System.Windows.Forms.NumericUpDown
+    Friend WithEvents num_margintop As System.Windows.Forms.NumericUpDown
+    Friend WithEvents num_marginright As System.Windows.Forms.NumericUpDown
+    Friend WithEvents num_marginleft As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
+    Friend WithEvents radio_evens As System.Windows.Forms.RadioButton
+    Friend WithEvents radio_odds As System.Windows.Forms.RadioButton
     Friend WithEvents Tab_Sides As System.Windows.Forms.TabPage
-    Friend WithEvents RadioButton7 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton6 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton5 As System.Windows.Forms.RadioButton
+    Friend WithEvents radio_twosidedlongedge As System.Windows.Forms.RadioButton
+    Friend WithEvents radio_twosidedshortedge As System.Windows.Forms.RadioButton
+    Friend WithEvents radio_onesided As System.Windows.Forms.RadioButton
     Friend WithEvents Tab_Media As System.Windows.Forms.TabPage
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
-    Friend WithEvents NumericUpDown7 As System.Windows.Forms.NumericUpDown
-    Friend WithEvents NumericUpDown6 As System.Windows.Forms.NumericUpDown
+    Friend WithEvents combo_media As System.Windows.Forms.ComboBox
+    Friend WithEvents btn_addmedia As System.Windows.Forms.Button
+    Friend WithEvents btn_removemedia As System.Windows.Forms.Button
+    Friend WithEvents btn_clearmedia As System.Windows.Forms.Button
+    Friend WithEvents lb_media As System.Windows.Forms.ListBox
+    Friend WithEvents num_charactersinch As System.Windows.Forms.NumericUpDown
+    Friend WithEvents num_linesinch As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents check_mirror As System.Windows.Forms.CheckBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents RadioButton9 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton8 As System.Windows.Forms.RadioButton
+    Friend WithEvents radio_reverseorder As System.Windows.Forms.RadioButton
+    Friend WithEvents radio_normalorder As System.Windows.Forms.RadioButton
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents combo_orientation As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents check_fittopage As System.Windows.Forms.CheckBox
+    Friend WithEvents combo_documents As System.Windows.Forms.ComboBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents combo_documentslayout As System.Windows.Forms.ComboBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents NumericUpDown8 As System.Windows.Forms.NumericUpDown
-    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
+    Friend WithEvents num_priority As System.Windows.Forms.NumericUpDown
+    Friend WithEvents check_nowrap As System.Windows.Forms.CheckBox
+    Friend WithEvents check_prettyprint As System.Windows.Forms.CheckBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
 End Class
