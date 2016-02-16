@@ -110,9 +110,9 @@ Partial Class PrintDialog
         Me.pnl_bottom.Controls.Add(Me.btnPrint)
         Me.pnl_bottom.Controls.Add(Me.btnCancel)
         Me.pnl_bottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnl_bottom.Location = New System.Drawing.Point(0, 267)
+        Me.pnl_bottom.Location = New System.Drawing.Point(0, 268)
         Me.pnl_bottom.Name = "pnl_bottom"
-        Me.pnl_bottom.Size = New System.Drawing.Size(449, 23)
+        Me.pnl_bottom.Size = New System.Drawing.Size(374, 23)
         Me.pnl_bottom.TabIndex = 0
         '
         'btnCancel
@@ -128,7 +128,7 @@ Partial Class PrintDialog
         'btnPrint
         '
         Me.btnPrint.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btnPrint.Location = New System.Drawing.Point(374, 0)
+        Me.btnPrint.Location = New System.Drawing.Point(299, 0)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(75, 23)
         Me.btnPrint.TabIndex = 2
@@ -141,7 +141,7 @@ Partial Class PrintDialog
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(449, 97)
+        Me.GroupBox1.Size = New System.Drawing.Size(374, 97)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Printer"
@@ -155,7 +155,7 @@ Partial Class PrintDialog
         Me.lb_printers.Location = New System.Drawing.Point(3, 16)
         Me.lb_printers.Name = "lb_printers"
         Me.lb_printers.ScrollAlwaysVisible = True
-        Me.lb_printers.Size = New System.Drawing.Size(443, 78)
+        Me.lb_printers.Size = New System.Drawing.Size(368, 78)
         Me.lb_printers.TabIndex = 0
         '
         'lbl_status
@@ -180,7 +180,7 @@ Partial Class PrintDialog
         Me.TabControl1.Location = New System.Drawing.Point(0, 122)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(449, 145)
+        Me.TabControl1.Size = New System.Drawing.Size(374, 146)
         Me.TabControl1.TabIndex = 3
         '
         'pnl_info
@@ -189,7 +189,7 @@ Partial Class PrintDialog
         Me.pnl_info.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnl_info.Location = New System.Drawing.Point(0, 97)
         Me.pnl_info.Name = "pnl_info"
-        Me.pnl_info.Size = New System.Drawing.Size(449, 25)
+        Me.pnl_info.Size = New System.Drawing.Size(374, 25)
         Me.pnl_info.TabIndex = 4
         '
         'Tab_PageRange
@@ -225,7 +225,7 @@ Partial Class PrintDialog
         Me.Tab_Options.Controls.Add(Me.Label8)
         Me.Tab_Options.Location = New System.Drawing.Point(4, 22)
         Me.Tab_Options.Name = "Tab_Options"
-        Me.Tab_Options.Size = New System.Drawing.Size(441, 119)
+        Me.Tab_Options.Size = New System.Drawing.Size(366, 120)
         Me.Tab_Options.TabIndex = 1
         Me.Tab_Options.Text = "Options"
         Me.Tab_Options.UseVisualStyleBackColor = True
@@ -726,7 +726,7 @@ Partial Class PrintDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(449, 290)
+        Me.ClientSize = New System.Drawing.Size(374, 291)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.pnl_info)
         Me.Controls.Add(Me.GroupBox1)
