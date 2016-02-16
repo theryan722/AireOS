@@ -1,3 +1,83 @@
 ﻿Public Class PrintDialog
 
+#Region "Properties/Variables/Enums"
+
+
+
+#End Region
+
+#Region "UI"
+
+#Region "TabControl1"
+
+#Region "Copies"
+
+
+
+#End Region
+
+#Region "Page Range"
+
+
+
+#End Region
+
+#Region "Sides"
+
+
+
+#End Region
+
+#Region "Margins"
+
+
+
+#End Region
+
+#Region "Media"
+
+
+
+#End Region
+
+#Region "Documents"
+
+
+
+#End Region
+
+#Region "Options"
+
+
+
+#End Region
+
+#End Region
+
+#Region "pnl_bottom"
+
+
+
+#End Region
+
+#Region "Printer GroupBox"
+
+
+
+#End Region
+
+#End Region
+
+#Region "Methods"
+
+
+
+#End Region
+
+#Region "PrintDialog"
+
+
+
+#End Region
+
 End Class
