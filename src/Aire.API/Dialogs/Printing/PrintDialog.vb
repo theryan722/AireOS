@@ -3,6 +3,7 @@
 #Region "Properties/Variables/Enums"
 
     Public Property PrinterOptions As PrinterSettings
+    Private printerlist As New List(Of Printer)
 
 #End Region
 
@@ -71,7 +72,12 @@
 #Region "Methods"
 
     Private Sub LoadPrinters()
-
+        printerlist.Clear()
+        lb_printers.Items.Clear()
+        printerlist = Aire.API.Printing.Info.GetPrinters
+        For Each item As Printer In printerlist
+            lb_printers.Items.Add(item.Name)
+        Next
     End Sub
 
     Private Sub LoadUI()
