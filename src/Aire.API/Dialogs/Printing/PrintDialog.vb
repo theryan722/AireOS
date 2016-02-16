@@ -86,7 +86,10 @@
     End Sub
 
     Private Sub LoadMarginsUI()
-
+        num_marginleft.Value = 72
+        num_marginright.Value = 72
+        num_margintop.Value = 72
+        num_marginbottom.Value = 72
     End Sub
 
     Private Sub LoadMediaUI()
