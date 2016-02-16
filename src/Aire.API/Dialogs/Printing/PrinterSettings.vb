@@ -199,9 +199,15 @@
         Else
             ret &= " -o outputorder=reverse"
         End If
-        If Mirror Then
+        If Mirror Then 'Mirror
             ret &= " -o mirror"
         End If
+        ret &= " -o cpi=" & CharactersPerInch 'Characters Per Inch
+        ret &= " -o lpi=" & LinesPerInch 'Lines Per Inch
+        ret &= " -o page-left=" & MarginLeft 'Margin Left
+        ret &= " -o page-right=" & MarginRight 'Margin Right
+        ret &= " -o page-top=" & MarginTop 'Margin Top
+        ret &= " -o page-bottom=" & MarginBottom 'Margin Bottom
         Return ret
     End Function
 
