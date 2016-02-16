@@ -15,7 +15,16 @@
     Public Class Actions
 
         Public Shared Sub PrintFile(ByVal file As String, Optional ByVal printer As String = "", Optional ByVal printsettings As PrinterSettings = Nothing)
-           
+            Dim pstr As String = ""
+            If printer <> "" Then
+                pstr &= "-d " & printer & " "
+            End If
+            If printsettings Is Nothing Then
+                pstr &= file
+            Else
+                pstr &= printsettings.ConvertToCommand() & " " & file
+            End If
+            Sys.Process.ExecuteCommand("lp", pstr)
         End Sub
 
         Public Shared Sub ClearPrintQeue()
