@@ -107,10 +107,16 @@
     <Compile Include="Dialogs\dlgLogout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\PrintDialog.Designer.vb">
+    <Compile Include="Dialogs\Printing\PrintDialog.Designer.vb">
       <DependentUpon>PrintDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\PrintDialog.vb">
+    <Compile Include="Dialogs\Printing\PrintDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Printing\PrintJobsDialog.Designer.vb">
+      <DependentUpon>PrintJobsDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Printing\PrintJobsDialog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\Toast.Designer.vb">

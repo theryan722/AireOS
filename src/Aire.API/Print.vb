@@ -1,6 +1,14 @@
 ﻿Namespace Printing
 
-    Public Class Print
+    Public Class Info
+
+
+
+    End Class
+
+    Public Class Actions
+
+
 
     End Class
 
