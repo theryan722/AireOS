@@ -109,7 +109,14 @@
     End Sub
 
     Private Sub LoadUI()
-
+        LoadPrinters()
+        LoadCopiesUI()
+        LoadPageRangeUI()
+        LoadSidesUI()
+        LoadMarginsUI()
+        LoadMediaUI()
+        LoadDocumentsUI()
+        LoadOptionsUI()
     End Sub
 
     Private Function CheckIfFieldsValid() As Boolean
