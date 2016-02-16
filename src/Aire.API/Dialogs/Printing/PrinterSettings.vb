@@ -208,6 +208,16 @@
         ret &= " -o page-right=" & MarginRight 'Margin Right
         ret &= " -o page-top=" & MarginTop 'Margin Top
         ret &= " -o page-bottom=" & MarginBottom 'Margin Bottom
+        If PrettyPrint Then 'Pretty Print
+            ret &= " -o prettyprint"
+        End If
+        If NoWrap Then 'No Wrap
+            ret &= " -o nowrap"
+        End If
+        ret &= " -o job-priority=" & Priority
+        If File <> "" Then
+            ret &= " " & File
+        End If
         Return ret
     End Function
 
