@@ -160,12 +160,22 @@
 
 #End Region
 
+#Region "PrinterSettings"
+
+    Public Sub New(Optional ByVal pmedia As List(Of MediaType), Optional ByVal pcopies As Integer = 1, Optional ByVal pfittopage As Boolean = True, Optional ByVal porientation As PageOrientation = PageOrientation.Portrait, Optional ByVal pcollate As Boolean = False, Optional ByVal psides As SideStyle = SideStyle.OneSided, Optional ByVal ppageranges As String = "", Optional ByVal pparity As ParityStyle = ParityStyle.Normal, Optional ByVal pnup As NUpStyle = NUpStyle.One, Optional ByVal pnuplayout As NUpLayoutStyle = NUpLayoutStyle.LeftToRight_TopToBottom, Optional ByVal pmirror As Boolean = False, Optional ByVal pcharactersperinch As integer = 10, Optional ByVal plinesperinch As integer = 6, Optional ByVal pmarginleft As Integer = 72, Optional ByVal pmarginright As Integer = 72, Optional ByVal pmargintop As Integer = 72, Optional pmarginbottom As Integer = 72, Optional ByVal pprettyprint As Boolean = False, Optional ByVal pnowrap As Boolean = False, Optional ByVal ppriority As Integer = 50, Optional ByVal pfile As String = "")
+        If pmedia Is Nothing Then
+            pmedia = New List(Of MediaType)
+            pmedia.Add(MediaType.Letter)
+        End If
+    End Sub
+
+#End Region
+
 #Region "Methods"
 
     Public Function ConvertToCommand() As String
         Dim ret As String = ""
-        If Not Media Is Nothing Then 'Media
-            ret &= "-o media="
+        ret &= "-o media=" 'Media
             For i As Integer = 0 To Media.Count - 1
                 If i = Media.Count - 1 Then
                     ret &= Media(i).ToString
@@ -173,7 +183,6 @@
                     ret &= Media(i).ToString & ","
                 End If
             Next
-        End If
         ret &= " -n " & Copies 'Copies
         ret &= " -o Collate=" & Collate.ToString 'Collate
         If FitToPage Then 'FitToPage
