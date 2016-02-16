@@ -75,6 +75,7 @@
     Public Property OutputOrder As OutputOrderStyle
     Public Property Mirror As Boolean
     Public Property CharactersPerInch As Integer 'Default 10
+    Public Property LinesPerInch As Integer 'Default 6
 
 #End Region
 
