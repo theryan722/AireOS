@@ -82,6 +82,7 @@
     Public Property MarginBottom As Integer 'Each point is 1/72 inch or 0.35mm
     Public Property PrettyPrint As Boolean
     Public Property NoWrap As Boolean
+    Public Property Priority As Integer '1 - 100
 
 #End Region
 
