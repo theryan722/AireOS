@@ -68,7 +68,16 @@
 
 #Region "Printer GroupBox"
 
-
+    Private Sub lb_printers_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lb_printers.SelectedIndexChanged
+        If lb_printers.SelectedIndex <> -1 Then
+            Dim b As Boolean = printerlist(lb_printers.SelectedIndex).Enabled
+            If b Then
+                lbl_status.Text = "Status: Enabled"
+            Else
+                lbl_status.Text = "Status: Disabled"
+            End If
+        End If
+    End Sub
 
 #End Region
 
@@ -118,15 +127,6 @@
         check_prettyprint.Checked = False
         check_nowrap.Checked = False
         num_priority.Value = 50
-    End Sub
-
-    Private Sub LoadPrinters()
-        printerlist.Clear()
-        lb_printers.Items.Clear()
-        printerlist = Aire.API.Printing.Info.GetPrinters
-        For Each item As Printer In printerlist
-            lb_printers.Items.Add(item.Name)
-        Next
     End Sub
 
     Private Sub LoadUI()
@@ -317,6 +317,15 @@
     End Function
 
 #End Region
+
+    Private Sub LoadPrinters()
+        printerlist.Clear()
+        lb_printers.Items.Clear()
+        printerlist = Aire.API.Printing.Info.GetPrinters
+        For Each item As Printer In printerlist
+            lb_printers.Items.Add(item.Name)
+        Next
+    End Sub
 
     Private Sub SetProperty()
         SelectedPrinter = New Printer(lb_printers.SelectedItem)
