@@ -162,7 +162,7 @@
     End Function
 
     Private Function CheckMargins()
-
+        Return num_marginleft.Value >= 0 AndAlso num_marginright.Value >= 0 AndAlso num_margintop.Value >= 0 AndAlso num_marginbottom.Value >= 0
     End Function
 
     Private Function CheckMedia()
