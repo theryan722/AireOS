@@ -243,6 +243,48 @@
         End Select
     End Function
 
+    Private Function GetDocumentsPerPage() As PrinterSettings.NUpStyle
+        Select Case combo_documents.SelectedItem
+            Case "1"
+                Return PrinterSettings.NUpStyle.One
+            Case "2"
+                Return PrinterSettings.NUpStyle.Two
+            Case "4"
+                Return PrinterSettings.NUpStyle.Four
+            Case "6"
+                Return PrinterSettings.NUpStyle.Six
+            Case "9"
+                Return PrinterSettings.NUpStyle.Nine
+            Case "16"
+                Return PrinterSettings.NUpStyle.Sixteen
+            Case Else
+                Return PrinterSettings.NUpStyle.One
+        End Select
+    End Function
+
+    Private Function GetDocumentsLayout() As PrinterSettings.NUpLayoutStyle
+        Select Case combo_documentslayout.SelectedItem
+            Case "BottomToTop_LeftToRight"
+                Return PrinterSettings.NUpLayoutStyle.BottomToTop_LeftToRight
+            Case "BottomToTop_RightToLeft"
+                Return PrinterSettings.NUpLayoutStyle.BottomToTop_RightToLeft
+            Case "LeftToRight_BottomToTop"
+                Return PrinterSettings.NUpLayoutStyle.LeftToRight_BottomToTop
+            Case "LeftToRight_TopToBottom"
+                Return PrinterSettings.NUpLayoutStyle.LeftToRight_TopToBottom
+            Case "RightToLeft_BottomToTop"
+                Return PrinterSettings.NUpLayoutStyle.RightToLeft_BottomToTop
+            Case "RightToLeft_TopToBottom"
+                Return PrinterSettings.NUpLayoutStyle.RightToLeft_TopToBottom
+            Case "TopToBottom_LeftToRight"
+                Return PrinterSettings.NUpLayoutStyle.TopToBottom_LeftToRight
+            Case "TopToBottom_RightToLeft"
+                Return PrinterSettings.NUpLayoutStyle.TopToBottom_RightToLeft
+            Case Else
+                Return PrinterSettings.NUpLayoutStyle.LeftToRight_TopToBottom
+        End Select
+    End Function
+
     Private Function GetMediaList() As List(Of PrinterSettings.MediaType)
         Dim ret As New List(Of PrinterSettings.MediaType)
         For Each item As String In lb_media.Items
