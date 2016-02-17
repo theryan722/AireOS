@@ -62,7 +62,12 @@
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-
+        If CheckIfFieldsValid() Then
+            SetProperty()
+            Me.DialogResult = Windows.Forms.DialogResult.OK
+        Else
+            Dim bb As New Aire.API.MessageBox("Some fields were not filled out properly. Please check and make sure all fields are filled out, as well as within their bounds.", "Error", MessageBox.MessageBoxButtons.OkOnly, MessageBox.MessageBoxIcon.Warning)
+        End If
     End Sub
 
 #End Region
@@ -194,6 +199,10 @@
     End Function
 
 #End Region
+
+    Private Sub SetProperty()
+
+    End Sub
 
     Private Function CheckIfFieldsValid() As Boolean
         Return CheckPrinters() AndAlso CheckCopies() AndAlso CheckPageRange() AndAlso CheckSides() AndAlso CheckMargins() AndAlso CheckMedia() AndAlso CheckDocuments() AndAlso CheckOptions()
