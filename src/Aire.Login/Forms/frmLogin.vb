@@ -53,7 +53,11 @@
     End Sub
 
     Private Sub txt_username_TextChanged(sender As Object, e As EventArgs) Handles txt_username.TextChanged
-
+        If txt_username.Text = "" Then
+            btnHint.Hide()
+        Else
+            btnHint.Show()
+        End If
     End Sub
 
 #End Region
