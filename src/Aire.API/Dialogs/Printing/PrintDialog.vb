@@ -170,7 +170,7 @@
     End Function
 
     Private Function CheckDocuments()
-
+        Return combo_documents.SelectedIndex <> -1 AndAlso combo_documentslayout.SelectedIndex <> -1
     End Function
 
     Private Function CheckOptions()
