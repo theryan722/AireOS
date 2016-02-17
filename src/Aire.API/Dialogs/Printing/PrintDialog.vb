@@ -20,7 +20,14 @@
 
 #Region "Page Range"
 
-
+    Private Sub radio_custom_CheckedChanged(sender As Object, e As EventArgs) Handles radio_custom.CheckedChanged
+        If radio_custom.Checked Then
+            txt_custompagerange.Enabled = True
+        Else
+            txt_custompagerange.Enabled = False
+            txt_custompagerange.Text = ""
+        End If
+    End Sub
 
 #End Region
 
