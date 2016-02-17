@@ -201,6 +201,8 @@
 
 #End Region
 
+#Region "Helper"
+
     Private Function ConvertMediaStringToType(ByVal str As String) As PrinterSettings.MediaType
         Select Case str
             Case "Letter"
@@ -320,6 +322,8 @@
             Return PrinterSettings.OutputOrderStyle.Reverse
         End If
     End Function
+
+#End Region
 
     Private Sub SetProperty()
         SelectedPrinter = New Printer(lb_printers.SelectedItem)
