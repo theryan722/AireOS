@@ -145,7 +145,9 @@
 
 #Region "PrintDialog"
 
-
+    Private Sub PrintDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadUI()
+    End Sub
 
 #End Region
 
