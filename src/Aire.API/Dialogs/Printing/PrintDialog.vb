@@ -93,7 +93,7 @@
     End Sub
 
     Private Sub LoadMediaUI()
-
+        lb_media.Items.Add("Letter")
     End Sub
 
     Private Sub LoadDocumentsUI()
