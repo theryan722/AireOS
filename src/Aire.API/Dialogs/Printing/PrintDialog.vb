@@ -144,7 +144,7 @@
     End Function
 
     Private Function CheckCopies()
-
+        Return num_copies.Value > 0
     End Function
 
     Private Function CheckPageRange()
