@@ -4,6 +4,10 @@ Namespace Cryptography
 
     Public Class Passwords
 
+        Public Shared Function HashPassword(ByVal pass As String) As String
+            Return HashPassword(pass, GenerateSalt())
+        End Function
+
         Public Shared Function HashPassword(ByVal pass As String, ByVal salt As String) As String
             Return BCrypt.Net.BCrypt.HashPassword(pass, salt)
         End Function
