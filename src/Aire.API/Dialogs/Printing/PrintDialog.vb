@@ -137,6 +137,42 @@
 
 #End Region
 
+#Region "Check Fields"
+
+    Private Function CheckPrinters() As Boolean
+
+    End Function
+
+    Private Function CheckCopies()
+
+    End Function
+
+    Private Function CheckPageRange()
+
+    End Function
+
+    Private Function CheckSides()
+
+    End Function
+
+    Private Function CheckMargins()
+
+    End Function
+
+    Private Function CheckMedia()
+
+    End Function
+
+    Private Function CheckDocuments()
+
+    End Function
+
+    Private Function CheckOptions()
+
+    End Function
+
+#End Region
+
     Private Function CheckIfFieldsValid() As Boolean
 
     End Function
