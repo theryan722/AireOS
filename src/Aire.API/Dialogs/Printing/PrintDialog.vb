@@ -97,7 +97,8 @@
     End Sub
 
     Private Sub LoadDocumentsUI()
-
+        combo_documents.SelectedItem = "1"
+        combo_documentslayout.SelectedItem = "LeftToRight_TopToBottom"
     End Sub
 
     Private Sub LoadOptionsUI()
