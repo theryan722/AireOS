@@ -46,15 +46,21 @@
 #Region "Media"
 
     Private Sub btn_addmedia_Click(sender As Object, e As EventArgs) Handles btn_addmedia.Click
-
+        If combo_media.SelectedIndex <> -1 Then
+            If Not lb_media.Items.Contains(combo_media.SelectedItem) Then
+                lb_media.Items.Add(combo_media.SelectedItem)
+            End If
+        End If
     End Sub
 
     Private Sub btn_removemedia_Click(sender As Object, e As EventArgs) Handles btn_removemedia.Click
-
+        If lb_media.SelectedIndex <> -1 Then
+            lb_media.Items.Remove(lb_media.SelectedItem)
+        End If
     End Sub
 
     Private Sub btn_clearmedia_Click(sender As Object, e As EventArgs) Handles btn_clearmedia.Click
-
+        lb_media.Items.Clear()
     End Sub
 
 #End Region
