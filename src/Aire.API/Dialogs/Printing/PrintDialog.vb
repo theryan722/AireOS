@@ -2,6 +2,7 @@
 
 #Region "Properties/Variables/Enums"
 
+    Public Property SelectedPrinter As Printer
     Public Property PrinterOptions As PrinterSettings
     Private printerlist As New List(Of Printer)
 
