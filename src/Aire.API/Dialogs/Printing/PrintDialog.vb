@@ -393,6 +393,7 @@
         Else
             LoadUI()
         End If
+        Me.ShowDialog()
     End Sub
 
 #End Region
