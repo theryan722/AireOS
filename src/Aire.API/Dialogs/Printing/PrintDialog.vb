@@ -158,7 +158,7 @@
     End Function
 
     Private Function CheckSides()
-
+        Return True
     End Function
 
     Private Function CheckMargins()
