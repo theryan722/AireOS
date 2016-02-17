@@ -83,6 +83,7 @@ Partial Class PrintDialog
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.pnl_info = New System.Windows.Forms.Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.pnl_bottom.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -544,6 +545,7 @@ Partial Class PrintDialog
         '
         'Tab_Options
         '
+        Me.Tab_Options.Controls.Add(Me.Label15)
         Me.Tab_Options.Controls.Add(Me.num_priority)
         Me.Tab_Options.Controls.Add(Me.check_nowrap)
         Me.Tab_Options.Controls.Add(Me.check_prettyprint)
@@ -722,6 +724,16 @@ Partial Class PrintDialog
         Me.pnl_info.Size = New System.Drawing.Size(374, 20)
         Me.pnl_info.TabIndex = 4
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(281, 86)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(34, 13)
+        Me.Label15.TabIndex = 14
+        Me.Label15.Text = "1-100"
+        '
         'PrintDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -832,4 +844,5 @@ Partial Class PrintDialog
     Friend WithEvents check_nowrap As System.Windows.Forms.CheckBox
     Friend WithEvents check_prettyprint As System.Windows.Forms.CheckBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class
