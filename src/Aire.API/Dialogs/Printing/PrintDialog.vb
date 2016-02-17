@@ -313,9 +313,17 @@
         Return ret
     End Function
 
+    Private Function GetOutputOrder() As PrinterSettings.OutputOrderStyle
+        If radio_normalorder.Checked Then
+            Return PrinterSettings.OutputOrderStyle.Normal
+        Else
+            Return PrinterSettings.OutputOrderStyle.Reverse
+        End If
+    End Function
+
     Private Sub SetProperty()
         SelectedPrinter = New Printer(lb_printers.SelectedItem)
-        PrinterOptions = New PrinterSettings(GetMediaList(), num_copies.Value, check_fittopage.Checked, GetOrientation(), check_collated.Checked, GetSides(), txt_custompagerange.Text)
+        PrinterOptions = New PrinterSettings(GetMediaList(), num_copies.Value, check_fittopage.Checked, GetOrientation(), check_collated.Checked, GetSides(), txt_custompagerange.Text, GetParity(), GetDocumentsPerPage(), GetDocumentsLayout(), GetOutputOrder(), check_mirror.Checked, num_charactersinch.Value, num_linesinch.Value, num_marginleft.Value, num_marginright.Value, num_margintop.Value, num_marginright.Value, check_prettyprint.Checked, check_nowrap.Checked, num_priority.Value)
     End Sub
 
     Private Function CheckIfFieldsValid() As Boolean
