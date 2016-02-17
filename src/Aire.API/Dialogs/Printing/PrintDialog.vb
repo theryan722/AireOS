@@ -174,7 +174,7 @@
 #End Region
 
     Private Function CheckIfFieldsValid() As Boolean
-
+        Return CheckPrinters() AndAlso CheckCopies() AndAlso CheckPageRange() AndAlso CheckSides() AndAlso CheckMargins() AndAlso CheckMedia() AndAlso CheckDocuments() AndAlso CheckOptions()
     End Function
 
 #End Region
