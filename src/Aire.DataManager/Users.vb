@@ -1,6 +1,14 @@
-﻿Public Class Users
+﻿Imports System.IO
+
+Public Class Users
 
 #Region "Helper"
+
+    Private Shared Sub WriteText(ByVal file As String, ByVal text As String, Optional ByVal append As Boolean = False)
+        Using writer As StreamWriter = New StreamWriter(file, append)
+            writer.Write(text)
+        End Using
+    End Sub
 
     Private Shared Sub CreateDirectories(ByVal loc As String)
         System.IO.Directory.CreateDirectory(loc)
@@ -30,11 +38,16 @@
 
     Private Shared Sub SetDefaultSettings(ByVal loc As String)
         'System.IO.File.WriteAllText(loc & "/Data/Config/", "")
-        System.IO.File.WriteAllText(loc & "/Data/Config/launchbarcolor.txt", "-6703919")
-        System.IO.File.WriteAllText(loc & "/Data/Config/appbarcolor.txt", "-6703919")
-        System.IO.File.WriteAllText(loc & "/Data/Config/backgroundimagelayout.txt", "Stretch")
-        System.IO.File.WriteAllText(loc & "/Data/Config/lognotificationtext.txt", "True")
-        System.IO.File.WriteAllText(loc & "/Data/Config/confirmshutdown.txt", "True")
+        'System.IO.File.WriteAllText(loc & "/Data/Config/launchbarcolor.txt", "-6703919")
+        'System.IO.File.WriteAllText(loc & "/Data/Config/appbarcolor.txt", "-6703919")
+        'System.IO.File.WriteAllText(loc & "/Data/Config/backgroundimagelayout.txt", "Stretch")
+        'System.IO.File.WriteAllText(loc & "/Data/Config/lognotificationtext.txt", "True")
+        'System.IO.File.WriteAllText(loc & "/Data/Config/confirmshutdown.txt", "True")
+        WriteText(loc & "/Data/Config/launchbarcolor.txt", "-6703919")
+        WriteText(loc & "/Data/Config/appbarcolor.txt", "-6703919")
+        WriteText(loc & "/Data/Config/backgroundimagelayout.txt", "Stretch")
+        WriteText(loc & "/Data/Config/lognotificationtext.txt", "True")
+        WriteText(loc & "/Data/Config/confirmshutdown.txt", "True")
     End Sub
 
 #End Region
