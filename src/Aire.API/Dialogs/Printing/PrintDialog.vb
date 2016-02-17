@@ -150,7 +150,7 @@
     Private Function CheckPageRange()
         Dim ret As Boolean = True
         If radio_custom.Checked Then
-            If txt_custompagerange.Text = "" Or txt_custompagerange.Contains(" ") Then
+            If txt_custompagerange.Text = "" Or txt_custompagerange.Text.Contains(" ") Then
                 ret = False
             End If
         End If
