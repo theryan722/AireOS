@@ -238,6 +238,8 @@
                 Return PrinterSettings.PageOrientation.ReverseLandscape
             Case "ReversePortrait"
                 Return PrinterSettings.PageOrientation.ReversePortrait
+            Case Else
+                Return PrinterSettings.PageOrientation.Portrait
         End Select
     End Function
 
