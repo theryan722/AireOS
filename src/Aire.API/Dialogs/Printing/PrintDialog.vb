@@ -228,6 +228,19 @@
         End Select
     End Function
 
+    Private Function GetOrientation() As PrinterSettings.PageOrientation
+        Select Case combo_orientation.SelectedItem
+            Case "Portrait"
+                Return PrinterSettings.PageOrientation.Portrait
+            Case "Landscape"
+                Return PrinterSettings.PageOrientation.Landscape
+            Case "ReverseLandscape"
+                Return PrinterSettings.PageOrientation.ReverseLandscape
+            Case "ReversePortrait"
+                Return PrinterSettings.PageOrientation.ReversePortrait
+        End Select
+    End Function
+
     Private Function GetMediaList() As List(Of PrinterSettings.MediaType)
         Dim ret As New List(Of PrinterSettings.MediaType)
         For Each item As String In lb_media.Items
@@ -238,7 +251,7 @@
 
     Private Sub SetProperty()
         SelectedPrinter = New Printer(lb_printers.SelectedItem)
-        PrinterOptions = New PrinterSettings()
+        PrinterOptions = New PrinterSettings(GetMediaList(), num_copies.Value, check_fittopage.Checked, )
     End Sub
 
     Private Function CheckIfFieldsValid() As Boolean
