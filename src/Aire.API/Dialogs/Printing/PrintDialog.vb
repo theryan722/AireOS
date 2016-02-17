@@ -336,6 +336,10 @@
         Return CheckPrinters() AndAlso CheckCopies() AndAlso CheckPageRange() AndAlso CheckSides() AndAlso CheckMargins() AndAlso CheckMedia() AndAlso CheckDocuments() AndAlso CheckOptions()
     End Function
 
+    Private Sub LoadUIFromPrintSettings(ByVal printset As PrinterSettings)
+
+    End Sub
+
 #End Region
 
 #Region "PrintDialog"
@@ -344,6 +348,14 @@
         LoadUI()
     End Sub
 
+    Public Sub New(Optional ByVal title As String = "Print", Optional ByVal printsettings As PrinterSettings = Nothing)
+        InitializeComponent()
+        Me.Text = title
+        If Not printsettings Is Nothing Then
+            LoadUIFromPrintSettings(printsettings)
+        End If
+    End Sub
+
 #End Region
-    
+
 End Class
