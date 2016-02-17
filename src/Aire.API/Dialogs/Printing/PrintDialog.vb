@@ -71,6 +71,8 @@
 
 #Region "Methods"
 
+#Region "LoadUI"
+
     Private Sub LoadCopiesUI()
         num_copies.Value = 1
         check_collated.Checked = False
@@ -132,6 +134,8 @@
         LoadDocumentsUI()
         LoadOptionsUI()
     End Sub
+
+#End Region
 
     Private Function CheckIfFieldsValid() As Boolean
 
