@@ -201,8 +201,44 @@
 
 #End Region
 
-    Private Sub SetProperty()
+    Private Function ConvertMediaStringToType(ByVal str As String) As PrinterSettings.MediaType
+        Select Case str
+            Case "Letter"
+                Return PrinterSettings.MediaType.Letter
+            Case "Legal"
+                Return PrinterSettings.MediaType.Legal
+            Case "A4"
+                Return PrinterSettings.MediaType.A4
+            Case "COM10"
+                Return PrinterSettings.MediaType.COM10
+            Case "DL"
+                Return PrinterSettings.MediaType.DL
+            Case "Transparency"
+                Return PrinterSettings.MediaType.Transparency
+            Case "Upper"
+                Return PrinterSettings.MediaType.Upper
+            Case "Lower"
+                Return PrinterSettings.MediaType.Lower
+            Case "MultiPurpose"
+                Return PrinterSettings.MediaType.MultiPurpose
+            Case "LargeCapacity"
+                Return PrinterSettings.MediaType.LargeCapacity
+            Case Else
+                Return PrinterSettings.MediaType.Letter
+        End Select
+    End Function
 
+    Private Function GetMediaList() As List(Of PrinterSettings.MediaType)
+        Dim ret As New List(Of PrinterSettings.MediaType)
+        For Each item As String In lb_media.Items
+            ret.Add(ConvertMediaStringToType(item))
+        Next
+        Return ret
+    End Function
+
+    Private Sub SetProperty()
+        SelectedPrinter = New Printer(lb_printers.SelectedItem)
+        PrinterOptions = New PrinterSettings()
     End Sub
 
     Private Function CheckIfFieldsValid() As Boolean
