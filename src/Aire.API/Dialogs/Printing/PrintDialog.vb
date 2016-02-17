@@ -140,7 +140,7 @@
 #Region "Check Fields"
 
     Private Function CheckPrinters() As Boolean
-
+        Return lb_printers.SelectedIndex <> -1
     End Function
 
     Private Function CheckCopies()
