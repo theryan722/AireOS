@@ -12,12 +12,6 @@
 
 #Region "TabControl1"
 
-#Region "Copies"
-
-
-
-#End Region
-
 #Region "Page Range"
 
     Private Sub radio_custom_CheckedChanged(sender As Object, e As EventArgs) Handles radio_custom.CheckedChanged
@@ -28,18 +22,6 @@
             txt_custompagerange.Text = ""
         End If
     End Sub
-
-#End Region
-
-#Region "Sides"
-
-
-
-#End Region
-
-#Region "Margins"
-
-
 
 #End Region
 
@@ -62,18 +44,6 @@
     Private Sub btn_clearmedia_Click(sender As Object, e As EventArgs) Handles btn_clearmedia.Click
         lb_media.Items.Clear()
     End Sub
-
-#End Region
-
-#Region "Documents"
-
-
-
-#End Region
-
-#Region "Options"
-
-
 
 #End Region
 
