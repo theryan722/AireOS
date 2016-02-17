@@ -106,8 +106,9 @@
     End Sub
 
     Private Sub Print()
-        If PrintDialog1.ShowDialog() = DialogResult.OK Then
-            PrintDocument1.Print()
+        Dim bb As New Aire.API.PrintDialog
+        If bb.DialogResult = Windows.Forms.DialogResult.OK Then
+
         End If
     End Sub
 
@@ -169,14 +170,6 @@
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
-    End Sub
-
-    Private Sub PageSetupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PageSetupToolStripMenuItem.Click
-        PageSetupDialog1.ShowDialog()
-    End Sub
-
-    Private Sub PrintPreviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintPreviewToolStripMenuItem.Click
-        PrintPreviewDialog1.ShowDialog()
     End Sub
 
 #End Region
@@ -249,11 +242,11 @@
 
 #Region "PrintDocument1"
 
-    Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.BeginPrint
+    Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs)
         checkPrint = 0
     End Sub
 
-    Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+    Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs)
         checkPrint = TextBox1.Print(checkPrint, TextBox1.TextLength, e)
         If checkPrint < TextBox1.TextLength Then
             e.HasMorePages = True

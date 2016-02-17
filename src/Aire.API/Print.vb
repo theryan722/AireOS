@@ -27,6 +27,22 @@
             Sys.Process.ExecuteCommand("lpoptions", "-d " & dprint.Name)
         End Sub
 
+        Public Shared Sub PrintText(ByVal txt As String, Optional ByVal printer As Printer = Nothing, Optional ByVal printsettings As PrinterSettings = Nothing)
+            Dim file As String = Aire.DataManager.DataPaths.GetSysDataLocation & "/Temp/print.txt"
+            My.Computer.FileSystem.WriteAllText(file, txt, False)
+            Dim pstr As String = ""
+            If printer.Name <> "" Then
+                pstr &= "-d " & printer.Name & " "
+            End If
+            If printsettings Is Nothing Then
+                pstr &= file
+            Else
+                pstr &= printsettings.ConvertToCommand() & " " & file
+            End If
+            Sys.Process.ExecuteCommand("lp", pstr)
+            My.Computer.FileSystem.WriteAllText(file, "", False)
+        End Sub
+
         Public Shared Sub PrintFile(ByVal file As String, Optional ByVal printer As Printer = Nothing, Optional ByVal printsettings As PrinterSettings = Nothing)
             Dim pstr As String = ""
             If printer.Name <> "" Then
