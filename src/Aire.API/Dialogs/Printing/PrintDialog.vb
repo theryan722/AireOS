@@ -45,7 +45,17 @@
 
 #Region "Media"
 
+    Private Sub btn_addmedia_Click(sender As Object, e As EventArgs) Handles btn_addmedia.Click
 
+    End Sub
+
+    Private Sub btn_removemedia_Click(sender As Object, e As EventArgs) Handles btn_removemedia.Click
+
+    End Sub
+
+    Private Sub btn_clearmedia_Click(sender As Object, e As EventArgs) Handles btn_clearmedia.Click
+
+    End Sub
 
 #End Region
 
