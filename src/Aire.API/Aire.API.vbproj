@@ -165,6 +165,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Events.vb" />
+    <Compile Include="File.vb" />
     <Compile Include="FormPosition.vb" />
     <Compile Include="LogManager.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
