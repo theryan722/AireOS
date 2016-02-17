@@ -57,7 +57,13 @@
 
 #Region "pnl_bottom"
 
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
 
+    End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+
+    End Sub
 
 #End Region
 
@@ -202,5 +208,5 @@
     End Sub
 
 #End Region
-
+    
 End Class
