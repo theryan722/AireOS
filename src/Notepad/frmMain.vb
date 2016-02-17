@@ -108,7 +108,7 @@
     Private Sub Print()
         Dim bb As New Aire.API.PrintDialog
         If bb.DialogResult = Windows.Forms.DialogResult.OK Then
-
+            Aire.API.Printing.Actions.PrintText(TextBox1.Text, bb.SelectedPrinter, bb.PrinterOptions)
         End If
     End Sub
 
@@ -237,23 +237,6 @@
     End Sub
 
 #End Region
-
-#End Region
-
-#Region "PrintDocument1"
-
-    Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs)
-        checkPrint = 0
-    End Sub
-
-    Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs)
-        checkPrint = TextBox1.Print(checkPrint, TextBox1.TextLength, e)
-        If checkPrint < TextBox1.TextLength Then
-            e.HasMorePages = True
-        Else
-            e.HasMorePages = False
-        End If
-    End Sub
 
 #End Region
 
