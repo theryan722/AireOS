@@ -295,6 +295,16 @@
         End If
     End Function
 
+    Public Function GetParity() As PrinterSettings.ParityStyle
+        If radio_odds.Checked Then
+            Return PrinterSettings.ParityStyle.Odd
+        ElseIf radio_evens.Checked Then
+            Return PrinterSettings.ParityStyle.Even
+        Else
+            Return PrinterSettings.ParityStyle.Normal
+        End If
+    End Function
+
     Private Function GetMediaList() As List(Of PrinterSettings.MediaType)
         Dim ret As New List(Of PrinterSettings.MediaType)
         For Each item As String In lb_media.Items
@@ -305,7 +315,7 @@
 
     Private Sub SetProperty()
         SelectedPrinter = New Printer(lb_printers.SelectedItem)
-        PrinterOptions = New PrinterSettings(GetMediaList(), num_copies.Value, check_fittopage.Checked, GetOrientation(), check_collated.Checked)
+        PrinterOptions = New PrinterSettings(GetMediaList(), num_copies.Value, check_fittopage.Checked, GetOrientation(), check_collated.Checked, GetSides(), txt_custompagerange.Text)
     End Sub
 
     Private Function CheckIfFieldsValid() As Boolean
