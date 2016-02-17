@@ -32,13 +32,14 @@
 #Region "Public Methods"
 
             Public Shared Sub Write(ByVal message As String, Optional source As LogSource = LogSource.System)
-
                 Select Case source
                     Case LogSource.General
                         WriteToLog(User.Current.Info.GetLogLocation, message)
                     Case LogSource.MessageBox
-                        If User.Current.Settings.LogNotificationText Then
-                            WriteToLog(User.Current.Info.GetLogLocation, message)
+                        If User.Current.Info.GetUsername <> "" Then
+                            If User.Current.Settings.LogNotificationText Then
+                                WriteToLog(User.Current.Info.GetLogLocation, message)
+                            End If
                         End If
                     Case LogSource.System
                         WriteToLog(syslogloc, message)
