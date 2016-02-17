@@ -337,22 +337,61 @@
     End Function
 
     Private Sub LoadUIFromPrintSettings(ByVal printset As PrinterSettings)
-
+        LoadUI()
+        lb_media.Items.Clear()
+        For Each item As PrinterSettings.MediaType In printset.Media
+            lb_media.Items.Add(item.ToString)
+        Next
+        num_copies.Value = printset.Copies
+        check_fittopage.Checked = printset.FitToPage
+        combo_orientation.SelectedItem = printset.Orientation.ToString
+        check_collated.Checked = printset.Collate
+        Select Case printset.Sides
+            Case PrinterSettings.SideStyle.OneSided
+                radio_onesided.Checked = True
+            Case PrinterSettings.SideStyle.TwoSidedLongEdge
+                radio_twosidedlongedge.Checked = True
+            Case PrinterSettings.SideStyle.TwoSidedShortEdge
+                radio_twosidedshortedge.Checked = True
+        End Select
+        txt_custompagerange.Text = printset.PageRanges
+        Select Case printset.Parity
+            Case PrinterSettings.ParityStyle.Even
+                radio_evens.Checked = True
+            Case PrinterSettings.ParityStyle.Odd
+                radio_odds.Checked = True
+        End Select
+        combo_documents.SelectedItem = printset.NUp.ToString
+        combo_documentslayout.SelectedItem = printset.NUpLayout.ToString
+        Select Case printset.OutputOrder
+            Case PrinterSettings.OutputOrderStyle.Normal
+                radio_normalorder.Checked = True
+            Case PrinterSettings.OutputOrderStyle.Reverse
+                radio_reverseorder.Checked = True
+        End Select
+        check_mirror.Checked = printset.Mirror
+        num_charactersinch.Value = printset.CharactersPerInch
+        num_linesinch.Value = printset.LinesPerInch
+        num_marginleft.Value = printset.MarginLeft
+        num_marginright.Value = printset.MarginRight
+        num_margintop.Value = printset.MarginTop
+        num_marginbottom.Value = printset.MarginBottom
+        check_prettyprint.Checked = printset.PrettyPrint
+        check_nowrap.Checked = printset.NoWrap
+        num_priority.Value = printset.Priority
     End Sub
 
 #End Region
 
 #Region "PrintDialog"
 
-    Private Sub PrintDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadUI()
-    End Sub
-
     Public Sub New(Optional ByVal title As String = "Print", Optional ByVal printsettings As PrinterSettings = Nothing)
         InitializeComponent()
         Me.Text = title
         If Not printsettings Is Nothing Then
             LoadUIFromPrintSettings(printsettings)
+        Else
+            LoadUI()
         End If
     End Sub
 
