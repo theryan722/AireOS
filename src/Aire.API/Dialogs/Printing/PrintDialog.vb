@@ -174,7 +174,17 @@
     End Function
 
     Private Function CheckOptions()
-
+        Dim ret As Boolean = True
+        If num_linesinch.Value <= 0 Or num_charactersinch.Value <= 0 Then
+            ret = False
+        End If
+        If combo_orientation.SelectedIndex = -1 Then
+            ret = False
+        End If
+        If num_priority.Value < 1 Or num_priority.Value > 100 Then
+            ret = False
+        End If
+        Return ret
     End Function
 
 #End Region
