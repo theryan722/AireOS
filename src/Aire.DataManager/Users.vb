@@ -23,11 +23,11 @@ Public Class Users
         System.IO.File.Create(loc & "/Apps/Terminal/config.txt")
         System.IO.File.Create(loc & "/Apps/Terminal/external.txt")
         System.IO.File.Create(loc & "/Data/applist.txt")
-        System.IO.File.Create(loc & "/Data/Config/launchbarcolor.txt")
-        System.IO.File.Create(loc & "/Data/Config/appbarcolor.txt")
-        System.IO.File.Create(loc & "/Data/Config/backgroundimagelayout.txt")
-        System.IO.File.Create(loc & "/Data/Config/lognotificationtext.txt")
-        System.IO.File.Create(loc & "/Data/Config/confirmshutdown.txt")
+        'System.IO.File.Create(loc & "/Data/Config/launchbarcolor.txt")
+        'System.IO.File.Create(loc & "/Data/Config/appbarcolor.txt")
+        'System.IO.File.Create(loc & "/Data/Config/backgroundimagelayout.txt")
+        'System.IO.File.Create(loc & "/Data/Config/lognotificationtext.txt")
+        'System.IO.File.Create(loc & "/Data/Config/confirmshutdown.txt")
         'System.IO.File.Create(loc & "/Data/Config/")
     End Sub
 
@@ -38,16 +38,11 @@ Public Class Users
 
     Private Shared Sub SetDefaultSettings(ByVal loc As String)
         'System.IO.File.WriteAllText(loc & "/Data/Config/", "")
-        'System.IO.File.WriteAllText(loc & "/Data/Config/launchbarcolor.txt", "-6703919")
-        'System.IO.File.WriteAllText(loc & "/Data/Config/appbarcolor.txt", "-6703919")
-        'System.IO.File.WriteAllText(loc & "/Data/Config/backgroundimagelayout.txt", "Stretch")
-        'System.IO.File.WriteAllText(loc & "/Data/Config/lognotificationtext.txt", "True")
-        'System.IO.File.WriteAllText(loc & "/Data/Config/confirmshutdown.txt", "True")
-        WriteText(loc & "/Data/Config/launchbarcolor.txt", "-6703919")
-        WriteText(loc & "/Data/Config/appbarcolor.txt", "-6703919")
-        WriteText(loc & "/Data/Config/backgroundimagelayout.txt", "Stretch")
-        WriteText(loc & "/Data/Config/lognotificationtext.txt", "True")
-        WriteText(loc & "/Data/Config/confirmshutdown.txt", "True")
+        System.IO.File.WriteAllText(loc & "/Data/Config/launchbarcolor.txt", "-6703919")
+        System.IO.File.WriteAllText(loc & "/Data/Config/appbarcolor.txt", "-6703919")
+        System.IO.File.WriteAllText(loc & "/Data/Config/backgroundimagelayout.txt", "Stretch")
+        System.IO.File.WriteAllText(loc & "/Data/Config/lognotificationtext.txt", "True")
+        System.IO.File.WriteAllText(loc & "/Data/Config/confirmshutdown.txt", "True")
     End Sub
 
 #End Region
