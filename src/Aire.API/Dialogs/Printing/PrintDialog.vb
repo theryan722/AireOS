@@ -166,7 +166,7 @@
     End Function
 
     Private Function CheckMedia()
-
+        Return lb_media.Items.Count > 0
     End Function
 
     Private Function CheckDocuments()
