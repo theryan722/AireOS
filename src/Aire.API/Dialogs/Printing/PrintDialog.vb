@@ -148,7 +148,13 @@
     End Function
 
     Private Function CheckPageRange()
-
+        Dim ret As Boolean = True
+        If radio_custom.Checked Then
+            If txt_custompagerange.Text = "" Or txt_custompagerange.Contains(" ") Then
+                ret = False
+            End If
+        End If
+        Return ret
     End Function
 
     Private Function CheckSides()
