@@ -102,7 +102,15 @@
     End Sub
 
     Private Sub LoadOptionsUI()
-
+        num_linesinch.Value = 6
+        num_charactersinch.Value = 10
+        check_mirror.Checked = False
+        radio_normalorder.Checked = True
+        check_fittopage.Checked = True
+        combo_orientation.SelectedItem = "Portrait"
+        check_prettyprint.Checked = False
+        check_nowrap.Checked = False
+        num_priority.Value = 50
     End Sub
 
     Private Sub LoadPrinters()

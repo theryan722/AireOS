@@ -614,7 +614,7 @@ Partial Class PrintDialog
         'combo_orientation
         '
         Me.combo_orientation.FormattingEnabled = True
-        Me.combo_orientation.Items.AddRange(New Object() {" Portrait", " Landscape", " ReverseLandscape", " ReversePortrait"})
+        Me.combo_orientation.Items.AddRange(New Object() {"Portrait", "Landscape", "ReverseLandscape", "ReversePortrait"})
         Me.combo_orientation.Location = New System.Drawing.Point(230, 9)
         Me.combo_orientation.Name = "combo_orientation"
         Me.combo_orientation.Size = New System.Drawing.Size(99, 21)
