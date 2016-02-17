@@ -101,20 +101,25 @@
 
     Private Sub LoadApplications()
         'Load System Applications
-        Dim objReader As New System.IO.StreamReader(Aire.DataManager.DataPaths.GetSystemApplicationList)
-        Do While objReader.Peek() <> -1
-            Dim arr() As String = objReader.ReadLine().Split("|")
-            Dim newb As New LauncherItem(arr(1), arr(0))
-            newb.Dock = DockStyle.Top
-            pnl_applications.Controls.Add(newb)
-        Loop
+        If My.Computer.FileSystem.ReadAllText(Aire.DataManager.DataPaths.GetSystemApplicationList) <> "" Then
+            Dim objReader As New System.IO.StreamReader(Aire.DataManager.DataPaths.GetSystemApplicationList)
+            Do While objReader.Peek() <> -1
+                Dim arr() As String = objReader.ReadLine().Split("|")
+                Dim newb As New LauncherItem(arr(1), arr(0))
+                newb.Dock = DockStyle.Top
+                pnl_applications.Controls.Add(newb)
+            Loop
+        End If
         'Load User Applications
-        For Each item As String In Aire.API.User.Current.Info.GetAppList
-            Dim arr() As String = item.Split("|")
-            Dim newb As New LauncherItem(arr(1), arr(0))
-            newb.Dock = DockStyle.Top
-            pnl_applications.Controls.Add(newb)
-        Next
+        Dim bb As List(Of String) = Aire.API.User.Current.Info.GetAppList
+        If bb.Count > 0 Then
+            For Each item As String In bb
+                Dim arr() As String = item.Split("|")
+                Dim newb As New LauncherItem(arr(1), arr(0))
+                newb.Dock = DockStyle.Top
+                pnl_applications.Controls.Add(newb)
+            Next
+        End If
     End Sub
 
     Private Sub LoadUI()

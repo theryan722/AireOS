@@ -52,6 +52,10 @@
         End If
     End Sub
 
+    Private Sub txt_username_TextChanged(sender As Object, e As EventArgs) Handles txt_username.TextChanged
+
+    End Sub
+
 #End Region
 
 #Region "Event Handlers"
@@ -123,5 +127,5 @@
     End Sub
 
 #End Region
-
+    
 End Class
