@@ -293,9 +293,6 @@
     <None Include="Resources\16_notification.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\72_profile.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\72_search.png" />
   </ItemGroup>
   <ItemGroup>
