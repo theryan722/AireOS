@@ -31,6 +31,12 @@
 
 #Region "Public Methods"
 
+            ''' <summary>
+            ''' Writes text to a specified log
+            ''' </summary>
+            ''' <param name="message">The message to log</param>
+            ''' <param name="source">The source of the message, also determines which log will be written to</param>
+            ''' <remarks></remarks>
             Public Shared Sub Write(ByVal message As String, Optional source As LogSource = LogSource.System)
                 Select Case source
                     Case LogSource.General
