@@ -1,5 +1,11 @@
 ﻿Public Class Converter
 
+    ''' <summary>
+    ''' Converts a string to an ImageLayout
+    ''' </summary>
+    ''' <param name="str">The string to convert</param>
+    ''' <returns>ImageLayout, the converted string</returns>
+    ''' <remarks></remarks>
     Public Shared Function ConvertStringToImageLayout(ByVal str As String) As System.Windows.Forms.ImageLayout
         Select Case str
             Case "None"
