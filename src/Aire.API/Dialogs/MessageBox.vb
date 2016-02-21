@@ -34,10 +34,20 @@ Public Class MessageBox
 
 #Region "Methods"
 
+    ''' <summary>
+    ''' Sets the font for the message text
+    ''' </summary>
+    ''' <param name="font">The font to set</param>
+    ''' <remarks></remarks>
     Public Sub SetFont(ByVal font As System.Drawing.Font)
         TextBox1.Font = font
     End Sub
 
+    ''' <summary>
+    ''' Sets the icon image for the dialog
+    ''' </summary>
+    ''' <param name="icon">The icon to set</param>
+    ''' <remarks></remarks>
     Private Sub SetImage(ByVal icon As MessageBoxIcon)
         Select Case icon
             Case MessageBoxIcon.Information
@@ -63,6 +73,11 @@ Public Class MessageBox
         End Select
     End Sub
 
+    ''' <summary>
+    ''' Sets the displayed buttons on the dialog
+    ''' </summary>
+    ''' <param name="buttons">The buttons to display</param>
+    ''' <remarks></remarks>
     Private Sub SetButtons(ByVal buttons As MessageBoxButtons)
         Select Case buttons
             Case MessageBoxButtons.OkOnly
@@ -115,6 +130,17 @@ Public Class MessageBox
 
 #Region "MessageBox"
 
+    ''' <summary>
+    ''' Constructor
+    ''' </summary>
+    ''' <param name="text">The text to display</param>
+    ''' <param name="title">The title of the dialog</param>
+    ''' <param name="buttons">The buttons to display</param>
+    ''' <param name="icon">The icon image to display</param>
+    ''' <param name="backcolor">The backcolor of the dialog</param>
+    ''' <param name="showintaskbar">Whether or not the dialog will display in the taskbar</param>
+    ''' <param name="topmost">Whether or not the dialog is topmost</param>
+    ''' <remarks></remarks>
     Public Sub New(ByVal text As String, Optional ByVal title As String = "", Optional ByVal buttons As MessageBoxButtons = MessageBoxButtons.OkOnly, Optional ByVal icon As MessageBoxIcon = MessageBoxIcon.None, Optional ByVal backcolor As System.Drawing.Color = Nothing, Optional ByVal showintaskbar As Boolean = False, Optional ByVal topmost As Boolean = True)
         InitializeComponent()
         Dim bcolor As Color = If(backcolor = Nothing, SystemColors.Control, backcolor)
