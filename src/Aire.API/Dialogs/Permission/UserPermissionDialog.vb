@@ -113,6 +113,16 @@
 
 #Region "UserPermissionDialog"
 
+    ''' <summary>
+    ''' Constructor
+    ''' </summary>
+    ''' <param name="requiredpermissionlevel">The permission level required to grant permission</param>
+    ''' <param name="defaultuser">The user displayed in the dialog</param>
+    ''' <param name="allowotherusers">Whether or not other users besides the default user can grant permission</param>
+    ''' <param name="displayotherusers">Whether or not to display other users</param>
+    ''' <param name="title">The title of the dialog</param>
+    ''' <param name="message">The message to display</param>
+    ''' <remarks></remarks>
     Public Sub New(ByVal requiredpermissionlevel As Integer, Optional ByVal defaultuser As String = "", Optional ByVal allowotherusers As Boolean = True, Optional ByVal displayotherusers As Boolean = True, Optional ByVal title As String = "User Permission", Optional ByVal message As String = "")
         InitializeComponent()
         permlevel = requiredpermissionlevel
