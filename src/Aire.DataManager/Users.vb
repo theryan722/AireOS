@@ -47,6 +47,11 @@ Public Class Users
 
 #End Region
 
+    ''' <summary>
+    ''' Sets up a user data storage directory
+    ''' </summary>
+    ''' <param name="loc">The location to setup</param>
+    ''' <remarks></remarks>
     Public Shared Sub SetupUserDataStorage(ByVal loc As String)
         CreateDirectories(loc)
         CreateFiles(loc)
