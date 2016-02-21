@@ -1,17 +1,27 @@
 ﻿Friend Class dlgVolumeControl
 
     Private Shared Volume As Integer = 0
+
+    ''' <summary>
+    ''' Whether or not the Volume Control is showing
+    ''' </summary>
+    ''' <remarks></remarks>
     Public Shared Showing As Boolean = False
 
 #Region "Methods"
 
+    ''' <summary>
+    ''' Updates the UI, including volume percentage and trackbar position
+    ''' </summary>
+    ''' <param name="notrackbar">Whether or not to update the trackbar position</param>
+    ''' <remarks></remarks>
     Public Sub UpdateUI(Optional notrackbar As Boolean = False)
         Dim vol As Integer = Audio.Volume.GetVolume()
         If Audio.Volume.GetIfMuted Then
             lbl_vol.Text = "Muted"
         Else
             lbl_vol.Text = vol & "%"
-            If notrackbar Then
+            If Not notrackbar Then
                 TrackBar1.Value = vol
             End If
         End If
