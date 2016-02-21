@@ -2,6 +2,10 @@
 
 #Region "Check"
 
+    ''' <summary>
+    ''' Checks all data locations
+    ''' </summary>
+    ''' <remarks></remarks>
     Public Shared Sub CheckAllData()
 
 
@@ -12,6 +16,10 @@
 
 #Region "Repair"
 
+    ''' <summary>
+    ''' Repairs all data locations
+    ''' </summary>
+    ''' <remarks></remarks>
     Public Shared Sub RepairAllData()
 
 
