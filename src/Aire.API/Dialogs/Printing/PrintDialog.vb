@@ -385,6 +385,12 @@
 
 #Region "PrintDialog"
 
+    ''' <summary>
+    ''' Constructor
+    ''' </summary>
+    ''' <param name="title">The title of the dialog</param>
+    ''' <param name="printsettings">The printsettings to load</param>
+    ''' <remarks></remarks>
     Public Sub New(Optional ByVal title As String = "Print", Optional ByVal printsettings As PrinterSettings = Nothing)
         InitializeComponent()
         Me.Text = title
