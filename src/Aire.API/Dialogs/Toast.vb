@@ -14,6 +14,14 @@ Public Class Toast
 
 #Region "Toast"
 
+    ''' <summary>
+    ''' Constructor
+    ''' </summary>
+    ''' <param name="text">The text to display</param>
+    ''' <param name="duration">How long to display the toast, in milliseconds</param>
+    ''' <param name="title">The title to display</param>
+    ''' <param name="backcolor">The backcolor of the toast</param>
+    ''' <remarks></remarks>
     Public Sub New(ByVal text As String, Optional ByVal duration As Integer = 2500, Optional ByVal title As String = "", Optional ByVal backcolor As System.Drawing.Color = Nothing)
         InitializeComponent()
         Dim bcolor As Color = If(backcolor = Nothing, SystemColors.ActiveBorder, backcolor)
