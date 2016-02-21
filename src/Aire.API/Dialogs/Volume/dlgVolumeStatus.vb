@@ -4,10 +4,20 @@ Imports System.Windows.Forms
 Friend Class dlgVolumeStatus
 
     Private Shared Volume As Integer = 0
+
+    ''' <summary>
+    ''' Whether the control is showing
+    ''' </summary>
+    ''' <remarks></remarks>
     Public Shared Showing As Boolean = False
 
 #Region "Methods"
 
+    ''' <summary>
+    ''' Updates the volume of the control
+    ''' </summary>
+    ''' <param name="vol">The volume to set</param>
+    ''' <remarks></remarks>
     Public Sub UpdateVolume(ByVal vol As Integer)
         Volume = Math.Min(vol, 100)
         Me.Invalidate()
