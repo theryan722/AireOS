@@ -22,7 +22,7 @@
     ''' <param name="pname">The name of the printer</param>
     ''' <param name="penabled">Whether the printer is enabled or not</param>
     ''' <remarks></remarks>
-    Public Sub New(ByVal pname As String, Optional penabled As Boolean = False)
+    Public Sub New(ByVal pname As String, Optional penabled As Boolean = True)
         Name = pname
         Enabled = penabled
     End Sub
