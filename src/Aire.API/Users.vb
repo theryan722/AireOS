@@ -367,7 +367,6 @@ Namespace User
 
             Friend Shared Sub SetCurrentUser(ByVal username As String)
                 Aire.DataManager.TempData.LoggedInUser = username
-                My.Computer.FileSystem.WriteAllText(Aire.DataManager.DataPaths.GetSysDataLocation & "/Temp/currentuser.txt", username, False)
             End Sub
 
             ''' <summary>
