@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Text
 
 Namespace Sys.IO
 
@@ -16,6 +17,24 @@ Namespace Sys.IO
                 writer.Write(text)
             End Using
         End Sub
+
+        ''' <summary>
+        ''' Reads text from a file
+        ''' </summary>
+        ''' <param name="sfile">The file to open and read</param>
+        ''' <returns>String, the text of the file</returns>
+        ''' <remarks>Allows multiple processes to read from the file asynchronously</remarks>
+        Public Shared Function ReadTextNoLock(ByVal sfile As String) As String
+            Using stream As FileStream = System.IO.File.Open(sfile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+                Dim strb As New StringBuilder()
+                Dim b As Byte() = New Byte(stream.Length) {}
+                Dim temp As New UTF8Encoding(True)
+                While stream.Read(b, 0, b.Length) > 0
+                    strb.Append(temp.GetString(b))
+                End While
+                Return strb.ToString
+            End Using
+        End Function
 
     End Class
 

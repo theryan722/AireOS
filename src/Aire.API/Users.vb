@@ -1,5 +1,6 @@
 ﻿Imports System.Windows.Forms
 Imports System.Drawing
+Imports System.IO
 
 Namespace User
 
@@ -14,6 +15,9 @@ Namespace User
             ''' <returns>String, the username of the current user</returns>
             ''' <remarks></remarks>
             Public Shared Function GetUsername() As String
+                Dim t As FileStream = File.Open("\\[network path]\test.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+                Return t.Read(
+                Return My.Computer.FileSystem.ReadAllText(Aire.DataManager.DataPaths.GetSysDataLocation & "/Temp/currentuser.txt")
                 Return Aire.DataManager.TempData.LoggedInUser
             End Function
 
@@ -366,6 +370,7 @@ Namespace User
 
             Friend Shared Sub SetCurrentUser(ByVal username As String)
                 Aire.DataManager.TempData.LoggedInUser = username
+                My.Computer.FileSystem.WriteAllText(Aire.DataManager.DataPaths.GetSysDataLocation & "/Temp/currentuser.txt", username, False)
             End Sub
 
             ''' <summary>
