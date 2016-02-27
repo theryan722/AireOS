@@ -15,9 +15,6 @@ Namespace User
             ''' <returns>String, the username of the current user</returns>
             ''' <remarks></remarks>
             Public Shared Function GetUsername() As String
-                Dim t As FileStream = File.Open("\\[network path]\test.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
-                Return t.Read(
-                Return My.Computer.FileSystem.ReadAllText(Aire.DataManager.DataPaths.GetSysDataLocation & "/Temp/currentuser.txt")
                 Return Aire.DataManager.TempData.LoggedInUser
             End Function
 
