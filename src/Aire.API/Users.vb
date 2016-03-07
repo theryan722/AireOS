@@ -191,6 +191,14 @@ Namespace User
 
         Public Class Actions
 
+            Public Shared Sub AddApplication(ByVal title As String, ByVal loc As String)
+
+            End Sub
+
+            Public Shared Sub RemoveApplication(ByVal title As String)
+
+            End Sub
+
             ''' <summary>
             ''' Displays the logout dialog for the current user
             ''' </summary>
