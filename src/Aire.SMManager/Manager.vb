@@ -21,7 +21,7 @@
     Private Shared Sub ExecuteScript(ByVal script As String)
         Try
             Dim proc As New System.Diagnostics.Process()
-            proc.StartInfo.FileName = "/bin/bash"
+            proc.StartInfo.FileName = "/usr/bin/python"
             proc.StartInfo.Arguments = script
             proc.StartInfo.UseShellExecute = False
             proc.StartInfo.RedirectStandardOutput = True
