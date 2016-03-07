@@ -203,6 +203,12 @@ Namespace User
                 objWriter.Close()
             End Sub
 
+            ''' <summary>
+            ''' Removes an application from the user application list
+            ''' </summary>
+            ''' <param name="title">The title of the application</param>
+            ''' <param name="loc">The location of the application executable</param>
+            ''' <remarks></remarks>
             Public Shared Sub RemoveApplication(ByVal title As String, ByVal loc As String)
                 Dim lines As List(Of String) = System.IO.File.ReadAllLines(Aire.DataManager.Databases.UserData.GetDataStorageLoc(Current.Info.GetUsername) & "/Data/applist.txt").ToList
                 lines.RemoveAt(lines.IndexOf(loc & "|" & title))
