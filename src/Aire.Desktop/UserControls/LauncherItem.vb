@@ -31,6 +31,7 @@
     Private Sub LaunchFile()
         If System.IO.File.Exists(FileLocation) Then
             Aire.API.Sys.Process.Start(FileLocation)
+            LauncherForm.Close()
         End If
     End Sub
 
