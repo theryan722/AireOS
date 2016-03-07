@@ -192,7 +192,9 @@ Namespace User
         Public Class Actions
 
             Public Shared Sub AddApplication(ByVal title As String, ByVal loc As String)
-
+                Dim objWriter As New System.IO.StreamWriter(Aire.DataManager.Databases.UserData.GetDataStorageLoc(GetUsername) & "/Data/applist.txt", True)
+                objWriter.Write(loc & "|" & title)
+                objWriter.Close()
             End Sub
 
             Public Shared Sub RemoveApplication(ByVal title As String)
