@@ -2,11 +2,11 @@
 
 #Region "Public"
 
-    Public Shared Sub UpdateFile(ByVal key As String, ByVal obj As Object)
+    Public Shared Sub UpdateFile(ByVal file As String, ByVal txt As String)
 
     End Sub
 
-    Public Shared Function ReadFile(ByVal key As String) As Object
+    Public Shared Function ReadFile(ByVal file As String) As String
 
     End Function
 
