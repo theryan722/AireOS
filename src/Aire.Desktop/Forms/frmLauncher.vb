@@ -114,6 +114,7 @@
             Do While objReader.Peek() <> -1
                 Dim arr() As String = objReader.ReadLine().Split("|")
                 Dim newb As New LauncherItem(arr(1), arr(0))
+                newb.LauncherForm = Me
                 newb.Dock = DockStyle.Top
                 pnl_applications.Controls.Add(newb)
             Loop
@@ -124,6 +125,7 @@
             For Each item As String In bb
                 Dim arr() As String = item.Split("|")
                 Dim newb As New LauncherItem(arr(1), arr(0))
+                newb.LauncherForm = Me
                 newb.Dock = DockStyle.Top
                 pnl_applications.Controls.Add(newb)
             Next
