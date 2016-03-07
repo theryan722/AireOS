@@ -22,6 +22,8 @@
 
     Public Property FileLocation As String
 
+    Public Property LauncherForm As frmLauncher
+
 #End Region
 
 #Region "Methods"
