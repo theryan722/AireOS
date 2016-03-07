@@ -171,6 +171,10 @@
       <Project>{8b285aed-9205-4cee-8955-c9c3c73408b9}</Project>
       <Name>Aire.API</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Aire.SMManager\Aire.SMManager.vbproj">
+      <Project>{665836bd-7a5c-4ce3-a5aa-f585ecb788ac}</Project>
+      <Name>Aire.SMManager</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

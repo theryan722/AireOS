@@ -8,10 +8,10 @@ Public Class ConfigManager
 
     Public Shared Function ReadConfig() As List(Of String)
         Dim TextLine As New List(Of String)
-        Dim objReader As New System.IO.StreamReader(setloc)
-        Do While objReader.Peek() <> -1
-            TextLine.Add(objReader.ReadLine())
-        Loop
+        Dim bb As String = Aire.SMManager.Manager.ReadFile(setloc)
+        For Each item As String In bb.Split(Environment.NewLine)
+            TextLine.Add(item)
+        Next
         Return TextLine
     End Function
 
