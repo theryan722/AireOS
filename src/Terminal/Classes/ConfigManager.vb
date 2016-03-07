@@ -8,7 +8,7 @@ Public Class ConfigManager
 
     Public Shared Function ReadConfig() As List(Of String)
         Dim TextLine As New List(Of String)
-        Dim bb As String = Aire.SMManager.Manager.ReadFile(setloc)
+        Dim bb As String = Aire.API.Sys.IO.File.SRead(setloc)
         For Each item As String In bb.Split(Environment.NewLine)
             TextLine.Add(item)
         Next

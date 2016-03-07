@@ -278,6 +278,10 @@
       <Project>{d1931c58-f5b4-467f-8b45-83dd530fd61a}</Project>
       <Name>Aire.Security</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Aire.SMManager\Aire.SMManager.vbproj">
+      <Project>{665836bd-7a5c-4ce3-a5aa-f585ecb788ac}</Project>
+      <Name>Aire.SMManager</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\72_profile.png" />

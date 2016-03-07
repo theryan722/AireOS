@@ -19,21 +19,23 @@ Namespace Sys.IO
         End Sub
 
         ''' <summary>
+        ''' Writes text to a file
+        ''' </summary>
+        ''' <param name="file">The file to write to</param>
+        ''' <param name="text">The text to write to the file</param>
+        ''' <remarks>Does not place a lock on the file</remarks>
+        Public Shared Sub SWrite(ByVal file As String, ByVal text As String)
+            Aire.SMManager.Manager.UpdateFile(file, text)
+        End Sub
+
+        ''' <summary>
         ''' Reads text from a file
         ''' </summary>
-        ''' <param name="sfile">The file to open and read</param>
+        ''' <param name="file">The file to read from</param>
         ''' <returns>String, the text of the file</returns>
-        ''' <remarks>Allows multiple processes to read from the file asynchronously</remarks>
-        Public Shared Function ReadTextNoLock(ByVal sfile As String) As String
-            Using stream As FileStream = System.IO.File.Open(sfile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
-                Dim strb As New StringBuilder()
-                Dim b As Byte() = New Byte(stream.Length) {}
-                Dim temp As New UTF8Encoding(True)
-                While stream.Read(b, 0, b.Length) > 0
-                    strb.Append(temp.GetString(b))
-                End While
-                Return strb.ToString
-            End Using
+        ''' <remarks>Does not place a lock on the file</remarks>
+        Public Shared Function SRead(ByVal file As String) As String
+            Return Aire.SMManager.Manager.ReadFile(file)
         End Function
 
     End Class
