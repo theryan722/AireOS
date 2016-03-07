@@ -191,6 +191,12 @@ Namespace User
 
         Public Class Actions
 
+            ''' <summary>
+            ''' Adds an application to the user application list
+            ''' </summary>
+            ''' <param name="title">The title of the application</param>
+            ''' <param name="loc">The location of the application executable</param>
+            ''' <remarks></remarks>
             Public Shared Sub AddApplication(ByVal title As String, ByVal loc As String)
                 Dim objWriter As New System.IO.StreamWriter(Aire.DataManager.Databases.UserData.GetDataStorageLoc(Current.Info.GetUsername) & "/Data/applist.txt", True)
                 objWriter.Write(loc & "|" & title)
