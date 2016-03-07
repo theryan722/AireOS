@@ -1,5 +1,7 @@
 ﻿Public Class Manager
 
+#Region "Public"
+
     Public Shared Sub CreateFile(ByVal file As String, ByVal key As String, ByVal obj As Object, ByVal buffer As Integer)
 
     End Sub
@@ -11,6 +13,10 @@
     Public Shared Function ReadFile(ByVal key As String) As Object
 
     End Function
+
+#End Region
+
+#Region "Helper"
 
     Private Shared Sub ExecuteScript(ByVal script As String)
         Try
@@ -41,5 +47,7 @@
             Return Nothing
         End Try
     End Function
+
+#End Region
 
 End Class
