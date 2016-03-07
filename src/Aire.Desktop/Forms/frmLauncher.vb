@@ -55,7 +55,7 @@
         btnSearch.BackColor = Aire.SysColors.Colors.GradientActiveCaption
     End Sub
 
-    Private Sub btnSearch_Leave(sender As Object, e As EventArgs) Handles btnSearch.Leave
+    Private Sub btnSearch_MouseLeave(sender As Object, e As EventArgs) Handles btnSearch.MouseLeave
         btnSearch.BackColor = Aire.SysColors.Colors.ActiveCaption
     End Sub
 
