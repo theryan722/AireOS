@@ -222,6 +222,7 @@ Partial Class frmLauncher
         Me.Controls.Add(Me.pnl_right)
         Me.Controls.Add(Me.pnl_bottom)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.KeyPreview = True
         Me.Name = "frmLauncher"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False

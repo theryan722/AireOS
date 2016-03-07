@@ -164,6 +164,12 @@
         frmLauncher.Showing = False
     End Sub
 
+    Private Sub frmLauncher_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        End If
+    End Sub
+
     Private Sub frmLauncher_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmLauncher.Showing = True
         LoadUI()
