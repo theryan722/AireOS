@@ -7,7 +7,9 @@ Public Class Manager
     Public Shared Sub UpdateFile(ByVal file As String, ByVal txt As String)
         Dim outStream = New FileStream(file, FileMode.Open, FileAccess.Write, FileShare.ReadWrite)
         Dim arr() As Byte = System.Text.Encoding.ASCII.GetBytes(txt)
+        outStream.SetLength(0)
         outStream.Write(System.Text.Encoding.ASCII.GetBytes(txt), 0, arr.Count)
+        outStream.Close()
     End Sub
 
     Public Shared Function ReadFile(ByVal file As String) As String
@@ -25,6 +27,7 @@ Public Class Manager
             numBytesToRead = (numBytesToRead - n)
         End While
         numBytesToRead = bytes.Length
+        inStream.Close()
         Return System.Text.ASCIIEncoding.ASCII.GetString(bytes)
     End Function
 
