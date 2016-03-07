@@ -6,8 +6,5 @@ import sys
 # 3: Text
 if len(sys.argv) > 1:
 	if sys.argv[1] == "CREATE":
-		print "Create"
 	elif sys.argv[1] == "UPDATE":
-		print "Update"
 	elif sys.argv[1] == "READ":
-		print "Read"
