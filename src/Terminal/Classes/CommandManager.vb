@@ -7,11 +7,19 @@
                 Case "clear"
                     sText = ""
                     cmdform.TextBox1.Clear()
+                Case "exit"
+                    sText = "Exiting Window"
+                    cmdform.Close()
+                Case "exit -all"
+                    sText = "Exiting Terminal"
+                    Application.Exit()
                 Case "help"
                     sText = "Basic Command List" & vbNewLine & _
 "-------------------" & vbNewLine & _
 "clear -- Clears the terminal" & vbNewLine & _
 "help -- Displays help" & vbNewLine & _
+"exit -- Closes the current terminal window" & vbNewLine & _
+"exit -all -- Exits the terminal application" & vbNewLine & _
 "terminal -about -- Displays Information about Terminal" & vbNewLine & _
 "terminal -about version -- Displays the terminal version" & vbNewLine & _
 "terminal -exit -- Closes the current terminal window" & vbNewLine & _
