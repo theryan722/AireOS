@@ -131,6 +131,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aire.SMManager\Aire.SMManager.vbproj">
+      <Project>{665836bd-7a5c-4ce3-a5aa-f585ecb788ac}</Project>
+      <Name>Aire.SMManager</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
