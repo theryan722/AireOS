@@ -13,6 +13,7 @@
 
     Private Sub btnProfile_Click(sender As Object, e As EventArgs) Handles btnProfile.Click
         Aire.API.User.Current.Actions.ShowLogoutDialog()
+        Me.Close()
     End Sub
 
     Private Sub btnProfile_MouseEnter(sender As Object, e As EventArgs) Handles btnProfile.MouseEnter
@@ -28,7 +29,7 @@
 #Region "btnOptions"
 
     Private Sub btnOptions_Click(sender As Object, e As EventArgs) Handles btnOptions.Click
-
+        Me.Close()
     End Sub
 
     Private Sub btnOptions_MouseEnter(sender As Object, e As EventArgs) Handles btnOptions.MouseEnter
@@ -48,6 +49,7 @@
             Dim newb As New frmSearch
             newb.Show()
             newb.Location = PointToScreen(desktop.btnLauncher.Location)
+            Me.Close()
         End If
     End Sub
 
@@ -64,7 +66,7 @@
 #Region "btnFileBrowser"
 
     Private Sub btnFileBrowser_Click(sender As Object, e As EventArgs) Handles btnFileBrowser.Click
-
+        Me.Close()
     End Sub
 
     Private Sub btnFileBrowser_MouseEnter(sender As Object, e As EventArgs) Handles btnFileBrowser.MouseEnter
@@ -81,6 +83,7 @@
 
     Private Sub btnPower_Click(sender As Object, e As EventArgs) Handles btnPower.Click
         Aire.API.Sys.Power.Actions.ShowPowerDialog()
+        Me.Close()
     End Sub
 
     Private Sub btnPower_MouseEnter(sender As Object, e As EventArgs) Handles btnPower.MouseEnter
@@ -99,6 +102,7 @@
                 Dim newb As New frmSearch(txtSearch.Text)
                 newb.Show()
                 newb.Location = PointToScreen(desktop.btnLauncher.Location)
+                Me.Close()
             End If
         End If
     End Sub
