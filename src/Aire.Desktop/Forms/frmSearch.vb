@@ -41,6 +41,12 @@
         frmSearch.Showing = False
     End Sub
 
+    Private Sub frmSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        End If
+    End Sub
+
     Private Sub frmSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmSearch.Showing = True
         FixBackColor()

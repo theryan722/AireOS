@@ -291,6 +291,7 @@ Partial Class frmSearch
         Me.Controls.Add(Me.pnl_options)
         Me.Controls.Add(Me.txtSearch)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmSearch"
