@@ -197,10 +197,9 @@ Namespace User
                 objWriter.Close()
             End Sub
 
-            Public Shared Sub RemoveApplication(ByVal title As String)
-                Dim delLine As Integer = 10
+            Public Shared Sub RemoveApplication(ByVal title As String, ByVal loc As String)
                 Dim lines As List(Of String) = System.IO.File.ReadAllLines(Aire.DataManager.Databases.UserData.GetDataStorageLoc(Current.Info.GetUsername) & "/Data/applist.txt").ToList
-                lines.RemoveAt(delLine - 1)
+                lines.RemoveAt(lines.IndexOf(loc & "|" & title))
                 System.IO.File.WriteAllLines(Aire.DataManager.Databases.UserData.GetDataStorageLoc(Current.Info.GetUsername) & "/Data/applist.txt", lines)
             End Sub
 
