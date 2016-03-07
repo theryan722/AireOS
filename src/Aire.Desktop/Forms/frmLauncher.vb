@@ -83,6 +83,14 @@
         Aire.API.Sys.Power.Actions.ShowPowerDialog()
     End Sub
 
+    Private Sub btnPower_MouseEnter(sender As Object, e As EventArgs) Handles btnPower.MouseEnter
+        btnPower.BackColor = Aire.SysColors.Colors.GradientActiveCaption
+    End Sub
+
+    Private Sub btnPower_MouseLeave(sender As Object, e As EventArgs) Handles btnPower.MouseLeave
+        btnPower.BackColor = Aire.SysColors.Colors.ActiveCaption
+    End Sub
+
 #End Region
 
     Private Sub txtSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtSearch.KeyDown
