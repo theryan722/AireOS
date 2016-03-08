@@ -51,6 +51,14 @@ Partial Class frmMain
         Me.btnForward = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.ContextMenuStrip_ListView1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.StyleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExtraLargeIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LargeIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MediumIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SmallIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -60,9 +68,9 @@ Partial Class frmMain
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 373)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 476)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(631, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(743, 22)
         Me.StatusStrip1.TabIndex = 0
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -71,7 +79,7 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.NavigationToolStripMenuItem, Me.ViewToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(631, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(743, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -143,6 +151,7 @@ Partial Class frmMain
         '
         'ViewToolStripMenuItem
         '
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StyleToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -182,7 +191,7 @@ Partial Class frmMain
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.ListView1)
-        Me.SplitContainer1.Size = New System.Drawing.Size(631, 317)
+        Me.SplitContainer1.Size = New System.Drawing.Size(743, 420)
         Me.SplitContainer1.SplitterDistance = 186
         Me.SplitContainer1.TabIndex = 2
         '
@@ -192,7 +201,7 @@ Partial Class frmMain
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView1.Location = New System.Drawing.Point(0, 0)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(631, 317)
+        Me.ListView1.Size = New System.Drawing.Size(743, 420)
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
@@ -206,7 +215,7 @@ Partial Class frmMain
         Me.pnl_navigation.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnl_navigation.Location = New System.Drawing.Point(0, 24)
         Me.pnl_navigation.Name = "pnl_navigation"
-        Me.pnl_navigation.Size = New System.Drawing.Size(631, 32)
+        Me.pnl_navigation.Size = New System.Drawing.Size(743, 32)
         Me.pnl_navigation.TabIndex = 3
         '
         'combo_navigation
@@ -215,7 +224,7 @@ Partial Class frmMain
         Me.combo_navigation.FormattingEnabled = True
         Me.combo_navigation.Location = New System.Drawing.Point(128, 0)
         Me.combo_navigation.Name = "combo_navigation"
-        Me.combo_navigation.Size = New System.Drawing.Size(503, 21)
+        Me.combo_navigation.Size = New System.Drawing.Size(615, 21)
         Me.combo_navigation.TabIndex = 0
         '
         'btnHome
@@ -275,11 +284,59 @@ Partial Class frmMain
         Me.ContextMenuStrip_ListView1.Name = "ContextMenuStrip_ListView1"
         Me.ContextMenuStrip_ListView1.Size = New System.Drawing.Size(61, 4)
         '
+        'ImageList1
+        '
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        '
+        'StyleToolStripMenuItem
+        '
+        Me.StyleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExtraLargeIconsToolStripMenuItem, Me.LargeIconsToolStripMenuItem, Me.MediumIconsToolStripMenuItem, Me.SmallIconsToolStripMenuItem, Me.ToolStripSeparator3, Me.ListToolStripMenuItem})
+        Me.StyleToolStripMenuItem.Name = "StyleToolStripMenuItem"
+        Me.StyleToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.StyleToolStripMenuItem.Text = "Style"
+        '
+        'ExtraLargeIconsToolStripMenuItem
+        '
+        Me.ExtraLargeIconsToolStripMenuItem.Name = "ExtraLargeIconsToolStripMenuItem"
+        Me.ExtraLargeIconsToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.ExtraLargeIconsToolStripMenuItem.Text = "Extra Large Icons"
+        '
+        'LargeIconsToolStripMenuItem
+        '
+        Me.LargeIconsToolStripMenuItem.Name = "LargeIconsToolStripMenuItem"
+        Me.LargeIconsToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.LargeIconsToolStripMenuItem.Text = "Large Icons"
+        '
+        'MediumIconsToolStripMenuItem
+        '
+        Me.MediumIconsToolStripMenuItem.Name = "MediumIconsToolStripMenuItem"
+        Me.MediumIconsToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.MediumIconsToolStripMenuItem.Text = "Medium Icons"
+        '
+        'SmallIconsToolStripMenuItem
+        '
+        Me.SmallIconsToolStripMenuItem.Name = "SmallIconsToolStripMenuItem"
+        Me.SmallIconsToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.SmallIconsToolStripMenuItem.Text = "Small Icons"
+        '
+        'ListToolStripMenuItem
+        '
+        Me.ListToolStripMenuItem.Name = "ListToolStripMenuItem"
+        Me.ListToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.ListToolStripMenuItem.Text = "List"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(159, 6)
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(631, 395)
+        Me.ClientSize = New System.Drawing.Size(743, 498)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.pnl_navigation)
         Me.Controls.Add(Me.StatusStrip1)
@@ -325,5 +382,13 @@ Partial Class frmMain
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ContextMenuStrip_ListView1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents StyleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ExtraLargeIconsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LargeIconsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MediumIconsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SmallIconsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
 
 End Class
