@@ -108,6 +108,12 @@
     <Compile Include="Forms\dlgOptions.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\dlgProperties.Designer.vb">
+      <DependentUpon>dlgProperties.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgProperties.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
