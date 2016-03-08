@@ -96,10 +96,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\FileIcon.vb" />
     <Compile Include="Forms\dlgAbout.Designer.vb">
       <DependentUpon>dlgAbout.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\dlgAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgBookmarks.Designer.vb">
+      <DependentUpon>dlgBookmarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgBookmarks.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\dlgOptions.Designer.vb">
@@ -163,9 +170,7 @@
   <ItemGroup>
     <Content Include="icon_filebrowser.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

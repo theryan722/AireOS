@@ -77,6 +77,7 @@ Partial Class frmMain
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.pnl_search = New System.Windows.Forms.Panel()
         Me.combo_search = New System.Windows.Forms.ComboBox()
+        Me.BookmarksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -95,7 +96,7 @@ Partial Class frmMain
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.NavigationToolStripMenuItem, Me.ViewToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.NavigationToolStripMenuItem, Me.ViewToolStripMenuItem, Me.BookmarksToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(743, 24)
@@ -307,9 +308,33 @@ Partial Class frmMain
         '
         'ImageList1
         '
-        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
-        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "unknown.png")
+        Me.ImageList1.Images.SetKeyName(1, "folder.png")
+        Me.ImageList1.Images.SetKeyName(2, "7z.png")
+        Me.ImageList1.Images.SetKeyName(3, "cab.png")
+        Me.ImageList1.Images.SetKeyName(4, "css.png")
+        Me.ImageList1.Images.SetKeyName(5, "dll.png")
+        Me.ImageList1.Images.SetKeyName(6, "doc.png")
+        Me.ImageList1.Images.SetKeyName(7, "docx.png")
+        Me.ImageList1.Images.SetKeyName(8, "exe.png")
+        Me.ImageList1.Images.SetKeyName(9, "gif.png")
+        Me.ImageList1.Images.SetKeyName(10, "html.png")
+        Me.ImageList1.Images.SetKeyName(11, "jpg.png")
+        Me.ImageList1.Images.SetKeyName(12, "mp3.png")
+        Me.ImageList1.Images.SetKeyName(13, "mp4.png")
+        Me.ImageList1.Images.SetKeyName(14, "pdf.png")
+        Me.ImageList1.Images.SetKeyName(15, "png.png")
+        Me.ImageList1.Images.SetKeyName(16, "rar.png")
+        Me.ImageList1.Images.SetKeyName(17, "rtf.png")
+        Me.ImageList1.Images.SetKeyName(18, "txt.png")
+        Me.ImageList1.Images.SetKeyName(19, "wav.png")
+        Me.ImageList1.Images.SetKeyName(20, "webm.png")
+        Me.ImageList1.Images.SetKeyName(21, "xls.png")
+        Me.ImageList1.Images.SetKeyName(22, "xlsx.png")
+        Me.ImageList1.Images.SetKeyName(23, "xml.png")
+        Me.ImageList1.Images.SetKeyName(24, "zip.png")
         '
         'StyleToolStripMenuItem
         '
@@ -464,6 +489,12 @@ Partial Class frmMain
         Me.combo_search.Size = New System.Drawing.Size(221, 21)
         Me.combo_search.TabIndex = 1
         '
+        'BookmarksToolStripMenuItem
+        '
+        Me.BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem"
+        Me.BookmarksToolStripMenuItem.Size = New System.Drawing.Size(78, 20)
+        Me.BookmarksToolStripMenuItem.Text = "Bookmarks"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -541,5 +572,6 @@ Partial Class frmMain
     Friend WithEvents NavigationPaneToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents pnl_search As System.Windows.Forms.Panel
     Friend WithEvents combo_search As System.Windows.Forms.ComboBox
+    Friend WithEvents BookmarksToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
