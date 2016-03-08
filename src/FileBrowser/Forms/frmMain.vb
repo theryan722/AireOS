@@ -2,7 +2,35 @@
 
 #Region "MenuStrip"
 
+#Region "File"
 
+
+
+#End Region
+
+#Region "Edit"
+
+
+
+#End Region
+
+#Region "Navigation"
+
+
+
+#End Region
+
+#Region "View"
+
+
+
+#End Region
+
+#Region "About"
+
+
+
+#End Region
 
 #End Region
 
