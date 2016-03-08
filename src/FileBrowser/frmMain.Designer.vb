@@ -31,10 +31,27 @@ Partial Class frmMain
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NavigationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GoUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForwardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.pnl_navigation = New System.Windows.Forms.Panel()
+        Me.combo_navigation = New System.Windows.Forms.ComboBox()
+        Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnForward = New System.Windows.Forms.Button()
+        Me.btnUp = New System.Windows.Forms.Button()
+        Me.btnHome = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.pnl_navigation.SuspendLayout()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -47,7 +64,7 @@ Partial Class frmMain
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.NavigationToolStripMenuItem, Me.ViewToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(559, 24)
@@ -57,13 +74,14 @@ Partial Class frmMain
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 24)
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 56)
         Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Panel1Collapsed = True
         '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.ListView1)
-        Me.SplitContainer1.Size = New System.Drawing.Size(559, 422)
+        Me.SplitContainer1.Size = New System.Drawing.Size(559, 390)
         Me.SplitContainer1.SplitterDistance = 186
         Me.SplitContainer1.TabIndex = 2
         '
@@ -72,12 +90,13 @@ Partial Class frmMain
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView1.Location = New System.Drawing.Point(0, 0)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(369, 422)
+        Me.ListView1.Size = New System.Drawing.Size(559, 390)
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
         'FileToolStripMenuItem
         '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewWindowToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -96,9 +115,144 @@ Partial Class frmMain
         '
         'AboutToolStripMenuItem
         '
+        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.AboutToolStripMenuItem1})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'OptionsToolStripMenuItem
+        '
+        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OptionsToolStripMenuItem.Text = "Options"
+        '
+        'AboutToolStripMenuItem1
+        '
+        Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem1.Text = "About"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'NewWindowToolStripMenuItem
+        '
+        Me.NewWindowToolStripMenuItem.Name = "NewWindowToolStripMenuItem"
+        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewWindowToolStripMenuItem.Text = "New Window"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'NavigationToolStripMenuItem
+        '
+        Me.NavigationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GoUpToolStripMenuItem, Me.ToolStripSeparator1, Me.BackToolStripMenuItem, Me.ForwardToolStripMenuItem})
+        Me.NavigationToolStripMenuItem.Name = "NavigationToolStripMenuItem"
+        Me.NavigationToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
+        Me.NavigationToolStripMenuItem.Text = "Navigation"
+        '
+        'GoUpToolStripMenuItem
+        '
+        Me.GoUpToolStripMenuItem.Name = "GoUpToolStripMenuItem"
+        Me.GoUpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GoUpToolStripMenuItem.Text = "Go Up"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
+        '
+        'BackToolStripMenuItem
+        '
+        Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackToolStripMenuItem.Text = "Back"
+        '
+        'ForwardToolStripMenuItem
+        '
+        Me.ForwardToolStripMenuItem.Name = "ForwardToolStripMenuItem"
+        Me.ForwardToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ForwardToolStripMenuItem.Text = "Forward"
+        '
+        'pnl_navigation
+        '
+        Me.pnl_navigation.Controls.Add(Me.combo_navigation)
+        Me.pnl_navigation.Controls.Add(Me.btnHome)
+        Me.pnl_navigation.Controls.Add(Me.btnUp)
+        Me.pnl_navigation.Controls.Add(Me.btnForward)
+        Me.pnl_navigation.Controls.Add(Me.btnBack)
+        Me.pnl_navigation.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnl_navigation.Location = New System.Drawing.Point(0, 24)
+        Me.pnl_navigation.Name = "pnl_navigation"
+        Me.pnl_navigation.Size = New System.Drawing.Size(559, 32)
+        Me.pnl_navigation.TabIndex = 3
+        '
+        'combo_navigation
+        '
+        Me.combo_navigation.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.combo_navigation.FormattingEnabled = True
+        Me.combo_navigation.Location = New System.Drawing.Point(128, 0)
+        Me.combo_navigation.Name = "combo_navigation"
+        Me.combo_navigation.Size = New System.Drawing.Size(431, 21)
+        Me.combo_navigation.TabIndex = 0
+        '
+        'btnBack
+        '
+        Me.btnBack.BackgroundImage = CType(resources.GetObject("btnBack.BackgroundImage"), System.Drawing.Image)
+        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBack.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnBack.FlatAppearance.BorderSize = 0
+        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBack.Location = New System.Drawing.Point(0, 0)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(32, 32)
+        Me.btnBack.TabIndex = 1
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
+        'btnForward
+        '
+        Me.btnForward.BackgroundImage = CType(resources.GetObject("btnForward.BackgroundImage"), System.Drawing.Image)
+        Me.btnForward.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnForward.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnForward.FlatAppearance.BorderSize = 0
+        Me.btnForward.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnForward.Location = New System.Drawing.Point(32, 0)
+        Me.btnForward.Name = "btnForward"
+        Me.btnForward.Size = New System.Drawing.Size(32, 32)
+        Me.btnForward.TabIndex = 2
+        Me.btnForward.UseVisualStyleBackColor = True
+        '
+        'btnUp
+        '
+        Me.btnUp.BackgroundImage = CType(resources.GetObject("btnUp.BackgroundImage"), System.Drawing.Image)
+        Me.btnUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnUp.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnUp.FlatAppearance.BorderSize = 0
+        Me.btnUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUp.Location = New System.Drawing.Point(64, 0)
+        Me.btnUp.Name = "btnUp"
+        Me.btnUp.Size = New System.Drawing.Size(32, 32)
+        Me.btnUp.TabIndex = 3
+        Me.btnUp.UseVisualStyleBackColor = True
+        '
+        'btnHome
+        '
+        Me.btnHome.BackgroundImage = CType(resources.GetObject("btnHome.BackgroundImage"), System.Drawing.Image)
+        Me.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnHome.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnHome.FlatAppearance.BorderSize = 0
+        Me.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHome.Location = New System.Drawing.Point(96, 0)
+        Me.btnHome.Name = "btnHome"
+        Me.btnHome.Size = New System.Drawing.Size(32, 32)
+        Me.btnHome.TabIndex = 4
+        Me.btnHome.UseVisualStyleBackColor = True
         '
         'frmMain
         '
@@ -106,6 +260,7 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(559, 468)
         Me.Controls.Add(Me.SplitContainer1)
+        Me.Controls.Add(Me.pnl_navigation)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -117,6 +272,7 @@ Partial Class frmMain
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.pnl_navigation.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -129,5 +285,21 @@ Partial Class frmMain
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents NewWindowToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OptionsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NavigationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GoUpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents BackToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ForwardToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents pnl_navigation As System.Windows.Forms.Panel
+    Friend WithEvents combo_navigation As System.Windows.Forms.ComboBox
+    Friend WithEvents btnHome As System.Windows.Forms.Button
+    Friend WithEvents btnUp As System.Windows.Forms.Button
+    Friend WithEvents btnForward As System.Windows.Forms.Button
+    Friend WithEvents btnBack As System.Windows.Forms.Button
 
 End Class
