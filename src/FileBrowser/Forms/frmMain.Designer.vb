@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -49,6 +50,7 @@ Partial Class frmMain
         Me.btnUp = New System.Windows.Forms.Button()
         Me.btnForward = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip_ListView1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -58,9 +60,9 @@ Partial Class frmMain
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 446)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 373)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(559, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(631, 22)
         Me.StatusStrip1.TabIndex = 0
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -69,7 +71,7 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.NavigationToolStripMenuItem, Me.ViewToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(559, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(631, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -180,16 +182,17 @@ Partial Class frmMain
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.ListView1)
-        Me.SplitContainer1.Size = New System.Drawing.Size(559, 390)
+        Me.SplitContainer1.Size = New System.Drawing.Size(631, 317)
         Me.SplitContainer1.SplitterDistance = 186
         Me.SplitContainer1.TabIndex = 2
         '
         'ListView1
         '
+        Me.ListView1.ContextMenuStrip = Me.ContextMenuStrip_ListView1
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView1.Location = New System.Drawing.Point(0, 0)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(559, 390)
+        Me.ListView1.Size = New System.Drawing.Size(631, 317)
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
@@ -203,7 +206,7 @@ Partial Class frmMain
         Me.pnl_navigation.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnl_navigation.Location = New System.Drawing.Point(0, 24)
         Me.pnl_navigation.Name = "pnl_navigation"
-        Me.pnl_navigation.Size = New System.Drawing.Size(559, 32)
+        Me.pnl_navigation.Size = New System.Drawing.Size(631, 32)
         Me.pnl_navigation.TabIndex = 3
         '
         'combo_navigation
@@ -212,7 +215,7 @@ Partial Class frmMain
         Me.combo_navigation.FormattingEnabled = True
         Me.combo_navigation.Location = New System.Drawing.Point(128, 0)
         Me.combo_navigation.Name = "combo_navigation"
-        Me.combo_navigation.Size = New System.Drawing.Size(431, 21)
+        Me.combo_navigation.Size = New System.Drawing.Size(503, 21)
         Me.combo_navigation.TabIndex = 0
         '
         'btnHome
@@ -267,11 +270,16 @@ Partial Class frmMain
         Me.btnBack.TabIndex = 1
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'ContextMenuStrip_ListView1
+        '
+        Me.ContextMenuStrip_ListView1.Name = "ContextMenuStrip_ListView1"
+        Me.ContextMenuStrip_ListView1.Size = New System.Drawing.Size(61, 4)
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(559, 468)
+        Me.ClientSize = New System.Drawing.Size(631, 395)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.pnl_navigation)
         Me.Controls.Add(Me.StatusStrip1)
@@ -316,5 +324,6 @@ Partial Class frmMain
     Friend WithEvents btnBack As System.Windows.Forms.Button
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ContextMenuStrip_ListView1 As System.Windows.Forms.ContextMenuStrip
 
 End Class
