@@ -45,7 +45,8 @@ Public Class frmMain
 #Region "Methods"
 
     Private Sub DisplayPropertiesDialog(ByVal path As String)
-
+        Dim newb As New dlgProperties(path)
+        newb.ShowDialog()
     End Sub
 
     Private Sub SetTopmost(ByVal val As Boolean)
