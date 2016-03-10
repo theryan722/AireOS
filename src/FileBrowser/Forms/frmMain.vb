@@ -105,7 +105,11 @@ Public Class frmMain
     End Sub
 
     Private Sub ListView1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseDoubleClick
-
+        If ListView1.SelectedItems.Count > 0 Then
+            If Directory.Exists(ListView1.SelectedItems(0).Tag) Then
+                LoadDirectory(ListView1.SelectedItems(0).Tag)
+            End If
+        End If
     End Sub
 
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
