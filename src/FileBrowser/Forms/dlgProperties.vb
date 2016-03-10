@@ -18,6 +18,14 @@ Public Class dlgProperties
 
 #End Region
 
+#Region "UI"
+
+    Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
+        Me.Close()
+    End Sub
+
+#End Region
+
 #Region "dlgProperties"
 
     Public Sub New(ByVal path As String)
