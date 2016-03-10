@@ -325,6 +325,7 @@ Partial Class frmMain
         '
         Me.ListView1.ContextMenuStrip = Me.ContextMenuStrip_ListView1
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListView1.LargeImageList = Me.ImageList1
         Me.ListView1.Location = New System.Drawing.Point(0, 0)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(743, 431)

@@ -49,6 +49,25 @@ Public Class frmMain
         TopmostToolStripMenuItem.Checked = val
     End Sub
 
+    Private Sub SetViewStyle(ByVal view As ConfigManager.FileViewStyle)
+        Select Case view
+            Case ConfigManager.FileViewStyle.ExtraLargeIcons
+                ListView1.View = Windows.Forms.View.LargeIcon
+                ImageList1.ImageSize = New Size(128, 128)
+            Case ConfigManager.FileViewStyle.LargeIcons
+                ListView1.View = Windows.Forms.View.LargeIcon
+                ImageList1.ImageSize = New Size(96, 96)
+            Case ConfigManager.FileViewStyle.MediumIcons
+                ListView1.View = Windows.Forms.View.LargeIcon
+                ImageList1.ImageSize = New Size(64, 64)
+            Case ConfigManager.FileViewStyle.SmallIcons
+                ListView1.View = Windows.Forms.View.LargeIcon
+                ImageList1.ImageSize = New Size(32, 32)
+            Case ConfigManager.FileViewStyle.List
+                ListView1.View = Windows.Forms.View.Details
+        End Select
+    End Sub
+
     Private Sub LoadUI()
 
     End Sub
