@@ -30,10 +30,6 @@ Public Class FileProperties
         Return New FileInfo(fpath).IsReadOnly
     End Function
 
-    Public Function GetIfHidden() As Boolean
-
-    End Function
-
 #End Region
 
     Public Sub New(ByVal path As String)
