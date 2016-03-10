@@ -10,7 +10,7 @@ Public Class dlgProperties
     Private Sub LoadProperties()
         TextBox1.Text = ""
         If isfolder Then
-            TextBox1.Text = ""
+            TextBox1.Text = "Name: " & Path.GetDirectoryName(fproperties.GetFullPath) & vbNewLine
         Else
             TextBox1.Text = "Name: " & Path.GetFileName(fproperties.GetFullPath) & vbNewLine & "Folder: " & Path.GetDirectoryName(fproperties.GetFullPath) & vbNewLine & "Full Path: " & fproperties.GetFullPath & vbNewLine & "Size: " & fproperties.GetFileSize & vbNewLine & "Created: " & fproperties.GetFileCreationDate.ToString & vbNewLine & "Modified: " & fproperties.GetFileModifiedDate.ToString & vbNewLine & "Accessed: " & fproperties.GetAccessedDate & vbNewLine & "Read Only: " & fproperties.GetIfReadOnly.ToString
         End If
