@@ -95,7 +95,7 @@ Public Class frmMain
 #Region "frmMain"
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        LoadUI()
     End Sub
 
 #End Region
