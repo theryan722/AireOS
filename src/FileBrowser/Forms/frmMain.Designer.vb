@@ -27,6 +27,8 @@ Partial Class frmMain
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -56,6 +58,10 @@ Partial Class frmMain
         Me.SidebarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NavigationPaneToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BookmarksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TopmostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -63,6 +69,7 @@ Partial Class frmMain
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ContextMenuStrip_ListView1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.pnl_navigation = New System.Windows.Forms.Panel()
         Me.combo_navigation = New System.Windows.Forms.ComboBox()
         Me.pnl_search = New System.Windows.Forms.Panel()
@@ -71,13 +78,13 @@ Partial Class frmMain
         Me.btnUp = New System.Windows.Forms.Button()
         Me.btnForward = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.WindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TopmostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.RenameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
+        Me.OpenParentInNewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -105,25 +112,37 @@ Partial Class frmMain
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewFolderToolStripMenuItem, Me.NewFileToolStripMenuItem, Me.ToolStripSeparator4, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenSelectedToolStripMenuItem, Me.ToolStripSeparator5, Me.NewFolderToolStripMenuItem, Me.NewFileToolStripMenuItem, Me.ToolStripSeparator4, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
+        'NewFolderToolStripMenuItem
+        '
+        Me.NewFolderToolStripMenuItem.Name = "NewFolderToolStripMenuItem"
+        Me.NewFolderToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewFolderToolStripMenuItem.Text = "New Folder"
+        '
+        'NewFileToolStripMenuItem
+        '
+        Me.NewFileToolStripMenuItem.Name = "NewFileToolStripMenuItem"
+        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewFileToolStripMenuItem.Text = "New File"
+        '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(142, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(149, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
         '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.ToolStripSeparator6, Me.SelectAllToolStripMenuItem})
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.ToolStripSeparator6, Me.RenameToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.ToolStripSeparator8, Me.SelectAllToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.EditToolStripMenuItem.Text = "Edit"
@@ -159,7 +178,7 @@ Partial Class frmMain
         '
         'NavigationToolStripMenuItem
         '
-        Me.NavigationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GoUpToolStripMenuItem, Me.ToolStripSeparator1, Me.HomeToolStripMenuItem, Me.ToolStripSeparator2, Me.BackToolStripMenuItem, Me.ForwardToolStripMenuItem, Me.ToolStripSeparator7, Me.GoToToolStripMenuItem})
+        Me.NavigationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GoUpToolStripMenuItem, Me.ToolStripSeparator1, Me.HomeToolStripMenuItem, Me.ToolStripSeparator2, Me.BackToolStripMenuItem, Me.ForwardToolStripMenuItem, Me.ToolStripSeparator7, Me.OpenParentInNewWindowToolStripMenuItem, Me.ToolStripSeparator9, Me.GoToToolStripMenuItem})
         Me.NavigationToolStripMenuItem.Name = "NavigationToolStripMenuItem"
         Me.NavigationToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
         Me.NavigationToolStripMenuItem.Text = "Navigation"
@@ -282,6 +301,31 @@ Partial Class frmMain
         Me.BookmarksToolStripMenuItem.Size = New System.Drawing.Size(78, 20)
         Me.BookmarksToolStripMenuItem.Text = "Bookmarks"
         '
+        'WindowToolStripMenuItem
+        '
+        Me.WindowToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.TopmostToolStripMenuItem, Me.CloseAllToolStripMenuItem})
+        Me.WindowToolStripMenuItem.Name = "WindowToolStripMenuItem"
+        Me.WindowToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
+        Me.WindowToolStripMenuItem.Text = "Window"
+        '
+        'NewToolStripMenuItem
+        '
+        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.NewToolStripMenuItem.Text = "New"
+        '
+        'TopmostToolStripMenuItem
+        '
+        Me.TopmostToolStripMenuItem.Name = "TopmostToolStripMenuItem"
+        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.TopmostToolStripMenuItem.Text = "Topmost"
+        '
+        'CloseAllToolStripMenuItem
+        '
+        Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.CloseAllToolStripMenuItem.Text = "Close All"
+        '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.AboutToolStripMenuItem1})
@@ -336,6 +380,36 @@ Partial Class frmMain
         '
         Me.ContextMenuStrip_ListView1.Name = "ContextMenuStrip_ListView1"
         Me.ContextMenuStrip_ListView1.Size = New System.Drawing.Size(61, 4)
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "unknown.png")
+        Me.ImageList1.Images.SetKeyName(1, "folder.png")
+        Me.ImageList1.Images.SetKeyName(2, "7z.png")
+        Me.ImageList1.Images.SetKeyName(3, "cab.png")
+        Me.ImageList1.Images.SetKeyName(4, "css.png")
+        Me.ImageList1.Images.SetKeyName(5, "dll.png")
+        Me.ImageList1.Images.SetKeyName(6, "doc.png")
+        Me.ImageList1.Images.SetKeyName(7, "docx.png")
+        Me.ImageList1.Images.SetKeyName(8, "exe.png")
+        Me.ImageList1.Images.SetKeyName(9, "gif.png")
+        Me.ImageList1.Images.SetKeyName(10, "html.png")
+        Me.ImageList1.Images.SetKeyName(11, "jpg.png")
+        Me.ImageList1.Images.SetKeyName(12, "mp3.png")
+        Me.ImageList1.Images.SetKeyName(13, "mp4.png")
+        Me.ImageList1.Images.SetKeyName(14, "pdf.png")
+        Me.ImageList1.Images.SetKeyName(15, "png.png")
+        Me.ImageList1.Images.SetKeyName(16, "rar.png")
+        Me.ImageList1.Images.SetKeyName(17, "rtf.png")
+        Me.ImageList1.Images.SetKeyName(18, "txt.png")
+        Me.ImageList1.Images.SetKeyName(19, "wav.png")
+        Me.ImageList1.Images.SetKeyName(20, "webm.png")
+        Me.ImageList1.Images.SetKeyName(21, "xls.png")
+        Me.ImageList1.Images.SetKeyName(22, "xlsx.png")
+        Me.ImageList1.Images.SetKeyName(23, "xml.png")
+        Me.ImageList1.Images.SetKeyName(24, "zip.png")
         '
         'pnl_navigation
         '
@@ -430,72 +504,44 @@ Partial Class frmMain
         Me.btnBack.TabIndex = 1
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'ImageList1
+        'OpenSelectedToolStripMenuItem
         '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "unknown.png")
-        Me.ImageList1.Images.SetKeyName(1, "folder.png")
-        Me.ImageList1.Images.SetKeyName(2, "7z.png")
-        Me.ImageList1.Images.SetKeyName(3, "cab.png")
-        Me.ImageList1.Images.SetKeyName(4, "css.png")
-        Me.ImageList1.Images.SetKeyName(5, "dll.png")
-        Me.ImageList1.Images.SetKeyName(6, "doc.png")
-        Me.ImageList1.Images.SetKeyName(7, "docx.png")
-        Me.ImageList1.Images.SetKeyName(8, "exe.png")
-        Me.ImageList1.Images.SetKeyName(9, "gif.png")
-        Me.ImageList1.Images.SetKeyName(10, "html.png")
-        Me.ImageList1.Images.SetKeyName(11, "jpg.png")
-        Me.ImageList1.Images.SetKeyName(12, "mp3.png")
-        Me.ImageList1.Images.SetKeyName(13, "mp4.png")
-        Me.ImageList1.Images.SetKeyName(14, "pdf.png")
-        Me.ImageList1.Images.SetKeyName(15, "png.png")
-        Me.ImageList1.Images.SetKeyName(16, "rar.png")
-        Me.ImageList1.Images.SetKeyName(17, "rtf.png")
-        Me.ImageList1.Images.SetKeyName(18, "txt.png")
-        Me.ImageList1.Images.SetKeyName(19, "wav.png")
-        Me.ImageList1.Images.SetKeyName(20, "webm.png")
-        Me.ImageList1.Images.SetKeyName(21, "xls.png")
-        Me.ImageList1.Images.SetKeyName(22, "xlsx.png")
-        Me.ImageList1.Images.SetKeyName(23, "xml.png")
-        Me.ImageList1.Images.SetKeyName(24, "zip.png")
+        Me.OpenSelectedToolStripMenuItem.Name = "OpenSelectedToolStripMenuItem"
+        Me.OpenSelectedToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpenSelectedToolStripMenuItem.Text = "Open Selected"
         '
-        'WindowToolStripMenuItem
+        'ToolStripSeparator5
         '
-        Me.WindowToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.TopmostToolStripMenuItem, Me.CloseAllToolStripMenuItem})
-        Me.WindowToolStripMenuItem.Name = "WindowToolStripMenuItem"
-        Me.WindowToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
-        Me.WindowToolStripMenuItem.Text = "Window"
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(149, 6)
         '
-        'NewFolderToolStripMenuItem
+        'RenameToolStripMenuItem
         '
-        Me.NewFolderToolStripMenuItem.Name = "NewFolderToolStripMenuItem"
-        Me.NewFolderToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.NewFolderToolStripMenuItem.Text = "New Folder"
+        Me.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem"
+        Me.RenameToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RenameToolStripMenuItem.Text = "Rename"
         '
-        'NewFileToolStripMenuItem
+        'ToolStripSeparator8
         '
-        Me.NewFileToolStripMenuItem.Name = "NewFileToolStripMenuItem"
-        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.NewFileToolStripMenuItem.Text = "New File"
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(149, 6)
         '
-        'NewToolStripMenuItem
+        'DeleteToolStripMenuItem
         '
-        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.NewToolStripMenuItem.Text = "New"
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
         '
-        'CloseAllToolStripMenuItem
+        'ToolStripSeparator9
         '
-        Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CloseAllToolStripMenuItem.Text = "Close All"
+        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(220, 6)
         '
-        'TopmostToolStripMenuItem
+        'OpenParentInNewWindowToolStripMenuItem
         '
-        Me.TopmostToolStripMenuItem.Name = "TopmostToolStripMenuItem"
-        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.TopmostToolStripMenuItem.Text = "Topmost"
+        Me.OpenParentInNewWindowToolStripMenuItem.Name = "OpenParentInNewWindowToolStripMenuItem"
+        Me.OpenParentInNewWindowToolStripMenuItem.Size = New System.Drawing.Size(223, 22)
+        Me.OpenParentInNewWindowToolStripMenuItem.Text = "Open parent in new window"
         '
         'frmMain
         '
@@ -575,5 +621,12 @@ Partial Class frmMain
     Friend WithEvents NewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CloseAllToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TopmostToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OpenSelectedToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents RenameToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents OpenParentInNewWindowToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator9 As System.Windows.Forms.ToolStripSeparator
 
 End Class
