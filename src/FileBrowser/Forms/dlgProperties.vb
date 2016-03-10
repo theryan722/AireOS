@@ -32,6 +32,10 @@ Public Class dlgProperties
         TextBox1.Copy()
     End Sub
 
+    Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
+        TextBox1.SelectAll()
+    End Sub
+
 #End Region
 
 #Region "dlgProperties"
@@ -52,5 +56,4 @@ Public Class dlgProperties
 
 #End Region
 
-    
 End Class
