@@ -44,6 +44,10 @@ Public Class frmMain
 
 #Region "Methods"
 
+    Private Sub DisplayPropertiesDialog(ByVal path As String)
+
+    End Sub
+
     Private Sub SetTopmost(ByVal val As Boolean)
         Me.TopMost = val
         TopmostToolStripMenuItem.Checked = val
@@ -123,6 +127,14 @@ Public Class frmMain
 
 #End Region
 
+#Region "lblProperties"
+
+    Private Sub lblProperties_Click(sender As Object, e As EventArgs) Handles lblProperties.Click
+
+    End Sub
+
+#End Region
+
 #Region "frmMain"
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -131,4 +143,5 @@ Public Class frmMain
 
 #End Region
 
+    
 End Class
