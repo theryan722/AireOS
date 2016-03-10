@@ -118,7 +118,8 @@ Public Class frmMain
 
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
         If ListView1.SelectedItems.Count > 0 Then
-
+            Dim bb As New FileProperties(ListView1.SelectedItems(0).Tag)
+            lblProperties.Text = "Name: " & Path.GetFileName(bb.GetFullPath) & " Size: "
         End If
     End Sub
 
