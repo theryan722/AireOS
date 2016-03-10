@@ -120,6 +120,8 @@ Public Class frmMain
         If ListView1.SelectedItems.Count > 0 Then
             Dim bb As New FileProperties(ListView1.SelectedItems(0).Tag)
             lblProperties.Text = "Name: " & Path.GetFileName(bb.GetFullPath) & " Size: " & bb.GetFileSize()
+        Else
+            lblProperties.Text = ""
         End If
     End Sub
 
