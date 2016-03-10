@@ -14,8 +14,8 @@ Public Class FileProperties
         Return fpath
     End Function
 
-    Public Function GetFileCreationDate() As String
-
+    Public Function GetFileCreationDate() As Date
+        Return File.GetCreationTime(fpath)
     End Function
 
     Public Function GetFileModifiedDate() As String
