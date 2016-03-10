@@ -96,7 +96,7 @@ Public Class frmMain
         newb.Text = Path.GetFileName(file)
         newb.ToolTipText = Path.GetDirectoryName(file)
         newb.Tag = file
-        newb.ImageIndex = FileIcon.ConvertPathToIndex(file)
+        newb.ImageIndex = Helper.ConvertPathToIndex(file)
         ListView1.Items.Add(newb)
     End Sub
 

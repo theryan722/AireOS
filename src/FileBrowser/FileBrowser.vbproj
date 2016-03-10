@@ -97,8 +97,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ConfigManager.vb" />
-    <Compile Include="Classes\FileIcon.vb" />
     <Compile Include="Classes\FileProperties.vb" />
+    <Compile Include="Classes\Helper.vb" />
     <Compile Include="Forms\dlgAbout.Designer.vb">
       <DependentUpon>dlgAbout.vb</DependentUpon>
     </Compile>
