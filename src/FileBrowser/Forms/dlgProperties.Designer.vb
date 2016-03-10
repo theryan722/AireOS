@@ -47,7 +47,7 @@ Partial Class dlgProperties
         '
         Me.Panel1.Controls.Add(Me.btnOk)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 388)
+        Me.Panel1.Location = New System.Drawing.Point(0, 338)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(284, 23)
         Me.Panel1.TabIndex = 1
@@ -61,14 +61,14 @@ Partial Class dlgProperties
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(284, 388)
+        Me.TextBox1.Size = New System.Drawing.Size(284, 338)
         Me.TextBox1.TabIndex = 2
         '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.SelectAllToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(123, 48)
         '
         'CopyToolStripMenuItem
         '
@@ -86,7 +86,7 @@ Partial Class dlgProperties
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 411)
+        Me.ClientSize = New System.Drawing.Size(284, 361)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
