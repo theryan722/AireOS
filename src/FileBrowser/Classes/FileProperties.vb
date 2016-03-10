@@ -22,8 +22,8 @@ Public Class FileProperties
         Return File.GetLastWriteTime(fpath)
     End Function
 
-    Public Function GetAccessedDate() As String
-
+    Public Function GetAccessedDate() As Date
+        Return File.GetLastAccessTime(fpath)
     End Function
 
     Public Function GetIfReadOnly() As Boolean
