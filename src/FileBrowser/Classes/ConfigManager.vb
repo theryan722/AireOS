@@ -14,7 +14,13 @@
 
 #Region "Properties"
 
-    Public Property ViewStyle As 
+    Public Property ViewStyle As FileViewStyle
+
+    Public Property Topmost As Boolean
+
+    Public Property Sidebar As Boolean
+
+    Public Property NavigationPane As Boolean
 
 #End Region
 
