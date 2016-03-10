@@ -1,4 +1,6 @@
-﻿Public Class frmMain
+﻿Imports System.IO
+
+Public Class frmMain
 
 #Region "MenuStrip"
 
@@ -36,7 +38,13 @@
 
 #Region "Methods"
 
-
+    Private Sub AddItem(ByVal file As String)
+        Dim newb As New ListViewItem
+        newb.Text = Path.GetFileName(file)
+        newb.ToolTipText = Path.GetDirectoryName(file)
+        newb.Tag = file
+        newb.ImageIndex = FileIcon.ConvertPathToIndex(file)
+    End Sub
 
 #End Region
 
@@ -53,5 +61,5 @@
     End Sub
 
 #End Region
-    
+
 End Class

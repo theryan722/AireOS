@@ -1,7 +1,7 @@
 ﻿Public Class FileIcon
 
     Public Shared Function ConvertPathToIndex(ByVal ext As String, Optional isdirectory As Boolean = False) As Integer
-        If isdirectory Then
+        If System.IO.Directory.Exists(ext) Then
             Return 1
         End If
         Select Case System.IO.Path.GetExtension(ext)
