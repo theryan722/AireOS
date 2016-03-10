@@ -44,10 +44,6 @@ Public Class frmMain
 
 #Region "Methods"
 
-    Private Sub DisplayPropertiesLabel(ByVal path As String)
-
-    End Sub
-
     Private Sub SetTopmost(ByVal val As Boolean)
         Me.TopMost = val
         TopmostToolStripMenuItem.Checked = val
