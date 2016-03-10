@@ -44,6 +44,26 @@ Public Class frmMain
 
 #Region "Methods"
 
+    Private Sub Search(ByVal txt As String)
+
+    End Sub
+
+    Private Sub Navigate(ByVal path As String)
+
+    End Sub
+
+    Private Sub GoBack()
+
+    End Sub
+
+    Private Sub GoForward()
+
+    End Sub
+
+    Private Sub GoUp()
+
+    End Sub
+
     Private Sub DisplayPropertiesDialog(ByVal path As String)
         Dim newb As New dlgProperties(path)
         newb.ShowDialog()
