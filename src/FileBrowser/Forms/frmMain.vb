@@ -44,6 +44,7 @@ Public Class frmMain
         newb.ToolTipText = Path.GetDirectoryName(file)
         newb.Tag = file
         newb.ImageIndex = FileIcon.ConvertPathToIndex(file)
+        ListView1.Items.Add(newb)
     End Sub
 
 #End Region
