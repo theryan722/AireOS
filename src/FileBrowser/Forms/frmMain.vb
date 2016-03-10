@@ -117,7 +117,9 @@ Public Class frmMain
     End Sub
 
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+        If ListView1.SelectedItems.Count > 0 Then
 
+        End If
     End Sub
 
 #End Region
