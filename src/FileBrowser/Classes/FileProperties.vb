@@ -1,11 +1,13 @@
-﻿Public Class FileProperties
+﻿Imports System.IO
+
+Public Class FileProperties
 
     Private fpath As String
 
 #Region "Methods"
 
     Public Function GetFileSize() As String
-
+        Return New FileInfo(fpath).Length
     End Function
 
     Public Function GetFullPath() As String
