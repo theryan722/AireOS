@@ -75,6 +75,18 @@ Public Class frmMain
         pnl_navigation.Visible = ConfigManager.NavigationPane
     End Sub
 
+    Private Sub LoadDirectory(ByVal dir As String)
+        If Directory.Exists(dir) Then
+            ListView1.Clear()
+            For Each item As String In Directory.GetDirectories(dir)
+                AddItem(item)
+            Next
+            For Each item As String In Directory.GetFiles(dir)
+                AddItem(item)
+            Next
+        End If
+    End Sub
+
     Private Sub AddItem(ByVal file As String)
         Dim newb As New ListViewItem
         newb.Text = Path.GetFileName(file)
