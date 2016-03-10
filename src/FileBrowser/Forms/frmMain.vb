@@ -69,7 +69,10 @@ Public Class frmMain
     End Sub
 
     Private Sub LoadUI()
-
+        SetViewStyle(ConfigManager.ViewStyle)
+        SetTopmost(ConfigManager.Topmost)
+        SplitContainer1.Panel1Collapsed = Not ConfigManager.Sidebar
+        pnl_navigation.Visible = ConfigManager.NavigationPane
     End Sub
 
     Private Sub AddItem(ByVal file As String)
