@@ -6,6 +6,10 @@ Public Class FileProperties
 
 #Region "Methods"
 
+    Public Function GetIfFileExists() As Boolean
+        Return File.Exists(fpath)
+    End Function
+
     Public Function GetFileSize() As String
         Return New FileInfo(fpath).Length
     End Function
