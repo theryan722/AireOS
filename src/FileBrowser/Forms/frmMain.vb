@@ -44,6 +44,11 @@ Public Class frmMain
 
 #Region "Methods"
 
+    Private Sub SetTopmost(ByVal val As Boolean)
+        Me.TopMost = val
+        TopmostToolStripMenuItem.Checked = val
+    End Sub
+
     Private Sub LoadUI()
 
     End Sub
