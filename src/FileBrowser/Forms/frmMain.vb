@@ -105,7 +105,7 @@ Public Class frmMain
 #Region "ListView1"
 
     Private Sub ListView1_KeyDown(sender As Object, e As KeyEventArgs) Handles ListView1.KeyDown
-
+        
     End Sub
 
     Private Sub ListView1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseDoubleClick
@@ -130,7 +130,9 @@ Public Class frmMain
 #Region "lblProperties"
 
     Private Sub lblProperties_Click(sender As Object, e As EventArgs) Handles lblProperties.Click
-
+        If ListView1.SelectedItems.Count > 0 AndAlso lblProperties.Text <> "" Then
+            DisplayPropertiesDialog(ListView1.SelectedItems(0).Tag)
+        End If
     End Sub
 
 #End Region
