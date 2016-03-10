@@ -18,8 +18,8 @@ Public Class FileProperties
         Return File.GetCreationTime(fpath)
     End Function
 
-    Public Function GetFileModifiedDate() As String
-
+    Public Function GetFileModifiedDate() As Date
+        Return File.GetLastWriteTime(fpath)
     End Function
 
     Public Function GetAccessedDate() As String
