@@ -4,7 +4,33 @@
 
 #Region "Methods"
 
+    Public Function GetFileSize() As String
 
+    End Function
+
+    Public Function GetFullPath() As String
+
+    End Function
+
+    Public Function GetFileCreationDate() As String
+
+    End Function
+
+    Public Function GetFileModifiedDate() As String
+
+    End Function
+
+    Public Function GetAccessedDate() As String
+
+    End Function
+
+    Public Function GetIfReadOnly() As Boolean
+
+    End Function
+
+    Public Function GetIfHidden() As Boolean
+
+    End Function
 
 #End Region
 
