@@ -11,7 +11,7 @@ Public Class FileProperties
     End Function
 
     Public Function GetFullPath() As String
-
+        Return fpath
     End Function
 
     Public Function GetFileCreationDate() As String
