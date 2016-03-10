@@ -14,13 +14,13 @@
 
 #Region "Properties"
 
-    Public Property ViewStyle As FileViewStyle
+    Public Shared Property ViewStyle As FileViewStyle
 
-    Public Property Topmost As Boolean
+    Public Shared Property Topmost As Boolean
 
-    Public Property Sidebar As Boolean
+    Public Shared Property Sidebar As Boolean
 
-    Public Property NavigationPane As Boolean
+    Public Shared Property NavigationPane As Boolean
 
 #End Region
 
