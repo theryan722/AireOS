@@ -38,6 +38,10 @@ Public Class frmMain
 
 #Region "Methods"
 
+    Private Sub LoadUI()
+
+    End Sub
+
     Private Sub AddItem(ByVal file As String)
         Dim newb As New ListViewItem
         newb.Text = Path.GetFileName(file)
