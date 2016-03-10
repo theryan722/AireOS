@@ -26,6 +26,14 @@ Public Class dlgProperties
 
 #End Region
 
+#Region "Context Menu Strip"
+
+    Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
+        TextBox1.Copy()
+    End Sub
+
+#End Region
+
 #Region "dlgProperties"
 
     Public Sub New(ByVal path As String)
@@ -44,4 +52,5 @@ Public Class dlgProperties
 
 #End Region
 
+    
 End Class
