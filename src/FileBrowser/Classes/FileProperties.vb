@@ -27,7 +27,7 @@ Public Class FileProperties
     End Function
 
     Public Function GetIfReadOnly() As Boolean
-
+        Return New FileInfo(fpath).IsReadOnly
     End Function
 
     Public Function GetIfHidden() As Boolean
