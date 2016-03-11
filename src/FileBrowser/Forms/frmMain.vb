@@ -2,6 +2,8 @@
 
 Public Class frmMain
 
+    Private curdir As String = ""
+
 #Region "MenuStrip"
 
 #Region "File"
@@ -49,6 +51,13 @@ Public Class frmMain
 #End Region
 
 #Region "Methods"
+
+    Private Sub DisplayDrives()
+        ListView1.Clear()
+        For Each item As String In Directory.GetLogicalDrives
+
+        Next
+    End Sub
 
     Private Sub Search(ByVal txt As String)
 
