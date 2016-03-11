@@ -25,35 +25,35 @@
             Case ".gif"
                 Return 9
             Case ".html"
-                Return 9
-            Case ".jpg"
                 Return 10
-            Case ".mp3"
+            Case ".jpg"
                 Return 11
-            Case ".mp4"
+            Case ".mp3"
                 Return 12
-            Case ".pdf"
+            Case ".mp4"
                 Return 13
-            Case ".png"
+            Case ".pdf"
                 Return 14
-            Case ".rar"
+            Case ".png"
                 Return 15
-            Case ".rtf"
+            Case ".rar"
                 Return 16
-            Case ".txt"
+            Case ".rtf"
                 Return 17
-            Case ".wav"
+            Case ".txt"
                 Return 18
-            Case ".webm"
+            Case ".wav"
                 Return 19
-            Case ".xls"
+            Case ".webm"
                 Return 20
-            Case ".xlsx"
+            Case ".xls"
                 Return 21
-            Case ".xml"
+            Case ".xlsx"
                 Return 22
-            Case ".zip"
+            Case ".xml"
                 Return 23
+            Case ".zip"
+                Return 24
             Case Else
                 Return 0
         End Select
