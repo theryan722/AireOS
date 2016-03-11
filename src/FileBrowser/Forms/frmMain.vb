@@ -55,7 +55,12 @@ Public Class frmMain
     Private Sub DisplayDrives()
         ListView1.Clear()
         For Each item As String In Directory.GetLogicalDrives
-
+            Dim newb As New ListViewItem
+            newb.Text = item
+            newb.ToolTipText = item
+            newb.Tag = item
+            newb.ImageIndex = Helper.ConvertPathToIndex(item, True)
+            ListView1.Items.Add(newb)
         Next
     End Sub
 
