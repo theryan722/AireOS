@@ -1,8 +1,11 @@
 ﻿Public Class Helper
 
-    Public Shared Function ConvertPathToIndex(ByVal ext As String, Optional isdirectory As Boolean = False) As Integer
+    Public Shared Function ConvertPathToIndex(ByVal ext As String, Optional isdrive As Boolean = False) As Integer
         If System.IO.Directory.Exists(ext) Then
             Return 1
+        End If
+        If isdrive Then
+            Return 25
         End If
         Select Case System.IO.Path.GetExtension(ext)
             Case ".7z"
