@@ -3,6 +3,7 @@
 Public Class frmMain
 
     Private curdir As String = ""
+    Private imgLst As New ImageList
 
 #Region "MenuStrip"
 
@@ -52,6 +53,15 @@ Public Class frmMain
 
 #Region "Methods"
 
+    Private Sub LoadImagesWithSize(sz As Size)
+        imgLst.ImageSize = sz
+        imgLst.Images.Clear()
+        For n As Int32 = 0 To ImageList_Master.Images.Count - 1
+            imgLst.Images.Add(ImageList_Master.Images(n))
+        Next
+        ListView1.LargeImageList = imgLst
+    End Sub
+
     Private Sub DisplayDrives()
         ListView1.Clear()
         For Each item As String In Directory.GetLogicalDrives
@@ -59,7 +69,7 @@ Public Class frmMain
             newb.Text = item
             newb.ToolTipText = item
             newb.Tag = item
-            newb.ImageIndex = Helper.ConvertPathToIndex(item, True)
+            newb.ImageIndex = 25 'Helper.ConvertPathToIndex(item, True)
             ListView1.Items.Add(newb)
         Next
     End Sub
@@ -98,16 +108,16 @@ Public Class frmMain
         Select Case view
             Case ConfigManager.FileViewStyle.ExtraLargeIcons
                 ListView1.View = Windows.Forms.View.LargeIcon
-                ImageList1.ImageSize = New Size(128, 128)
+                LoadImagesWithSize(New Size(128, 128))
             Case ConfigManager.FileViewStyle.LargeIcons
                 ListView1.View = Windows.Forms.View.LargeIcon
-                ImageList1.ImageSize = New Size(96, 96)
+                LoadImagesWithSize(New Size(96, 96))
             Case ConfigManager.FileViewStyle.MediumIcons
                 ListView1.View = Windows.Forms.View.LargeIcon
-                ImageList1.ImageSize = New Size(64, 64)
+                LoadImagesWithSize(New Size(64, 64))
             Case ConfigManager.FileViewStyle.SmallIcons
                 ListView1.View = Windows.Forms.View.LargeIcon
-                ImageList1.ImageSize = New Size(32, 32)
+                LoadImagesWithSize(New Size(32, 32))
             Case ConfigManager.FileViewStyle.List
                 ListView1.View = Windows.Forms.View.Details
         End Select
@@ -118,9 +128,11 @@ Public Class frmMain
         SetTopmost(ConfigManager.Topmost)
         SplitContainer1.Panel1Collapsed = Not ConfigManager.Sidebar
         pnl_navigation.Visible = ConfigManager.NavigationPane
+        DisplayDrives()
     End Sub
 
     Private Sub LoadDirectory(ByVal dir As String)
+        'Dim t As Task = Task.Factory.StartNew(Sub()
         If Directory.Exists(dir) Then
             ListView1.Clear()
             For Each item As String In Directory.GetDirectories(dir)
@@ -130,6 +142,7 @@ Public Class frmMain
                 AddItem(item)
             Next
         End If
+        'End Sub)
     End Sub
 
     Private Sub AddItem(ByVal file As String)
@@ -158,12 +171,12 @@ Public Class frmMain
     End Sub
 
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
-        If ListView1.SelectedItems.Count > 0 Then
-            Dim bb As New FileProperties(ListView1.SelectedItems(0).Tag)
-            lblProperties.Text = "Name: " & Path.GetFileName(bb.GetFullPath) & " Size: " & bb.GetFileSize()
-        Else
-            lblProperties.Text = ""
-        End If
+        'If ListView1.SelectedItems.Count > 0 Then
+        '    Dim bb As New FileProperties(ListView1.SelectedItems(0).Tag)
+        '    lblProperties.Text = "Name: " & Path.GetFileName(bb.GetFullPath) & " Size: " & bb.GetFileSize()
+        'Else
+        '    lblProperties.Text = ""
+        'End If
     End Sub
 
 #End Region
@@ -181,9 +194,10 @@ Public Class frmMain
 #Region "frmMain"
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
         LoadUI()
     End Sub
 
 #End Region
-    
+
 End Class

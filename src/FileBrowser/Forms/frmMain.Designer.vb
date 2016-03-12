@@ -94,7 +94,7 @@ Partial Class frmMain
         Me.SelectAllToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.PropertiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList_Master = New System.Windows.Forms.ImageList(Me.components)
         Me.pnl_navigation = New System.Windows.Forms.Panel()
         Me.combo_navigation = New System.Windows.Forms.ComboBox()
         Me.pnl_search = New System.Windows.Forms.Panel()
@@ -187,41 +187,41 @@ Partial Class frmMain
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(119, 6)
         '
         'RenameToolStripMenuItem
         '
         Me.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem"
-        Me.RenameToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RenameToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.RenameToolStripMenuItem.Text = "Rename"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(119, 6)
         '
         'SelectAllToolStripMenuItem
         '
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.SelectAllToolStripMenuItem.Text = "Select All"
         '
         'NavigationToolStripMenuItem
@@ -369,19 +369,19 @@ Partial Class frmMain
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'TopmostToolStripMenuItem
         '
         Me.TopmostToolStripMenuItem.Name = "TopmostToolStripMenuItem"
-        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.TopmostToolStripMenuItem.Text = "Topmost"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.CloseAllToolStripMenuItem.Text = "Close All"
         '
         'ToolsToolStripMenuItem
@@ -446,10 +446,12 @@ Partial Class frmMain
         '
         Me.ListView1.ContextMenuStrip = Me.ContextMenuStrip_ListView1
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListView1.LargeImageList = Me.ImageList1
+        Me.ListView1.LargeImageList = Me.ImageList_Master
         Me.ListView1.Location = New System.Drawing.Point(0, 0)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(743, 431)
+        Me.ListView1.SmallImageList = Me.ImageList_Master
+        Me.ListView1.StateImageList = Me.ImageList_Master
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
@@ -546,36 +548,36 @@ Partial Class frmMain
         Me.PropertiesToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
         Me.PropertiesToolStripMenuItem.Text = "Properties"
         '
-        'ImageList1
+        'ImageList_Master
         '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "unknown.png")
-        Me.ImageList1.Images.SetKeyName(1, "folder.png")
-        Me.ImageList1.Images.SetKeyName(2, "7z.png")
-        Me.ImageList1.Images.SetKeyName(3, "cab.png")
-        Me.ImageList1.Images.SetKeyName(4, "css.png")
-        Me.ImageList1.Images.SetKeyName(5, "dll.png")
-        Me.ImageList1.Images.SetKeyName(6, "doc.png")
-        Me.ImageList1.Images.SetKeyName(7, "docx.png")
-        Me.ImageList1.Images.SetKeyName(8, "exe.png")
-        Me.ImageList1.Images.SetKeyName(9, "gif.png")
-        Me.ImageList1.Images.SetKeyName(10, "html.png")
-        Me.ImageList1.Images.SetKeyName(11, "jpg.png")
-        Me.ImageList1.Images.SetKeyName(12, "mp3.png")
-        Me.ImageList1.Images.SetKeyName(13, "mp4.png")
-        Me.ImageList1.Images.SetKeyName(14, "pdf.png")
-        Me.ImageList1.Images.SetKeyName(15, "png.png")
-        Me.ImageList1.Images.SetKeyName(16, "rar.png")
-        Me.ImageList1.Images.SetKeyName(17, "rtf.png")
-        Me.ImageList1.Images.SetKeyName(18, "txt.png")
-        Me.ImageList1.Images.SetKeyName(19, "wav.png")
-        Me.ImageList1.Images.SetKeyName(20, "webm.png")
-        Me.ImageList1.Images.SetKeyName(21, "xls.png")
-        Me.ImageList1.Images.SetKeyName(22, "xlsx.png")
-        Me.ImageList1.Images.SetKeyName(23, "xml.png")
-        Me.ImageList1.Images.SetKeyName(24, "zip.png")
-        Me.ImageList1.Images.SetKeyName(25, "drive.png")
+        Me.ImageList_Master.ImageStream = CType(resources.GetObject("ImageList_Master.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList_Master.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList_Master.Images.SetKeyName(0, "unknown.png")
+        Me.ImageList_Master.Images.SetKeyName(1, "folder.png")
+        Me.ImageList_Master.Images.SetKeyName(2, "7z.png")
+        Me.ImageList_Master.Images.SetKeyName(3, "cab.png")
+        Me.ImageList_Master.Images.SetKeyName(4, "css.png")
+        Me.ImageList_Master.Images.SetKeyName(5, "dll.png")
+        Me.ImageList_Master.Images.SetKeyName(6, "doc.png")
+        Me.ImageList_Master.Images.SetKeyName(7, "docx.png")
+        Me.ImageList_Master.Images.SetKeyName(8, "exe.png")
+        Me.ImageList_Master.Images.SetKeyName(9, "gif.png")
+        Me.ImageList_Master.Images.SetKeyName(10, "html.png")
+        Me.ImageList_Master.Images.SetKeyName(11, "jpg.png")
+        Me.ImageList_Master.Images.SetKeyName(12, "mp3.png")
+        Me.ImageList_Master.Images.SetKeyName(13, "mp4.png")
+        Me.ImageList_Master.Images.SetKeyName(14, "pdf.png")
+        Me.ImageList_Master.Images.SetKeyName(15, "png.png")
+        Me.ImageList_Master.Images.SetKeyName(16, "rar.png")
+        Me.ImageList_Master.Images.SetKeyName(17, "rtf.png")
+        Me.ImageList_Master.Images.SetKeyName(18, "txt.png")
+        Me.ImageList_Master.Images.SetKeyName(19, "wav.png")
+        Me.ImageList_Master.Images.SetKeyName(20, "webm.png")
+        Me.ImageList_Master.Images.SetKeyName(21, "xls.png")
+        Me.ImageList_Master.Images.SetKeyName(22, "xlsx.png")
+        Me.ImageList_Master.Images.SetKeyName(23, "xml.png")
+        Me.ImageList_Master.Images.SetKeyName(24, "zip.png")
+        Me.ImageList_Master.Images.SetKeyName(25, "drive.png")
         '
         'pnl_navigation
         '
@@ -679,6 +681,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.pnl_navigation)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
@@ -730,7 +733,7 @@ Partial Class frmMain
     Friend WithEvents SmallIconsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
+    Friend WithEvents ImageList_Master As System.Windows.Forms.ImageList
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents CopyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PasteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
