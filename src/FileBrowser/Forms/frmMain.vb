@@ -30,7 +30,7 @@ Public Class frmMain
 #Region "Style"
 
     Private Sub ExtraLargeIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExtraLargeIconsToolStripMenuItem.Click
-
+        SetViewStyle(ConfigManager.FileViewStyle.ExtraLargeIcons)
     End Sub
 
     Private Sub LargeIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LargeIconsToolStripMenuItem.Click
