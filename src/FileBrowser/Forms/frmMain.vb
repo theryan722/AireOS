@@ -126,7 +126,9 @@ Public Class frmMain
 
     Private Sub GoUp()
         Dim bb As String = Path.GetDirectoryName(curdir)
-        If bb <> "" Then
+        If bb = "" Then
+            DisplayDrives()
+        Else
             LoadDirectory(bb)
         End If
     End Sub
