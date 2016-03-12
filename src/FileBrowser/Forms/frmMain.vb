@@ -112,6 +112,11 @@ Public Class frmMain
 
 #Region "Methods"
 
+    Private Sub DisplayNavigationPane(ByVal val As Boolean)
+        pnl_navigation.Visible = val
+        NavigationToolStripMenuItem.Checked = val
+    End Sub
+
     Private Sub DisplaySideBar(ByVal val As Boolean)
         SplitContainer1.Panel1Collapsed = Not val
         SidebarToolStripMenuItem.Checked = val
