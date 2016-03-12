@@ -175,6 +175,7 @@ Public Class frmMain
         'Dim t As Task = Task.Factory.StartNew(Sub()
         If Directory.Exists(dir) Then
             curdir = dir
+            combo_navigation.Text = dir
             ListView1.Clear()
             For Each item As String In Directory.GetDirectories(dir)
                 AddItem(item)
