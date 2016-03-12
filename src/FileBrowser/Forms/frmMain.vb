@@ -145,6 +145,9 @@ Public Class frmMain
     End Sub
 
     Private Sub SetViewStyle(ByVal view As ConfigManager.FileViewStyle)
+        If ListView1.SelectedItems.Count > 0 Then
+            ListView1.EnsureVisible(ListView1.SelectedItems(0).Index)
+        End If
         UncheckAllViewStyleMenuItems()
         Select Case view
             Case ConfigManager.FileViewStyle.ExtraLargeIcons
