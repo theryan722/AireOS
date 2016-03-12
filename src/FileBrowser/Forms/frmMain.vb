@@ -139,21 +139,27 @@ Public Class frmMain
     End Sub
 
     Private Sub SetViewStyle(ByVal view As ConfigManager.FileViewStyle)
+        UncheckAllViewStyleMenuItems()
         Select Case view
             Case ConfigManager.FileViewStyle.ExtraLargeIcons
                 ListView1.View = Windows.Forms.View.LargeIcon
                 LoadImagesWithSize(New Size(128, 128))
+                ExtraLargeIconsToolStripMenuItem.Checked = True
             Case ConfigManager.FileViewStyle.LargeIcons
                 ListView1.View = Windows.Forms.View.LargeIcon
                 LoadImagesWithSize(New Size(96, 96))
+                LargeIconsToolStripMenuItem.Checked = True
             Case ConfigManager.FileViewStyle.MediumIcons
                 ListView1.View = Windows.Forms.View.LargeIcon
                 LoadImagesWithSize(New Size(64, 64))
+                MediumIconsToolStripMenuItem.Checked = True
             Case ConfigManager.FileViewStyle.SmallIcons
                 ListView1.View = Windows.Forms.View.LargeIcon
                 LoadImagesWithSize(New Size(32, 32))
+                SmallIconsToolStripMenuItem.Checked = True
             Case ConfigManager.FileViewStyle.List
                 ListView1.View = Windows.Forms.View.Details
+                ListToolStripMenuItem.Checked = True
         End Select
     End Sub
 
