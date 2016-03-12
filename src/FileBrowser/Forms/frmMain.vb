@@ -71,6 +71,13 @@ Public Class frmMain
         newb.Show()
     End Sub
 
+    Private Sub CloseAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseAllToolStripMenuItem.Click
+        Dim bb As New Aire.API.MessageBox("Are you sure you want to close all windows?", "Confirm Close All", Aire.API.MessageBox.MessageBoxButtons.YesNo, Aire.API.MessageBox.MessageBoxIcon.Question)
+        If bb.DialogResult = Windows.Forms.DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
 #End Region
 
 #Region "Tools"
