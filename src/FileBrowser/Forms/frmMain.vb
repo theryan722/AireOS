@@ -27,7 +27,29 @@ Public Class frmMain
 
 #Region "View"
 
+#Region "Style"
 
+    Private Sub ExtraLargeIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExtraLargeIconsToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub LargeIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LargeIconsToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub MediumIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MediumIconsToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub SmallIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SmallIconsToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub ListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListToolStripMenuItem.Click
+
+    End Sub
+
+#End Region
 
 #End Region
 
