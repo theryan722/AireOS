@@ -55,7 +55,11 @@ Public Class frmMain
 #End Region
 
     Private Sub SidebarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SidebarToolStripMenuItem.Click
-        
+        If SplitContainer1.Panel1Collapsed Then
+            DisplaySideBar(True)
+        Else
+            DisplaySideBar(False)
+        End If
     End Sub
 
     Private Sub NavigationPaneToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NavigationPaneToolStripMenuItem.Click
