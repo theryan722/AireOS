@@ -38,7 +38,7 @@ Public Class frmMain
     End Sub
 
     Private Sub MediumIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MediumIconsToolStripMenuItem.Click
-
+        SetViewStyle(ConfigManager.FileViewStyle.MediumIcons)
     End Sub
 
     Private Sub SmallIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SmallIconsToolStripMenuItem.Click
