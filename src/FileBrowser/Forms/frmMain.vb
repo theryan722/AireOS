@@ -223,8 +223,8 @@ Public Class frmMain
     Private Sub LoadUI()
         SetViewStyle(ConfigManager.ViewStyle)
         SetTopmost(ConfigManager.Topmost)
-        SplitContainer1.Panel1Collapsed = Not ConfigManager.Sidebar
-        pnl_navigation.Visible = ConfigManager.NavigationPane
+        DisplaySideBar(ConfigManager.Sidebar)
+        DisplayNavigationPane(ConfigManager.NavigationPane)
         DisplayDrives()
     End Sub
 
