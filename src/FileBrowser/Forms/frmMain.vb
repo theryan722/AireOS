@@ -46,7 +46,7 @@ Public Class frmMain
     End Sub
 
     Private Sub ListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListToolStripMenuItem.Click
-
+        SetViewStyle(ConfigManager.FileViewStyle.List)
     End Sub
 
 #End Region
