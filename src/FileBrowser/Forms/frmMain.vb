@@ -42,7 +42,7 @@ Public Class frmMain
     End Sub
 
     Private Sub SmallIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SmallIconsToolStripMenuItem.Click
-
+        SetViewStyle(ConfigManager.FileViewStyle.SmallIcons)
     End Sub
 
     Private Sub ListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListToolStripMenuItem.Click
