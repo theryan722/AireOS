@@ -1,9 +1,12 @@
 ﻿Imports System.IO
+Imports System.Threading
 
 Public Class frmMain
 
     Private curdir As String = ""
     Private imgLst As New ImageList
+    Dim tokenSource2 As New CancellationTokenSource()
+    Dim ct As CancellationToken = tokenSource2.Token
 
 #Region "MenuStrip"
 
@@ -181,7 +184,7 @@ Public Class frmMain
 #Region "ListView1"
 
     Private Sub ListView1_KeyDown(sender As Object, e As KeyEventArgs) Handles ListView1.KeyDown
-        
+
     End Sub
 
     Private Sub ListView1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseDoubleClick
@@ -193,12 +196,20 @@ Public Class frmMain
     End Sub
 
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
-        'If ListView1.SelectedItems.Count > 0 Then
-        '    Dim bb As New FileProperties(ListView1.SelectedItems(0).Tag)
-        '    lblProperties.Text = "Name: " & Path.GetFileName(bb.GetFullPath) & " Size: " & bb.GetFileSize()
-        'Else
-        '    lblProperties.Text = ""
-        'End If
+        If ListView1.SelectedItems.Count > 0 Then
+            tokenSource2.Cancel()
+            Dim bb As New FileProperties(ListView1.SelectedItems(0).Tag)
+            If bb.GetIfFileExists Then
+                lblProperties.Text = "Name: " & Path.GetFileName(bb.GetFullPath) & " | Size: " & bb.GetFileSize()
+            Else
+                lblProperties.Text = "Name: " & Path.GetFileName(bb.GetFullPath) & " | Size: "
+                Dim t As Task = Task.Factory.StartNew(Sub()
+                                                          lblProperties.Text &= bb.GetFolderSize(ListView1)
+                                                      End Sub)
+            End If
+        Else
+            lblProperties.Text = ""
+        End If
     End Sub
 
 #End Region

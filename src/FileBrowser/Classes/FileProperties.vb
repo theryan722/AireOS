@@ -3,14 +3,15 @@
 Public Class FileProperties
 
     Private fpath As String
-
+    Private tempselfolder As String = ""
+    Private times As Integer = 0
 #Region "Methods"
 
-    Public Function GetFolderSize() As String
+    Public Function GetFolderSize(Optional ByRef lv As ListView = Nothing) As String
         Dim DoubleBytes As Double
         If fpath.Length = 0 Then Return ""
         '---
-        Dim TheSize As ULong = GetDirectorySize(fpath)
+        Dim TheSize As ULong = GetDirectorySize(fpath, True, lv)
         Dim SizeType As String = ""
         '---
         Try
@@ -67,6 +68,8 @@ Public Class FileProperties
     End Function
 
     Public Function GetFileSize() As String
+        Dim bb As String = fpath
+
         Dim DoubleBytes As Double
         If fpath.Length = 0 Then Return ""
         '---
@@ -102,7 +105,21 @@ Public Class FileProperties
 
 #Region "Helper"
 
-    Private Function GetDirectorySize(ByVal sPath As String, Optional ByVal bRecursive As Boolean = True) As Long
+    Private Function GetDirectorySize(ByVal sPath As String, Optional ByVal bRecursive As Boolean = True, Optional ByRef lv As ListView = Nothing) As Long
+        If lv IsNot Nothing Then
+            If lv.SelectedItems.Count > 0 Then
+                If times = 0 Then
+                    tempselfolder = lv.SelectedItems(0).Tag
+                    times += 1
+                Else
+                    If tempselfolder <> lv.SelectedItems(0).Tag Then
+                        tempselfolder = ""
+                        times = 0
+                        Return ""
+                    End If
+                End If
+            End If
+        End If
         Dim lngNumberOfDirectories As Long = 0
         Dim Size As Long = 0
         Try
