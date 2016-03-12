@@ -159,6 +159,7 @@ Public Class frmMain
     Private Sub LoadDirectory(ByVal dir As String)
         'Dim t As Task = Task.Factory.StartNew(Sub()
         If Directory.Exists(dir) Then
+            curdir = dir
             ListView1.Clear()
             For Each item As String In Directory.GetDirectories(dir)
                 AddItem(item)
