@@ -58,7 +58,13 @@ Public Class frmMain
 
 #Region "Window"
 
-
+    Private Sub TopmostToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TopmostToolStripMenuItem.Click
+        If Me.TopMost Then
+            SetTopmost(False)
+        Else
+            SetTopmost(True)
+        End If
+    End Sub
 
 #End Region
 
