@@ -63,7 +63,11 @@ Public Class frmMain
     End Sub
 
     Private Sub NavigationPaneToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NavigationPaneToolStripMenuItem.Click
-
+        If pnl_navigation.Visible Then
+            DisplayNavigationPane(False)
+        Else
+            DisplayNavigationPane(True)
+        End If
     End Sub
 
     Private Sub ReloadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReloadToolStripMenuItem.Click
