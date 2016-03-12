@@ -125,7 +125,10 @@ Public Class frmMain
     End Sub
 
     Private Sub GoUp()
-
+        Dim bb As String = Path.GetDirectoryName(curdir)
+        If bb <> "" Then
+            LoadDirectory(bb)
+        End If
     End Sub
 
     Private Sub DisplayPropertiesDialog(ByVal path As String)
