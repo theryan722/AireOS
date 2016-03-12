@@ -201,6 +201,14 @@ Public Class frmMain
 
 #End Region
 
+#Region "Navigation Bar"
+
+    Private Sub btnUp_Click(sender As Object, e As EventArgs) Handles btnUp.Click
+        GoUp()
+    End Sub
+
+#End Region
+
 #Region "ListView1"
 
     Private Sub ListView1_KeyDown(sender As Object, e As KeyEventArgs) Handles ListView1.KeyDown
