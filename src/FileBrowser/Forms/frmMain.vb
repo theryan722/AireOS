@@ -34,7 +34,7 @@ Public Class frmMain
     End Sub
 
     Private Sub LargeIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LargeIconsToolStripMenuItem.Click
-
+        SetViewStyle(ConfigManager.FileViewStyle.LargeIcons)
     End Sub
 
     Private Sub MediumIconsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MediumIconsToolStripMenuItem.Click
