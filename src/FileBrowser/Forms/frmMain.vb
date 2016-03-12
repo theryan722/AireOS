@@ -78,7 +78,16 @@ Public Class frmMain
 
 #Region "Methods"
 
+    Private Sub UncheckAllViewStyleMenuItems()
+        ExtraLargeIconsToolStripMenuItem.Checked = False
+        LargeIconsToolStripMenuItem.Checked = False
+        MediumIconsToolStripMenuItem.Checked = False
+        SmallIconsToolStripMenuItem.Checked = False
+        ListToolStripMenuItem.Checked = False
+    End Sub
+
     Private Sub LoadImagesWithSize(sz As Size)
+        imgLst.ColorDepth = ColorDepth.Depth32Bit
         imgLst.ImageSize = sz
         imgLst.Images.Clear()
         For n As Int32 = 0 To ImageList_Master.Images.Count - 1
