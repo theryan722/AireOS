@@ -66,6 +66,11 @@ Public Class frmMain
         End If
     End Sub
 
+    Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
+        Dim newb As New frmMain
+        newb.Show()
+    End Sub
+
 #End Region
 
 #Region "Tools"
