@@ -104,6 +104,7 @@ Public Class frmMain
             newb.ToolTipText = item
             newb.Tag = item
             newb.ImageIndex = 25 'Helper.ConvertPathToIndex(item, True)
+            combo_navigation.Text = ""
             ListView1.Items.Add(newb)
         Next
     End Sub
