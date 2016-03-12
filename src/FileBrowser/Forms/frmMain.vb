@@ -55,7 +55,7 @@ Public Class frmMain
 #End Region
 
     Private Sub SidebarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SidebarToolStripMenuItem.Click
-
+        
     End Sub
 
     Private Sub NavigationPaneToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NavigationPaneToolStripMenuItem.Click
@@ -107,6 +107,11 @@ Public Class frmMain
 #End Region
 
 #Region "Methods"
+
+    Private Sub DisplaySideBar(ByVal val As Boolean)
+        SplitContainer1.Panel1Collapsed = Not val
+        SidebarToolStripMenuItem.Checked = val
+    End Sub
 
     Private Sub UncheckAllViewStyleMenuItems()
         ExtraLargeIconsToolStripMenuItem.Checked = False
