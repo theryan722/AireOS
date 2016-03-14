@@ -163,7 +163,13 @@ Public Class frmMain
     End Sub
 
     Private Sub Navigate(ByVal path As String)
-
+        If path = "" Then
+            LoadDirectory("")
+        ElseIf System.IO.File.Exists(path) Then
+            LoadDirectory(System.IO.Path.GetDirectoryName(path))
+        ElseIf System.IO.Directory.Exists(path) Then
+            LoadDirectory(path)
+        End If
     End Sub
 
     Private Sub GoUp()
