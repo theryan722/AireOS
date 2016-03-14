@@ -119,7 +119,7 @@ Public Class frmMain
     End Sub
 
     Private Sub ReloadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReloadToolStripMenuItem.Click
-
+        LoadDirectory(curdir)
     End Sub
 
 #End Region
