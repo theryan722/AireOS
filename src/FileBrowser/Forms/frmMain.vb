@@ -268,7 +268,7 @@ Public Class frmMain
     End Sub
 
     Private Sub btnForward_Click(sender As Object, e As EventArgs) Handles btnForward.Click
-
+        GoForward()
     End Sub
 
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
