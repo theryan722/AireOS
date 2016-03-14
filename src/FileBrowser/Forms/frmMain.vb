@@ -265,6 +265,10 @@ Public Class frmMain
         End If
     End Sub
 
+    Private Sub combo_navigation_SelectedIndexChanged(sender As Object, e As EventArgs) Handles combo_navigation.SelectedIndexChanged
+        Navigate(combo_navigation.SelectedItem)
+    End Sub
+
     Private Sub combo_search_KeyDown(sender As Object, e As KeyEventArgs) Handles combo_search.KeyDown
 
     End Sub
