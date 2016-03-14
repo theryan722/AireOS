@@ -31,7 +31,15 @@
 #Region "InputDialog"
 
     Public Sub New(Optional ByVal multiline As Boolean = False, Optional ByVal title As String = "", Optional ByVal message As String = "")
-
+        InitializeComponent()
+        If multiline Then
+            TextBox1.Multiline = True
+            TextBox1.Dock = Windows.Forms.DockStyle.Fill
+            TextBox1.ScrollBars = Windows.Forms.ScrollBars.Vertical
+        End If
+        Me.Text = title
+        lblMessage.Text = message
+        Me.ShowDialog()
     End Sub
 
 #End Region
