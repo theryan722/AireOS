@@ -8,12 +8,15 @@ Public Class frmMain
     Dim tokenSource2 As New CancellationTokenSource()
     Dim ct As CancellationToken = tokenSource2.Token
     Private history As New List(Of String)
+    Private tempfile As String = ""
 
 #Region "MenuStrip"
 
 #Region "File"
 
-
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        Me.Close()
+    End Sub
 
 #End Region
 
