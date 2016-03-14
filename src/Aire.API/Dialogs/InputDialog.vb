@@ -45,6 +45,14 @@
 
 #Region "InputDialog"
 
+    ''' <summary>
+    ''' Constructor
+    ''' </summary>
+    ''' <param name="multiline">Whether the textbox allows multiple lines</param>
+    ''' <param name="textval">What kind of text evaluation to perform</param>
+    ''' <param name="title">The title of the dialog</param>
+    ''' <param name="message">The message to display</param>
+    ''' <remarks></remarks>
     Public Sub New(Optional ByVal multiline As Boolean = False, Optional textval As ValidationType = ValidationType.AllText, Optional ByVal title As String = "", Optional ByVal message As String = "")
         InitializeComponent()
         If multiline Then
