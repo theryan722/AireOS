@@ -234,6 +234,7 @@ Public Class frmMain
         If Directory.Exists(dir) Then
             curdir = dir
             combo_navigation.Text = dir
+            history.Add(dir)
             ListView1.Clear()
             For Each item As String In Directory.GetDirectories(dir)
                 AddItem(item)
