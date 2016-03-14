@@ -14,6 +14,18 @@ Public Class frmMain
 
 #Region "File"
 
+    Private Sub OpenSelectedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenSelectedToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub NewFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewFolderToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub NewFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewFileToolStripMenuItem.Click
+
+    End Sub
+
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
     End Sub
@@ -22,13 +34,45 @@ Public Class frmMain
 
 #Region "Edit"
 
+    Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub RenameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenameToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
+
+    End Sub
 
 #End Region
 
 #Region "Navigation"
 
+    Private Sub GoToToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoToToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub OpenParentInNewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenParentInNewWindowToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub GoUpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoUpToolStripMenuItem.Click
+
+    End Sub
 
 #End Region
 
@@ -106,13 +150,29 @@ Public Class frmMain
 
 #Region "Tools"
 
+    Private Sub BookmarksToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BookmarksToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
+
+    End Sub
 
 #End Region
 
 #Region "About"
 
+    Private Sub OptionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionsToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub AboutToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem1.Click
+
+    End Sub
 
 #End Region
 

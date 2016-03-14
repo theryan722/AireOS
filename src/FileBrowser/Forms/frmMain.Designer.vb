@@ -141,7 +141,7 @@ Partial Class frmMain
         'OpenSelectedToolStripMenuItem
         '
         Me.OpenSelectedToolStripMenuItem.Name = "OpenSelectedToolStripMenuItem"
-        Me.OpenSelectedToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.OpenSelectedToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OpenSelectedToolStripMenuItem.Text = "Open Selected"
         '
         'ToolStripSeparator5
@@ -152,13 +152,13 @@ Partial Class frmMain
         'NewFolderToolStripMenuItem
         '
         Me.NewFolderToolStripMenuItem.Name = "NewFolderToolStripMenuItem"
-        Me.NewFolderToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.NewFolderToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewFolderToolStripMenuItem.Text = "New Folder"
         '
         'NewFileToolStripMenuItem
         '
         Me.NewFileToolStripMenuItem.Name = "NewFileToolStripMenuItem"
-        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewFileToolStripMenuItem.Text = "New File"
         '
         'ToolStripSeparator4
@@ -182,13 +182,13 @@ Partial Class frmMain
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'ToolStripSeparator6
@@ -199,13 +199,13 @@ Partial Class frmMain
         'RenameToolStripMenuItem
         '
         Me.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem"
-        Me.RenameToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.RenameToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.RenameToolStripMenuItem.Text = "Rename"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'ToolStripSeparator8
@@ -216,7 +216,7 @@ Partial Class frmMain
         'SelectAllToolStripMenuItem
         '
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SelectAllToolStripMenuItem.Text = "Select All"
         '
         'NavigationToolStripMenuItem
@@ -372,13 +372,13 @@ Partial Class frmMain
         'BookmarksToolStripMenuItem
         '
         Me.BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem"
-        Me.BookmarksToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.BookmarksToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BookmarksToolStripMenuItem.Text = "Bookmarks"
         '
         'HistoryToolStripMenuItem
         '
         Me.HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem"
-        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.HistoryToolStripMenuItem.Text = "History"
         '
         'AboutToolStripMenuItem
@@ -391,19 +391,19 @@ Partial Class frmMain
         'OptionsToolStripMenuItem
         '
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OptionsToolStripMenuItem.Text = "Options"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
         'SplitContainer1
