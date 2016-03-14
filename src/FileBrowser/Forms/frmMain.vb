@@ -8,6 +8,8 @@ Public Class frmMain
     Dim tokenSource2 As New CancellationTokenSource()
     Dim ct As CancellationToken = tokenSource2.Token
     Private history As New List(Of String)
+    Private navhistory As New List(Of String)
+    Private navind As Integer = 0
 
 #Region "MenuStrip"
 
@@ -167,7 +169,17 @@ Public Class frmMain
     End Sub
 
     Private Sub GoBack()
-
+        If navhistory.Count > 0 Then
+            If navind = 0 Then
+                LoadDirectory(navhistory(navind))
+            Else
+                LoadDirectory(navhistory(navind - 1))
+                navind -= 1
+            End If
+           
+        Else
+            navind = 0
+        End If
     End Sub
 
     Private Sub GoForward()
