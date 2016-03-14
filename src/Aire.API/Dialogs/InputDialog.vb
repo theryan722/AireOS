@@ -19,7 +19,8 @@
     End Sub
 
     Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
-
+        Response = TextBox1.Text
+        Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 
 #End Region
