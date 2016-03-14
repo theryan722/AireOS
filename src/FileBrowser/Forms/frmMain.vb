@@ -264,7 +264,7 @@ Public Class frmMain
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-
+        GoBack()
     End Sub
 
     Private Sub btnForward_Click(sender As Object, e As EventArgs) Handles btnForward.Click
