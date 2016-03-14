@@ -229,7 +229,7 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub Navigate(ByVal path As String)
+    Public Sub Navigate(ByVal path As String)
         If path = "" Then
             LoadDirectory("")
         ElseIf System.IO.File.Exists(path) Then
