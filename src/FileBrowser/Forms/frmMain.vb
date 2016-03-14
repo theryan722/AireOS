@@ -260,7 +260,9 @@ Public Class frmMain
 #Region "Navigation Bar"
 
     Private Sub combo_navigation_KeyDown(sender As Object, e As KeyEventArgs) Handles combo_navigation.KeyDown
-
+        If e.KeyCode = Keys.Enter Then
+            Navigate(combo_navigation.Text)
+        End If
     End Sub
 
     Private Sub combo_search_KeyDown(sender As Object, e As KeyEventArgs) Handles combo_search.KeyDown
