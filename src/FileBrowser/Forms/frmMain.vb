@@ -151,7 +151,8 @@ Public Class frmMain
 #Region "Tools"
 
     Private Sub BookmarksToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BookmarksToolStripMenuItem.Click
-
+        Dim newb As New dlgBookmarks
+        newb.ShowDialog()
     End Sub
 
     Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
