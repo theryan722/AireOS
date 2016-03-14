@@ -6,12 +6,6 @@
 
 #End Region
 
-#Region "Methods"
-
-
-
-#End Region
-
 #Region "UI"
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
