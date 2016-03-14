@@ -369,19 +369,19 @@ Partial Class frmMain
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'TopmostToolStripMenuItem
         '
         Me.TopmostToolStripMenuItem.Name = "TopmostToolStripMenuItem"
-        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.TopmostToolStripMenuItem.Text = "Topmost"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.CloseAllToolStripMenuItem.Text = "Close All"
         '
         'ToolsToolStripMenuItem
@@ -394,13 +394,13 @@ Partial Class frmMain
         'BookmarksToolStripMenuItem
         '
         Me.BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem"
-        Me.BookmarksToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BookmarksToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.BookmarksToolStripMenuItem.Text = "Bookmarks"
         '
         'HistoryToolStripMenuItem
         '
         Me.HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem"
-        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.HistoryToolStripMenuItem.Text = "History"
         '
         'AboutToolStripMenuItem
