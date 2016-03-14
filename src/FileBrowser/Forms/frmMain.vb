@@ -163,7 +163,8 @@ Public Class frmMain
 #Region "About"
 
     Private Sub OptionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionsToolStripMenuItem.Click
-
+        Dim newb As New dlgOptions
+        newb.ShowDialog()
     End Sub
 
     Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
