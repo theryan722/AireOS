@@ -251,12 +251,18 @@ Public Class frmMain
         DisplayDrives()
     End Sub
 
-    Private Sub LoadDirectory(ByVal dir As String)
+    Private Sub LoadDirectory(ByVal dir As String, Optional ByVal fromnavhistory As Boolean = False)
         'Dim t As Task = Task.Factory.StartNew(Sub()
         If Directory.Exists(dir) Then
             curdir = dir
             combo_navigation.Text = dir
-            history.Add(dir)
+            If Not history.Contains(dir) Then
+                history.Add(dir)
+            End If
+            If Not fromnavhistory Then
+                navhistory.Add(dir)
+                navind = navhistory.Count
+            End If
             ListView1.Clear()
             For Each item As String In Directory.GetDirectories(dir)
                 AddItem(item)
