@@ -8,8 +8,6 @@ Public Class frmMain
     Dim tokenSource2 As New CancellationTokenSource()
     Dim ct As CancellationToken = tokenSource2.Token
     Private history As New List(Of String)
-    Private navhistory As New List(Of String)
-    Private navind As Integer = 0
 
 #Region "MenuStrip"
 
@@ -168,34 +166,6 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub GoBack()
-        If navhistory.Count > 0 Then
-            If navind = 0 Then
-                LoadDirectory(navhistory(navind))
-            Else
-                LoadDirectory(navhistory(navind - 1))
-                navind -= 1
-            End If
-           
-        Else
-            navind = 0
-        End If
-    End Sub
-
-    Private Sub GoForward()
-        If navhistory.Count > 0 Then
-            If navind = navhistory.Count Then
-                LoadDirectory(navhistory(navind - 1))
-            Else
-                LoadDirectory(navhistory(navind + 1))
-                navind += 1
-            End If
-
-        Else
-            navind = 0
-        End If
-    End Sub
-
     Private Sub GoUp()
         Dim bb As String = Path.GetDirectoryName(curdir)
         If bb = "" Then
@@ -251,18 +221,12 @@ Public Class frmMain
         DisplayDrives()
     End Sub
 
-    Private Sub LoadDirectory(ByVal dir As String, Optional ByVal fromnavhistory As Boolean = False)
+    Private Sub LoadDirectory(ByVal dir As String)
         'Dim t As Task = Task.Factory.StartNew(Sub()
         If Directory.Exists(dir) Then
             curdir = dir
             combo_navigation.Text = dir
-            If Not history.Contains(dir) Then
-                history.Add(dir)
-            End If
-            If Not fromnavhistory Then
-                navhistory.Add(dir)
-                navind = navhistory.Count
-            End If
+            history.Add(dir)
             ListView1.Clear()
             For Each item As String In Directory.GetDirectories(dir)
                 AddItem(item)
@@ -270,6 +234,8 @@ Public Class frmMain
             For Each item As String In Directory.GetFiles(dir)
                 AddItem(item)
             Next
+        ElseIf dir = "" Then
+            DisplayDrives()
         End If
         'End Sub)
     End Sub
@@ -291,11 +257,11 @@ Public Class frmMain
         GoUp()
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
         GoBack()
     End Sub
 
-    Private Sub btnForward_Click(sender As Object, e As EventArgs) Handles btnForward.Click
+    Private Sub btnForward_Click(sender As Object, e As EventArgs)
         GoForward()
     End Sub
 
