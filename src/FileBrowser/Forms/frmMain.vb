@@ -272,7 +272,7 @@ Public Class frmMain
     End Sub
 
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
-
+        DisplayDrives()
     End Sub
 
 #End Region
