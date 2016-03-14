@@ -1,8 +1,16 @@
 ﻿Public Class InputDialog
 
-#Region "Properties"
+#Region "Properties/Enum"
 
     Public Property Response As String
+
+    Public Property TextValidation As ValidationType = ValidationType.AllText
+
+    Public Enum ValidationType
+        AllText
+        NumbersOnly
+        LettersOnly
+    End Enum
 
 #End Region
 
@@ -21,7 +29,7 @@
 
 #Region "InputDialog"
 
-    Public Sub New(Optional ByVal multiline As Boolean = False, Optional ByVal title As String = "", Optional ByVal message As String = "")
+    Public Sub New(Optional ByVal multiline As Boolean = False, Optional textval As ValidationType = ValidationType.AllText, Optional ByVal title As String = "", Optional ByVal message As String = "")
         InitializeComponent()
         If multiline Then
             TextBox1.Multiline = True
@@ -30,6 +38,7 @@
         End If
         Me.Text = title
         lblMessage.Text = message
+        TextValidation = textval
         Me.ShowDialog()
     End Sub
 
