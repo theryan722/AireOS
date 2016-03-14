@@ -7,6 +7,7 @@ Public Class frmMain
     Private imgLst As New ImageList
     Dim tokenSource2 As New CancellationTokenSource()
     Dim ct As CancellationToken = tokenSource2.Token
+    Private history As New List(Of String)
 
 #Region "MenuStrip"
 
