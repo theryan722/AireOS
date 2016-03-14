@@ -1,6 +1,6 @@
 ﻿Public Class InputDialog
 
-#Region "Properties/Enum"
+#Region "Properties/Enum/Variables"
 
     Public Property Response As String
 
@@ -12,9 +12,25 @@
         LettersOnly
     End Enum
 
+    Private anum As String = "0123456789"
+
+    Private achar As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 #End Region
 
 #Region "UI"
+
+    Private Sub TextBox1_KeyPress(sender As Object, e As Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
+        If TextValidation = ValidationType.LettersOnly Then
+            If achar.IndexOf(e.KeyChar) = -1 Then
+                e.Handled = True
+            End If
+        ElseIf TextValidation = ValidationType.NumbersOnly Then
+            If anum.IndexOf(e.KeyChar) = -1 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.DialogResult = Windows.Forms.DialogResult.Cancel
