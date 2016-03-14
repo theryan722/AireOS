@@ -259,16 +259,16 @@ Public Class frmMain
 
 #Region "Navigation Bar"
 
+    Private Sub combo_navigation_KeyDown(sender As Object, e As KeyEventArgs) Handles combo_navigation.KeyDown
+
+    End Sub
+
+    Private Sub combo_search_KeyDown(sender As Object, e As KeyEventArgs) Handles combo_search.KeyDown
+
+    End Sub
+
     Private Sub btnUp_Click(sender As Object, e As EventArgs) Handles btnUp.Click
         GoUp()
-    End Sub
-
-    Private Sub btnBack_Click(sender As Object, e As EventArgs)
-        GoBack()
-    End Sub
-
-    Private Sub btnForward_Click(sender As Object, e As EventArgs)
-        GoForward()
     End Sub
 
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
