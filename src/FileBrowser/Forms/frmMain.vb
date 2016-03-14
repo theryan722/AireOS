@@ -156,7 +156,8 @@ Public Class frmMain
     End Sub
 
     Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
-
+        Dim newb As New dlgHistory
+        newb.ShowDialog()
     End Sub
 
 #End Region
