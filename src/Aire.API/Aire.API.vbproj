@@ -107,6 +107,12 @@
     <Compile Include="Dialogs\dlgLogout.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Dialogs\InputDialog.Designer.vb">
+      <DependentUpon>InputDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\InputDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\Printing\PrintDialog.Designer.vb">
       <DependentUpon>PrintDialog.vb</DependentUpon>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgRun.resx">
       <DependentUpon>dlgRun.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InputDialog.resx">
+      <DependentUpon>InputDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Printing\PrintDialog.resx">
       <DependentUpon>PrintDialog.vb</DependentUpon>
