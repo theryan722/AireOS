@@ -295,9 +295,9 @@ Public Class frmMain
         If Directory.Exists(dir) Then
             curdir = dir
             combo_navigation.Text = dir
-            history.Add(dir)
-            If Not combo_navigation.Items.Contains(dir) Then
+            If Not history.Contains(dir) Then
                 combo_navigation.Items.Add(dir)
+                history.Add(dir)
             End If
             ListView1.Clear()
             For Each item As String In Directory.GetDirectories(dir)
