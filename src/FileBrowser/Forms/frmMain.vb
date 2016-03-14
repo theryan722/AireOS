@@ -183,7 +183,17 @@ Public Class frmMain
     End Sub
 
     Private Sub GoForward()
+        If navhistory.Count > 0 Then
+            If navind = navhistory.Count Then
+                LoadDirectory(navhistory(navind - 1))
+            Else
+                LoadDirectory(navhistory(navind + 1))
+                navind += 1
+            End If
 
+        Else
+            navind = 0
+        End If
     End Sub
 
     Private Sub GoUp()
