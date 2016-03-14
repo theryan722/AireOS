@@ -63,7 +63,8 @@ Public Class frmMain
     End Sub
 
     Private Sub OpenParentInNewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenParentInNewWindowToolStripMenuItem.Click
-
+        Dim newb As New frmMain
+        newb.Navigate(Path.GetDirectoryName(curdir))
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
