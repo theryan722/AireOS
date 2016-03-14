@@ -71,7 +71,7 @@ Public Class frmMain
     End Sub
 
     Private Sub GoUpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoUpToolStripMenuItem.Click
-
+        GoUp()
     End Sub
 
 #End Region
