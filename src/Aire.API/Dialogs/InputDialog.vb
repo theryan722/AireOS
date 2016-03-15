@@ -1,4 +1,6 @@
-﻿Public Class InputDialog
+﻿Imports System.Windows.Forms
+
+Public Class InputDialog
 
 #Region "Properties/Enum/Variables"
 
@@ -16,18 +18,30 @@
 
     Private achar As String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+    Private BACKSPACE As Boolean = False
+
 #End Region
 
 #Region "UI"
 
+    Private Sub TextBox1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown
+        If e.KeyCode = Keys.Back Then
+            BACKSPACE = True
+        Else
+            BACKSPACE = False
+        End If
+    End Sub
+
     Private Sub TextBox1_KeyPress(sender As Object, e As Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
-        If TextValidation = ValidationType.LettersOnly Then
-            If achar.IndexOf(e.KeyChar) = -1 Then
-                e.Handled = True
-            End If
-        ElseIf TextValidation = ValidationType.NumbersOnly Then
-            If anum.IndexOf(e.KeyChar) = -1 Then
-                e.Handled = True
+        If BACKSPACE = False Then
+            If TextValidation = ValidationType.LettersOnly Then
+                If achar.IndexOf(e.KeyChar) = -1 Then
+                    e.Handled = True
+                End If
+            ElseIf TextValidation = ValidationType.NumbersOnly Then
+                If anum.IndexOf(e.KeyChar) = -1 Then
+                    e.Handled = True
+                End If
             End If
         End If
     End Sub
