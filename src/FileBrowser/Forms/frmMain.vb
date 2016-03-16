@@ -229,8 +229,20 @@ Public Class frmMain
         Next
     End Sub
 
-    Private Sub Search(ByVal txt As String)
+    Private Sub Search(ByVal txt As String, ByVal dir As String)
+        ListView1.Clear()
+        SearchRec(txt, dir)
+    End Sub
 
+    Private Sub SearchRec(ByVal txt As String, ByVal rootdir As String)
+        For Each item As String In Directory.GetFiles(rootdir)
+            If item.Contains(txt) Then
+                AddItem(item)
+            End If
+        Next
+        For Each item As String In Directory.GetDirectories(rootdir)
+            SearchRec(txt, item)
+        Next
     End Sub
 
     Public Sub Navigate(ByVal path As String)
