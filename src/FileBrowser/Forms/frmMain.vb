@@ -9,6 +9,7 @@ Public Class frmMain
     Dim ct As CancellationToken = tokenSource2.Token
     Private history As New List(Of String)
     Private tempfile As String = ""
+    Private searchhistory As New List(Of String)
 
 #Region "MenuStrip"
 
@@ -231,6 +232,10 @@ Public Class frmMain
 
     Private Sub Search(ByVal txt As String, ByVal dir As String)
         ListView1.Clear()
+        If Not searchhistory.Contains(txt) Then
+            searchhistory.Add(txt)
+            combo_search.Items.Add(txt)
+        End If
         SearchRec(txt, dir)
     End Sub
 
