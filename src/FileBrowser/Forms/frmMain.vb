@@ -59,7 +59,10 @@ Public Class frmMain
 #Region "Navigation"
 
     Private Sub GoToToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoToToolStripMenuItem.Click
-
+        Dim newb As New Aire.API.InputDialog(False, Aire.API.InputDialog.ValidationType.AllText, "Go to...", "Enter a location to navigate to")
+        If newb.DialogResult = Windows.Forms.DialogResult.OK Then
+            Navigate(newb.Response)
+        End If
     End Sub
 
     Private Sub OpenParentInNewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenParentInNewWindowToolStripMenuItem.Click
