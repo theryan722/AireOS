@@ -350,6 +350,8 @@ Public Class frmMain
 
 #Region "Navigation Bar"
 
+#Region "combo_navigation"
+
     Private Sub combo_navigation_KeyDown(sender As Object, e As KeyEventArgs) Handles combo_navigation.KeyDown
         If e.KeyCode = Keys.Enter Then
             Navigate(combo_navigation.Text)
@@ -360,9 +362,19 @@ Public Class frmMain
         Navigate(combo_navigation.SelectedItem)
     End Sub
 
+#End Region
+
+#Region "combo_search"
+
     Private Sub combo_search_KeyDown(sender As Object, e As KeyEventArgs) Handles combo_search.KeyDown
 
     End Sub
+
+    Private Sub combo_search_SelectedIndexChanged(sender As Object, e As EventArgs) Handles combo_search.SelectedIndexChanged
+
+    End Sub
+
+#End Region
 
     Private Sub btnUp_Click(sender As Object, e As EventArgs) Handles btnUp.Click
         GoUp()
@@ -426,4 +438,5 @@ Public Class frmMain
 
 #End Region
 
+    
 End Class
