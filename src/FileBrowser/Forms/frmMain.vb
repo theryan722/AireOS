@@ -221,10 +221,6 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub Delete(ByVal loc As String)
-
-    End Sub
-
     Private Sub DisplayNavigationPane(ByVal val As Boolean)
         pnl_navigation.Visible = val
         NavigationToolStripMenuItem.Checked = val
