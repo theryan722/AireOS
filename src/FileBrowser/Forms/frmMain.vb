@@ -191,7 +191,12 @@ Public Class frmMain
 #Region "Methods"
 
     Private Sub Copy()
-
+        If ListView1.SelectedItems.Count > 0 Then
+            fileclipboard.Clear()
+            For Each item As ListViewItem In ListView1.SelectedItems
+                fileclipboard.Add(item.Tag)
+            Next
+        End If
     End Sub
 
     Private Sub Paste()
