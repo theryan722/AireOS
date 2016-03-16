@@ -214,7 +214,11 @@ Public Class frmMain
     End Sub
 
     Private Sub Delete()
-
+        If ListView1.SelectedItems.Count > 0 Then
+            For Each item As String In ListView1.SelectedItems
+                File.Delete(item)
+            Next
+        End If
     End Sub
 
     Private Sub Delete(ByVal loc As String)
