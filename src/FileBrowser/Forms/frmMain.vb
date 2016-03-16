@@ -373,7 +373,7 @@ Public Class frmMain
     End Sub
 
     Private Sub combo_search_SelectedIndexChanged(sender As Object, e As EventArgs) Handles combo_search.SelectedIndexChanged
-
+        Search(combo_search.SelectedItem, curdir)
     End Sub
 
 #End Region
