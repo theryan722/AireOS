@@ -367,7 +367,9 @@ Public Class frmMain
 #Region "combo_search"
 
     Private Sub combo_search_KeyDown(sender As Object, e As KeyEventArgs) Handles combo_search.KeyDown
-
+        If e.KeyCode = Keys.Enter Then
+            Search(combo_search.Text, curdir)
+        End If
     End Sub
 
     Private Sub combo_search_SelectedIndexChanged(sender As Object, e As EventArgs) Handles combo_search.SelectedIndexChanged
