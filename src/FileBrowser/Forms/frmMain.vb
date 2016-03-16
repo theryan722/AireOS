@@ -204,6 +204,7 @@ Public Class frmMain
             For Each item As String In fileclipboard
                 File.Copy(item, curdir & Path.GetFileName(item))
             Next
+            LoadDirectory(curdir)
         End If
     End Sub
 
@@ -218,6 +219,7 @@ Public Class frmMain
             For Each item As String In ListView1.SelectedItems
                 File.Delete(item)
             Next
+            LoadDirectory(curdir)
         End If
     End Sub
 
