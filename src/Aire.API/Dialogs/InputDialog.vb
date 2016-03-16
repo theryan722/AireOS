@@ -25,6 +25,11 @@ Public Class InputDialog
 #Region "UI"
 
     Private Sub TextBox1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown
+        If Not TextBox1.Multiline Then
+            If e.KeyCode = Keys.Enter Then
+                btnOk.PerformClick()
+            End If
+        End If
         If e.KeyCode = Keys.Back Then
             BACKSPACE = True
         Else
