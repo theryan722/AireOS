@@ -236,7 +236,13 @@ Public Class frmMain
             searchhistory.Add(txt)
             combo_search.Items.Add(txt)
         End If
-        SearchRec(txt, dir)
+        If dir = "" Then
+            For Each item As String In Directory.GetLogicalDrives
+                SearchRec(txt, item)
+            Next
+        Else
+            SearchRec(txt, dir)
+        End If
     End Sub
 
     Private Sub SearchRec(ByVal txt As String, ByVal rootdir As String)
