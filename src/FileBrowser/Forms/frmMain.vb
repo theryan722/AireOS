@@ -10,6 +10,7 @@ Public Class frmMain
     Private history As New List(Of String)
     Private tempfile As String = ""
     Private searchhistory As New List(Of String)
+    Private fileclipboard As New List(Of String)
 
 #Region "MenuStrip"
 
@@ -188,6 +189,26 @@ Public Class frmMain
 #End Region
 
 #Region "Methods"
+
+    Private Sub Copy()
+
+    End Sub
+
+    Private Sub Paste()
+
+    End Sub
+
+    Private Sub SelectAll()
+
+    End Sub
+
+    Private Sub Delete()
+
+    End Sub
+
+    Private Sub Delete(ByVal loc As String)
+
+    End Sub
 
     Private Sub DisplayNavigationPane(ByVal val As Boolean)
         pnl_navigation.Visible = val
@@ -445,6 +466,5 @@ Public Class frmMain
     End Sub
 
 #End Region
-
     
 End Class
