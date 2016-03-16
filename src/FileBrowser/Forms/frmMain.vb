@@ -208,7 +208,9 @@ Public Class frmMain
     End Sub
 
     Private Sub SelectAll()
-
+        For Each item As ListViewItem In ListView1.Items
+            item.Selected = True
+        Next
     End Sub
 
     Private Sub Delete()
