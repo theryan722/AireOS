@@ -190,6 +190,12 @@ Public Class frmMain
 
 #Region "Methods"
 
+    Private Sub Rename()
+        If ListView1.SelectedItems.Count > 0 Then
+            Dim t As ListViewItem = ListView1.SelectedItems(0)
+        End If
+    End Sub
+
     Private Sub Copy()
         If ListView1.SelectedItems.Count > 0 Then
             fileclipboard.Clear()
