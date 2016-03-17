@@ -202,7 +202,7 @@ Public Class frmMain
         Rename()
     End Sub
     Private Sub DeleteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem1.Click
-
+        Delete()
     End Sub
     Private Sub PasteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem1.Click
 
