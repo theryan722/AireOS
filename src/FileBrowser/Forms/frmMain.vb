@@ -234,7 +234,7 @@ Public Class frmMain
     End Sub
 
     Private Sub FileToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles FileToolStripMenuItem1.Click
-
+        CreateNewFile()
     End Sub
 
 #End Region
