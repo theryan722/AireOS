@@ -261,8 +261,12 @@ Public Class frmMain
         If curdir <> "" Then
             Dim bb As New Aire.API.InputDialog(False, Aire.API.InputDialog.ValidationType.AllText, "New File", "Enter new file name")
             If bb.ShowDialog = Windows.Forms.DialogResult.OK Then
-                File.Create(curdir & "/" & bb.Response)
-                AddItem(curdir & "/" & bb.Response)
+                If Not File.Exists(curdir & "/" & bb.Response) Then
+                    File.Create(curdir & "/" & bb.Response)
+                    AddItem(curdir & "/" & bb.Response)
+                Else
+                    Dim t As New Aire.API.MessageBox("The specified file already exists!", "Could not create file", Aire.API.MessageBox.MessageBoxButtons.OkOnly, Aire.API.MessageBox.MessageBoxIcon.Warning)
+                End If
             End If
         End If
     End Sub
