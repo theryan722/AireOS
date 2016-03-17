@@ -451,7 +451,14 @@ Public Class frmMain
 #Region "ListView1"
 
     Private Sub ListView1_KeyDown(sender As Object, e As KeyEventArgs) Handles ListView1.KeyDown
-
+        If ListView1.SelectedItems.Count > 0 Then
+            Select Case e.KeyCode
+                Case Keys.Delete, Keys.Back
+                    Delete()
+                Case Keys.F2
+                    Rename()
+            End Select
+        End If
     End Sub
 
     Private Sub ListView1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseDoubleClick
