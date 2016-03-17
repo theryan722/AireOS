@@ -391,7 +391,7 @@
     ''' <param name="title">The title of the dialog</param>
     ''' <param name="printsettings">The printsettings to load</param>
     ''' <remarks></remarks>
-    Public Sub New(Optional ByVal title As String = "Print", Optional ByVal printsettings As PrinterSettings = Nothing)
+    Public Sub New(Optional ByVal title As String = "Print", Optional ByVal printsettings As PrinterSettings = Nothing, Optional ByVal autoshow As Boolean = True)
         InitializeComponent()
         Me.Text = title
         If Not printsettings Is Nothing Then
@@ -399,7 +399,9 @@
         Else
             LoadUI()
         End If
-        Me.ShowDialog()
+        If autoshow Then
+            Me.ShowDialog()
+        End If
     End Sub
 
 #End Region
