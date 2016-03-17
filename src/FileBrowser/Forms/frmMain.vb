@@ -211,7 +211,10 @@ Public Class frmMain
         Copy()
     End Sub
     Private Sub OpenInNewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenInNewWindowToolStripMenuItem.Click
-
+        If ListView1.SelectedItems.Count > 0 Then
+            Dim newb As New frmMain
+            newb.Navigate(ListView1.SelectedItems(0).Tag)
+        End If
     End Sub
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
 
