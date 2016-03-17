@@ -244,7 +244,13 @@ Public Class frmMain
 #Region "Methods"
 
     Private Sub CreateNewFolder()
-
+        If curdir <> "" Then
+            Dim bb As New Aire.API.InputDialog(False, Aire.API.InputDialog.ValidationType.AllText, "New Folder", "Enter new folder name")
+            If bb.ShowDialog = Windows.Forms.DialogResult.OK Then
+                Directory.CreateDirectory(curdir & "/" & bb.Response)
+                AddItem(curdir & "/" & bb.Response)
+            End If
+        End If
     End Sub
 
     Private Sub CreateNewFile()
