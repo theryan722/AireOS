@@ -45,7 +45,7 @@ Public Class frmMain
     End Sub
 
     Private Sub RenameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenameToolStripMenuItem.Click
-
+        Rename()
     End Sub
 
     Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
