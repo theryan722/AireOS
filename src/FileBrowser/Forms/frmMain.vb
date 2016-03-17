@@ -291,7 +291,7 @@ Public Class frmMain
         If ListView1.SelectedItems.Count > 0 Then
             Dim t As ListViewItem = ListView1.SelectedItems(0)
             Dim bb As New Aire.API.InputDialog(False, Aire.API.InputDialog.ValidationType.AllText, "Rename", "", t.Text)
-            If bb.ShowDialog = Windows.Forms.DialogResult.OK AndAlso bb.Response <> t.Text Then
+            If bb.DialogResult = Windows.Forms.DialogResult.OK AndAlso bb.Response <> t.Text Then
                 If Directory.Exists(t.Tag) Then
                     t.Text = bb.Response
                     My.Computer.FileSystem.RenameDirectory(t.Tag, bb.Response)
