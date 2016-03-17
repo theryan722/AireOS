@@ -195,27 +195,34 @@ Public Class frmMain
             DisplayPropertiesDialog(ListView1.SelectedItems(0).Tag)
         End If
     End Sub
+
     Private Sub SelectAllToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem1.Click
         SelectAll()
     End Sub
+
     Private Sub RenameToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RenameToolStripMenuItem1.Click
         Rename()
     End Sub
+
     Private Sub DeleteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem1.Click
         Delete()
     End Sub
+
     Private Sub PasteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem1.Click
         Paste()
     End Sub
+
     Private Sub CopyToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem1.Click
         Copy()
     End Sub
+
     Private Sub OpenInNewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenInNewWindowToolStripMenuItem.Click
         If ListView1.SelectedItems.Count > 0 Then
             Dim newb As New frmMain
             newb.Navigate(ListView1.SelectedItems(0).Tag)
         End If
     End Sub
+
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
         Open()
     End Sub
