@@ -327,6 +327,12 @@ Public Class frmMain
         Next
     End Sub
 
+    Private Sub DeselectAll()
+        For Each item As ListViewItem In ListView1.Items
+            item.Selected = False
+        Next
+    End Sub
+
     Private Sub Delete()
         If ListView1.SelectedItems.Count > 0 Then
             For Each item As String In ListView1.SelectedItems
