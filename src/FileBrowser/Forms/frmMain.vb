@@ -268,7 +268,7 @@ Public Class frmMain
     Private Sub CreateNewFile()
         If curdir <> "" Then
             Dim bb As New Aire.API.InputDialog(False, Aire.API.InputDialog.ValidationType.AllText, "New File", "Enter new file name")
-            If bb.ShowDialog = Windows.Forms.DialogResult.OK Then
+            If bb.DialogResult = Windows.Forms.DialogResult.OK Then
                 If Not File.Exists(curdir & "/" & bb.Response) Then
                     File.Create(curdir & "/" & bb.Response)
                     AddItem(curdir & "/" & bb.Response)
