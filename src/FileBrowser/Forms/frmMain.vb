@@ -208,7 +208,7 @@ Public Class frmMain
         Paste()
     End Sub
     Private Sub CopyToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem1.Click
-
+        Copy()
     End Sub
     Private Sub OpenInNewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenInNewWindowToolStripMenuItem.Click
 
