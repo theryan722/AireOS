@@ -437,7 +437,7 @@ Partial Class frmMain
         '
         Me.ContextMenuStrip_ListView1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.OpenInNewWindowToolStripMenuItem, Me.ToolStripSeparator11, Me.NewToolStripMenuItem1, Me.ToolStripSeparator13, Me.CopyToolStripMenuItem1, Me.PasteToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.RenameToolStripMenuItem1, Me.ToolStripSeparator10, Me.SelectAllToolStripMenuItem1, Me.ToolStripSeparator12, Me.PropertiesToolStripMenuItem})
         Me.ContextMenuStrip_ListView1.Name = "ContextMenuStrip_ListView1"
-        Me.ContextMenuStrip_ListView1.Size = New System.Drawing.Size(187, 226)
+        Me.ContextMenuStrip_ListView1.Size = New System.Drawing.Size(187, 248)
         '
         'OpenToolStripMenuItem
         '
@@ -466,13 +466,13 @@ Partial Class frmMain
         'FileToolStripMenuItem1
         '
         Me.FileToolStripMenuItem1.Name = "FileToolStripMenuItem1"
-        Me.FileToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
+        Me.FileToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.FileToolStripMenuItem1.Text = "File"
         '
         'FolderToolStripMenuItem
         '
         Me.FolderToolStripMenuItem.Name = "FolderToolStripMenuItem"
-        Me.FolderToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.FolderToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.FolderToolStripMenuItem.Text = "Folder"
         '
         'ToolStripSeparator13
