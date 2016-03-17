@@ -193,6 +193,20 @@ Public Class frmMain
     Private Sub Rename()
         If ListView1.SelectedItems.Count > 0 Then
             Dim t As ListViewItem = ListView1.SelectedItems(0)
+            Dim bb As New Aire.API.InputDialog(False, Aire.API.InputDialog.ValidationType.AllText, "Rename", "", t.Text)
+            If bb.ShowDialog = Windows.Forms.DialogResult.OK AndAlso bb.Response <> t.Text Then
+                If Directory.Exists(t.Tag) Then
+                    t.Text = bb.Response
+                    My.Computer.FileSystem.RenameDirectory(t.Tag, bb.Response)
+                    t.Tag = Path.GetDirectoryName(t.Tag) & "/" & bb.Response
+                    t.ToolTipText = t.Tag
+                ElseIf File.Exists(t.Tag) Then
+                    t.Text = bb.Response
+                    My.Computer.FileSystem.RenameFile(t.Tag, bb.Response)
+                    t.Tag = Path.GetDirectoryName(t.Tag) & "/" & bb.Response
+                    t.ToolTipText = t.Tag
+                End If
+            End If
         End If
     End Sub
 
@@ -386,7 +400,7 @@ Public Class frmMain
     Private Sub AddItem(ByVal file As String)
         Dim newb As New ListViewItem
         newb.Text = Path.GetFileName(file)
-        newb.ToolTipText = Path.GetDirectoryName(file)
+        newb.ToolTipText = file
         newb.Tag = file
         newb.ImageIndex = Helper.ConvertPathToIndex(file)
         ListView1.Items.Add(newb)
