@@ -123,7 +123,7 @@
     ''' <param name="title">The title of the dialog</param>
     ''' <param name="message">The message to display</param>
     ''' <remarks></remarks>
-    Public Sub New(ByVal requiredpermissionlevel As Integer, Optional ByVal defaultuser As String = "", Optional ByVal allowotherusers As Boolean = True, Optional ByVal displayotherusers As Boolean = True, Optional ByVal title As String = "User Permission", Optional ByVal message As String = "")
+    Public Sub New(ByVal requiredpermissionlevel As Integer, Optional ByVal defaultuser As String = "", Optional ByVal allowotherusers As Boolean = True, Optional ByVal displayotherusers As Boolean = True, Optional ByVal title As String = "User Permission", Optional ByVal message As String = "", Optional ByVal autoshow As Boolean = True)
         InitializeComponent()
         permlevel = requiredpermissionlevel
         ouser = defaultuser
@@ -142,7 +142,9 @@
             txt_msg.Text = message
             txt_msg.Show()
         End If
-        Me.ShowDialog()
+        If autoshow Then
+            Me.ShowDialog()
+        End If
     End Sub
 
 #End Region
