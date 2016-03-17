@@ -230,7 +230,7 @@ Public Class frmMain
 #Region "New"
 
     Private Sub FolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FolderToolStripMenuItem.Click
-
+        CreateNewFolder()
     End Sub
 
     Private Sub FileToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles FileToolStripMenuItem1.Click
