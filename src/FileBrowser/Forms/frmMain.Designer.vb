@@ -38,10 +38,13 @@ Partial Class frmMain
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ClearCopyListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.RenameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeselectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NavigationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GoUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -98,9 +101,6 @@ Partial Class frmMain
         Me.combo_search = New System.Windows.Forms.ComboBox()
         Me.btnHome = New System.Windows.Forms.Button()
         Me.btnUp = New System.Windows.Forms.Button()
-        Me.ClearCopyListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.DeselectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,42 +185,59 @@ Partial Class frmMain
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(119, 6)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(150, 6)
+        '
+        'ClearCopyListToolStripMenuItem
+        '
+        Me.ClearCopyListToolStripMenuItem.Name = "ClearCopyListToolStripMenuItem"
+        Me.ClearCopyListToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.ClearCopyListToolStripMenuItem.Text = "Clear Copy List"
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(150, 6)
         '
         'RenameToolStripMenuItem
         '
         Me.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem"
-        Me.RenameToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.RenameToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.RenameToolStripMenuItem.Text = "Rename"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(119, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(150, 6)
         '
         'SelectAllToolStripMenuItem
         '
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.SelectAllToolStripMenuItem.Text = "Select All"
+        '
+        'DeselectAllToolStripMenuItem
+        '
+        Me.DeselectAllToolStripMenuItem.Name = "DeselectAllToolStripMenuItem"
+        Me.DeselectAllToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.DeselectAllToolStripMenuItem.Text = "Deselect All"
         '
         'NavigationToolStripMenuItem
         '
@@ -425,6 +442,7 @@ Partial Class frmMain
         '
         'ListView1
         '
+        Me.ListView1.AllowDrop = True
         Me.ListView1.ContextMenuStrip = Me.ContextMenuStrip_ListView1
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView1.LargeImageList = Me.ImageList_Master
@@ -469,13 +487,13 @@ Partial Class frmMain
         'FileToolStripMenuItem1
         '
         Me.FileToolStripMenuItem1.Name = "FileToolStripMenuItem1"
-        Me.FileToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.FileToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.FileToolStripMenuItem1.Text = "File"
         '
         'FolderToolStripMenuItem
         '
         Me.FolderToolStripMenuItem.Name = "FolderToolStripMenuItem"
-        Me.FolderToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FolderToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.FolderToolStripMenuItem.Text = "Folder"
         '
         'ToolStripSeparator13
@@ -624,23 +642,6 @@ Partial Class frmMain
         Me.btnUp.Size = New System.Drawing.Size(21, 21)
         Me.btnUp.TabIndex = 3
         Me.btnUp.UseVisualStyleBackColor = True
-        '
-        'ClearCopyListToolStripMenuItem
-        '
-        Me.ClearCopyListToolStripMenuItem.Name = "ClearCopyListToolStripMenuItem"
-        Me.ClearCopyListToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
-        Me.ClearCopyListToolStripMenuItem.Text = "Clear Copy List"
-        '
-        'ToolStripSeparator7
-        '
-        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(150, 6)
-        '
-        'DeselectAllToolStripMenuItem
-        '
-        Me.DeselectAllToolStripMenuItem.Name = "DeselectAllToolStripMenuItem"
-        Me.DeselectAllToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
-        Me.DeselectAllToolStripMenuItem.Text = "Deselect All"
         '
         'frmMain
         '
