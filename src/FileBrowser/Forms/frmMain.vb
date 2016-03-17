@@ -243,6 +243,14 @@ Public Class frmMain
 
 #Region "Methods"
 
+    Private Sub CreateNewFolder()
+
+    End Sub
+
+    Private Sub CreateNewFile()
+
+    End Sub
+
     Private Sub Open()
         If ListView1.SelectedItems.Count > 0 Then
             If Directory.Exists(ListView1.SelectedItems(0).Tag) Then
