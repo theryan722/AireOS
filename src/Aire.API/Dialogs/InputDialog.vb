@@ -72,7 +72,7 @@ Public Class InputDialog
     ''' <param name="title">The title of the dialog</param>
     ''' <param name="message">The message to display</param>
     ''' <remarks></remarks>
-    Public Sub New(Optional ByVal multiline As Boolean = False, Optional textval As ValidationType = ValidationType.AllText, Optional ByVal title As String = "", Optional ByVal message As String = "")
+    Public Sub New(Optional ByVal multiline As Boolean = False, Optional textval As ValidationType = ValidationType.AllText, Optional ByVal title As String = "", Optional ByVal message As String = "", Optional ByVal deftext As String = "")
         InitializeComponent()
         If multiline Then
             TextBox1.Multiline = True
@@ -82,6 +82,7 @@ Public Class InputDialog
         Me.Text = title
         lblMessage.Text = message
         TextValidation = textval
+        TextBox1.Text = deftext
         Me.ShowDialog()
     End Sub
 
