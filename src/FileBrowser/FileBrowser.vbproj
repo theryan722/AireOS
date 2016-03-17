@@ -153,6 +153,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Dialogs\dlgAbout.resx">
+      <DependentUpon>dlgAbout.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dialogs\dlgProperties.resx">
       <DependentUpon>dlgProperties.vb</DependentUpon>
     </EmbeddedResource>
