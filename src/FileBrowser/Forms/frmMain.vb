@@ -191,7 +191,9 @@ Public Class frmMain
 #Region "Context Menu Strip"
 
     Private Sub PropertiesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PropertiesToolStripMenuItem.Click
-
+        If ListView1.SelectedItems.Count > 0 Then
+            DisplayPropertiesDialog(ListView1.SelectedItems(0).Tag)
+        End If
     End Sub
     Private Sub SelectAllToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem1.Click
 
