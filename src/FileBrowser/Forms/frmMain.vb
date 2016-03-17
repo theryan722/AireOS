@@ -553,6 +553,35 @@ Public Class frmMain
 
 #Region "ListView1"
 
+    Private Sub ListView_ItemDrag(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemDragEventArgs) Handles ListView1.ItemDrag
+        Dim myItem As ListViewItem
+        Dim myItems As New List(Of ListViewItem)
+        Dim i As Integer = 0
+        For Each myItem In sender.SelectedItems
+            myItems.Add(myItem)
+        Next
+        sender.DoDragDrop(New DataObject("System.Windows.Forms.ListViewItem()", myItems), DragDropEffects.Move)
+    End Sub
+
+    Private Sub ListView_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView1.DragEnter
+        If e.Data.GetDataPresent("System.Windows.Forms.ListViewItem()") Then
+            e.Effect = DragDropEffects.Move
+        Else
+            e.Effect = DragDropEffects.None
+        End If
+    End Sub
+
+    Private Sub ListView_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles ListView1.DragDrop
+        Dim myItem As ListViewItem
+        Dim myItems As List(Of ListViewItem) = e.Data.GetData("System.Windows.Forms.ListViewItem()")
+        Dim i As Integer = 0
+        For Each myItem In myItems
+            If Not ListView1.Items.Contains(myItem.Clone) Then
+                sender.Items.Add(myItem.Clone)
+            End If
+        Next
+    End Sub
+
     Private Sub ListView1_KeyDown(sender As Object, e As KeyEventArgs) Handles ListView1.KeyDown
         If ListView1.SelectedItems.Count > 0 Then
             Select Case e.KeyCode
