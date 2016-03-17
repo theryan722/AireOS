@@ -578,12 +578,21 @@ Public Class frmMain
         For Each myItem In myItems
             Dim t As ListViewItem = myItem.Clone()
             If Not Path.GetDirectoryName(t.Tag) = curdir Then
-                Dim b As String = Path.GetFileName(t.Tag)
-                Dim orig As String = t.Tag
-                t.Tag = curdir & "/" & b
-                t.ToolTipText = curdir & "/" & vbAbort
-                File.Move(orig, t.Tag)
-                sender.Items.Add(t)
+                If Directory.Exists(t.Tag) Then
+                    Dim b As String = Path.GetFileName(t.Tag)
+                    Dim orig As String = t.Tag
+                    t.Tag = curdir & "/" & b
+                    t.ToolTipText = curdir & "/" & vbAbort
+                    Directory.Move(orig, t.Tag)
+                    sender.Items.Add(t)
+                ElseIf File.Exists(t.Tag) Then
+                    Dim b As String = Path.GetFileName(t.Tag)
+                    Dim orig As String = t.Tag
+                    t.Tag = curdir & "/" & b
+                    t.ToolTipText = curdir & "/" & vbAbort
+                    File.Move(orig, t.Tag)
+                    sender.Items.Add(t)
+                End If
             End If
         Next
     End Sub
