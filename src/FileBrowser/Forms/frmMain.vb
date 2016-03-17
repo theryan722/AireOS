@@ -36,6 +36,10 @@ Public Class frmMain
 
 #Region "Edit"
 
+    Private Sub ClearCopyListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearCopyListToolStripMenuItem.Click
+        fileclipboard.Clear()
+    End Sub
+
     Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
         SelectAll()
     End Sub
