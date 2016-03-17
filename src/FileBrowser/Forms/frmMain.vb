@@ -465,6 +465,8 @@ Public Class frmMain
                     Delete()
                 Case Keys.F2
                     Rename()
+                Case Keys.Enter
+                    Open()
             End Select
         End If
     End Sub
