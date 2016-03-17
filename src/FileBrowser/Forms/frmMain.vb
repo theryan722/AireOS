@@ -576,8 +576,14 @@ Public Class frmMain
         Dim myItems As List(Of ListViewItem) = e.Data.GetData("System.Windows.Forms.ListViewItem()")
         Dim i As Integer = 0
         For Each myItem In myItems
-            If Not ListView1.Items.Contains(myItem.Clone) Then
-                sender.Items.Add(myItem.Clone)
+            Dim t As ListViewItem = myItem.Clone()
+            If Not Path.GetDirectoryName(t.Tag) = curdir Then
+                Dim b As String = Path.GetFileName(t.Tag)
+                Dim orig As String = t.Tag
+                t.Tag = curdir & "/" & b
+                t.ToolTipText = curdir & "/" & vbAbort
+                File.Move(orig, t.Tag)
+                sender.Items.Add(t)
             End If
         Next
     End Sub
