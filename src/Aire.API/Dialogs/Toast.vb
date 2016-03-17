@@ -22,7 +22,7 @@ Public Class Toast
     ''' <param name="title">The title to display</param>
     ''' <param name="backcolor">The backcolor of the toast</param>
     ''' <remarks></remarks>
-    Public Sub New(ByVal text As String, Optional ByVal duration As Integer = 2500, Optional ByVal title As String = "", Optional ByVal backcolor As System.Drawing.Color = Nothing)
+    Public Sub New(ByVal text As String, Optional ByVal duration As Integer = 2500, Optional ByVal title As String = "", Optional ByVal backcolor As System.Drawing.Color = Nothing, Optional ByVal autoshow As Boolean = True)
         InitializeComponent()
         Dim bcolor As Color = If(backcolor = Nothing, SystemColors.ActiveBorder, backcolor)
         Me.TextBox1.BackColor = bcolor
@@ -31,7 +31,9 @@ Public Class Toast
         Me.lblTitle.Text = title
         Me.lifeTimer.Interval = duration
         Sys.Logging.Log.Write("Toast - TITLE: " & title & " , TEXT: " & text, Sys.Logging.Log.LogSource.Toast)
-        Me.Show()
+        If autoshow Then
+            Me.Show()
+        End If
     End Sub
 
     Private Sub Toast_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
