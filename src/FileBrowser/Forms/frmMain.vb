@@ -199,7 +199,7 @@ Public Class frmMain
         SelectAll()
     End Sub
     Private Sub RenameToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RenameToolStripMenuItem1.Click
-
+        Rename()
     End Sub
     Private Sub DeleteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem1.Click
 
