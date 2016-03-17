@@ -217,7 +217,7 @@ Public Class frmMain
         End If
     End Sub
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
-
+        Open()
     End Sub
 
 #Region "New"
