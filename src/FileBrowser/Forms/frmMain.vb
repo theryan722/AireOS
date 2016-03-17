@@ -17,7 +17,7 @@ Public Class frmMain
 #Region "File"
 
     Private Sub OpenSelectedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenSelectedToolStripMenuItem.Click
-
+        Open()
     End Sub
 
     Private Sub NewFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewFolderToolStripMenuItem.Click
