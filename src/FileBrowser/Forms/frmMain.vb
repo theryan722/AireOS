@@ -191,7 +191,11 @@ Public Class frmMain
 #Region "Methods"
 
     Private Sub Open()
-
+        If ListView1.SelectedItems.Count > 0 Then
+            If Directory.Exists(ListView1.SelectedItems(0).Tag) Then
+                LoadDirectory(ListView1.SelectedItems(0).Tag)
+            End If
+        End If
     End Sub
 
     Private Sub Rename()
