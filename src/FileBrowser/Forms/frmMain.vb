@@ -190,6 +190,10 @@ Public Class frmMain
 
 #Region "Methods"
 
+    Private Sub Open()
+
+    End Sub
+
     Private Sub Rename()
         If ListView1.SelectedItems.Count > 0 Then
             Dim t As ListViewItem = ListView1.SelectedItems(0)
@@ -462,11 +466,7 @@ Public Class frmMain
     End Sub
 
     Private Sub ListView1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseDoubleClick
-        If ListView1.SelectedItems.Count > 0 Then
-            If Directory.Exists(ListView1.SelectedItems(0).Tag) Then
-                LoadDirectory(ListView1.SelectedItems(0).Tag)
-            End If
-        End If
+        Open()
     End Sub
 
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
