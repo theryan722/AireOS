@@ -141,7 +141,7 @@ Public Class MessageBox
     ''' <param name="showintaskbar">Whether or not the dialog will display in the taskbar</param>
     ''' <param name="topmost">Whether or not the dialog is topmost</param>
     ''' <remarks></remarks>
-    Public Sub New(ByVal text As String, Optional ByVal title As String = "", Optional ByVal buttons As MessageBoxButtons = MessageBoxButtons.OkOnly, Optional ByVal icon As MessageBoxIcon = MessageBoxIcon.None, Optional ByVal backcolor As System.Drawing.Color = Nothing, Optional ByVal showintaskbar As Boolean = False, Optional ByVal topmost As Boolean = True)
+    Public Sub New(ByVal text As String, Optional ByVal title As String = "", Optional ByVal buttons As MessageBoxButtons = MessageBoxButtons.OkOnly, Optional ByVal icon As MessageBoxIcon = MessageBoxIcon.None, Optional ByVal autoshow As Boolean = True, Optional ByVal backcolor As System.Drawing.Color = Nothing, Optional ByVal showintaskbar As Boolean = False, Optional ByVal topmost As Boolean = True)
         InitializeComponent()
         Dim bcolor As Color = If(backcolor = Nothing, SystemColors.Control, backcolor)
         TextBox1.BackColor = bcolor
@@ -153,7 +153,9 @@ Public Class MessageBox
         Me.ShowInTaskbar = showintaskbar
         Me.TopMost = topmost
         Sys.Logging.Log.Write("MessageBox - TITLE: " & title & " , TEXT: " & text, Sys.Logging.Log.LogSource.MessageBox)
-        Me.ShowDialog()
+        If autoshow Then
+            Me.ShowDialog()
+        End If
     End Sub
 
 #End Region
