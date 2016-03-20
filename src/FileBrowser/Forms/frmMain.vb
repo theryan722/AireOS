@@ -11,6 +11,7 @@ Public Class frmMain
     Private tempfile As String = ""
     Private searchhistory As New List(Of String)
     Private fileclipboard As New List(Of String)
+    Private searchstat As Integer = 0
 
 #Region "MenuStrip"
 
@@ -388,23 +389,38 @@ Public Class frmMain
     End Sub
 
     Private Sub Search(ByVal txt As String, ByVal dir As String)
-        ListView1.Clear()
-        Dim iscasesensitive As Boolean = ConfigManager.SearchIsCaseSensitive
-        If Not searchhistory.Contains(txt) Then
-            searchhistory.Add(txt)
-            combo_search.Items.Add(txt)
-        End If
-        If dir = "" Then
-            For Each item As String In Directory.GetLogicalDrives
-                SearchRec(txt, item, iscasesensitive)
-            Next
-        Else
-            SearchRec(txt, dir)
-        End If
+        pnl_cancelsearch.Show()
+        Dim t As Task = Task.Factory.StartNew(Sub()
+                                                  ListView1.Clear()
+                                                  Dim iscasesensitive As Boolean = ConfigManager.SearchIsCaseSensitive
+                                                  If Not searchhistory.Contains(txt) Then
+                                                      searchhistory.Add(txt)
+                                                      combo_search.Items.Add(txt)
+                                                  End If
+                                                  If dir = "" Then
+                                                      For Each item As String In Directory.GetLogicalDrives
+                                                          If searchstat = 2 Then
+                                                              searchstat = 0
+                                                              Exit Sub
+                                                          End If
+                                                          SearchRec(txt, item, iscasesensitive)
+                                                      Next
+                                                  Else
+                                                      If searchstat = 2 Then
+                                                          searchstat = 0
+                                                          Exit Sub
+                                                      End If
+                                                      SearchRec(txt, dir)
+                                                  End If
+                                                  pnl_cancelsearch.Hide()
+                                              End Sub)
     End Sub
 
     Private Sub SearchRec(ByVal txt As String, ByVal rootdir As String, Optional ByVal casesensitive As Boolean = True)
         For Each item As String In Directory.GetFiles(rootdir)
+            If searchstat = 2 Then
+                Exit Sub
+            End If
             If casesensitive Then
                 If item.Contains(txt) Then
                     AddItem(item)
@@ -416,6 +432,9 @@ Public Class frmMain
             End If
         Next
         For Each item As String In Directory.GetDirectories(rootdir)
+            If searchstat = 2 Then
+                Exit Sub
+            End If
             SearchRec(txt, item)
         Next
     End Sub
@@ -554,6 +573,15 @@ Public Class frmMain
 
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
         DisplayDrives()
+    End Sub
+
+#End Region
+
+#Region "pnl_cancelsearch"
+
+    Private Sub btnCancelSearch_Click(sender As Object, e As EventArgs) Handles btnCancelSearch.Click
+        searchstat = 2
+        pnl_cancelsearch.Hide()
     End Sub
 
 #End Region

@@ -655,6 +655,7 @@ Partial Class frmMain
         Me.pnl_cancelsearch.Name = "pnl_cancelsearch"
         Me.pnl_cancelsearch.Size = New System.Drawing.Size(743, 23)
         Me.pnl_cancelsearch.TabIndex = 1
+        Me.pnl_cancelsearch.Visible = False
         '
         'btnCancelSearch
         '
