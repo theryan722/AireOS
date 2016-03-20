@@ -389,23 +389,30 @@ Public Class frmMain
 
     Private Sub Search(ByVal txt As String, ByVal dir As String)
         ListView1.Clear()
+        Dim iscasesensitive As Boolean = ConfigManager.SearchIsCaseSensitive
         If Not searchhistory.Contains(txt) Then
             searchhistory.Add(txt)
             combo_search.Items.Add(txt)
         End If
         If dir = "" Then
             For Each item As String In Directory.GetLogicalDrives
-                SearchRec(txt, item)
+                SearchRec(txt, item, iscasesensitive)
             Next
         Else
             SearchRec(txt, dir)
         End If
     End Sub
 
-    Private Sub SearchRec(ByVal txt As String, ByVal rootdir As String)
+    Private Sub SearchRec(ByVal txt As String, ByVal rootdir As String, Optional ByVal casesensitive As Boolean = True)
         For Each item As String In Directory.GetFiles(rootdir)
-            If item.Contains(txt) Then
-                AddItem(item)
+            If casesensitive Then
+                If item.Contains(txt) Then
+                    AddItem(item)
+                End If
+            Else
+                If item.ToLower.Contains(txt.ToLower) Then
+                    AddItem(item)
+                End If
             End If
         Next
         For Each item As String In Directory.GetDirectories(rootdir)

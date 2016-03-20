@@ -22,6 +22,8 @@
 
     Public Shared Property NavigationPane As Boolean
 
+    Public Shared Property SearchIsCaseSensitive As Boolean
+
 #End Region
 
 End Class
