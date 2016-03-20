@@ -53,6 +53,7 @@ Public Class dlgProperties
             Me.Text = System.IO.Path.GetDirectoryName(fproperties.GetFullPath) & " Properties"
             isfolder = True
         End If
+        LoadProperties()
     End Sub
 
 #End Region
