@@ -11,7 +11,6 @@ Public Class frmMain
     Private tempfile As String = ""
     Private searchhistory As New List(Of String)
     Private fileclipboard As New List(Of String)
-    Private searchstat As Integer = 0
 
 #Region "MenuStrip"
 
@@ -252,6 +251,11 @@ Public Class frmMain
 
 #Region "Methods"
 
+    Private Sub CancelSearch()
+        tokenSource2.Cancel()
+        pnl_cancelsearch.Hide()
+    End Sub
+
     Private Sub CreateNewFolder()
         If curdir <> "" Then
             Dim bb As New Aire.API.InputDialog(False, Aire.API.InputDialog.ValidationType.AllText, "New Folder", "Enter new folder name")
@@ -389,27 +393,31 @@ Public Class frmMain
     End Sub
 
     Private Sub Search(ByVal txt As String, ByVal dir As String)
+        CancelSearch()
+        tokenSource2 = New CancellationTokenSource()
+        ct = tokenSource2.Token
         pnl_cancelsearch.Show()
         Dim t As Task = Task.Factory.StartNew(Sub()
+                                                  If ct.IsCancellationRequested Then
+                                                      Exit Sub
+                                                  End If
                                                   ListView1.Clear()
                                                   Dim iscasesensitive As Boolean = ConfigManager.SearchIsCaseSensitive
                                                   If Not searchhistory.Contains(txt) Then
                                                       searchhistory.Add(txt)
                                                       combo_search.Items.Add(txt)
                                                   End If
+                                                  If ct.IsCancellationRequested Then
+                                                      Exit Sub
+                                                  End If
                                                   If dir = "" Then
                                                       For Each item As String In Directory.GetLogicalDrives
-                                                          If searchstat = 2 Then
-                                                              searchstat = 0
+                                                          If ct.IsCancellationRequested Then
                                                               Exit Sub
                                                           End If
                                                           SearchRec(txt, item, iscasesensitive)
                                                       Next
                                                   Else
-                                                      If searchstat = 2 Then
-                                                          searchstat = 0
-                                                          Exit Sub
-                                                      End If
                                                       SearchRec(txt, dir)
                                                   End If
                                                   pnl_cancelsearch.Hide()
@@ -418,7 +426,7 @@ Public Class frmMain
 
     Private Sub SearchRec(ByVal txt As String, ByVal rootdir As String, Optional ByVal casesensitive As Boolean = True)
         For Each item As String In Directory.GetFiles(rootdir)
-            If searchstat = 2 Then
+            If ct.IsCancellationRequested Then
                 Exit Sub
             End If
             If casesensitive Then
@@ -432,7 +440,7 @@ Public Class frmMain
             End If
         Next
         For Each item As String In Directory.GetDirectories(rootdir)
-            If searchstat = 2 Then
+            If ct.IsCancellationRequested Then
                 Exit Sub
             End If
             SearchRec(txt, item)
@@ -580,8 +588,7 @@ Public Class frmMain
 #Region "pnl_cancelsearch"
 
     Private Sub btnCancelSearch_Click(sender As Object, e As EventArgs) Handles btnCancelSearch.Click
-        searchstat = 2
-        pnl_cancelsearch.Hide()
+        CancelSearch()
     End Sub
 
 #End Region
@@ -681,7 +688,7 @@ Public Class frmMain
 #Region "frmMain"
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
+        System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
         LoadUI()
     End Sub
 
