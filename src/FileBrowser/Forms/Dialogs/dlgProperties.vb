@@ -41,6 +41,7 @@ Public Class dlgProperties
 #Region "dlgProperties"
 
     Public Sub New(ByVal path As String)
+        InitializeComponent()
         fproperties = New FileProperties(path)
     End Sub
 
