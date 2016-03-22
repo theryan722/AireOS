@@ -108,6 +108,8 @@ Partial Class frmMain
         Me.combo_search = New System.Windows.Forms.ComboBox()
         Me.btnHome = New System.Windows.Forms.Button()
         Me.btnUp = New System.Windows.Forms.Button()
+        Me.contextmenustrip_search = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SearchIsCaSeSensitiveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,6 +119,7 @@ Partial Class frmMain
         Me.pnl_cancelsearch.SuspendLayout()
         Me.pnl_navigation.SuspendLayout()
         Me.pnl_search.SuspendLayout()
+        Me.contextmenustrip_search.SuspendLayout()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -408,19 +411,19 @@ Partial Class frmMain
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'TopmostToolStripMenuItem
         '
         Me.TopmostToolStripMenuItem.Name = "TopmostToolStripMenuItem"
-        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TopmostToolStripMenuItem.Text = "Topmost"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CloseAllToolStripMenuItem.Text = "Close All"
         '
         'ToolsToolStripMenuItem
@@ -717,6 +720,18 @@ Partial Class frmMain
         Me.btnUp.TabIndex = 3
         Me.btnUp.UseVisualStyleBackColor = True
         '
+        'contextmenustrip_search
+        '
+        Me.contextmenustrip_search.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SearchIsCaSeSensitiveToolStripMenuItem})
+        Me.contextmenustrip_search.Name = "contextmenustrip_search"
+        Me.contextmenustrip_search.Size = New System.Drawing.Size(199, 48)
+        '
+        'SearchIsCaSeSensitiveToolStripMenuItem
+        '
+        Me.SearchIsCaSeSensitiveToolStripMenuItem.Name = "SearchIsCaSeSensitiveToolStripMenuItem"
+        Me.SearchIsCaSeSensitiveToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.SearchIsCaSeSensitiveToolStripMenuItem.Text = "Search is CaSe Sensitive"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -742,6 +757,7 @@ Partial Class frmMain
         Me.pnl_cancelsearch.ResumeLayout(False)
         Me.pnl_navigation.ResumeLayout(False)
         Me.pnl_search.ResumeLayout(False)
+        Me.contextmenustrip_search.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -830,5 +846,7 @@ Partial Class frmMain
     Friend WithEvents ToolStripSeparator15 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator16 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents AddCurrentDirectoryToBookmarksToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents contextmenustrip_search As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents SearchIsCaSeSensitiveToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

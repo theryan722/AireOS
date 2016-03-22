@@ -271,6 +271,18 @@ Public Class frmMain
 
 #End Region
 
+#Region "Search Context Menu Strip"
+
+    Private Sub SearchIsCaSeSensitiveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchIsCaSeSensitiveToolStripMenuItem.Click
+        If ConfigManager.SearchIsCaseSensitive Then
+            SetSearchIsCaseSensitive(False)
+        Else
+            SetSearchIsCaseSensitive(True)
+        End If
+    End Sub
+
+#End Region
+
 #Region "Methods"
 
 #Region "Search"
@@ -565,17 +577,24 @@ Public Class frmMain
 
 #End Region
 
+    Private Sub SetSearchIsCaseSensitive(ByVal val As Boolean)
+        SearchIsCaSeSensitiveToolStripMenuItem.Checked = val
+        ConfigManager.SearchIsCaseSensitive = val
+    End Sub
+
     Private Sub DisplayNavigationPane(ByVal val As Boolean, Optional ByVal focusonnav As Boolean = False)
         pnl_navigation.Visible = val
         NavigationToolStripMenuItem.Checked = val
         If focusonnav Then
             combo_navigation.Focus()
         End If
+        ConfigManager.NavigationPane = val
     End Sub
 
     Private Sub DisplaySideBar(ByVal val As Boolean)
         SplitContainer1.Panel1Collapsed = Not val
         SidebarToolStripMenuItem.Checked = val
+        ConfigManager.Sidebar = val
     End Sub
 
     Private Sub UncheckAllViewStyleMenuItems()
@@ -604,6 +623,7 @@ Public Class frmMain
     Private Sub SetTopmost(ByVal val As Boolean)
         Me.TopMost = val
         TopmostToolStripMenuItem.Checked = val
+        ConfigManager.Topmost = val
     End Sub
 
     Private Sub SetViewStyle(ByVal view As ConfigManager.FileViewStyle)
@@ -642,6 +662,7 @@ Public Class frmMain
         DisplaySideBar(ConfigManager.Sidebar)
         DisplayNavigationPane(ConfigManager.NavigationPane)
         DisplayDrives()
+        SearchIsCaSeSensitiveToolStripMenuItem.Checked = ConfigManager.SearchIsCaseSensitive
     End Sub
 
     Private Sub AddItem(ByVal file As String)
