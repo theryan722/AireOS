@@ -67,7 +67,7 @@
 #Region "Bookmarks"
 
     Public Shared Function ReadBookmarks() As List(Of String)
-
+        Return ReadFile(bookmarkloc)
     End Function
 
     Public Shared Sub AddToBookmarks(ByVal s As String)
