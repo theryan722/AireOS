@@ -5,7 +5,7 @@
 #Region "Buttons"
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-
+        Me.Close()
     End Sub
 
     Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
