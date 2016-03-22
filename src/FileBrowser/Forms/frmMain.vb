@@ -417,7 +417,11 @@ Public Class frmMain
     Private Sub Delete()
         If ListView1.SelectedItems.Count > 0 Then
             For Each item As ListViewItem In ListView1.SelectedItems
-                File.Delete(item.Tag)
+                If File.Exists(item.Tag) Then
+                    File.Delete(item.Tag)
+                ElseIf Directory.Exists(item.Tag) Then
+                    Directory.Delete(item.Tag, True)
+                End If
             Next
             LoadDirectory(curdir)
         End If
