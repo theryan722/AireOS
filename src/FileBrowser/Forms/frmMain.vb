@@ -324,7 +324,7 @@ Public Class frmMain
     Private Sub Paste()
         If fileclipboard.Count > 0 AndAlso curdir <> "" Then
             For Each item As String In fileclipboard
-                File.Copy(item, curdir & Path.GetFileName(item))
+                File.Copy(item, curdir & "/" & Path.GetFileName(item))
             Next
             LoadDirectory(curdir)
         End If
