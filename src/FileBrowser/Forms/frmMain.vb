@@ -36,6 +36,10 @@ Public Class frmMain
 
 #Region "Edit"
 
+    Private Sub MoveHereToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MoveHereToolStripMenuItem.Click
+
+    End Sub
+
     Private Sub DeselectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeselectAllToolStripMenuItem.Click
         DeselectAll()
     End Sub
@@ -197,6 +201,10 @@ Public Class frmMain
 #End Region
 
 #Region "Context Menu Strip"
+
+    Private Sub MoveHereToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MoveHereToolStripMenuItem1.Click
+
+    End Sub
 
     Private Sub PropertiesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PropertiesToolStripMenuItem.Click
         If ListView1.SelectedItems.Count > 0 Then
