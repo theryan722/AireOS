@@ -57,7 +57,7 @@
     End Sub
 
     Private Sub ListBox1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListBox1.MouseDoubleClick
-
+        OpenSelected()
     End Sub
 
 #End Region
