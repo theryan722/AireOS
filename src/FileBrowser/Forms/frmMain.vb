@@ -203,7 +203,7 @@ Public Class frmMain
 #Region "Context Menu Strip"
 
     Private Sub MoveHereToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MoveHereToolStripMenuItem1.Click
-
+        MoveHere()
     End Sub
 
     Private Sub PropertiesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PropertiesToolStripMenuItem.Click
