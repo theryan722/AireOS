@@ -84,10 +84,10 @@
 
 #Region "dlgBookmarks"
 
-
+    Private Sub dlgBookmarks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadBookmarks()
+    End Sub
 
 #End Region
-
-    
 
 End Class
