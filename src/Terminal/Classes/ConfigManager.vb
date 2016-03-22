@@ -41,6 +41,7 @@ Public Class ConfigManager
                 Return If(item.Split(":")(1) = "True", True, False)
             End If
         Next
+        Return False
     End Function
 
     Public Shared Function GetIfFullscreen() As Boolean
@@ -49,6 +50,7 @@ Public Class ConfigManager
                 Return If(item.Split(":")(1) = "True", True, False)
             End If
         Next
+        Return False
     End Function
 
     Public Shared Function GetIfAllowExternal() As Boolean
@@ -57,6 +59,7 @@ Public Class ConfigManager
                 Return If(item.Split(":")(1) = "True", True, False)
             End If
         Next
+        Return False
     End Function
 
     Public Shared Function GetIfDisplayMenu() As Boolean
@@ -65,6 +68,7 @@ Public Class ConfigManager
                 Return If(item.Split(":")(1) = "True", True, False)
             End If
         Next
+        Return False
     End Function
 
 #End Region

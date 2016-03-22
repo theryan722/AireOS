@@ -137,6 +137,7 @@ Public Class FileProperties
             End If
             Return Size
         Catch fex As System.IO.FileNotFoundException
+            Return 0
         Catch ex As Exception
             Return 0
         End Try
