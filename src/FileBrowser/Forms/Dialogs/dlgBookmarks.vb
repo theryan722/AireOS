@@ -77,7 +77,9 @@
     End Sub
 
     Private Sub LoadBookmarks()
-
+        For Each line As String In ConfigManager.ReadBookmarks
+            ListBox1.Items.Add(line)
+        Next
     End Sub
 
 #End Region
