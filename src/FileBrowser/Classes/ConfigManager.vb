@@ -50,7 +50,7 @@
                     End Select
                 End If
             Next
-            Return Nothing
+            Return False
         End Get
         Set(value As FileViewStyle)
             Dim ss() As String
@@ -61,6 +61,13 @@
     End Property
 
     Public Shared Property Topmost As Boolean
+        Get
+
+        End Get
+        Set(value As Boolean)
+
+        End Set
+    End Property
 
     Public Shared Property Sidebar As Boolean
 
