@@ -71,7 +71,7 @@
         If bb.DialogResult = Windows.Forms.DialogResult.OK AndAlso Not bb.Response = "" AndAlso Not ListBox1.Items.Contains(bb.Response) Then
             If IO.Directory.Exists(bb.Response) Then
                 ListBox1.Items.Add(bb.Response)
-                ConfigManager.AddBookmark(bb.Response)
+                DataManager.AddBookmark(bb.Response)
             Else
                 Dim msg As New Aire.API.MessageBox("The path entered is not a valid one.", "Invalid Path", Aire.API.MessageBox.MessageBoxButtons.OkOnly, Aire.API.MessageBox.MessageBoxIcon.Warning)
             End If
@@ -80,7 +80,7 @@
 
     Private Sub RemoveSelected()
         If ListBox1.SelectedIndex <> -1 Then
-            ConfigManager.RemoveBookmark(ListBox1.SelectedItem)
+            DataManager.RemoveBookmark(ListBox1.SelectedItem)
             ListBox1.Items.Remove(ListBox1.SelectedItem)
         End If
     End Sub
@@ -102,12 +102,12 @@
         Dim bb As New Aire.API.MessageBox("Are you sure you want to clear all bookmarks?", "Clear Bookmarks", Aire.API.MessageBox.MessageBoxButtons.YesNo, Aire.API.MessageBox.MessageBoxIcon.Question)
         If bb.DialogResult = Windows.Forms.DialogResult.Yes Then
             ListBox1.Items.Clear()
-            ConfigManager.ClearBookmarks()
+            DataManager.ClearBookmarks()
         End If
     End Sub
 
     Private Sub LoadBookmarks()
-        For Each line As String In ConfigManager.ReadBookmarks
+        For Each line As String In DataManager.ReadBookmarks
             ListBox1.Items.Add(line)
         Next
     End Sub

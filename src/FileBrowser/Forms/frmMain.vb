@@ -192,7 +192,7 @@ Public Class frmMain
 
     Private Sub AddCurrentDirectoryToBookmarksToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddCurrentDirectoryToBookmarksToolStripMenuItem.Click
         If curdir <> "" Then
-            ConfigManager.AddBookmark(curdir)
+            DataManager.AddBookmark(curdir)
             Dim bb As New Aire.API.MessageBox("Added '" & curdir & "' as a bookmark!", "New Bookmark", Aire.API.MessageBox.MessageBoxButtons.OkOnly, Aire.API.MessageBox.MessageBoxIcon.Information)
         End If
     End Sub
@@ -560,7 +560,7 @@ Public Class frmMain
             If Not history.Contains(dir) Then
                 combo_navigation.Items.Add(dir)
                 history.Add(dir)
-                ConfigManager.AddToHistory(dir)
+                DataManager.AddToHistory(dir)
             End If
             ListView1.Clear()
             For Each item As String In Directory.GetDirectories(dir)
@@ -822,7 +822,7 @@ Public Class frmMain
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
         LoadUI()
-        history = ConfigManager.ReadHistory
+        history = DataManager.ReadHistory
     End Sub
 
 #End Region
