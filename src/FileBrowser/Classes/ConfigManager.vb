@@ -62,10 +62,18 @@
 
     Public Shared Property Topmost As Boolean
         Get
-
+            For Each item As String In ReadFile(setloc)
+                If item.StartsWith("TM:") Then
+                    Return If(item.Split(":")(1) = "True", True, False)
+                End If
+            Next
+            Return False
         End Get
         Set(value As Boolean)
-
+            Dim ss() As String
+            ss = IO.File.ReadAllLines(setloc)
+            ss(Array.IndexOf(ss, Array.Find(ss, Function(x) (x.StartsWith("TM:"))))) = "TM:" & value.ToString
+            IO.File.WriteAllLines(setloc, ss)
         End Set
     End Property
 
