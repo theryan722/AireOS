@@ -259,7 +259,7 @@ Public Class frmMain
     Private Sub CreateNewFolder()
         If curdir <> "" Then
             Dim bb As New Aire.API.InputDialog(False, Aire.API.InputDialog.ValidationType.AllText, "New Folder", "Enter new folder name")
-            If bb.DialogResult = Windows.Forms.DialogResult.OK Then
+            If bb.DialogResult = Windows.Forms.DialogResult.OK AndAlso Not bb.Response = "" Then
                 If Not Directory.Exists(curdir & "/" & bb.Response) Then
                     Directory.CreateDirectory(curdir & "/" & bb.Response)
                     AddItem(curdir & "/" & bb.Response)
@@ -273,7 +273,7 @@ Public Class frmMain
     Private Sub CreateNewFile()
         If curdir <> "" Then
             Dim bb As New Aire.API.InputDialog(False, Aire.API.InputDialog.ValidationType.AllText, "New File", "Enter new file name")
-            If bb.DialogResult = Windows.Forms.DialogResult.OK Then
+            If bb.DialogResult = Windows.Forms.DialogResult.OK AndAlso Not bb.Response = "" Then
                 If Not File.Exists(curdir & "/" & bb.Response) Then
                     File.Create(curdir & "/" & bb.Response)
                     AddItem(curdir & "/" & bb.Response)
