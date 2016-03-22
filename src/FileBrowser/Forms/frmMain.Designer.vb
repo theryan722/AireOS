@@ -160,13 +160,16 @@ Partial Class frmMain
         'NewFolderToolStripMenuItem
         '
         Me.NewFolderToolStripMenuItem.Name = "NewFolderToolStripMenuItem"
-        Me.NewFolderToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.NewFolderToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
+        Me.NewFolderToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.NewFolderToolStripMenuItem.Text = "New Folder"
         '
         'NewFileToolStripMenuItem
         '
         Me.NewFileToolStripMenuItem.Name = "NewFileToolStripMenuItem"
-        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.NewFileToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
+        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.NewFileToolStripMenuItem.Text = "New File"
         '
         'ToolStripSeparator4
@@ -190,13 +193,15 @@ Partial Class frmMain
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.PasteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'ToolStripSeparator6
@@ -218,13 +223,15 @@ Partial Class frmMain
         'RenameToolStripMenuItem
         '
         Me.RenameToolStripMenuItem.Name = "RenameToolStripMenuItem"
-        Me.RenameToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.RenameToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2
+        Me.RenameToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.RenameToolStripMenuItem.Text = "Rename"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.DeleteToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'ToolStripSeparator8
@@ -235,13 +242,16 @@ Partial Class frmMain
         'SelectAllToolStripMenuItem
         '
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.SelectAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.SelectAllToolStripMenuItem.Text = "Select All"
         '
         'DeselectAllToolStripMenuItem
         '
         Me.DeselectAllToolStripMenuItem.Name = "DeselectAllToolStripMenuItem"
-        Me.DeselectAllToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.DeselectAllToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
+        Me.DeselectAllToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.DeselectAllToolStripMenuItem.Text = "Deselect All"
         '
         'NavigationToolStripMenuItem
@@ -675,7 +685,9 @@ Partial Class frmMain
         'MoveHereToolStripMenuItem
         '
         Me.MoveHereToolStripMenuItem.Name = "MoveHereToolStripMenuItem"
-        Me.MoveHereToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.MoveHereToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
+        Me.MoveHereToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
         Me.MoveHereToolStripMenuItem.Text = "Move Here"
         '
         'MoveHereToolStripMenuItem1
