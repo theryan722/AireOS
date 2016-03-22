@@ -120,6 +120,13 @@ Public Class frmMain
 
 #End Region
 
+    Private Sub SearchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchToolStripMenuItem.Click
+        If Not pnl_navigation.Visible Then
+            DisplayNavigationPane(True)
+        End If
+        combo_search.Focus()
+    End Sub
+
     Private Sub SidebarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SidebarToolStripMenuItem.Click
         If SplitContainer1.Panel1Collapsed Then
             DisplaySideBar(True)
@@ -706,12 +713,13 @@ Public Class frmMain
     Private Sub ListView1_KeyDown(sender As Object, e As KeyEventArgs) Handles ListView1.KeyDown
         If ListView1.SelectedItems.Count > 0 Then
             Select Case e.KeyCode
-                Case Keys.Back
+                Case Keys.Back, Keys.Delete
                     Delete()
                 Case Keys.Enter
                     Open()
                 Case Keys.Escape
                     GoUp()
+                    ListView1.Focus()
             End Select
         End If
     End Sub

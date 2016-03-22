@@ -105,6 +105,8 @@ Partial Class frmMain
         Me.btnUp = New System.Windows.Forms.Button()
         Me.MoveHereToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MoveHereToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator15 = New System.Windows.Forms.ToolStripSeparator()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -230,7 +232,7 @@ Partial Class frmMain
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete
+        Me.DeleteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
         Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
@@ -302,7 +304,7 @@ Partial Class frmMain
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadToolStripMenuItem, Me.ToolStripSeparator14, Me.StyleToolStripMenuItem, Me.SidebarToolStripMenuItem, Me.NavigationPaneToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadToolStripMenuItem, Me.ToolStripSeparator14, Me.StyleToolStripMenuItem, Me.SidebarToolStripMenuItem, Me.NavigationPaneToolStripMenuItem, Me.ToolStripSeparator15, Me.SearchToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -696,6 +698,18 @@ Partial Class frmMain
         Me.MoveHereToolStripMenuItem1.Size = New System.Drawing.Size(186, 22)
         Me.MoveHereToolStripMenuItem1.Text = "Move Here"
         '
+        'SearchToolStripMenuItem
+        '
+        Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
+        Me.SearchToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
+        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.SearchToolStripMenuItem.Text = "Search"
+        '
+        'ToolStripSeparator15
+        '
+        Me.ToolStripSeparator15.Name = "ToolStripSeparator15"
+        Me.ToolStripSeparator15.Size = New System.Drawing.Size(158, 6)
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -806,5 +820,7 @@ Partial Class frmMain
     Friend WithEvents btnCancelSearch As System.Windows.Forms.Button
     Friend WithEvents MoveHereToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MoveHereToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SearchToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator15 As System.Windows.Forms.ToolStripSeparator
 
 End Class
