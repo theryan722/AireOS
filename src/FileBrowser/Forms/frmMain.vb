@@ -190,6 +190,13 @@ Public Class frmMain
         newb.ShowDialog()
     End Sub
 
+    Private Sub AddCurrentDirectoryToBookmarksToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddCurrentDirectoryToBookmarksToolStripMenuItem.Click
+        If curdir <> "" Then
+            ConfigManager.AddToBookmarks(curdir)
+            Dim bb As New Aire.API.MessageBox("Added '" & curdir & "' as a bookmark!", "New Bookmark", Aire.API.MessageBox.MessageBoxButtons.OkOnly, Aire.API.MessageBox.MessageBoxIcon.Information)
+        End If
+    End Sub
+
 #End Region
 
 #Region "About"
