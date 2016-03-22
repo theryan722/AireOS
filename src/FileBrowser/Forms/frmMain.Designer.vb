@@ -373,7 +373,8 @@ Partial Class frmMain
         'NavigationPaneToolStripMenuItem
         '
         Me.NavigationPaneToolStripMenuItem.Name = "NavigationPaneToolStripMenuItem"
-        Me.NavigationPaneToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.NavigationPaneToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.NavigationPaneToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
         Me.NavigationPaneToolStripMenuItem.Text = "Navigation Pane"
         '
         'WindowToolStripMenuItem

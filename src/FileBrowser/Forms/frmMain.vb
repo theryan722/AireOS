@@ -139,7 +139,7 @@ Public Class frmMain
         If pnl_navigation.Visible Then
             DisplayNavigationPane(False)
         Else
-            DisplayNavigationPane(True)
+            DisplayNavigationPane(True, True)
         End If
     End Sub
 
@@ -418,9 +418,12 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub DisplayNavigationPane(ByVal val As Boolean)
+    Private Sub DisplayNavigationPane(ByVal val As Boolean, Optional ByVal focusonnav As Boolean = False)
         pnl_navigation.Visible = val
         NavigationToolStripMenuItem.Checked = val
+        If focusonnav Then
+            combo_navigation.Focus()
+        End If
     End Sub
 
     Private Sub DisplaySideBar(ByVal val As Boolean)
