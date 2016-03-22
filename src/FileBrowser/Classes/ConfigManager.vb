@@ -44,6 +44,8 @@
 
 #Region "Methods"
 
+#Region "History"
+
     Public Shared Function ReadHistory() As List(Of String)
         Return ReadFile(histloc)
     End Function
@@ -59,6 +61,28 @@
         stream.Write("")
         stream.Close()
     End Sub
+
+#End Region
+
+#Region "Bookmarks"
+
+    Public Shared Function ReadBookmarks() As List(Of String)
+
+    End Function
+
+    Public Shared Sub AddToBookmarks(ByVal s As String)
+
+    End Sub
+
+    Public Shared Sub ClearBookmarks()
+
+    End Sub
+
+    Public Shared Sub RemoveBookmark(ByVal s As String)
+
+    End Sub
+
+#End Region
 
 #End Region
 
