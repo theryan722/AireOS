@@ -344,8 +344,8 @@ Public Class frmMain
 
     Private Sub Delete()
         If ListView1.SelectedItems.Count > 0 Then
-            For Each item As String In ListView1.SelectedItems
-                File.Delete(item)
+            For Each item As ListViewItem In ListView1.SelectedItems
+                File.Delete(item.Tag)
             Next
             LoadDirectory(curdir)
         End If
