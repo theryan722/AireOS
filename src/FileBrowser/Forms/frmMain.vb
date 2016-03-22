@@ -431,11 +431,15 @@ Public Class frmMain
             End If
             If casesensitive Then
                 If item.Contains(txt) Then
-                    AddItem(item)
+                    ListView1.BeginInvoke(Sub()
+                                              AddItem(item)
+                                          End Sub)
                 End If
             Else
                 If item.ToLower.Contains(txt.ToLower) Then
-                    AddItem(item)
+                    ListView1.BeginInvoke(Sub()
+                                              AddItem(item)
+                                          End Sub)
                 End If
             End If
         Next
