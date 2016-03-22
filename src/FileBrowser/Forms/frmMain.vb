@@ -201,11 +201,6 @@ Public Class frmMain
 
 #Region "About"
 
-    Private Sub OptionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionsToolStripMenuItem.Click
-        Dim newb As New dlgOptions
-        newb.ShowDialog()
-    End Sub
-
     Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
 
     End Sub
@@ -621,6 +616,7 @@ Public Class frmMain
                 ListView1.View = Windows.Forms.View.LargeIcon
                 LoadImagesWithSize(New Size(128, 128))
                 ExtraLargeIconsToolStripMenuItem.Checked = True
+
             Case ConfigManager.FileViewStyle.LargeIcons
                 ListView1.View = Windows.Forms.View.LargeIcon
                 LoadImagesWithSize(New Size(96, 96))
@@ -637,6 +633,7 @@ Public Class frmMain
                 ListView1.View = Windows.Forms.View.Details
                 ListToolStripMenuItem.Checked = True
         End Select
+        ConfigManager.ViewStyle = view
     End Sub
 
     Private Sub LoadUI()
