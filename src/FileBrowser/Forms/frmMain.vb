@@ -706,12 +706,12 @@ Public Class frmMain
     Private Sub ListView1_KeyDown(sender As Object, e As KeyEventArgs) Handles ListView1.KeyDown
         If ListView1.SelectedItems.Count > 0 Then
             Select Case e.KeyCode
-                Case Keys.Delete, Keys.Back
+                Case Keys.Back
                     Delete()
-                Case Keys.F2
-                    Rename()
                 Case Keys.Enter
                     Open()
+                Case Keys.Escape
+                    GoUp()
             End Select
         End If
     End Sub
