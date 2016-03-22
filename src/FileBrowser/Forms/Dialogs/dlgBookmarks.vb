@@ -76,6 +76,14 @@
 
     End Sub
 
+    Private Sub ClearBookmarks()
+        Dim bb As New Aire.API.MessageBox("Are you sure you want to clear all bookmarks?", "Clear Bookmarks", Aire.API.MessageBox.MessageBoxButtons.YesNo, Aire.API.MessageBox.MessageBoxIcon.Question)
+        If bb.DialogResult = Windows.Forms.DialogResult.Yes Then
+            ListBox1.Items.Clear()
+            ConfigManager.ClearBookmarks()
+        End If
+    End Sub
+
     Private Sub LoadBookmarks()
         For Each line As String In ConfigManager.ReadBookmarks
             ListBox1.Items.Add(line)
