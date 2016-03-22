@@ -69,7 +69,10 @@
     End Sub
 
     Private Sub RemoveSelected()
-
+        If ListBox1.SelectedIndex <> -1 Then
+            ConfigManager.RemoveBookmark(ListBox1.SelectedItem)
+            ListBox1.Items.Remove(ListBox1.SelectedItem)
+        End If
     End Sub
 
     Private Sub OpenSelected(Optional ByVal newwin As Boolean = False)
