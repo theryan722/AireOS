@@ -49,7 +49,11 @@
 #Region "ListBox"
 
     Private Sub ListBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles ListBox1.KeyDown
-
+        If e.KeyCode = Keys.Enter Then
+            OpenSelected()
+        ElseIf e.KeyCode = Keys.Delete Then
+            RemoveSelected()
+        End If
     End Sub
 
     Private Sub ListBox1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListBox1.MouseDoubleClick
