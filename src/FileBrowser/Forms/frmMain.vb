@@ -330,7 +330,34 @@ Public Class frmMain
     End Sub
 
     Private Sub MoveHere()
-
+        If fileclipboard.Count > 0 AndAlso curdir <> "" Then
+            For Each item As String In fileclipboard
+                If File.Exists(item) Then
+                    Dim bb As String = curdir & "/" & Path.GetFileName(item)
+                    If File.Exists(bb) Then
+                        Dim msg As New Aire.API.MessageBox("The directory you are attempting to move the file '" & Path.GetFileName(item) & "' to already contains a file with that name. Do you want to replace it?", "File Already Exists", Aire.API.MessageBox.MessageBoxButtons.YesNo, Aire.API.MessageBox.MessageBoxIcon.Question)
+                        If msg.DialogResult = Windows.Forms.DialogResult.Yes Then
+                            File.Delete(bb)
+                            File.Move(item, bb)
+                        End If
+                    Else
+                        File.Move(item, bb)
+                    End If
+                ElseIf Directory.Exists(item) Then
+                    Dim bb As String = curdir & "/" & Path.GetFileName(item)
+                    If Directory.Exists(bb) Then
+                        Dim msg As New Aire.API.MessageBox("The directory you are attempting to move the directory '" & Path.GetFileName(item) & "' to already contains a directory with that name. Do you want to replace it?", "Directory Already Exists", Aire.API.MessageBox.MessageBoxButtons.YesNo, Aire.API.MessageBox.MessageBoxIcon.Question)
+                        If msg.DialogResult = Windows.Forms.DialogResult.Yes Then
+                            Directory.Delete(bb, True)
+                            Directory.Move(item, bb)
+                        End If
+                    Else
+                        Directory.Move(item, bb)
+                    End If
+                End If
+            Next
+            LoadDirectory(curdir)
+        End If
     End Sub
 
     Private Sub Paste()
