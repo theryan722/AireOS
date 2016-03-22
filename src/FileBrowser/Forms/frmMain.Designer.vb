@@ -95,23 +95,25 @@ Partial Class frmMain
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.PropertiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImageList_Master = New System.Windows.Forms.ImageList(Me.components)
+        Me.pnl_cancelsearch = New System.Windows.Forms.Panel()
+        Me.btnCancelSearch = New System.Windows.Forms.Button()
         Me.pnl_navigation = New System.Windows.Forms.Panel()
         Me.combo_navigation = New System.Windows.Forms.ComboBox()
         Me.pnl_search = New System.Windows.Forms.Panel()
         Me.combo_search = New System.Windows.Forms.ComboBox()
         Me.btnHome = New System.Windows.Forms.Button()
         Me.btnUp = New System.Windows.Forms.Button()
-        Me.pnl_cancelsearch = New System.Windows.Forms.Panel()
-        Me.btnCancelSearch = New System.Windows.Forms.Button()
+        Me.MoveHereToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MoveHereToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.ContextMenuStrip_ListView1.SuspendLayout()
+        Me.pnl_cancelsearch.SuspendLayout()
         Me.pnl_navigation.SuspendLayout()
         Me.pnl_search.SuspendLayout()
-        Me.pnl_cancelsearch.SuspendLayout()
         Me.SuspendLayout()
         '
         'StatusStrip1
@@ -180,7 +182,7 @@ Partial Class frmMain
         '
         'EditToolStripMenuItem
         '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.ToolStripSeparator6, Me.ClearCopyListToolStripMenuItem, Me.ToolStripSeparator7, Me.RenameToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.ToolStripSeparator8, Me.SelectAllToolStripMenuItem, Me.DeselectAllToolStripMenuItem})
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.MoveHereToolStripMenuItem, Me.ToolStripSeparator6, Me.ClearCopyListToolStripMenuItem, Me.ToolStripSeparator7, Me.RenameToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.ToolStripSeparator8, Me.SelectAllToolStripMenuItem, Me.DeselectAllToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.EditToolStripMenuItem.Text = "Edit"
@@ -370,19 +372,19 @@ Partial Class frmMain
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'TopmostToolStripMenuItem
         '
         Me.TopmostToolStripMenuItem.Name = "TopmostToolStripMenuItem"
-        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TopmostToolStripMenuItem.Text = "Topmost"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CloseAllToolStripMenuItem.Text = "Close All"
         '
         'ToolsToolStripMenuItem
@@ -395,13 +397,13 @@ Partial Class frmMain
         'BookmarksToolStripMenuItem
         '
         Me.BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem"
-        Me.BookmarksToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BookmarksToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.BookmarksToolStripMenuItem.Text = "Bookmarks"
         '
         'HistoryToolStripMenuItem
         '
         Me.HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem"
-        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.HistoryToolStripMenuItem.Text = "History"
         '
         'AboutToolStripMenuItem
@@ -414,19 +416,19 @@ Partial Class frmMain
         'OptionsToolStripMenuItem
         '
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.OptionsToolStripMenuItem.Text = "Options"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
         'SplitContainer1
@@ -460,9 +462,9 @@ Partial Class frmMain
         '
         'ContextMenuStrip_ListView1
         '
-        Me.ContextMenuStrip_ListView1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.OpenInNewWindowToolStripMenuItem, Me.ToolStripSeparator11, Me.NewToolStripMenuItem1, Me.ToolStripSeparator13, Me.CopyToolStripMenuItem1, Me.PasteToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.RenameToolStripMenuItem1, Me.ToolStripSeparator10, Me.SelectAllToolStripMenuItem1, Me.ToolStripSeparator12, Me.PropertiesToolStripMenuItem})
+        Me.ContextMenuStrip_ListView1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.OpenInNewWindowToolStripMenuItem, Me.ToolStripSeparator11, Me.NewToolStripMenuItem1, Me.ToolStripSeparator13, Me.CopyToolStripMenuItem1, Me.PasteToolStripMenuItem1, Me.MoveHereToolStripMenuItem1, Me.DeleteToolStripMenuItem1, Me.RenameToolStripMenuItem1, Me.ToolStripSeparator10, Me.SelectAllToolStripMenuItem1, Me.ToolStripSeparator12, Me.PropertiesToolStripMenuItem})
         Me.ContextMenuStrip_ListView1.Name = "ContextMenuStrip_ListView1"
-        Me.ContextMenuStrip_ListView1.Size = New System.Drawing.Size(187, 226)
+        Me.ContextMenuStrip_ListView1.Size = New System.Drawing.Size(187, 248)
         '
         'OpenToolStripMenuItem
         '
@@ -582,6 +584,27 @@ Partial Class frmMain
         Me.ImageList_Master.Images.SetKeyName(24, "zip.png")
         Me.ImageList_Master.Images.SetKeyName(25, "drive.png")
         '
+        'pnl_cancelsearch
+        '
+        Me.pnl_cancelsearch.Controls.Add(Me.btnCancelSearch)
+        Me.pnl_cancelsearch.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnl_cancelsearch.Location = New System.Drawing.Point(0, 408)
+        Me.pnl_cancelsearch.Name = "pnl_cancelsearch"
+        Me.pnl_cancelsearch.Size = New System.Drawing.Size(743, 23)
+        Me.pnl_cancelsearch.TabIndex = 1
+        Me.pnl_cancelsearch.Visible = False
+        '
+        'btnCancelSearch
+        '
+        Me.btnCancelSearch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnCancelSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelSearch.Location = New System.Drawing.Point(0, 0)
+        Me.btnCancelSearch.Name = "btnCancelSearch"
+        Me.btnCancelSearch.Size = New System.Drawing.Size(743, 23)
+        Me.btnCancelSearch.TabIndex = 0
+        Me.btnCancelSearch.Text = "Cancel Search"
+        Me.btnCancelSearch.UseVisualStyleBackColor = True
+        '
         'pnl_navigation
         '
         Me.pnl_navigation.Controls.Add(Me.combo_navigation)
@@ -647,26 +670,17 @@ Partial Class frmMain
         Me.btnUp.TabIndex = 3
         Me.btnUp.UseVisualStyleBackColor = True
         '
-        'pnl_cancelsearch
+        'MoveHereToolStripMenuItem
         '
-        Me.pnl_cancelsearch.Controls.Add(Me.btnCancelSearch)
-        Me.pnl_cancelsearch.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnl_cancelsearch.Location = New System.Drawing.Point(0, 408)
-        Me.pnl_cancelsearch.Name = "pnl_cancelsearch"
-        Me.pnl_cancelsearch.Size = New System.Drawing.Size(743, 23)
-        Me.pnl_cancelsearch.TabIndex = 1
-        Me.pnl_cancelsearch.Visible = False
+        Me.MoveHereToolStripMenuItem.Name = "MoveHereToolStripMenuItem"
+        Me.MoveHereToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.MoveHereToolStripMenuItem.Text = "Move Here"
         '
-        'btnCancelSearch
+        'MoveHereToolStripMenuItem1
         '
-        Me.btnCancelSearch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCancelSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelSearch.Location = New System.Drawing.Point(0, 0)
-        Me.btnCancelSearch.Name = "btnCancelSearch"
-        Me.btnCancelSearch.Size = New System.Drawing.Size(743, 23)
-        Me.btnCancelSearch.TabIndex = 0
-        Me.btnCancelSearch.Text = "Cancel Search"
-        Me.btnCancelSearch.UseVisualStyleBackColor = True
+        Me.MoveHereToolStripMenuItem1.Name = "MoveHereToolStripMenuItem1"
+        Me.MoveHereToolStripMenuItem1.Size = New System.Drawing.Size(186, 22)
+        Me.MoveHereToolStripMenuItem1.Text = "Move Here"
         '
         'frmMain
         '
@@ -690,9 +704,9 @@ Partial Class frmMain
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.ContextMenuStrip_ListView1.ResumeLayout(False)
+        Me.pnl_cancelsearch.ResumeLayout(False)
         Me.pnl_navigation.ResumeLayout(False)
         Me.pnl_search.ResumeLayout(False)
-        Me.pnl_cancelsearch.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -776,5 +790,7 @@ Partial Class frmMain
     Friend WithEvents DeselectAllToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents pnl_cancelsearch As System.Windows.Forms.Panel
     Friend WithEvents btnCancelSearch As System.Windows.Forms.Button
+    Friend WithEvents MoveHereToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MoveHereToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class
