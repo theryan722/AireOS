@@ -388,6 +388,7 @@ Partial Class frmMain
         Me.NavigationPaneToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
         Me.NavigationPaneToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
         Me.NavigationPaneToolStripMenuItem.Text = "Navigation Pane"
+        Me.NavigationPaneToolStripMenuItem.Visible = False
         '
         'ToolStripSeparator15
         '
@@ -411,19 +412,19 @@ Partial Class frmMain
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'TopmostToolStripMenuItem
         '
         Me.TopmostToolStripMenuItem.Name = "TopmostToolStripMenuItem"
-        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TopmostToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.TopmostToolStripMenuItem.Text = "Topmost"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.CloseAllToolStripMenuItem.Text = "Close All"
         '
         'ToolsToolStripMenuItem
@@ -466,13 +467,13 @@ Partial Class frmMain
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
         'SplitContainer1
@@ -724,7 +725,7 @@ Partial Class frmMain
         '
         Me.contextmenustrip_search.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SearchIsCaSeSensitiveToolStripMenuItem})
         Me.contextmenustrip_search.Name = "contextmenustrip_search"
-        Me.contextmenustrip_search.Size = New System.Drawing.Size(199, 48)
+        Me.contextmenustrip_search.Size = New System.Drawing.Size(199, 26)
         '
         'SearchIsCaSeSensitiveToolStripMenuItem
         '
