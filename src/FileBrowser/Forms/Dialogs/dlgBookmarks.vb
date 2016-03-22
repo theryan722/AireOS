@@ -41,7 +41,7 @@
     End Sub
 
     Private Sub AddToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem.Click
-
+        AddBookmark()
     End Sub
 
 #End Region
