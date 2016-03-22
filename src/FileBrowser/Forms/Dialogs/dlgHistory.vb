@@ -66,7 +66,7 @@
     End Sub
 
     Private Sub dlgHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        LoadHistory()
     End Sub
 
 #End Region
