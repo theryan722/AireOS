@@ -43,7 +43,11 @@
     End Sub
 
     Private Sub ClearHistory()
-
+        Dim bb As New Aire.API.MessageBox("Are you sure you want to clear the history?", "Clear History", Aire.API.MessageBox.MessageBoxButtons.YesNo, Aire.API.MessageBox.MessageBoxIcon.Question)
+        If bb.DialogResult = Windows.Forms.DialogResult.Yes Then
+            ListBox1.Items.Clear()
+            ConfigManager.ClearHistory()
+        End If
     End Sub
 
     Private Sub LoadHistory()
