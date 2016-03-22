@@ -13,22 +13,26 @@ Public Class Manager
     End Sub
 
     Public Shared Function ReadFile(ByVal file As String) As String
-        Dim inStream = New FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
-        Dim bytes() As Byte = New Byte((inStream.Length) - 1) {}
-        Dim numBytesToRead As Integer = CType(inStream.Length, Integer)
-        Dim numBytesRead As Integer = 0
-        While (numBytesToRead > 0)
-            Dim n As Integer = inStream.Read(bytes, numBytesRead, _
-                numBytesToRead)
-            If (n = 0) Then
-                Exit While
-            End If
-            numBytesRead = (numBytesRead + n)
-            numBytesToRead = (numBytesToRead - n)
-        End While
-        numBytesToRead = bytes.Length
-        inStream.Close()
-        Return System.Text.ASCIIEncoding.ASCII.GetString(bytes)
+        If System.IO.File.Exists(file) Then
+            Dim inStream = New FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+            Dim bytes() As Byte = New Byte((inStream.Length) - 1) {}
+            Dim numBytesToRead As Integer = CType(inStream.Length, Integer)
+            Dim numBytesRead As Integer = 0
+            While (numBytesToRead > 0)
+                Dim n As Integer = inStream.Read(bytes, numBytesRead, _
+                    numBytesToRead)
+                If (n = 0) Then
+                    Exit While
+                End If
+                numBytesRead = (numBytesRead + n)
+                numBytesToRead = (numBytesToRead - n)
+            End While
+            numBytesToRead = bytes.Length
+            inStream.Close()
+            Return System.Text.ASCIIEncoding.ASCII.GetString(bytes)
+        Else
+            Return ""
+        End If
     End Function
 
 #End Region
