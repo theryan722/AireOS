@@ -37,7 +37,7 @@ Public Class frmMain
 #Region "Edit"
 
     Private Sub MoveHereToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MoveHereToolStripMenuItem.Click
-
+        MoveHere()
     End Sub
 
     Private Sub DeselectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeselectAllToolStripMenuItem.Click
