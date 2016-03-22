@@ -77,7 +77,9 @@
     End Sub
 
     Public Shared Sub ClearBookmarks()
-
+        Dim stream As New IO.StreamWriter(bookmarkloc, False)
+        stream.Write("")
+        stream.Close()
     End Sub
 
     Public Shared Sub RemoveBookmark(ByVal s As String)
