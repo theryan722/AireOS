@@ -157,6 +157,9 @@
     <EmbeddedResource Include="Forms\Dialogs\dlgAbout.resx">
       <DependentUpon>dlgAbout.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\dlgBookmarks.resx">
+      <DependentUpon>dlgBookmarks.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dialogs\dlgHistory.resx">
       <DependentUpon>dlgHistory.vb</DependentUpon>
     </EmbeddedResource>
