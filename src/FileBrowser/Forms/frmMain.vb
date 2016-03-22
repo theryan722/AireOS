@@ -321,6 +321,10 @@ Public Class frmMain
         End If
     End Sub
 
+    Private Sub MoveHere()
+
+    End Sub
+
     Private Sub Paste()
         If fileclipboard.Count > 0 AndAlso curdir <> "" Then
             For Each item As String In fileclipboard
