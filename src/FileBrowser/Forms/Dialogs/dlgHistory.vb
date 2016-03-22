@@ -39,7 +39,16 @@
 #Region "Methods"
 
     Private Sub OpenSelected(Optional ByVal newwin As Boolean = False)
-
+        If ListBox1.SelectedIndex <> -1 Then
+            If newwin Then
+                Dim newb As New frmMain
+                newb.Navigate(ListBox1.SelectedItem)
+                newb.Show()
+            Else
+                frmMain.Navigate(ListBox1.SelectedItem)
+            End If
+            Me.Close()
+        End If
     End Sub
 
     Private Sub ClearHistory()
