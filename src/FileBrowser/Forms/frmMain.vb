@@ -278,10 +278,75 @@ Public Class frmMain
 
 #Region "Methods"
 
+#Region "Search"
+
     Private Sub CancelSearch()
         tokenSource2.Cancel()
         pnl_cancelsearch.Hide()
     End Sub
+
+    Private Sub Search(ByVal txt As String, ByVal dir As String)
+        CancelSearch()
+        tokenSource2 = New CancellationTokenSource()
+        ct = tokenSource2.Token
+        pnl_cancelsearch.Show()
+        Dim t As Task = Task.Factory.StartNew(Sub()
+                                                  If ct.IsCancellationRequested Then
+                                                      Exit Sub
+                                                  End If
+                                                  ListView1.Clear()
+                                                  Dim iscasesensitive As Boolean = ConfigManager.SearchIsCaseSensitive
+                                                  If Not searchhistory.Contains(txt) Then
+                                                      searchhistory.Add(txt)
+                                                      combo_search.Items.Add(txt)
+                                                  End If
+                                                  If ct.IsCancellationRequested Then
+                                                      Exit Sub
+                                                  End If
+                                                  If dir = "" Then
+                                                      For Each item As String In Directory.GetLogicalDrives
+                                                          If ct.IsCancellationRequested Then
+                                                              Exit Sub
+                                                          End If
+                                                          SearchRec(txt, item, iscasesensitive)
+                                                      Next
+                                                  Else
+                                                      SearchRec(txt, dir)
+                                                  End If
+                                                  pnl_cancelsearch.Hide()
+                                              End Sub)
+    End Sub
+
+    Private Sub SearchRec(ByVal txt As String, ByVal rootdir As String, Optional ByVal casesensitive As Boolean = True)
+        For Each item As String In Directory.GetFiles(rootdir)
+            If ct.IsCancellationRequested Then
+                Exit Sub
+            End If
+            If casesensitive Then
+                If item.Contains(txt) Then
+                    ListView1.BeginInvoke(Sub()
+                                              AddItem(item)
+                                          End Sub)
+                End If
+            Else
+                If item.ToLower.Contains(txt.ToLower) Then
+                    ListView1.BeginInvoke(Sub()
+                                              AddItem(item)
+                                          End Sub)
+                End If
+            End If
+        Next
+        For Each item As String In Directory.GetDirectories(rootdir)
+            If ct.IsCancellationRequested Then
+                Exit Sub
+            End If
+            SearchRec(txt, item)
+        Next
+    End Sub
+
+#End Region
+
+#Region "Create"
 
     Private Sub CreateNewFolder()
         If curdir <> "" Then
@@ -310,6 +375,10 @@ Public Class frmMain
             End If
         End If
     End Sub
+
+#End Region
+
+#Region "Edit Methods"
 
     Private Sub Open()
         If ListView1.SelectedItems.Count > 0 Then
@@ -409,7 +478,7 @@ Public Class frmMain
                     End If
                     My.Computer.FileSystem.CopyDirectory(item, bb)
                 End If
-                
+
             Next
             LoadDirectory(curdir)
         End If
@@ -440,6 +509,67 @@ Public Class frmMain
         End If
     End Sub
 
+#End Region
+
+#Region "Navigation"
+
+    Private Sub DisplayDrives()
+        ListView1.Clear()
+        For Each item As String In Directory.GetLogicalDrives
+            Dim newb As New ListViewItem
+            newb.Text = item
+            newb.ToolTipText = item
+            newb.Tag = item
+            newb.ImageIndex = 25 'Helper.ConvertPathToIndex(item, True)
+            combo_navigation.Text = ""
+            ListView1.Items.Add(newb)
+        Next
+    End Sub
+
+    Public Sub Navigate(ByVal path As String)
+        If path = "" Then
+            LoadDirectory("")
+        ElseIf System.IO.File.Exists(path) Then
+            LoadDirectory(System.IO.Path.GetDirectoryName(path))
+        ElseIf System.IO.Directory.Exists(path) Then
+            LoadDirectory(path)
+        End If
+    End Sub
+
+    Private Sub GoUp()
+        Dim bb As String = Path.GetDirectoryName(curdir)
+        If bb = "" Then
+            DisplayDrives()
+        Else
+            LoadDirectory(bb)
+        End If
+    End Sub
+
+    Private Sub LoadDirectory(ByVal dir As String)
+        'Dim t As Task = Task.Factory.StartNew(Sub()
+        If Directory.Exists(dir) Then
+            curdir = dir
+            combo_navigation.Text = dir
+            If Not history.Contains(dir) Then
+                combo_navigation.Items.Add(dir)
+                history.Add(dir)
+                ConfigManager.AddToHistory(dir)
+            End If
+            ListView1.Clear()
+            For Each item As String In Directory.GetDirectories(dir)
+                AddItem(item)
+            Next
+            For Each item As String In Directory.GetFiles(dir)
+                AddItem(item)
+            Next
+        ElseIf dir = "" Then
+            DisplayDrives()
+        End If
+        'End Sub)
+    End Sub
+
+#End Region
+
     Private Sub DisplayNavigationPane(ByVal val As Boolean, Optional ByVal focusonnav As Boolean = False)
         pnl_navigation.Visible = val
         NavigationToolStripMenuItem.Checked = val
@@ -469,97 +599,6 @@ Public Class frmMain
             imgLst.Images.Add(ImageList_Master.Images(n))
         Next
         ListView1.LargeImageList = imgLst
-    End Sub
-
-    Private Sub DisplayDrives()
-        ListView1.Clear()
-        For Each item As String In Directory.GetLogicalDrives
-            Dim newb As New ListViewItem
-            newb.Text = item
-            newb.ToolTipText = item
-            newb.Tag = item
-            newb.ImageIndex = 25 'Helper.ConvertPathToIndex(item, True)
-            combo_navigation.Text = ""
-            ListView1.Items.Add(newb)
-        Next
-    End Sub
-
-    Private Sub Search(ByVal txt As String, ByVal dir As String)
-        CancelSearch()
-        tokenSource2 = New CancellationTokenSource()
-        ct = tokenSource2.Token
-        pnl_cancelsearch.Show()
-        Dim t As Task = Task.Factory.StartNew(Sub()
-                                                  If ct.IsCancellationRequested Then
-                                                      Exit Sub
-                                                  End If
-                                                  ListView1.Clear()
-                                                  Dim iscasesensitive As Boolean = ConfigManager.SearchIsCaseSensitive
-                                                  If Not searchhistory.Contains(txt) Then
-                                                      searchhistory.Add(txt)
-                                                      combo_search.Items.Add(txt)
-                                                  End If
-                                                  If ct.IsCancellationRequested Then
-                                                      Exit Sub
-                                                  End If
-                                                  If dir = "" Then
-                                                      For Each item As String In Directory.GetLogicalDrives
-                                                          If ct.IsCancellationRequested Then
-                                                              Exit Sub
-                                                          End If
-                                                          SearchRec(txt, item, iscasesensitive)
-                                                      Next
-                                                  Else
-                                                      SearchRec(txt, dir)
-                                                  End If
-                                                  pnl_cancelsearch.Hide()
-                                              End Sub)
-    End Sub
-
-    Private Sub SearchRec(ByVal txt As String, ByVal rootdir As String, Optional ByVal casesensitive As Boolean = True)
-        For Each item As String In Directory.GetFiles(rootdir)
-            If ct.IsCancellationRequested Then
-                Exit Sub
-            End If
-            If casesensitive Then
-                If item.Contains(txt) Then
-                    ListView1.BeginInvoke(Sub()
-                                              AddItem(item)
-                                          End Sub)
-                End If
-            Else
-                If item.ToLower.Contains(txt.ToLower) Then
-                    ListView1.BeginInvoke(Sub()
-                                              AddItem(item)
-                                          End Sub)
-                End If
-            End If
-        Next
-        For Each item As String In Directory.GetDirectories(rootdir)
-            If ct.IsCancellationRequested Then
-                Exit Sub
-            End If
-            SearchRec(txt, item)
-        Next
-    End Sub
-
-    Public Sub Navigate(ByVal path As String)
-        If path = "" Then
-            LoadDirectory("")
-        ElseIf System.IO.File.Exists(path) Then
-            LoadDirectory(System.IO.Path.GetDirectoryName(path))
-        ElseIf System.IO.Directory.Exists(path) Then
-            LoadDirectory(path)
-        End If
-    End Sub
-
-    Private Sub GoUp()
-        Dim bb As String = Path.GetDirectoryName(curdir)
-        If bb = "" Then
-            DisplayDrives()
-        Else
-            LoadDirectory(bb)
-        End If
     End Sub
 
     Private Sub DisplayPropertiesDialog(ByVal path As String)
@@ -606,29 +645,6 @@ Public Class frmMain
         DisplaySideBar(ConfigManager.Sidebar)
         DisplayNavigationPane(ConfigManager.NavigationPane)
         DisplayDrives()
-    End Sub
-
-    Private Sub LoadDirectory(ByVal dir As String)
-        'Dim t As Task = Task.Factory.StartNew(Sub()
-        If Directory.Exists(dir) Then
-            curdir = dir
-            combo_navigation.Text = dir
-            If Not history.Contains(dir) Then
-                combo_navigation.Items.Add(dir)
-                history.Add(dir)
-                ConfigManager.AddToHistory(dir)
-            End If
-            ListView1.Clear()
-            For Each item As String In Directory.GetDirectories(dir)
-                AddItem(item)
-            Next
-            For Each item As String In Directory.GetFiles(dir)
-                AddItem(item)
-            Next
-        ElseIf dir = "" Then
-            DisplayDrives()
-        End If
-        'End Sub)
     End Sub
 
     Private Sub AddItem(ByVal file As String)
