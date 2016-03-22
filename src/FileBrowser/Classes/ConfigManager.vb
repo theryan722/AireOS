@@ -83,7 +83,13 @@
     End Sub
 
     Public Shared Sub RemoveBookmark(ByVal s As String)
-
+        Dim sb As New System.Text.StringBuilder
+        For Each line As String In IO.File.ReadLines(bookmarkloc)
+            If Not line = s Then
+                sb.AppendLine(line)
+            End If
+        Next
+        My.Computer.FileSystem.WriteAllText(bookmarkloc, sb.ToString, False)
     End Sub
 
 #End Region
