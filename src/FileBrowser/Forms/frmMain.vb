@@ -636,7 +636,6 @@ Public Class frmMain
                 ListView1.View = Windows.Forms.View.LargeIcon
                 LoadImagesWithSize(New Size(128, 128))
                 ExtraLargeIconsToolStripMenuItem.Checked = True
-
             Case ConfigManager.FileViewStyle.LargeIcons
                 ListView1.View = Windows.Forms.View.LargeIcon
                 LoadImagesWithSize(New Size(96, 96))

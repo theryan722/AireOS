@@ -30,7 +30,6 @@
         End If
     End Sub
 
-
 #Region "History"
 
     Public Shared Function ReadHistory() As List(Of String)

@@ -1,6 +1,5 @@
 ﻿Public Class ConfigManager
 
-    
     Private Shared setloc As String = Aire.API.User.Current.Info.GetDataStorageLocation & "/Apps/FileBrowser/config.txt"
 
 #Region "Enums"
