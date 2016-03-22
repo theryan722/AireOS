@@ -71,7 +71,9 @@
     End Function
 
     Public Shared Sub AddToBookmarks(ByVal s As String)
-
+        Dim objWriter As New System.IO.StreamWriter(bookmarkloc, True)
+        objWriter.WriteLine(s)
+        objWriter.Close()
     End Sub
 
     Public Shared Sub ClearBookmarks()
