@@ -324,7 +324,28 @@ Public Class frmMain
     Private Sub Paste()
         If fileclipboard.Count > 0 AndAlso curdir <> "" Then
             For Each item As String In fileclipboard
-                File.Copy(item, curdir & "/" & Path.GetFileName(item))
+                If File.Exists(item) Then
+                    Dim bb As String = curdir & "/" & Path.GetFileName(item)
+                    If File.Exists(bb) Then
+                        Dim i As Integer = 1
+                        While File.Exists(curdir & "/" & Path.GetFileNameWithoutExtension(item) & " (" & i & ")" & Path.GetExtension(item))
+                            i += 1
+                        End While
+                        bb = curdir & "/" & Path.GetFileNameWithoutExtension(item) & " (" & i & ")" & Path.GetExtension(item)
+                    End If
+                    File.Copy(item, bb)
+                ElseIf Directory.Exists(item) Then
+                    Dim bb As String = curdir & "/" & Path.GetFileName(item)
+                    If Directory.Exists(bb) Then
+                        Dim i As Integer = 1
+                        While Directory.Exists(bb & " (" & i & ")")
+                            i += 1
+                        End While
+                        bb = bb & " (" & i & ")"
+                    End If
+                    My.Computer.FileSystem.CopyDirectory(item, bb)
+                End If
+                
             Next
             LoadDirectory(curdir)
         End If
