@@ -27,13 +27,4 @@
         Return AppDomain.CurrentDomain.BaseDirectory & "SysData/sysapplist.txt"
     End Function
 
-    ''' <summary>
-    ''' Returns the highest visible directory for the user
-    ''' </summary>
-    ''' <returns>String, the rooth path</returns>
-    ''' <remarks></remarks>
-    Public Shared Function GetRootPath() As String
-        'Todo
-    End Function
-
 End Class
