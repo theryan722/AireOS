@@ -42,7 +42,13 @@ Namespace Cryptography
         ''' <returns>True, if the passwords match, otherwise false</returns>
         ''' <remarks></remarks>
         Public Shared Function CheckPassword(ByVal pass As String, ByVal hashedpass As String) As Boolean
-            Return Verify(pass, hashedpass)
+            Dim res As Boolean = Verify(pass, hashedpass)
+            If res Then
+                Return True
+            Else
+                Threading.Thread.Sleep(2000)
+                Return False
+            End If
         End Function
 
     End Class
