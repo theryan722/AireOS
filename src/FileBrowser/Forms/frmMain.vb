@@ -308,6 +308,12 @@ Public Class frmMain
         If ListView1.SelectedItems.Count > 0 Then
             If Directory.Exists(ListView1.SelectedItems(0).Tag) Then
                 LoadDirectory(ListView1.SelectedItems(0).Tag)
+            Else
+                For Each item As ListViewItem In ListView1.SelectedItems
+                    If File.Exists(item.Tag) Then
+                        FileLauncher.LaunchFile(item.Tag)
+                    End If
+                Next
             End If
         End If
     End Sub
