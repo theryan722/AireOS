@@ -48,6 +48,16 @@
         Return ReadFile(histloc)
     End Function
 
+    Public Shared Sub AddToHistory(ByVal s As String)
+
+    End Sub
+
+    Public Shared Sub ClearHistory()
+        Dim stream As New IO.StreamWriter(histloc, False)
+        stream.Write("")
+        stream.Close()
+    End Sub
+
 #End Region
 
 End Class
