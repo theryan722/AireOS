@@ -53,13 +53,9 @@
     End Sub
 
     Private Sub LoadHistory()
-        If IO.File.Exists(histsource) Then
-            Dim objReader As New System.IO.StreamReader(histsource)
-            Do While objReader.Peek() <> -1
-                ListBox1.Items.Add(objReader.ReadLine())
-            Loop
-            objReader.Dispose()
-        End If
+        For Each line As String In ConfigManager.ReadHistory
+            ListBox1.Items.Add(line)
+        Next
     End Sub
 
 #End Region
