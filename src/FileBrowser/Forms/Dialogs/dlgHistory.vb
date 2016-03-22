@@ -10,7 +10,17 @@
 
 #Region "Buttons"
 
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
 
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+
+    End Sub
+
+    Private Sub btnNavigate_Click(sender As Object, e As EventArgs) Handles btnNavigate.Click
+
+    End Sub
 
 #End Region
 
