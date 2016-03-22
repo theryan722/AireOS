@@ -616,6 +616,7 @@ Public Class frmMain
             If Not history.Contains(dir) Then
                 combo_navigation.Items.Add(dir)
                 history.Add(dir)
+                ConfigManager.AddToHistory(dir)
             End If
             ListView1.Clear()
             For Each item As String In Directory.GetDirectories(dir)
