@@ -72,7 +72,7 @@
 
     End Sub
 
-    Private Sub OpenSelected(Optional ByVal newwin As booolean = False)
+    Private Sub OpenSelected(Optional ByVal newwin As Boolean = False)
 
     End Sub
 
