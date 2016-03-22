@@ -4,7 +4,25 @@
 
 #Region "Buttons"
 
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
 
+    End Sub
+
+    Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
+
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+
+    End Sub
+
+    Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
+
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+
+    End Sub
 
 #End Region
 
@@ -28,11 +46,39 @@
 
 #End Region
 
+#Region "ListBox"
+
+    Private Sub ListBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles ListBox1.KeyDown
+
+    End Sub
+
+    Private Sub ListBox1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListBox1.MouseDoubleClick
+
+    End Sub
+
+#End Region
+
+
+
 #End Region
 
 #Region "Methods"
 
+    Private Sub AddBookmark()
 
+    End Sub
+
+    Private Sub RemoveSelected()
+
+    End Sub
+
+    Private Sub OpenSelected(Optional ByVal newwin As booolean = False)
+
+    End Sub
+
+    Private Sub LoadBookmarks()
+
+    End Sub
 
 #End Region
 
@@ -41,5 +87,7 @@
 
 
 #End Region
+
+    
 
 End Class
