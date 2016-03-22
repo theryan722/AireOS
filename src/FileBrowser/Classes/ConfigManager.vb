@@ -2,6 +2,7 @@
 
     Private Shared histloc As String = Aire.API.User.Current.Info.GetDataStorageLocation & "/Apps/FileBrowser/history.txt"
     Private Shared bookmarkloc As String = Aire.API.User.Current.Info.GetDataStorageLocation & "/Apps/FileBrowser/bookmarks.txt"
+    Private Shared setloc As String = Aire.API.User.Current.Info.GetDataStorageLocation & "/Apps/FileBrowser/config.txt"
 
 #Region "Enums"
 
@@ -31,6 +32,33 @@
 #Region "Properties"
 
     Public Shared Property ViewStyle As FileViewStyle
+        Get
+            For Each item As String In ReadFile(setloc)
+                If item.StartsWith("VS:") Then
+                    Dim bb As String = item.Split(":")(1)
+                    Select Case bb
+                        Case "ExtraLargeIcons"
+                            Return FileViewStyle.ExtraLargeIcons
+                        Case "LargeIcons"
+                            Return FileViewStyle.LargeIcons
+                        Case "MediumIcons"
+                            Return FileViewStyle.MediumIcons
+                        Case "SmallIcons"
+                            Return FileViewStyle.SmallIcons
+                        Case "List"
+                            Return FileViewStyle.List
+                    End Select
+                End If
+            Next
+            Return Nothing
+        End Get
+        Set(value As FileViewStyle)
+            Dim ss() As String
+            ss = IO.File.ReadAllLines(setloc)
+            ss(Array.IndexOf(ss, Array.Find(ss, Function(x) (x.StartsWith("VS:"))))) = "VS:" & value.ToString
+            IO.File.WriteAllLines(setloc, ss)
+        End Set
+    End Property
 
     Public Shared Property Topmost As Boolean
 
