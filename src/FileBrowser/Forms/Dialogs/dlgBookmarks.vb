@@ -65,7 +65,11 @@
 #Region "Methods"
 
     Private Sub AddBookmark()
-
+        Dim bb As New Aire.API.InputDialog(False, Aire.API.InputDialog.ValidationType.AllText, "Add Bookmark", "Enter a directory to bookmark")
+        If bb.DialogResult = Windows.Forms.DialogResult.OK AndAlso bb.Response <> "" Then
+            ListBox1.Items.Add(bb.Response)
+            ConfigManager.AddToBookmarks(bb.Response)
+        End If
     End Sub
 
     Private Sub RemoveSelected()
