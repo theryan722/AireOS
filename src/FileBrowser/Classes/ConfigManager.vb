@@ -70,7 +70,7 @@
         Return ReadFile(bookmarkloc)
     End Function
 
-    Public Shared Sub AddToBookmarks(ByVal s As String)
+    Public Shared Sub AddBookmark(ByVal s As String)
         Dim objWriter As New System.IO.StreamWriter(bookmarkloc, True)
         objWriter.WriteLine(s)
         objWriter.Close()
