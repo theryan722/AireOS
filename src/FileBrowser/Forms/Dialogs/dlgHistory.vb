@@ -25,7 +25,7 @@
     End Sub
 
     Private Sub btnNavigate_Click(sender As Object, e As EventArgs) Handles btnNavigate.Click
-
+        OpenSelected()
     End Sub
 
 #End Region
