@@ -68,9 +68,13 @@
 
     Private Sub AddBookmark()
         Dim bb As New Aire.API.InputDialog(False, Aire.API.InputDialog.ValidationType.AllText, "Add Bookmark", "Enter a directory to bookmark")
-        If bb.DialogResult = Windows.Forms.DialogResult.OK AndAlso bb.Response <> "" Then
-            ListBox1.Items.Add(bb.Response)
-            ConfigManager.AddBookmark(bb.Response)
+        If bb.DialogResult = Windows.Forms.DialogResult.OK AndAlso Not bb.Response = "" AndAlso Not ListBox1.Items.Contains(bb.Response) Then
+            If IO.Directory.Exists(bb.Response) Then
+                ListBox1.Items.Add(bb.Response)
+                ConfigManager.AddBookmark(bb.Response)
+            Else
+                Dim msg As New Aire.API.MessageBox("The path entered is not a valid one.", "Invalid Path", Aire.API.MessageBox.MessageBoxButtons.OkOnly, Aire.API.MessageBox.MessageBoxIcon.Warning)
+            End If
         End If
     End Sub
 
