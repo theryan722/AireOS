@@ -38,11 +38,25 @@
 
 #Region "Methods"
 
+    Private Sub OpenSelected(Optional ByVal newwin As Boolean = False)
 
+    End Sub
+
+    Private Sub ClearHistory()
+
+    End Sub
+
+    Private Sub LoadHistory()
+
+    End Sub
 
 #End Region
 
 #Region "dlgHistory"
+
+    Public Sub New(ByVal histloc As String)
+
+    End Sub
 
     Private Sub dlgHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
