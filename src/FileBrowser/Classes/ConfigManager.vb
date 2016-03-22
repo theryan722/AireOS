@@ -95,6 +95,21 @@
     End Property
 
     Public Shared Property NavigationPane As Boolean
+        Get
+            For Each item As String In ReadFile(setloc)
+                If item.StartsWith("NP:") Then
+                    Return If(item.Split(":")(1) = "True", True, False)
+                End If
+            Next
+            Return False
+        End Get
+        Set(value As Boolean)
+            Dim ss() As String
+            ss = IO.File.ReadAllLines(setloc)
+            ss(Array.IndexOf(ss, Array.Find(ss, Function(x) (x.StartsWith("NP:"))))) = "NP:" & value.ToString
+            IO.File.WriteAllLines(setloc, ss)
+        End Set
+    End Property
 
     Public Shared Property SearchIsCaseSensitive As Boolean
 
