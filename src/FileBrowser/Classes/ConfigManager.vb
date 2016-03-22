@@ -49,7 +49,9 @@
     End Function
 
     Public Shared Sub AddToHistory(ByVal s As String)
-
+        Dim objWriter As New System.IO.StreamWriter(histloc, True)
+        objWriter.WriteLine(s)
+        objWriter.Close()
     End Sub
 
     Public Shared Sub ClearHistory()
