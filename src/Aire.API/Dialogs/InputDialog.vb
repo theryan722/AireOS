@@ -88,6 +88,10 @@ Public Class InputDialog
         End If
     End Sub
 
+    Private Sub InputDialog_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        TextBox1.Focus()
+    End Sub
+
 #End Region
 
 End Class
