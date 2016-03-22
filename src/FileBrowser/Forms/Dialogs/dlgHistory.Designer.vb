@@ -52,7 +52,7 @@ Partial Class dlgHistory
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.OpenInNewWindowToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(191, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(191, 70)
         '
         'OpenToolStripMenuItem
         '

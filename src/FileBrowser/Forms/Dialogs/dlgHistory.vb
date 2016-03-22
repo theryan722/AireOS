@@ -4,7 +4,13 @@
 
 #Region "Context Menu Strip"
 
+    Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub OpenInNewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenInNewWindowToolStripMenuItem.Click
+
+    End Sub
 
 #End Region
 
