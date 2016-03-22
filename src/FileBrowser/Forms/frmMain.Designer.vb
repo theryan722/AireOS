@@ -343,12 +343,14 @@ Partial Class frmMain
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(159, 6)
+        Me.ToolStripSeparator3.Visible = False
         '
         'ListToolStripMenuItem
         '
         Me.ListToolStripMenuItem.Name = "ListToolStripMenuItem"
         Me.ListToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.ListToolStripMenuItem.Text = "List"
+        Me.ListToolStripMenuItem.Visible = False
         '
         'SidebarToolStripMenuItem
         '
