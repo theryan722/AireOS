@@ -1,5 +1,11 @@
 ﻿Public Class dlgHistory
 
+#Region "Properties/Variables"
+
+    Private histsource As String
+
+#End Region
+
 #Region "UI"
 
 #Region "Context Menu Strip"
@@ -55,7 +61,8 @@
 #Region "dlgHistory"
 
     Public Sub New(ByVal histloc As String)
-
+        InitializeComponent()
+        histsource = histloc
     End Sub
 
     Private Sub dlgHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
