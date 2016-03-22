@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
-
+        OpenSelected()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
