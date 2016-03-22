@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ConfigManager.vb" />
+    <Compile Include="Classes\FileLauncher.vb" />
     <Compile Include="Classes\FileProperties.vb" />
     <Compile Include="Classes\Helper.vb" />
     <Compile Include="Forms\Dialogs\dlgAbout.Designer.vb">
