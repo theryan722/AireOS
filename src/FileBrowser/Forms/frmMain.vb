@@ -201,10 +201,6 @@ Public Class frmMain
 
 #Region "About"
 
-    Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
-
-    End Sub
-
     Private Sub AboutToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem1.Click
         Dim newb As New dlgAbout
         newb.ShowDialog()

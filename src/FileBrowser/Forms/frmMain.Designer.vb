@@ -78,7 +78,6 @@ Partial Class frmMain
         Me.ToolStripSeparator16 = New System.Windows.Forms.ToolStripSeparator()
         Me.AddCurrentDirectoryToBookmarksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.ListView1 = New System.Windows.Forms.ListView()
@@ -459,21 +458,15 @@ Partial Class frmMain
         '
         'AboutToolStripMenuItem
         '
-        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HelpToolStripMenuItem, Me.AboutToolStripMenuItem1})
+        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem1})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.AboutToolStripMenuItem.Text = "About"
         '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
-        Me.HelpToolStripMenuItem.Text = "Help"
-        '
         'AboutToolStripMenuItem1
         '
         Me.AboutToolStripMenuItem1.Name = "AboutToolStripMenuItem1"
-        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
+        Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
         'SplitContainer1
@@ -772,7 +765,6 @@ Partial Class frmMain
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NavigationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GoUpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
